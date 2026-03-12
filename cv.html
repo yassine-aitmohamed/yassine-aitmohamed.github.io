@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Yassine Ait Mohamed</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #F9F6F2;
+            --bg2: #F2EDE6;
+            --primary: #2c3e50;
+            --secondary: #34495e;
+            --accent: #D97757;
+            --text: #2c3e50;
+            --text2: #7f8c8d;
+            --border: rgba(28,25,23,0.10);
+        }
+
+        body {
+            font-family: 'Computer Modern Serif', 'Latin Modern Roman', 'CMU Serif', Georgia, serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+            background-image:
+                radial-gradient(ellipse 80% 60% at 70% 20%, rgba(217,119,87,0.055) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 50% at 20% 80%, rgba(194,98,45,0.04)  0%, transparent 55%),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.022'/%3E%3C/svg%3E");
+            background-attachment: fixed;
+            font-size: 17px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 1rem 2rem;
+            background: rgba(249, 246, 242, 0.90);
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 2px 4px rgba(28,25,23,0.05);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+        .nav-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text2);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            letter-spacing: 0.5px;
+            position: relative;
+            padding-bottom: 2px;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            height: 1px; width: 0;
+            background: var(--accent);
+            transition: width 0.25s ease;
+        }
+        .nav-links a:hover { color: var(--accent); }
+        .nav-links a:hover::after { width: 100%; }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 5rem 2rem 3rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        a { color: var(--accent); }
+        a:hover { text-decoration: underline; }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li {
+            margin-bottom: 0.8rem;
+        }
+        .date {
+            font-weight: bold;
+            color: var(--primary);
+        }
+        .detail {
+            color: var(--text2);
+            font-size: 0.95rem;
+        }
+        .pdf-link {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .pdf-link:hover { text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .nav-inner { flex-direction: column; gap: 0.75rem; }
+            .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+            .container { padding: 5rem 1rem 2rem; }
+            h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="research.html">Research</a>
+                <a href="talks.html">Talks</a>
+                <a href="cv.html">CV</a>
+                <a href="teaching.html">Teaching</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>CV</h1>
+
+        <h2>Education</h2>
+        <ul>
+            <li>
+                <span class="date">2024 – Present:</span> PhD in Mathematics, University of Sherbrooke, Canada
+            </li>
+            <li>
+                <span class="date">2022 – 2023:</span> First year in PhD Doctoral program, University of Sidi Mohamed Ben Abdellah, Morocco
+            </li>
+            <li>
+                <span class="date">2020 – 2022:</span> Master's degree in Mathematics, University of Sidi Mohamed Ben Abdellah, Morocco
+            </li>
+            <li>
+                <span class="date">2016 – 2020:</span> BSc in Mathematics, University of Moulay Ismail, Morocco
+            </li>
+        </ul>
+
+        <h2>Full CV</h2>
+        <p><a href="cv.pdf" class="pdf-link">Download PDF</a></p>
+    </div>
+</body>
+</html>
