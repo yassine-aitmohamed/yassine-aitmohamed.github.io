@@ -4,23 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Yassine Ait Mohamed</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --bg: #F9F6F2;
-            --bg2: #F2EDE6;
-            --primary: #2c3e50;
-            --secondary: #34495e;
-            --accent: #D97757;
-            --text: #2c3e50;
-            --text2: #7f8c8d;
-            --border: rgba(28,25,23,0.10);
+            --bg:          #F9F6F2;
+            --bg2:         #F2EDE6;
+            --bg-nav:      rgba(249, 246, 242, 0.90);
+            --primary:     #1C1917;
+            --text:        #1C1917;
+            --text2:       #78716C;
+            --accent:      #D97757;
+            --accent-deep: #C2622D;
+            --border:      rgba(28, 25, 23, 0.10);
+            --shadow-sm:   0 1px 4px rgba(28, 25, 23, 0.06);
         }
 
         body {
-            font-family: 'Computer Modern Serif', 'Latin Modern Roman', 'CMU Serif', Georgia, serif;
+            font-family: 'EB Garamond', Georgia, serif;
             line-height: 1.6;
             color: var(--text);
             background: var(--bg);
@@ -32,18 +38,18 @@
             font-size: 17px;
         }
 
+        /* ── NAV ── */
         nav {
             position: fixed;
-            top: 0;
-            left: 0;
+            top: 0; left: 0;
             width: 100%;
             z-index: 100;
             padding: 1rem 2rem;
-            background: rgba(249, 246, 242, 0.90);
+            background: var(--bg-nav);
             border-bottom: 1px solid var(--border);
-            box-shadow: 0 2px 4px rgba(28,25,23,0.05);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
+            box-shadow: var(--shadow-sm);
         }
         .nav-inner {
             max-width: 800px;
@@ -52,19 +58,16 @@
             justify-content: space-between;
             align-items: center;
         }
-        .nav-logo {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: var(--primary);
-        }
         .nav-links { display: flex; gap: 2rem; list-style: none; }
         .nav-links a {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 400;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
             text-decoration: none;
             color: var(--text2);
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.3s;
-            letter-spacing: 0.5px;
+            transition: color 0.25s;
             position: relative;
             padding-bottom: 2px;
         }
@@ -79,58 +82,93 @@
         .nav-links a:hover { color: var(--accent); }
         .nav-links a:hover::after { width: 100%; }
 
+        /* ── CONTAINER ── */
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 5rem 2rem 3rem;
+            padding: 5rem 2rem 4rem;
         }
 
         h1 {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2.4rem;
+            font-weight: 400;
+            margin-bottom: 1.8rem;
             color: var(--primary);
+            letter-spacing: -0.2px;
         }
 
         h2 {
-            font-size: 1.3rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-            font-weight: bold;
-        }
-
-        a { color: var(--accent); }
-        a:hover { text-decoration: underline; }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        ul li {
-            margin-bottom: 0.8rem;
-        }
-        .date {
-            font-weight: bold;
-            color: var(--primary);
-        }
-        .detail {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
             color: var(--text2);
-            font-size: 0.95rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
         }
+
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; color: var(--accent-deep); }
+
+        /* ── EDUCATION LIST ── */
+        ul { list-style: none; padding-left: 0; }
+
+        ul li {
+            font-family: 'EB Garamond', Georgia, serif;
+            font-size: 1.02rem;
+            margin-bottom: 0.7rem;
+            line-height: 1.65;
+        }
+
+        .date {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 1.3px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-right: 0.3rem;
+        }
+
+        .detail {
+            font-style: italic;
+            color: var(--text2);
+            font-size: 0.97rem;
+        }
+
+        /* ── PDF LINK ── */
         .pdf-link {
-            display: inline-block;
-            margin-top: 0.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
             color: var(--accent);
             text-decoration: none;
+            border: 1px solid rgba(217,119,87,0.4);
+            padding: 0.45rem 1rem;
+            border-radius: 2px;
+            transition: background 0.2s, border-color 0.2s, color 0.2s;
         }
-        .pdf-link:hover { text-decoration: underline; }
 
+        .pdf-link:hover {
+            background: rgba(217,119,87,0.08);
+            border-color: var(--accent);
+            color: var(--accent-deep);
+            text-decoration: none;
+        }
+
+        /* ── RESPONSIVE ── */
         @media (max-width: 768px) {
             .nav-inner { flex-direction: column; gap: 0.75rem; }
             .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
             .container { padding: 5rem 1rem 2rem; }
-            h1 { font-size: 1.6rem; }
+            h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -146,27 +184,32 @@
             </div>
         </div>
     </nav>
+
     <div class="container">
         <h1>CV</h1>
 
         <h2>Education</h2>
         <ul>
             <li>
-                <span class="date">2024 – Present:</span> PhD in Mathematics, University of Sherbrooke, Canada
+                <span class="date">2024 – Present</span>
+                PhD in Mathematics, University of Sherbrooke, Canada
             </li>
             <li>
-                <span class="date">2022 – 2023:</span> First year in PhD Doctoral program, University of Sidi Mohamed Ben Abdellah, Morocco
+                <span class="date">2022 – 2023</span>
+                First year in PhD Doctoral program, University of Sidi Mohamed Ben Abdellah, Morocco
             </li>
             <li>
-                <span class="date">2020 – 2022:</span> Master's degree in Mathematics, University of Sidi Mohamed Ben Abdellah, Morocco
+                <span class="date">2020 – 2022</span>
+                Master's degree in Mathematics, University of Sidi Mohamed Ben Abdellah, Morocco
             </li>
             <li>
-                <span class="date">2016 – 2020:</span> BSc in Mathematics, University of Moulay Ismail, Morocco
+                <span class="date">2016 – 2020</span>
+                BSc in Mathematics, University of Moulay Ismail, Morocco
             </li>
         </ul>
 
         <h2>Full CV</h2>
-        <p><a href="cv.pdf" class="pdf-link">Download PDF</a></p>
+        <a href="cv.pdf" class="pdf-link">↗ Download PDF</a>
     </div>
 </body>
 </html>
