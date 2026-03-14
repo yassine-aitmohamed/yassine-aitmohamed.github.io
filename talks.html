@@ -3,203 +3,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talks - Yassine Ait Mohamed</title>
+    <title>Talks — Yassine Ait Mohamed</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --bg:          #F9F6F2;
-            --bg2:         #F2EDE6;
-            --bg-nav:      rgba(249, 246, 242, 0.90);
-            --primary:     #1C1917;
-            --text:        #1C1917;
-            --text2:       #78716C;
-            --accent:      #D97757;
-            --accent-deep: #C2622D;
-            --border:      rgba(28, 25, 23, 0.10);
-            --shadow-sm:   0 1px 4px rgba(28, 25, 23, 0.06);
+            --bg:           #F5F4F0;
+            --bg2:          #ECEAE3;
+            --bg-nav:       rgba(245, 244, 240, 0.93);
+            --primary:      #1E2B3A;
+            --secondary:    #374B5E;
+            --text:         #1E2B3A;
+            --text2:        #5A6E82;
+            --text3:        #8299AD;
+            --accent:       #8B6F47;
+            --accent-deep:  #6E5334;
+            --accent-light: rgba(139, 111, 71, 0.08);
+            --rule:         rgba(30, 43, 58, 0.13);
+            --border:       rgba(30, 43, 58, 0.09);
+            --border-soft:  rgba(30, 43, 58, 0.05);
+            --shadow-sm:    0 1px 4px rgba(30, 43, 58, 0.06);
         }
 
+        html { scroll-behavior: smooth; }
+
         body {
-            font-family: 'EB Garamond', Georgia, serif;
-            line-height: 1.6;
+            font-family: 'Source Serif 4', Georgia, serif;
+            line-height: 1.7;
             color: var(--text);
-            background: var(--bg);
-            background-image:
-                radial-gradient(ellipse 80% 60% at 70% 20%, rgba(217,119,87,0.055) 0%, transparent 60%),
-                radial-gradient(ellipse 60% 50% at 20% 80%, rgba(194,98,45,0.04)  0%, transparent 55%),
-                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.022'/%3E%3C/svg%3E");
-            background-attachment: fixed;
-            font-size: 17px;
+            background-color: var(--bg);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.018'/%3E%3C/svg%3E");
         }
 
         /* ── NAV ── */
         nav {
             position: fixed;
-            top: 0; left: 0;
-            width: 100%;
+            top: 0; width: 100%;
             z-index: 100;
-            padding: 1rem 2rem;
+            padding: 0.95rem 2.5rem;
             background: var(--bg-nav);
-            border-bottom: 1px solid var(--border);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--rule);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             box-shadow: var(--shadow-sm);
         }
+
         .nav-inner {
-            max-width: 800px;
+            max-width: 1120px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .nav-links { display: flex; gap: 2rem; list-style: none; }
+
+        .nav-brand {
+            font-family: 'Lora', serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+
         .nav-links a {
-            font-family: 'Josefin Sans', sans-serif;
-            font-size: 0.72rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.70rem;
             font-weight: 400;
-            letter-spacing: 1.8px;
+            letter-spacing: 1.6px;
             text-transform: uppercase;
             text-decoration: none;
             color: var(--text2);
-            transition: color 0.25s;
+            transition: color 0.22s;
             position: relative;
-            padding-bottom: 2px;
+            padding-bottom: 3px;
         }
+
         .nav-links a::after {
             content: '';
             position: absolute;
             bottom: 0; left: 0;
             height: 1px; width: 0;
             background: var(--accent);
-            transition: width 0.25s ease;
+            transition: width 0.22s ease;
         }
-        .nav-links a:hover { color: var(--accent); }
+
+        .nav-links a:hover { color: var(--primary); }
         .nav-links a:hover::after { width: 100%; }
+        .nav-links a.active { color: var(--primary); }
+        .nav-links a.active::after { width: 100%; }
 
         /* ── CONTAINER ── */
         .container {
-            max-width: 800px;
+            max-width: 780px;
             margin: 0 auto;
-            padding: 5rem 2rem 3rem;
+            padding: 6.5rem 2rem 5rem;
+            animation: fadeUp 0.65s ease both;
         }
 
-        h1 {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 2.4rem;
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-            letter-spacing: -0.2px;
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
 
-        a { color: var(--accent); text-decoration: none; }
-        a:hover { text-decoration: underline; color: var(--accent-deep); }
-
-        /* ── TALKS LIST ── */
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        ul li {
-            font-family: 'EB Garamond', Georgia, serif;
-            font-size: 1.02rem;
-            margin-bottom: 1.1rem;
-            line-height: 1.65;
-        }
-
-        .date {
-            font-family: 'Josefin Sans', sans-serif;
-            font-size: 0.68rem;
+        /* ── PAGE TITLE ── */
+        .page-title {
+            font-family: 'Lora', serif;
+            font-size: 2.6rem;
             font-weight: 500;
-            letter-spacing: 1.5px;
+            color: var(--primary);
+            letter-spacing: -0.3px;
+            margin-bottom: 0.25rem;
+        }
+
+        .page-rule {
+            width: 40px;
+            height: 1px;
+            background: var(--accent);
+            opacity: 0.7;
+            margin: 1rem 0 2.5rem;
+        }
+
+        /* ── SECTION LABEL ── */
+        .section-label {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.66rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text3);
+            margin-bottom: 1.4rem;
+            margin-top: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+        }
+
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        /* ── TALK ITEM ── */
+        .talk-item {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 0 1.4rem;
+            padding: 1.1rem 0;
+            border-bottom: 1px solid var(--border-soft);
+            align-items: start;
+        }
+
+        .talk-item:last-child {
+            border-bottom: none;
+        }
+
+        .talk-date {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.63rem;
+            font-weight: 500;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
             color: var(--accent);
+            padding-top: 0.22rem;
+            line-height: 1.4;
         }
 
-        .location {
-            font-family: 'EB Garamond', Georgia, serif;
+        .talk-body {}
+
+        .talk-title {
+            font-family: 'Lora', serif;
+            font-size: 1.04rem;
+            font-weight: 500;
+            color: var(--primary);
+            line-height: 1.45;
+            margin-bottom: 0.28rem;
+        }
+
+        .talk-location {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 0.91rem;
+            font-weight: 300;
             font-style: italic;
             color: var(--text2);
-            font-size: 0.97rem;
+            line-height: 1.5;
+            margin-bottom: 0.3rem;
+        }
+
+        .talk-link {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.63rem;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--text2);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1px;
+            transition: color 0.2s, border-color 0.2s;
+            display: inline-block;
+            margin-top: 0.2rem;
+        }
+
+        .talk-link:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* ── FOOTER ── */
+        .page-footer {
+            text-align: center;
+            padding: 2rem 1.5rem 2.5rem;
+            border-top: 1px solid var(--border-soft);
+            margin-top: 4rem;
+        }
+
+        .footer-copy {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.67rem;
+            letter-spacing: 0.8px;
+            color: var(--text3);
         }
 
         /* ── RESPONSIVE ── */
         @media (max-width: 768px) {
-            .nav-inner { flex-direction: column; gap: 0.75rem; }
-            .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
-            .container { padding: 5rem 1rem 2rem; }
-            h1 { font-size: 1.8rem; }
+            .nav-inner { flex-direction: column; gap: 0.6rem; }
+            .nav-links { gap: 1.2rem; flex-wrap: wrap; justify-content: center; }
+            .container { padding: 5.5rem 1.5rem 3rem; }
+            .page-title { font-size: 2rem; }
+            .talk-item { grid-template-columns: 1fr; gap: 0.15rem; }
+            .talk-date { font-size: 0.60rem; }
         }
     </style>
 </head>
 <body>
+
     <nav>
         <div class="nav-inner">
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="research.html">Research</a>
-                <a href="talks.html">Talks</a>
-                <a href="cv.html">CV</a>
-                <a href="teaching.html">Teaching</a>
-            </div>
+            <a href="index.html" class="nav-brand"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="talks.html" class="active">Talks</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="teaching.html">Teaching</a></li>
+            </ul>
         </div>
     </nav>
 
     <div class="container">
-        <h1>Talks</h1>
 
-        <ul>
-            <li>
-                <span class="date">November 2025</span> &mdash;
-                Poisson structures on 1-shifted coisotropics
-                [<a href="Documents talks/ppt2025.pdf" target="_blank">pdf</a>]<br>
-                <span class="location">Séminaire SAG, Université de Sherbrooke</span>
-            </li>
-            <li>
-                <span class="date">July 2023</span> &mdash;
-                Generalized homogeneous derivations on graded rings<br>
-                <span class="location">Seminar of NonCommutative Algebra, Laboratory of Modeling and Mathematical Structures, Faculty of Science and Technology, Fez</span>
-            </li>
-            <li>
-                <span class="date">April 2023</span> &mdash;
-                On Graded Rings with homogeneous derivations<br>
-                <span class="location">Seminar of NonCommutative Algebra, Laboratory of Modeling and Mathematical Structures, Faculty of Science and Technology, Fez</span>
-            </li>
-            <li>
-                <span class="date">February 2023</span> &mdash;
-                On Graded Rings and derivations<br>
-                <span class="location">Seminar of NonCommutative Algebra, Laboratory of Modeling and Mathematical Structures, Faculty of Science and Technology, Fez</span>
-            </li>
-            <li>
-                <span class="date">January 2023</span> &mdash;
-                On Graded Rings
-                [<a href="Documents talks/graded_rings.pdf" target="_blank">pdf</a>]<br>
-                <span class="location">Seminar of NonCommutative Algebra, Laboratory of Modeling and Mathematical Structures, Faculty of Science and Technology, Fez</span>
-            </li>
-            <li>
-                <span class="date">December 2021</span> &mdash;
-                Tensor Algebra and Enveloping Algebra of a Lie Algebra<br>
-                <span class="location">Seminar of Geometry and Algebra, Faculty of Science, Dhar El Mahraz</span>
-            </li>
-            <li>
-                <span class="date">November 2021</span> &mdash;
-                On Riemann-Roch Theorem
-                [<a href="Documents talks/roch.pdf" target="_blank">pdf</a>]<br>
-                <span class="location">Seminar of Geometry and Algebra, Faculty of Science, Dhar El Mahraz</span>
-            </li>
-            <li>
-                <span class="date">February 2021</span> &mdash;
-                Action of a Lie Group on a Smooth Manifold<br>
-                <span class="location">Seminar of Geometry and Algebra, Faculty of Science, Dhar El Mahraz</span>
-            </li>
-        </ul>
+        <h1 class="page-title">Talks</h1>
+        <div class="page-rule"></div>
+
+        <!-- ── CANADA ── -->
+        <div class="section-label">Canada</div>
+
+        <div class="talk-item">
+            <div class="talk-date">November 2025</div>
+            <div class="talk-body">
+                <div class="talk-title">Poisson structures on 1-shifted coisotropics</div>
+                <div class="talk-location">Séminaire SAG, Université de Sherbrooke</div>
+                <a href="Documents talks/ppt2025.pdf" target="_blank" class="talk-link">
+                    <i class="fas fa-file-pdf" style="font-size:0.6rem; margin-right:4px;"></i>Slides
+                </a>
+            </div>
+        </div>
+
+        <!-- ── MOROCCO ── -->
+        <div class="section-label">Morocco</div>
+
+        <div class="talk-item">
+            <div class="talk-date">July 2023</div>
+            <div class="talk-body">
+                <div class="talk-title">Generalized homogeneous derivations on graded rings</div>
+                <div class="talk-location">Seminar of NonCommutative Algebra, Laboratory of Modeling and Mathematical Structures, Faculty of Science and Technology, Fez</div>
+            </div>
+        </div>
+
+        <div class="talk-item">
+            <div class="talk-date">April 2023</div>
+            <div class="talk-body">
+                <div class="talk-title">On graded rings with homogeneous derivations</div>
+                <div class="talk-location">Seminar of NonCommutative Algebra, Laboratory of Modeling and Mathematical Structures, Faculty of Science and Technology, Fez</div>
+            </div>
+        </div>
+
+        <div class="talk-item">
+            <div class="talk-date">February 2023</div>
+            <div class="talk-body">
+                <div class="talk-title">On graded rings and derivations</div>
+                <div class="talk-location">Seminar of NonCommutative Algebra, Laboratory of Modeling and Mathematical Structures, Faculty of Science and Technology, Fez</div>
+            </div>
+        </div>
+
+        <div class="talk-item">
+            <div class="talk-date">January 2023</div>
+            <div class="talk-body">
+                <div class="talk-title">On graded rings</div>
+                <div class="talk-location">Seminar of NonCommutative Algebra, Laboratory of Modeling and Mathematical Structures, Faculty of Science and Technology, Fez</div>
+                <a href="Documents talks/graded_rings.pdf" target="_blank" class="talk-link">
+                    <i class="fas fa-file-pdf" style="font-size:0.6rem; margin-right:4px;"></i>Slides
+                </a>
+            </div>
+        </div>
+
+        <div class="talk-item">
+            <div class="talk-date">December 2021</div>
+            <div class="talk-body">
+                <div class="talk-title">Tensor algebra and enveloping algebra of a Lie algebra</div>
+                <div class="talk-location">Seminar of Geometry and Algebra, Faculty of Science, Dhar El Mahraz</div>
+            </div>
+        </div>
+
+        <div class="talk-item">
+            <div class="talk-date">November 2021</div>
+            <div class="talk-body">
+                <div class="talk-title">On the Riemann–Roch theorem</div>
+                <div class="talk-location">Seminar of Geometry and Algebra, Faculty of Science, Dhar El Mahraz</div>
+                <a href="Documents talks/roch.pdf" target="_blank" class="talk-link">
+                    <i class="fas fa-file-pdf" style="font-size:0.6rem; margin-right:4px;"></i>Slides
+                </a>
+            </div>
+        </div>
+
+        <div class="talk-item">
+            <div class="talk-date">February 2021</div>
+            <div class="talk-body">
+                <div class="talk-title">Action of a Lie group on a smooth manifold</div>
+                <div class="talk-location">Seminar of Geometry and Algebra, Faculty of Science, Dhar El Mahraz</div>
+            </div>
+        </div>
+
     </div>
+
+
 </body>
 </html>
