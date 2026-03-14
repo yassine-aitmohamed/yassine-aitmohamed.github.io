@@ -4,23 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Talks - Yassine Ait Mohamed</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --bg: #F9F6F2;
-            --bg2: #F2EDE6;
-            --primary: #2c3e50;
-            --secondary: #34495e;
-            --accent: #D97757;
-            --text: #2c3e50;
-            --text2: #7f8c8d;
-            --border: rgba(28,25,23,0.10);
+            --bg:          #F9F6F2;
+            --bg2:         #F2EDE6;
+            --bg-nav:      rgba(249, 246, 242, 0.90);
+            --primary:     #1C1917;
+            --text:        #1C1917;
+            --text2:       #78716C;
+            --accent:      #D97757;
+            --accent-deep: #C2622D;
+            --border:      rgba(28, 25, 23, 0.10);
+            --shadow-sm:   0 1px 4px rgba(28, 25, 23, 0.06);
         }
 
         body {
-            font-family: 'Computer Modern Serif', 'Latin Modern Roman', 'CMU Serif', Georgia, serif;
+            font-family: 'EB Garamond', Georgia, serif;
             line-height: 1.6;
             color: var(--text);
             background: var(--bg);
@@ -32,18 +38,18 @@
             font-size: 17px;
         }
 
+        /* ── NAV ── */
         nav {
             position: fixed;
-            top: 0;
-            left: 0;
+            top: 0; left: 0;
             width: 100%;
             z-index: 100;
             padding: 1rem 2rem;
-            background: rgba(249, 246, 242, 0.90);
+            background: var(--bg-nav);
             border-bottom: 1px solid var(--border);
-            box-shadow: 0 2px 4px rgba(28,25,23,0.05);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
+            box-shadow: var(--shadow-sm);
         }
         .nav-inner {
             max-width: 800px;
@@ -52,19 +58,16 @@
             justify-content: space-between;
             align-items: center;
         }
-        .nav-logo {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: var(--primary);
-        }
         .nav-links { display: flex; gap: 2rem; list-style: none; }
         .nav-links a {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 400;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
             text-decoration: none;
             color: var(--text2);
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.3s;
-            letter-spacing: 0.5px;
+            transition: color 0.25s;
             position: relative;
             padding-bottom: 2px;
         }
@@ -79,6 +82,7 @@
         .nav-links a:hover { color: var(--accent); }
         .nav-links a:hover::after { width: 100%; }
 
+        /* ── CONTAINER ── */
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -86,36 +90,52 @@
         }
 
         h1 {
-            font-size: 2rem;
-            font-weight: bold;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2.4rem;
+            font-weight: 400;
             margin-bottom: 1.5rem;
             color: var(--primary);
+            letter-spacing: -0.2px;
         }
 
-        a { color: var(--accent); }
-        a:hover { text-decoration: underline; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; color: var(--accent-deep); }
 
+        /* ── TALKS LIST ── */
         ul {
             list-style: none;
             padding-left: 0;
         }
+
         ul li {
-            margin-bottom: 1rem;
-        }
-        .date {
-            font-weight: bold;
-            color: var(--primary);
-        }
-        .location {
-            color: var(--text2);
-            font-size: 0.95rem;
+            font-family: 'EB Garamond', Georgia, serif;
+            font-size: 1.02rem;
+            margin-bottom: 1.1rem;
+            line-height: 1.65;
         }
 
+        .date {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+
+        .location {
+            font-family: 'EB Garamond', Georgia, serif;
+            font-style: italic;
+            color: var(--text2);
+            font-size: 0.97rem;
+        }
+
+        /* ── RESPONSIVE ── */
         @media (max-width: 768px) {
             .nav-inner { flex-direction: column; gap: 0.75rem; }
             .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
             .container { padding: 5rem 1rem 2rem; }
-            h1 { font-size: 1.6rem; }
+            h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -137,36 +157,46 @@
 
         <ul>
             <li>
-                <span class="date">November 2025:</span> Poisson structures on 1-shifted coisotropics [<a href="Documents talks/ppt2025.pdf" target="_blank">pdf</a>]<br>
+                <span class="date">November 2025</span> &mdash;
+                Poisson structures on 1-shifted coisotropics
+                [<a href="Documents talks/ppt2025.pdf" target="_blank">pdf</a>]<br>
                 <span class="location">Séminaire SAG, Université de Sherbrooke</span>
             </li>
-            
             <li>
-                <span class="date">July 2023:</span> Generalized homogeneous derivations on graded rings<br>
+                <span class="date">July 2023</span> &mdash;
+                Generalized homogeneous derivations on graded rings<br>
                 <span class="location">Seminar of NonCommutative Algebra, Laboratory of Modeling and Mathematical Structures, Faculty of Science and Technology, Fez</span>
             </li>
             <li>
-                <span class="date">April 2023:</span> On Graded Rings with homogeneous derivations<br>
+                <span class="date">April 2023</span> &mdash;
+                On Graded Rings with homogeneous derivations<br>
                 <span class="location">Seminar of NonCommutative Algebra, Laboratory of Modeling and Mathematical Structures, Faculty of Science and Technology, Fez</span>
             </li>
             <li>
-                <span class="date">February 2023:</span> On Graded Rings and derivations<br>
+                <span class="date">February 2023</span> &mdash;
+                On Graded Rings and derivations<br>
                 <span class="location">Seminar of NonCommutative Algebra, Laboratory of Modeling and Mathematical Structures, Faculty of Science and Technology, Fez</span>
             </li>
             <li>
-                <span class="date">January 2023:</span> On Graded Rings [<a href="Documents talks/graded_rings.pdf" target="_blank">pdf</a>]<br>
+                <span class="date">January 2023</span> &mdash;
+                On Graded Rings
+                [<a href="Documents talks/graded_rings.pdf" target="_blank">pdf</a>]<br>
                 <span class="location">Seminar of NonCommutative Algebra, Laboratory of Modeling and Mathematical Structures, Faculty of Science and Technology, Fez</span>
             </li>
             <li>
-                <span class="date">December 2021:</span> Tensor Algebra and Enveloping Algebra of a Lie Algebra<br>
+                <span class="date">December 2021</span> &mdash;
+                Tensor Algebra and Enveloping Algebra of a Lie Algebra<br>
                 <span class="location">Seminar of Geometry and Algebra, Faculty of Science, Dhar El Mahraz</span>
             </li>
             <li>
-                <span class="date">November 2021:</span> On Riemann-Roch Theorem [<a href="Documents talks/roch.pdf" target="_blank">pdf</a>]<br>
+                <span class="date">November 2021</span> &mdash;
+                On Riemann-Roch Theorem
+                [<a href="Documents talks/roch.pdf" target="_blank">pdf</a>]<br>
                 <span class="location">Seminar of Geometry and Algebra, Faculty of Science, Dhar El Mahraz</span>
             </li>
             <li>
-                <span class="date">February 2021:</span> Action of a Lie Group on a Smooth Manifold<br>
+                <span class="date">February 2021</span> &mdash;
+                Action of a Lie Group on a Smooth Manifold<br>
                 <span class="location">Seminar of Geometry and Algebra, Faculty of Science, Dhar El Mahraz</span>
             </li>
         </ul>
