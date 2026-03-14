@@ -17,6 +17,7 @@
     <meta name="twitter:title" content="Yassine Ait Mohamed - Mathematics">
     <meta name="twitter:description" content="Research in differential geometry, Poisson structures, and shifted symplectic geometry">
     <link rel="canonical" href="https://yassineaitmohamed.github.io/">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -33,86 +34,98 @@
     }
     </script>
 
-    <!-- Nouvelles polices -->
+    <!-- Polices académiques raffinées -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* ── PALETTE ORIGINALE ── */
+        /* ── PALETTE ACADÉMIQUE PROFESSIONNELLE ── */
+        /* Inspiration : Oxford, Cambridge, Princeton — ardoise, ivoire, or discret */
         :root {
-            --bg:          #F9F6F2;
-            --bg2:         #F2EDE6;
-            --bg-nav:      rgba(249, 246, 242, 0.90);
-            --primary:     #1C1917;
-            --secondary:   #44403C;
-            --text:        #1C1917;
-            --text2:       #78716C;
-            --accent:      #D97757;
-            --accent-deep: #C2622D;
-            --accent-glow: rgba(217, 119, 87, 0.12);
-            --border:      rgba(28, 25, 23, 0.10);
-            --border-soft: rgba(28, 25, 23, 0.06);
-            --shadow-sm:   0 1px 4px rgba(28, 25, 23, 0.06);
-            --shadow-md:   0 4px 16px rgba(28, 25, 23, 0.08);
+            --bg:           #F5F4F0;          /* Ivoire chaud, papier vieilli doux */
+            --bg2:          #ECEAE3;          /* Légèrement plus sombre */
+            --bg-nav:       rgba(245, 244, 240, 0.93);
+            --primary:      #1E2B3A;          /* Bleu marine profond — sérieux, académique */
+            --secondary:    #374B5E;          /* Ardoise bleutée */
+            --text:         #1E2B3A;
+            --text2:        #5A6E82;          /* Bleu gris moyen */
+            --text3:        #8299AD;          /* Léger, pour détails */
+            --accent:       #8B6F47;          /* Or mat / bronze — discret, élégant */
+            --accent-deep:  #6E5334;          /* Or profond */
+            --accent-light: rgba(139, 111, 71, 0.10);
+            --rule:         rgba(30, 43, 58, 0.13); /* Filet horizontal */
+            --border:       rgba(30, 43, 58, 0.09);
+            --border-soft:  rgba(30, 43, 58, 0.05);
+            --shadow-sm:    0 1px 4px rgba(30, 43, 58, 0.06);
+            --shadow-md:    0 6px 24px rgba(30, 43, 58, 0.09);
+            --shadow-photo: 0 8px 32px rgba(30, 43, 58, 0.14);
         }
 
         html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'EB Garamond', Georgia, serif;
-            line-height: 1.6;
+            font-family: 'Source Serif 4', Georgia, serif;
+            line-height: 1.7;
             color: var(--text);
-            background: var(--bg);
+            background-color: var(--bg);
+            /* Légère texture papier */
             background-image:
-                radial-gradient(ellipse 80% 60% at 70% 20%, rgba(217,119,87,0.055) 0%, transparent 60%),
-                radial-gradient(ellipse 60% 50% at 20% 80%, rgba(194,98,45,0.04)  0%, transparent 55%),
-                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.022'/%3E%3C/svg%3E");
-            background-attachment: fixed;
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.018'/%3E%3C/svg%3E");
         }
 
-        /* ── NAVIGATION (structure originale) ── */
+        /* ── NAVIGATION ── */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 100;
-            padding: 1rem 2rem;
+            padding: 0.95rem 2.5rem;
             background: var(--bg-nav);
-            border-bottom: 1px solid var(--border);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--rule);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             box-shadow: var(--shadow-sm);
         }
 
         .nav-inner {
-            max-width: 1200px;
+            max-width: 1120px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
+        /* Monogramme dans la nav */
+        .nav-brand {
+            font-family: 'Lora', serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--primary);
+            letter-spacing: 0.3px;
+            text-decoration: none;
+        }
+
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 2.2rem;
             list-style: none;
         }
 
         .nav-links a {
-            font-family: 'Josefin Sans', sans-serif;
-            font-size: 0.72rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.70rem;
             font-weight: 400;
-            letter-spacing: 1.8px;
+            letter-spacing: 1.6px;
             text-transform: uppercase;
             text-decoration: none;
             color: var(--text2);
-            transition: color 0.25s;
+            transition: color 0.22s;
             position: relative;
-            padding-bottom: 2px;
+            padding-bottom: 3px;
         }
 
         .nav-links a::after {
@@ -122,119 +135,157 @@
             height: 1px;
             width: 0;
             background: var(--accent);
-            transition: width 0.25s ease;
+            transition: width 0.22s ease;
         }
 
-        .nav-links a:hover { color: var(--accent); }
+        .nav-links a:hover { color: var(--primary); }
         .nav-links a:hover::after { width: 100%; }
 
-        /* ── HERO (structure originale) ── */
+        /* ── HERO ── */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 6rem 2rem 4rem;
+            padding: 7rem 2.5rem 5rem;
         }
 
         .hero-content {
-            max-width: 1100px;
+            max-width: 1060px;
             width: 100%;
             display: grid;
-            grid-template-columns: 1fr 280px;
-            gap: 4rem;
+            grid-template-columns: 1fr 260px;
+            gap: 5rem;
             align-items: center;
         }
 
-        /* h1 : Cormorant Garamond à la place de Computer Modern */
+        /* ── NOM ── */
         .hero-text h1 {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 3.2rem;
-            font-weight: 400;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
+            font-family: 'Lora', serif;
+            font-size: 2.9rem;
+            font-weight: 500;
+            line-height: 1.18;
+            margin-bottom: 0.3rem;
             color: var(--primary);
-            letter-spacing: -0.2px;
+            letter-spacing: -0.3px;
         }
 
+        /* Sous-titre institution */
+        .affiliation {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1.6rem;
+        }
+
+        /* Filet séparateur */
+        .rule {
+            width: 40px;
+            height: 1px;
+            background: var(--accent);
+            margin-bottom: 1.6rem;
+            opacity: 0.7;
+        }
+
+        /* Paragraphe principal */
         .hero-text .desc {
-            font-family: 'EB Garamond', Georgia, serif;
-            color: var(--text2);
-            font-size: 1.08rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.75;
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-weight: 300;
+            color: var(--secondary);
+            font-size: 1.07rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
         }
 
         .hero-text .desc a {
-            color: var(--accent);
+            color: var(--primary);
             text-decoration: none;
             font-weight: 500;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.2s;
+            border-bottom: 1px solid var(--rule);
+            transition: border-color 0.2s, color 0.2s;
         }
 
         .hero-text .desc a:hover {
             color: var(--accent-deep);
-            border-color: var(--accent-deep);
+            border-color: var(--accent);
         }
 
-        /* h2 : Josefin Sans uppercase à la place de Computer Modern */
-        .hero-text h2 {
-            font-family: 'Josefin Sans', sans-serif;
-            font-size: 0.68rem;
+        /* Labels de section */
+        .section-label {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.66rem;
             font-weight: 500;
-            letter-spacing: 2.5px;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            color: var(--text2);
+            color: var(--text3);
             margin-top: 1.8rem;
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.55rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
         }
 
-        .hero-text .interest-text {
-            font-family: 'EB Garamond', Georgia, serif;
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+            max-width: 60px;
+        }
+
+        /* Intérêts */
+        .interest-text {
+            font-family: 'Source Serif 4', Georgia, serif;
             font-style: italic;
-            color: var(--text2);
+            font-weight: 300;
+            color: var(--secondary);
             font-size: 1.05rem;
-            line-height: 1.7;
+            line-height: 1.75;
         }
 
-        .hero-text .contact-text {
-            font-family: 'EB Garamond', Georgia, serif;
-            color: var(--text2);
-            font-size: 1.05rem;
-            line-height: 1.7;
+        /* Contact */
+        .contact-text {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-weight: 300;
+            color: var(--secondary);
+            font-size: 1.02rem;
+            line-height: 1.75;
         }
 
-        .hero-text .contact-text a {
-            color: var(--accent);
+        .contact-text a {
+            color: var(--primary);
             text-decoration: none;
-            font-weight: 500;
-            border-bottom: 1px solid transparent;
+            font-weight: 400;
+            border-bottom: 1px solid var(--rule);
             transition: border-color 0.2s, color 0.2s;
         }
 
-        .hero-text .contact-text a:hover {
+        .contact-text a:hover {
             color: var(--accent-deep);
-            border-color: var(--accent-deep);
+            border-color: var(--accent);
         }
 
-        /* ── Photo (structure originale) ── */
+        /* ── PHOTO ── */
         .hero-photo {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            gap: 1.4rem;
         }
 
         .photo-wrapper {
-            width: 250px;
-            height: 250px;
+            width: 230px;
+            height: 230px;
             border-radius: 50%;
             overflow: hidden;
             border: 1px solid var(--border);
             box-shadow:
-                var(--shadow-md),
-                0 0 0 4px var(--bg),
-                0 0 0 5px var(--border);
+                var(--shadow-photo),
+                0 0 0 5px var(--bg),
+                0 0 0 6px rgba(30, 43, 58, 0.07);
         }
 
         .photo-wrapper img {
@@ -243,44 +294,129 @@
             object-fit: cover;
         }
 
+        /* Liens icônes sous la photo */
+        .photo-links {
+            display: flex;
+            gap: 1.1rem;
+        }
+
+        .photo-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            color: var(--text2);
+            font-size: 0.78rem;
+            text-decoration: none;
+            transition: color 0.2s, border-color 0.2s, background 0.2s;
+            background: transparent;
+        }
+
+        .photo-links a:hover {
+            color: var(--primary);
+            border-color: var(--accent);
+            background: var(--accent-light);
+        }
+
+        /* ── FOOTER ── */
+        .page-footer {
+            text-align: center;
+            padding: 2rem 1.5rem 2.5rem;
+            border-top: 1px solid var(--border-soft);
+        }
+
+        .footer-quran {
+            font-family: 'Amiri', 'Traditional Arabic', Georgia, serif;
+            direction: rtl;
+            font-size: 1.45rem;
+            color: var(--accent);
+            line-height: 2;
+            opacity: 0.9;
+            margin-bottom: 0.3rem;
+        }
+
+        .footer-ref {
+            font-family: 'Amiri', 'Traditional Arabic', Georgia, serif;
+            direction: rtl;
+            font-size: 0.85rem;
+            color: var(--text3);
+            letter-spacing: 0.3px;
+        }
+
+        /* Citation arabe */
+        .arabic-quote {
+            font-family: 'Amiri', 'Scheherazade New', 'Traditional Arabic', Georgia, serif;
+            direction: rtl;
+            font-size: 1.22rem;
+            font-weight: 400;
+            color: var(--accent);
+            line-height: 2;
+            margin-bottom: 1.4rem;
+            opacity: 0.85;
+        }
+
+        /* ── ANIMATIONS D'ENTRÉE ── */
+        .hero-text, .hero-photo {
+            animation: fadeUp 0.7s ease both;
+        }
+        .hero-photo { animation-delay: 0.15s; }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(18px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
         /* ── RESPONSIVE ── */
-        @media (max-width: 768px) {
+        @media (max-width: 800px) {
             .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
+                gap: 3rem;
             }
             .hero-photo { order: -1; }
-            .photo-wrapper { width: 200px; height: 200px; margin: 0 auto; }
+            .photo-wrapper { width: 190px; height: 190px; margin: 0 auto; }
             .hero-text h1 { font-size: 2.2rem; }
-            .nav-inner { flex-direction: column; gap: 0.75rem; }
-            .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+            .rule { margin: 0 auto 1.6rem; }
+            .section-label::after { display: none; }
+            .photo-links { justify-content: center; }
+            .nav-inner { flex-direction: column; gap: 0.6rem; }
+            .nav-links { gap: 1.2rem; flex-wrap: wrap; justify-content: center; }
         }
 
         @media (max-width: 480px) {
-            .hero-text h1 { font-size: 1.8rem; }
-            .hero { padding: 5rem 1.5rem 3rem; }
+            .hero-text h1 { font-size: 1.85rem; }
+            .hero { padding: 5.5rem 1.5rem 3rem; }
         }
     </style>
 </head>
 <body>
+
     <!-- Navigation -->
     <nav>
         <div class="nav-inner">
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="research.html">Research</a>
-                <a href="talks.html">Talks</a>
-                <a href="cv.html">CV</a>
-                <a href="teaching.html">Teaching</a>
-            </div>
+            <a href="index.html" class="nav-brand">Y. Ait Mohamed</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="talks.html">Talks</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="teaching.html">Teaching</a></li>
+            </ul>
         </div>
     </nav>
 
     <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
+
             <div class="hero-text">
                 <h1>Yassine Ait Mohamed</h1>
+
+                <div class="rule"></div>
+
                 <p class="desc">
                     I am a PhD student in Mathematics at the University of Sherbrooke, under the supervision of 
                     <a href="https://maxencemayrand.github.io/" target="_blank" rel="noopener">Prof. Maxence Mayrand</a>.
@@ -288,22 +424,39 @@
                     <a href="https://scholar.google.com/citations?hl=fr&user=D2ZlnJIAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Prof. Lahcen Oukhtite</a>.
                 </p>
 
-                <h2>Research Interests</h2>
+                <p class="section-label">Research Interests</p>
                 <p class="interest-text">
-                    Derivations theory, Algebraic geometry, Lie groups, topological quantum field theories, shifted symplectic geometry, Poisson geometry
+                    Derivations theory, algebraic geometry, Lie groups, topological quantum field theories,
+                    shifted symplectic geometry, Poisson geometry.
                 </p>
 
-                <h2>Contact</h2>
+                <p class="section-label">Contact</p>
                 <p class="contact-text">
-                    For academic inquiries, collaborations, or questions about my research, please feel free to reach out via email: <a href="mailto:yassine.ait.mohamed@usherbrooke.ca">yassine.ait.mohamed@usherbrooke.ca</a>
+                    <a href="mailto:yassine.ait.mohamed@usherbrooke.ca">yassine.ait.mohamed@usherbrooke.ca</a>.
                 </p>
             </div>
+
             <div class="hero-photo">
                 <div class="photo-wrapper">
                     <img src="photo.jpg" alt="Yassine Ait Mohamed">
                 </div>
+                <div class="photo-links">
+                    <a href="mailto:yassine.ait.mohamed@usherbrooke.ca" title="Email" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://github.com/yassineaitmohamed" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="cv.html" title="Curriculum Vitae" aria-label="CV">
+                        <i class="fas fa-file-alt"></i>
+                    </a>
+                </div>
             </div>
+
         </div>
     </section>
+
+    
+
 </body>
 </html>
