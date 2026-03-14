@@ -3,270 +3,505 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research - Yassine Ait Mohamed</title>
+    <title>Research — Yassine Ait Mohamed</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --bg:          #F9F6F2;
-            --bg2:         #F2EDE6;
-            --bg-nav:      rgba(249, 246, 242, 0.90);
-            --primary:     #1C1917;
-            --secondary:   #44403C;
-            --text:        #1C1917;
-            --text2:       #78716C;
-            --accent:      #D97757;
-            --accent-deep: #C2622D;
-            --border:      rgba(28, 25, 23, 0.10);
-            --shadow-sm:   0 1px 4px rgba(28, 25, 23, 0.06);
+            --bg:           #F5F4F0;
+            --bg2:          #ECEAE3;
+            --bg-nav:       rgba(245, 244, 240, 0.93);
+            --primary:      #1E2B3A;
+            --secondary:    #374B5E;
+            --text:         #1E2B3A;
+            --text2:        #5A6E82;
+            --text3:        #8299AD;
+            --accent:       #8B6F47;
+            --accent-deep:  #6E5334;
+            --accent-light: rgba(139, 111, 71, 0.10);
+            --accent-bar:   rgba(139, 111, 71, 0.25);
+            --rule:         rgba(30, 43, 58, 0.13);
+            --border:       rgba(30, 43, 58, 0.09);
+            --border-soft:  rgba(30, 43, 58, 0.05);
+            --shadow-sm:    0 1px 4px rgba(30, 43, 58, 0.06);
+            --green:        #4A7040;
         }
 
+        html { scroll-behavior: smooth; }
+
         body {
-            font-family: 'EB Garamond', Georgia, serif;
-            line-height: 1.6;
+            font-family: 'Source Serif 4', Georgia, serif;
+            line-height: 1.7;
             color: var(--text);
-            background: var(--bg);
-            background-image:
-                radial-gradient(ellipse 80% 60% at 70% 20%, rgba(217,119,87,0.055) 0%, transparent 60%),
-                radial-gradient(ellipse 60% 50% at 20% 80%, rgba(194,98,45,0.04)  0%, transparent 55%),
-                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.022'/%3E%3C/svg%3E");
-            background-attachment: fixed;
-            font-size: 17px;
+            background-color: var(--bg);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.018'/%3E%3C/svg%3E");
         }
 
         /* ── NAV ── */
         nav {
             position: fixed;
-            top: 0; left: 0;
-            width: 100%;
+            top: 0; width: 100%;
             z-index: 100;
-            padding: 1rem 2rem;
+            padding: 0.95rem 2.5rem;
             background: var(--bg-nav);
-            border-bottom: 1px solid var(--border);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--rule);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             box-shadow: var(--shadow-sm);
         }
+
         .nav-inner {
-            max-width: 800px;
+            max-width: 1120px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .nav-links { display: flex; gap: 2rem; list-style: none; }
+
+        .nav-brand {
+            font-family: 'Lora', serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+
         .nav-links a {
-            font-family: 'Josefin Sans', sans-serif;
-            font-size: 0.72rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.70rem;
             font-weight: 400;
-            letter-spacing: 1.8px;
+            letter-spacing: 1.6px;
             text-transform: uppercase;
             text-decoration: none;
             color: var(--text2);
-            transition: color 0.25s;
+            transition: color 0.22s;
             position: relative;
-            padding-bottom: 2px;
+            padding-bottom: 3px;
         }
+
         .nav-links a::after {
             content: '';
             position: absolute;
             bottom: 0; left: 0;
             height: 1px; width: 0;
             background: var(--accent);
-            transition: width 0.25s ease;
+            transition: width 0.22s ease;
         }
-        .nav-links a:hover { color: var(--accent); }
+
+        .nav-links a:hover { color: var(--primary); }
         .nav-links a:hover::after { width: 100%; }
+        .nav-links a.active { color: var(--primary); }
+        .nav-links a.active::after { width: 100%; }
 
         /* ── CONTAINER ── */
         .container {
-            max-width: 800px;
+            max-width: 780px;
             margin: 0 auto;
-            padding: 5rem 2rem 3rem;
+            padding: 6.5rem 2rem 5rem;
+            animation: fadeUp 0.65s ease both;
         }
 
-        /* ── HEADINGS ── */
-        h1 {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 2.4rem;
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-            letter-spacing: -0.2px;
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
 
-        h2 {
-            font-family: 'Josefin Sans', sans-serif;
-            font-size: 0.68rem;
+        /* ── PAGE TITLE ── */
+        .page-title {
+            font-family: 'Lora', serif;
+            font-size: 2.6rem;
             font-weight: 500;
-            letter-spacing: 2.5px;
+            color: var(--primary);
+            letter-spacing: -0.3px;
+            margin-bottom: 0.25rem;
+        }
+
+        .page-rule {
+            width: 40px;
+            height: 1px;
+            background: var(--accent);
+            opacity: 0.7;
+            margin: 1rem 0 2.5rem;
+        }
+
+        /* ── SECTION LABEL ── */
+        .section-label {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.66rem;
+            font-weight: 500;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            color: var(--text2);
-            margin-top: 2.5rem;
-            margin-bottom: 1.2rem;
-        }
-
-        a { color: var(--accent); text-decoration: none; }
-        a:hover { text-decoration: underline; color: var(--accent-deep); }
-
-        /* ── PAPERS LIST ── */
-        .papers-list {
-            list-style: decimal;
-            padding-left: 1.5rem;
-        }
-
-        .papers-list > li {
+            color: var(--text3);
             margin-bottom: 1.4rem;
+            margin-top: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
         }
+
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        /* ── PAPER ITEM ── */
+        .paper-item {
+            display: grid;
+            grid-template-columns: 28px 1fr;
+            gap: 0 1.1rem;
+            margin-bottom: 2.2rem;
+            padding-bottom: 2.2rem;
+            border-bottom: 1px solid var(--border-soft);
+        }
+
+        .paper-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .paper-number {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 400;
+            color: var(--text3);
+            letter-spacing: 0.5px;
+            padding-top: 0.25rem;
+            text-align: right;
+        }
+
+        .paper-body {}
 
         .paper-title {
-            font-family: 'EB Garamond', Georgia, serif;
-            font-size: 1.05rem;
-            font-weight: 600;
+            font-family: 'Lora', serif;
+            font-size: 1.08rem;
+            font-weight: 500;
             color: var(--primary);
+            line-height: 1.45;
+            margin-bottom: 0.35rem;
         }
 
-        .paper-meta {
-            margin-left: 1px;
-            margin-top: 3px;
-            font-family: 'EB Garamond', Georgia, serif;
-            font-size: 0.95rem;
+        .paper-authors {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 0.93rem;
+            font-weight: 300;
             color: var(--text2);
+            margin-bottom: 0.25rem;
         }
 
-        .paper-meta .journal { font-style: italic; }
-
-        .paper-meta .status {
-            color: #5a7a2a;
+        .paper-venue {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 0.93rem;
+            font-weight: 300;
+            color: var(--text2);
             font-style: italic;
+            margin-bottom: 0.45rem;
         }
 
-        /* ── ABSTRACT TOGGLE ── */
-        .abstract-toggle {
-            cursor: pointer;
-            font-family: 'Josefin Sans', sans-serif;
-            font-size: 0.62rem;
-            letter-spacing: 1.4px;
-            text-transform: uppercase;
-            color: var(--accent);
-            text-decoration: none;
+        /* Badges de statut */
+        .badge {
             display: inline-block;
-            margin-top: 6px;
-            transition: color 0.2s;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.60rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 2px 8px;
+            border-radius: 2px;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
         }
-        .abstract-toggle:hover { color: var(--accent-deep); text-decoration: none; }
+
+        .badge-submitted  { background: rgba(90,110,130,0.10); color: var(--text2); }
+        .badge-published  { background: rgba(74,112,64,0.10);  color: var(--green); }
+        .badge-toappear   { background: rgba(139,111,71,0.12); color: var(--accent); }
+
+        /* Liens inline */
+        .paper-links {
+            display: flex;
+            gap: 0.9rem;
+            flex-wrap: wrap;
+            margin-top: 0.4rem;
+        }
+
+        .paper-link {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--text2);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .paper-link:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* Abstract toggle */
+        .abstract-toggle {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--text3);
+            cursor: pointer;
+            border: none;
+            background: none;
+            padding: 0;
+            border-bottom: 1px solid var(--border-soft);
+            padding-bottom: 1px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .abstract-toggle:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
 
         .abstract {
             display: none;
-            margin-top: 10px;
-            font-family: 'EB Garamond', Georgia, serif;
-            font-size: 0.97rem;
+            margin-top: 0.9rem;
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 0.96rem;
+            font-weight: 300;
             font-style: italic;
             color: var(--text2);
-            line-height: 1.7;
-            border-left: 2px solid rgba(217,119,87,0.3);
+            line-height: 1.78;
             padding-left: 1rem;
+            border-left: 2px solid var(--accent-bar);
         }
 
-        /* ── THESIS / NOTES ── */
-        .thesis-item, .note-item {
-            font-family: 'EB Garamond', Georgia, serif;
-            font-size: 1rem;
-            margin-bottom: 0.7rem;
+        /* ── THESIS ── */
+        .thesis-item {
+            margin-bottom: 1rem;
+        }
+
+        .thesis-title {
+            font-family: 'Lora', serif;
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .thesis-meta {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 0.93rem;
+            font-weight: 300;
             color: var(--text2);
         }
 
-        .thesis-item .paper-title,
-        .note-item .paper-title {
-            font-weight: 600;
-            color: var(--primary);
+        /* ── NOTES ── */
+        .note-item {
+            display: flex;
+            align-items: baseline;
+            gap: 0.6rem;
+            margin-bottom: 0.85rem;
+        }
+
+        .note-dot {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.65rem;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .note-title {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--secondary);
+        }
+
+        /* ── FOOTER ── */
+        .page-footer {
+            text-align: center;
+            padding: 2rem 1.5rem 2.5rem;
+            border-top: 1px solid var(--border-soft);
+            margin-top: 4rem;
+        }
+
+        .footer-quran {
+            font-family: 'Amiri', 'Traditional Arabic', Georgia, serif;
+            direction: rtl;
+            font-size: 1.45rem;
+            color: var(--accent);
+            line-height: 2;
+            opacity: 0.9;
+            margin-bottom: 0.3rem;
+        }
+
+        .footer-ref {
+            font-family: 'Amiri', 'Traditional Arabic', Georgia, serif;
+            direction: rtl;
+            font-size: 0.85rem;
+            color: var(--text3);
         }
 
         /* ── RESPONSIVE ── */
         @media (max-width: 768px) {
-            .nav-inner { flex-direction: column; gap: 0.75rem; }
-            .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
-            .container { padding: 5rem 1rem 2rem; }
-            h1 { font-size: 1.8rem; }
+            .nav-inner { flex-direction: column; gap: 0.6rem; }
+            .nav-links { gap: 1.2rem; flex-wrap: wrap; justify-content: center; }
+            .container { padding: 5.5rem 1.5rem 3rem; }
+            .page-title { font-size: 2rem; }
+            .paper-item { grid-template-columns: 1fr; }
+            .paper-number { display: none; }
         }
     </style>
 
     <script>
         function toggleAbstract(id) {
             const el = document.getElementById(id);
-            el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'block' : 'none';
+            const btn = el.previousElementSibling;
+            if (el.style.display === 'block') {
+                el.style.display = 'none';
+                btn.textContent = 'Abstract ↓';
+            } else {
+                el.style.display = 'block';
+                btn.textContent = 'Abstract ↑';
+            }
         }
     </script>
 </head>
 <body>
+
     <nav>
         <div class="nav-inner">
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="research.html">Research</a>
-                <a href="talks.html">Talks</a>
-                <a href="cv.html">CV</a>
-                <a href="teaching.html">Teaching</a>
-            </div>
+            <a href="index.html" class="nav-brand"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html" class="active">Research</a></li>
+                <li><a href="talks.html">Talks</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="teaching.html">Teaching</a></li>
+            </ul>
         </div>
     </nav>
 
     <div class="container">
-        <h1>Research</h1>
 
-        <h2>Papers</h2>
+        <h1 class="page-title">Research</h1>
+        <div class="page-rule"></div>
 
-        <ol class="papers-list">
-            <li>
+        <!-- ── PAPERS ── -->
+        <div class="section-label">Publications & Preprints</div>
+
+        <!-- Paper 1 -->
+        <div class="paper-item">
+            <div class="paper-number">1.</div>
+            <div class="paper-body">
                 <div class="paper-title">On graded rings with homogeneous derivations II</div>
-                <div class="paper-meta">
-                    <span class="status">Submitted</span>
+                <div class="paper-authors">Yassine Ait Mohamed</div>
+                <div>
+                    <span class="badge badge-submitted">Submitted</span>
                 </div>
-                <a href="javascript:void(0)" class="abstract-toggle" onclick="toggleAbstract('abs1')">Abstract</a>
+                <div class="paper-links">
+                    <!-- arXiv link will go here once available -->
+                    <!-- <a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank" class="paper-link">arXiv</a> -->
+                    <!-- PDF link will go here once available -->
+                    <!-- <a href="Documents research/pdf_paper1.pdf" target="_blank" class="paper-link">PDF</a> -->
+                    <button class="abstract-toggle" onclick="toggleAbstract('abs1')">Abstract ↓</button>
+                </div>
                 <div id="abs1" class="abstract">
                     In this work, we study graded rings endowed with homogeneous derivations and investigate how the associated degree function influences the structure of graded ideals and differential extensions. We establish conditions under which the preimage of a graded ideal under a homogeneous derivation remains graded and prove an integrality property for preimages of invariant graded prime ideals. We further obtain graded analogues of classical results on skew polynomial rings, including preservation of graded Noetherianity and graded simplicity under suitable degree-preserving derivations. Finally, we describe homogeneous derivations on graded trivial extensions and characterize their invariant graded ideals.
                 </div>
-            </li>
+            </div>
+        </div>
 
-            <li>
+        <!-- Paper 2 -->
+        <div class="paper-item">
+            <div class="paper-number">2.</div>
+            <div class="paper-body">
                 <div class="paper-title">Generalized homogeneous derivations on graded rings</div>
-                <div class="paper-meta">
-                    <span class="journal">Siberian Mathematical Journal</span> (to appear)<br>
-                    [<a href="Documents research/pdf2.pdf" target="_blank">pdf</a>]
+                <div class="paper-authors">Yassine Ait Mohamed</div>
+                <div class="paper-venue">Siberian Mathematical Journal</div>
+                <div>
+                    <span class="badge badge-toappear">To appear</span>
                 </div>
-                <a href="javascript:void(0)" class="abstract-toggle" onclick="toggleAbstract('abs2')">Abstract</a>
+                <div class="paper-links">
+                    <!-- DOI link will go here once published -->
+                    <!-- <a href="https://doi.org/XXXX" target="_blank" class="paper-link">DOI</a> -->
+                    <!-- <a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank" class="paper-link">arXiv</a> -->
+                    <a href="Documents research/pdf2.pdf" target="_blank" class="paper-link">PDF</a>
+                    <button class="abstract-toggle" onclick="toggleAbstract('abs2')">Abstract ↓</button>
+                </div>
                 <div id="abs2" class="abstract">
                     We introduce a notion of generalized homogeneous derivations on graded rings as a natural extension of the homogeneous derivations defined by Kanunnikov. We then define gr-generalized derivations, which preserve the degrees of homogeneous components. Several significant results originally established for prime rings are extended to the setting of gr-prime rings, and we characterize conditions under which gr-semiprime rings contain nontrivial central graded ideals. In addition, we investigate the algebraic and module-theoretic structures of these maps, establish their functorial properties, and develop categorical frameworks that describe their derivation structures in both ring and module contexts.
                 </div>
-            </li>
+            </div>
+        </div>
 
-            <li>
+        <!-- Paper 3 -->
+        <div class="paper-item">
+            <div class="paper-number">3.</div>
+            <div class="paper-body">
                 <div class="paper-title">On graded rings with homogeneous derivations</div>
-                <div class="paper-meta">
-                    <a href="https://doi.org/10.33044/revuma.4934" target="_blank"><span class="journal">Revista de la Unión Matemática Argentina</span></a><br>
-                    [<a href="Documents research/pdf1.pdf" target="_blank">pdf</a>]
+                <div class="paper-authors">Yassine Ait Mohamed</div>
+                <div class="paper-venue">Revista de la Unión Matemática Argentina</div>
+                <div>
+                    <span class="badge badge-published">Published</span>
                 </div>
-                <a href="javascript:void(0)" class="abstract-toggle" onclick="toggleAbstract('abs3')">Abstract</a>
+                <div class="paper-links">
+                    <a href="https://doi.org/10.33044/revuma.4934" target="_blank" class="paper-link">DOI</a>
+                    <a href="Documents research/pdf1.pdf" target="_blank" class="paper-link">PDF</a>
+                    <button class="abstract-toggle" onclick="toggleAbstract('abs3')">Abstract ↓</button>
+                </div>
                 <div id="abs3" class="abstract">
                     We establish results related to homogeneous derivations, a concept introduced by Kanunnikov (2018). First, we prove the existence of a non-trivial family of derivations that are not homogeneous on graded rings. Furthermore, based on homogeneous derivations, we extend certain existing significant results in the context of prime (resp. semiprime) rings to gr-prime (resp. gr-semiprime) rings, such as Posner's and Herstein's theorems.
                 </div>
-            </li>
-        </ol>
-
-        <h2>Master's Thesis — Sidi Mohamed Ben Abdellah University, 2022</h2>
-        <div class="thesis-item">
-            <span class="paper-title">Divisors in Algebraic Geometry, Central Simple Algebras and Severi-Brauer Varieties</span><br>
-            <span style="margin-left:0;">[<a href="Documents research/master_thesis.pdf" target="_blank">pdf</a>]</span>
+            </div>
         </div>
 
-        <h2>Notes</h2>
-        <div class="note-item">• Note on Central Simple Algebras and the Brauer Group &nbsp;[<a href="Documents research/On_Simple_Algebras.pdf" target="_blank">pdf</a>]</div>
-        <div class="note-item">• Note on Sheaf Theory &nbsp;[<a href="Documents research/Note_on_sheaf_theory.pdf" target="_blank">pdf</a>]</div>
+        <!-- ── THESIS ── -->
+        <div class="section-label">Master's Thesis</div>
+
+        <div class="thesis-item">
+            <div class="thesis-title">Divisors in Algebraic Geometry, Central Simple Algebras and Severi–Brauer Varieties</div>
+            <div class="thesis-meta">
+                Sidi Mohamed Ben Abdellah University, 2022 &nbsp;·&nbsp;
+                <a href="Documents research/master_thesis.pdf" target="_blank" style="color:var(--accent); text-decoration:none; border-bottom:1px solid var(--border); font-size:0.9rem;">PDF</a>
+            </div>
+        </div>
+
+        <!-- ── NOTES ── -->
+        <div class="section-label">Expository Notes</div>
+
+        <div class="note-item">
+            <span class="note-dot">—</span>
+            <span class="note-title">
+                Note on Central Simple Algebras and the Brauer Group &nbsp;
+                <a href="Documents research/On_Simple_Algebras.pdf" target="_blank" style="color:var(--accent); text-decoration:none; font-size:0.88rem; border-bottom:1px solid var(--border);">PDF</a>
+            </span>
+        </div>
+
+        <div class="note-item">
+            <span class="note-dot">—</span>
+            <span class="note-title">
+                Note on Sheaf Theory &nbsp;
+                <a href="Documents research/Note_on_sheaf_theory.pdf" target="_blank" style="color:var(--accent); text-decoration:none; font-size:0.88rem; border-bottom:1px solid var(--border);">PDF</a>
+            </span>
+        </div>
+
     </div>
+
+   
+
 </body>
 </html>
