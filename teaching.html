@@ -4,23 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teaching - Yassine Ait Mohamed</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --bg: #F9F6F2;
-            --bg2: #F2EDE6;
-            --primary: #2c3e50;
-            --secondary: #34495e;
-            --accent: #D97757;
-            --text: #2c3e50;
-            --text2: #7f8c8d;
-            --border: rgba(28,25,23,0.10);
+            --bg:          #F9F6F2;
+            --bg2:         #F2EDE6;
+            --bg-nav:      rgba(249, 246, 242, 0.90);
+            --primary:     #1C1917;
+            --text:        #1C1917;
+            --text2:       #78716C;
+            --accent:      #D97757;
+            --accent-deep: #C2622D;
+            --border:      rgba(28, 25, 23, 0.10);
+            --border-soft: rgba(28, 25, 23, 0.05);
+            --shadow-sm:   0 1px 4px rgba(28, 25, 23, 0.06);
         }
 
         body {
-            font-family: 'Computer Modern Serif', 'Latin Modern Roman', 'CMU Serif', Georgia, serif;
+            font-family: 'EB Garamond', Georgia, serif;
             line-height: 1.6;
             color: var(--text);
             background: var(--bg);
@@ -32,18 +39,18 @@
             font-size: 17px;
         }
 
+        /* ── NAV ── */
         nav {
             position: fixed;
-            top: 0;
-            left: 0;
+            top: 0; left: 0;
             width: 100%;
             z-index: 100;
             padding: 1rem 2rem;
-            background: rgba(249, 246, 242, 0.90);
+            background: var(--bg-nav);
             border-bottom: 1px solid var(--border);
-            box-shadow: 0 2px 4px rgba(28,25,23,0.05);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
+            box-shadow: var(--shadow-sm);
         }
         .nav-inner {
             max-width: 800px;
@@ -52,19 +59,16 @@
             justify-content: space-between;
             align-items: center;
         }
-        .nav-logo {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: var(--primary);
-        }
         .nav-links { display: flex; gap: 2rem; list-style: none; }
         .nav-links a {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 400;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
             text-decoration: none;
             color: var(--text2);
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.3s;
-            letter-spacing: 0.5px;
+            transition: color 0.25s;
             position: relative;
             padding-bottom: 2px;
         }
@@ -79,60 +83,108 @@
         .nav-links a:hover { color: var(--accent); }
         .nav-links a:hover::after { width: 100%; }
 
+        /* ── CONTAINER ── */
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 5rem 2rem 3rem;
+            padding: 5rem 2rem 4rem;
         }
 
         h1 {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2.4rem;
+            font-weight: 400;
+            margin-bottom: 1.8rem;
             color: var(--primary);
+            letter-spacing: -0.2px;
         }
 
         h2 {
-            font-size: 1.3rem;
-            margin-top: 2rem;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--text2);
+            margin-top: 2.5rem;
             margin-bottom: 1rem;
-            color: var(--primary);
-            font-weight: bold;
         }
 
-        a { color: var(--accent); }
-        a:hover { text-decoration: underline; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; color: var(--accent-deep); }
 
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
+        /* ── TEACHING LISTS ── */
+        ul { list-style: none; padding-left: 0; }
+
         ul li {
-            margin-bottom: 0.6rem;
+            font-family: 'EB Garamond', Georgia, serif;
+            font-size: 1.02rem;
+            margin-bottom: 0.55rem;
+            line-height: 1.6;
         }
+
         .date {
-            font-weight: bold;
-            color: var(--primary);
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 1.3px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-right: 0.3rem;
         }
+
         .institution {
+            font-style: italic;
             color: var(--text2);
         }
 
-        .materials-list {
-            list-style: disc;
-            padding-left: 2rem;
-        }
-        .materials-list li {
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-            color: var(--text2);
+        /* ── MATERIALS GRID ── */
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 0.6rem;
+            margin-top: 0.5rem;
         }
 
+        .material-card {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.55rem 0.85rem;
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            transition: border-color 0.2s, background 0.2s;
+            text-decoration: none;
+        }
+
+        .material-card:hover {
+            border-color: rgba(217, 119, 87, 0.35);
+            background: rgba(217, 119, 87, 0.06);
+            text-decoration: none;
+        }
+
+        .material-card .icon {
+            font-size: 0.75rem;
+            color: var(--accent);
+            opacity: 0.7;
+            flex-shrink: 0;
+        }
+
+        .material-card .label {
+            font-family: 'EB Garamond', Georgia, serif;
+            font-size: 0.92rem;
+            color: var(--primary);
+            line-height: 1.35;
+        }
+
+        /* ── RESPONSIVE ── */
         @media (max-width: 768px) {
             .nav-inner { flex-direction: column; gap: 0.75rem; }
             .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
             .container { padding: 5rem 1rem 2rem; }
-            h1 { font-size: 1.6rem; }
+            h1 { font-size: 1.8rem; }
+            .materials-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -152,50 +204,109 @@
     <div class="container">
         <h1>Teaching</h1>
 
-        <h2>University  of Sherbrooke</h2>
+        <h2>Université de Sherbrooke</h2>
         <ul>
-            <li><span class="date">Hiver 2026:</span> <a href="https://www.usherbrooke.ca/admission/fiches-cours/MAT129/" target="_blank">Analyse I (MAT129)</a></li>
-            <li><span class="date">Automne 2025:</span> <a href="https://www.usherbrooke.ca/admission/fiches-cours/MAT141/" target="_blank">Éléments d'algèbre (MAT141)</a></li>
-            <li><span class="date">Automne 2025:</span> <a href="https://www.usherbrooke.ca/admission/fiches-cours/MAT199/" target="_blank">Algèbre linéaire appliquée en informatique (MAT199)</a></li>
-            <li><span class="date">Hiver 2025:</span> <a href="https://www.usherbrooke.ca/admission/fiches-cours/MAT253/" target="_blank">Algèbre linéaire (MAT253)</a></li>
-            <li><span class="date">Automne 2024:</span> <a href="https://www.usherbrooke.ca/admission/fiches-cours/MAT194/" target="_blank">Calcul différentiel et intégral I (MAT194)</a></li>
-            <li><span class="date">Automne 2024:</span> Centre d'aide en mathématiques</li>
+            <li><span class="date">Hiver 2026</span> <a href="https://www.usherbrooke.ca/admission/fiches-cours/MAT129/" target="_blank">Analyse I (MAT129)</a></li>
+            <li><span class="date">Automne 2025</span> <a href="https://www.usherbrooke.ca/admission/fiches-cours/MAT141/" target="_blank">Éléments d'algèbre (MAT141)</a></li>
+            <li><span class="date">Automne 2025</span> <a href="https://www.usherbrooke.ca/admission/fiches-cours/MAT199/" target="_blank">Algèbre linéaire appliquée en informatique (MAT199)</a></li>
+            <li><span class="date">Hiver 2025</span> <a href="https://www.usherbrooke.ca/admission/fiches-cours/MAT253/" target="_blank">Algèbre linéaire (MAT253)</a></li>
+            <li><span class="date">Automne 2024</span> <a href="https://www.usherbrooke.ca/admission/fiches-cours/MAT194/" target="_blank">Calcul différentiel et intégral I (MAT194)</a></li>
+            <li><span class="date">Automne 2024</span> Centre d'aide en mathématiques</li>
+        </ul>
 
-           </ul>
-
-          <h2>Private School</h2>
-         <ul>
-  <li><span class="date">September 2022 – November 2023:</span> Mini School Center, Fez, Morocco</li>
-  <li><span class="date">September 2018 – March 2019:</span> Olympia Centre Zarhounia, Meknes, Morocco</li>
-  <li><span class="date">September 2017 – March 2018:</span> Maxcence Centre, Meknes, Morocco</li>
-     </ul>       
+        <h2>Private School</h2>
+        <ul>
+            <li><span class="date">Sep 2022 – Nov 2023</span> <span class="institution">Mini School Center, Fez, Morocco</span></li>
+            <li><span class="date">Sep 2018 – Mar 2019</span> <span class="institution">Olympia Centre Zarhounia, Meknes, Morocco</span></li>
+            <li><span class="date">Sep 2017 – Mar 2018</span> <span class="institution">Maxcence Centre, Meknes, Morocco</span></li>
+        </ul>
 
         <h2>Mathematics Tutor</h2>
         <ul>
-            <li><span class="date">September 2022 – Present:</span> Algebra, Real and Complex Analysis, and Topology [<a href="https://www.voscours.fr/professeur/yassine-ait-mohamed.htm" target="_blank">View profile on VosCours</a>]</li>
+            <li>
+                <span class="date">Sep 2022 – Present</span>
+                Algebra, Real and Complex Analysis, and Topology
+                [<a href="https://www.voscours.fr/professeur/yassine-ait-mohamed.htm" target="_blank">View profile on VosCours</a>]
+            </li>
         </ul>
 
         <h2>Teaching Materials</h2>
-        <ul class="materials-list">
-            <li><a href="Documents teach/Guide MAT141 25.pdf" target="_blank">Guide (La rédaction mathématique)</a></li>
-            <li><a href="Documents teach/TD_Algebre_1.pdf" target="_blank">TD Algèbre 1</a></li>
-            <li><a href="Documents teach/redu.pdf" target="_blank">Note sur réduction des endomorphismes</a></li>
-            <li><a href="Documents teach/Reduction_des_endomorphismes__exercices.pdf" target="_blank">Réduction des endomorphismes (Exercices)</a></li>
-            <li><a href="Documents teach/Test4.pdf" target="_blank">Test 4</a></li>
-            <li><a href="Documents teach/anneaux.pdf" target="_blank">Anneaux (Exercices)</a></li>
-            <li><a href="Documents teach/SMA.pdf" target="_blank">Résumé SMA (par Prof. Elamdaoui)</a></li>
-            <li><a href="Documents teach/ALG31.pdf" target="_blank">Algèbre linéaire 1 (Prof. Abdellatif Bentaleb, Université de Mouly Ismail, Meknes)</a></li>
-            <li><a href="Documents teach/ALG32.pdf" target="_blank">Algèbre linéaire 2 (Prof. Abdellatif Bentaleb, Université de Mouly Ismail, Meknes)</a></li>
-            <li><a href="Documents teach/Devoir1_Mesures_Integration.pdf" target="_blank">Mesures et intégration (Devoir 1)</a></li>
-            <li><a href="Documents teach/nmreelles.pdf" target="_blank">Nombres réels (Exercices)</a></li>
-            <li><a href="Documents teach/Exercices__Analyse_II.pdf" target="_blank">Exercices: Analyse II</a></li>
-            <li><a href="Documents teach/topologie.pdf" target="_blank">Topologie générale (Exercices)</a></li>
-            <li><a href="Documents teach/Test_1.pdf" target="_blank">Test 1</a></li>
-            <li><a href="Documents teach/Devoir_1 (1).pdf" target="_blank">Test 2</a></li>
-            <li><a href="Documents teach/Devoir3.pdf" target="_blank">Devoir 3</a></li>
-            <li><a href="Documents teach/integrales.pdf" target="_blank">Intégrales à paramètres (Exercices)</a></li>
-            <li><a href="Documents teach/Devoir1_Suites_Reelles.pdf" target="_blank">Suites réelles (Devoir 1)</a></li>
-        </ul>
+        <div class="materials-grid">
+
+            <a class="material-card" href="Documents teach/Guide MAT141 25.pdf" target="_blank">
+                <span class="icon">↗</span>
+                <span class="label">Guide — La rédaction mathématique</span>
+            </a>
+            <a class="material-card" href="Documents teach/TD_Algebre_1.pdf" target="_blank">
+                <span class="icon">↗</span>
+                <span class="label">TD Algèbre 1</span>
+            </a>
+            <a class="material-card" href="Documents teach/redu.pdf" target="_blank">
+                <span class="icon">↗</span>
+                <span class="label">Réduction des endomorphismes</span>
+            </a>
+            <a class="material-card" href="Documents teach/Reduction_des_endomorphismes__exercices.pdf" target="_blank">
+                <span class="icon">↗</span>
+                <span class="label">Réduction des endomorphismes — Exercices</span>
+            </a>
+            <a class="material-card" href="Documents teach/Test4.pdf" target="_blank">
+                <span class="icon">↗</span>
+                <span class="label">Test 4</span>
+            </a>
+            <a class="material-card" href="Documents teach/anneaux.pdf" target="_blank">
+                <span class="icon">↗</span>
+                <span class="label">Anneaux — Exercices</span>
+            </a>
+            <a class="material-card" href="Documents teach/SMA.pdf" target="_blank">
+                <span class="icon">↗</span>
+                <span class="label">Résumé SMA (Prof. Elamdaoui)</span>
+            </a>
+            <a class="material-card" href="Documents teach/ALG31.pdf" target="_blank">
+                <span class="icon">↗</span>
+                <span class="label">Algèbre linéaire 1 (Prof. Bentaleb, Moulay Ismail)</span>
+            </a>
+            <a class="material-card" href="Documents teach/ALG32.pdf" target="_blank">
+                <span class="icon">↗</span>
+                <span class="label">Algèbre linéaire 2 (Prof. Bentaleb, Moulay Ismail)</span>
+            </a>
+            <a class="material-card" href="Documents teach/Devoir1_Mesures_Integration.pdf" target="_blank">
+                <span class="icon">↗</span>
+                <span class="label">Mesures et intégration — Devoir 1</span>
+            </a>
+            <a class="material-card" href="Documents teach/nmreelles.pdf" target="_blank">
+                <span class="icon">↗</span>
+                <span class="label">Nombres réels — Exercices</span>
+            </a>
+            <a class="material-card" href="Documents teach/Exercices__Analyse_II.pdf" target="_blank">
+                <span class="icon">↗</span>
+                <span class="label">Exercices — Analyse II</span>
+            </a>
+            <a class="material-card" href="Documents teach/topologie.pdf" target="_blank">
+                <span class="icon">↗</span>
+                <span class="label">Topologie générale — Exercices</span>
+            </a>
+            <a class="material-card" href="Documents teach/Test_1.pdf" target="_blank">
+                <span class="icon">↗</span>
+                <span class="label">Test 1</span>
+            </a>
+            <a class="material-card" href="Documents teach/Devoir_1 (1).pdf" target="_blank">
+                <span class="icon">↗</span>
+                <span class="label">Test 2</span>
+            </a>
+            <a class="material-card" href="Documents teach/Devoir3.pdf" target="_blank">
+                <span class="icon">↗</span>
+                <span class="label">Devoir 3</span>
+            </a>
+            <a class="material-card" href="Documents teach/integrales.pdf" target="_blank">
+                <span class="icon">↗</span>
+                <span class="label">Intégrales à paramètres — Exercices</span>
+            </a>
+            <a class="material-card" href="Documents teach/Devoir1_Suites_Reelles.pdf" target="_blank">
+                <span class="icon">↗</span>
+                <span class="label">Suites réelles — Devoir 1</span>
+            </a>
+
+        </div>
     </div>
 </body>
 </html>
