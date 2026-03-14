@@ -32,34 +32,30 @@
       "knowsAbout": ["Differential Geometry","Poisson Geometry","Shifted Symplectic Geometry","Algebraic Geometry","Lie Groups","Topological Quantum Field Theories"]
     }
     </script>
+
+    <!-- Nouvelles polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* ── CLAUDE.AI THEME PALETTE ── */
+        /* ── PALETTE ORIGINALE ── */
         :root {
-            /* Backgrounds — warm layered cream, exact Claude.ai spirit */
-            --bg:          #F9F6F2;   /* page canvas — warm off-white */
-            --bg2:         #F2EDE6;   /* slightly deeper warm layer   */
+            --bg:          #F9F6F2;
+            --bg2:         #F2EDE6;
             --bg-nav:      rgba(249, 246, 242, 0.90);
-
-            /* Text */
-            --primary:     #1C1917;   /* near-black warm ink           */
-            --secondary:   #44403C;   /* mid-tone warm brown           */
+            --primary:     #1C1917;
+            --secondary:   #44403C;
             --text:        #1C1917;
-            --text2:       #78716C;   /* muted warm grey               */
-
-            /* Accent — Claude.ai orange-amber */
-            --accent:      #D97757;   /* characteristic Claude orange  */
-            --accent-deep: #C2622D;   /* deeper hover state            */
+            --text2:       #78716C;
+            --accent:      #D97757;
+            --accent-deep: #C2622D;
             --accent-glow: rgba(217, 119, 87, 0.12);
-
-            /* Borders */
             --border:      rgba(28, 25, 23, 0.10);
             --border-soft: rgba(28, 25, 23, 0.06);
-
-            /* Shadow */
             --shadow-sm:   0 1px 4px rgba(28, 25, 23, 0.06);
             --shadow-md:   0 4px 16px rgba(28, 25, 23, 0.08);
         }
@@ -67,12 +63,10 @@
         html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Computer Modern Serif', 'CMU Serif', Georgia, serif;
+            font-family: 'EB Garamond', Georgia, serif;
             line-height: 1.6;
             color: var(--text);
             background: var(--bg);
-
-            /* Subtle warm grain texture — Claude.ai signature */
             background-image:
                 radial-gradient(ellipse 80% 60% at 70% 20%, rgba(217,119,87,0.055) 0%, transparent 60%),
                 radial-gradient(ellipse 60% 50% at 20% 80%, rgba(194,98,45,0.04)  0%, transparent 55%),
@@ -80,9 +74,7 @@
             background-attachment: fixed;
         }
 
-        /* ────────────────────────────
-           NAVIGATION
-        ──────────────────────────── */
+        /* ── NAVIGATION (structure originale) ── */
         nav {
             position: fixed;
             top: 0;
@@ -104,13 +96,6 @@
             align-items: center;
         }
 
-        .nav-logo {
-            font-family: 'Computer Modern Serif', 'CMU Serif', Georgia, serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
         .nav-links {
             display: flex;
             gap: 2rem;
@@ -118,12 +103,14 @@
         }
 
         .nav-links a {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 400;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
             text-decoration: none;
             color: var(--text2);
-            font-size: 0.9rem;
-            font-weight: 500;
             transition: color 0.25s;
-            letter-spacing: 0.5px;
             position: relative;
             padding-bottom: 2px;
         }
@@ -141,9 +128,7 @@
         .nav-links a:hover { color: var(--accent); }
         .nav-links a:hover::after { width: 100%; }
 
-        /* ────────────────────────────
-           HERO
-        ──────────────────────────── */
+        /* ── HERO (structure originale) ── */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -161,21 +146,23 @@
             align-items: center;
         }
 
-        /* ── Text ── */
+        /* h1 : Cormorant Garamond à la place de Computer Modern */
         .hero-text h1 {
-            font-family: 'Computer Modern Serif', 'CMU Serif', Georgia, serif;
+            font-family: 'Cormorant Garamond', Georgia, serif;
             font-size: 3.2rem;
-            font-weight: 700;
+            font-weight: 400;
             line-height: 1.2;
             margin-bottom: 1.5rem;
             color: var(--primary);
+            letter-spacing: -0.2px;
         }
 
         .hero-text .desc {
+            font-family: 'EB Garamond', Georgia, serif;
             color: var(--text2);
-            font-size: 1.05rem;
+            font-size: 1.08rem;
             margin-bottom: 1.5rem;
-            line-height: 1.7;
+            line-height: 1.75;
         }
 
         .hero-text .desc a {
@@ -191,22 +178,28 @@
             border-color: var(--accent-deep);
         }
 
+        /* h2 : Josefin Sans uppercase à la place de Computer Modern */
         .hero-text h2 {
-            font-family: 'Computer Modern Serif', 'CMU Serif', Georgia, serif;
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--text2);
+            margin-top: 1.8rem;
+            margin-bottom: 0.6rem;
         }
 
         .hero-text .interest-text {
+            font-family: 'EB Garamond', Georgia, serif;
+            font-style: italic;
             color: var(--text2);
             font-size: 1.05rem;
             line-height: 1.7;
         }
 
         .hero-text .contact-text {
+            font-family: 'EB Garamond', Georgia, serif;
             color: var(--text2);
             font-size: 1.05rem;
             line-height: 1.7;
@@ -225,7 +218,7 @@
             border-color: var(--accent-deep);
         }
 
-        /* ── Photo ── */
+        /* ── Photo (structure originale) ── */
         .hero-photo {
             display: flex;
             justify-content: center;
@@ -250,9 +243,7 @@
             object-fit: cover;
         }
 
-        /* ────────────────────────────
-           RESPONSIVE
-        ──────────────────────────── */
+        /* ── RESPONSIVE ── */
         @media (max-width: 768px) {
             .hero-content {
                 grid-template-columns: 1fr;
