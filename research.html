@@ -31,6 +31,8 @@
             --border-soft:  rgba(30, 43, 58, 0.05);
             --shadow-sm:    0 1px 4px rgba(30, 43, 58, 0.06);
             --green:        #4A7040;
+            --cyan:         #2A9D8F;          /* ← couleur journal */
+            --cyan-hover:   #1E7268;
         }
 
         html { scroll-behavior: smooth; }
@@ -208,6 +210,20 @@
             margin-bottom: 0.45rem;
         }
 
+        /* ── JOURNAL LINK — cyan ── */
+        .journal-link {
+            color: var(--cyan) !important;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(42, 157, 143, 0.35);
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .journal-link:hover {
+            color: var(--cyan-hover) !important;
+            border-color: var(--cyan-hover);
+        }
+
         /* Badges de statut */
         .badge {
             display: inline-block;
@@ -275,15 +291,16 @@
             border-color: var(--accent);
         }
 
+        /* ── ABSTRACT — Courier ── */
         .abstract {
             display: none;
             margin-top: 0.9rem;
-            font-family: 'Source Serif 4', Georgia, serif;
-            font-size: 0.96rem;
-            font-weight: 300;
-            font-style: italic;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.88rem;
+            font-weight: 400;
+            font-style: normal;
             color: var(--text2);
-            line-height: 1.78;
+            line-height: 1.80;
             padding-left: 1rem;
             border-left: 2px solid var(--accent-bar);
         }
@@ -400,14 +417,12 @@
         <h1 class="page-title">Research</h1>
         <div class="page-rule"></div>
 
+        <p class="section-label">Research Interests</p>
+        <p class="interest-text">
+            Derivations theory, algebraic geometry, Lie groups, topological quantum field theories,
+            shifted symplectic geometry, Poisson geometry.
+        </p>
 
- <p class="section-label">Research Interests</p>
-                <p class="interest-text">
-                    Derivations theory, algebraic geometry, Lie groups, topological quantum field theories,
-                    shifted symplectic geometry, Poisson geometry.
-                </p>
-
-        
         <!-- ── PAPERS ── -->
         <div class="section-label">Publications</div>
 
@@ -421,10 +436,6 @@
                     <span class="badge badge-submitted">Submitted</span>
                 </div>
                 <div class="paper-links">
-                    <!-- arXiv link will go here once available -->
-                    <!-- <a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank" class="paper-link">arXiv</a> -->
-                    <!-- PDF link will go here once available -->
-                    <!-- <a href="Documents research/pdf_paper1.pdf" target="_blank" class="paper-link">PDF</a> -->
                     <button class="abstract-toggle" onclick="toggleAbstract('abs1')">Abstract ↓</button>
                 </div>
                 <div id="abs1" class="abstract">
@@ -446,13 +457,16 @@ gr-Noetherian and $M$ is Noetherian as a graded $R$-module.
                 </div>
             </div>
         </div>
-<!-- Paper 2 -->
+
+        <!-- Paper 2 -->
         <div class="paper-item">
             <div class="paper-number">2.</div>
             <div class="paper-body">
                 <div class="paper-title">Generalized homogeneous derivations on graded rings</div>
                 <div class="paper-authors">Yassine Ait Mohamed</div>
-                <div class="paper-venue"><a href="https://www.springer.com/journal/11202" target="_blank" rel="noopener" style="color: var(--primary); text-decoration: none; font-weight: 500; border-bottom: 1px solid var(--rule); transition: border-color 0.2s, color 0.2s;">Siberian Mathematical Journal</a></div>
+                <div class="paper-venue">
+                    <a href="https://www.springer.com/journal/11202" target="_blank" rel="noopener" class="journal-link">Siberian Mathematical Journal</a>
+                </div>
                 <div>
                     <span class="badge badge-toappear">To appear</span>
                 </div>
@@ -464,13 +478,16 @@ gr-Noetherian and $M$ is Noetherian as a graded $R$-module.
                 </div>
             </div>
         </div>
-     <!-- Paper 3 -->
+
+        <!-- Paper 3 -->
         <div class="paper-item">
             <div class="paper-number">3.</div>
             <div class="paper-body">
                 <div class="paper-title">On graded rings with homogeneous derivations</div>
                 <div class="paper-authors">Yassine Ait Mohamed</div>
-                <div class="paper-venue"><a href="https://doi.org/10.33044/revuma.4934" target="_blank" rel="noopener" style="color: var(--primary); text-decoration: none; font-weight: 500; border-bottom: 1px solid var(--rule); transition: border-color 0.2s, color 0.2s;">Revista de la Unión Matemática Argentina</a></div>
+                <div class="paper-venue">
+                    <a href="https://doi.org/10.33044/revuma.4934" target="_blank" rel="noopener" class="journal-link">Revista de la Unión Matemática Argentina</a>
+                </div>
                 <div class="paper-links">
                     <button class="abstract-toggle" onclick="toggleAbstract('abs3')">Abstract ↓</button>
                 </div>
@@ -511,8 +528,6 @@ gr-Noetherian and $M$ is Noetherian as a graded $R$-module.
         </div>
 
     </div>
-
-   
 
 </body>
 </html>
