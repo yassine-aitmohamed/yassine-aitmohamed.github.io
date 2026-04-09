@@ -29,6 +29,8 @@
             --border:       rgba(30, 43, 58, 0.09);
             --border-soft:  rgba(30, 43, 58, 0.05);
             --shadow-sm:    0 1px 4px rgba(30, 43, 58, 0.06);
+            --cyan:         #2A9D8F;
+            --cyan-hover:   #1E7268;
         }
 
         html { scroll-behavior: smooth; }
@@ -43,9 +45,7 @@
 
         /* ── NAV ── */
         nav {
-            position: fixed;
-            top: 0; width: 100%;
-            z-index: 100;
+            position: fixed; top: 0; width: 100%; z-index: 100;
             padding: 0.95rem 2.5rem;
             background: var(--bg-nav);
             border-bottom: 1px solid var(--rule);
@@ -53,47 +53,25 @@
             -webkit-backdrop-filter: blur(16px);
             box-shadow: var(--shadow-sm);
         }
-
         .nav-inner {
-            max-width: 1120px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            max-width: 1120px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
         }
-
         .nav-brand {
-            font-family: 'Lora', serif;
-            font-size: 1rem;
-            font-weight: 500;
-            color: var(--primary);
-            text-decoration: none;
+            font-family: 'Lora', serif; font-size: 1rem; font-weight: 500;
+            color: var(--primary); text-decoration: none;
         }
-
         .nav-links { display: flex; gap: 2.2rem; list-style: none; }
-
         .nav-links a {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.70rem;
-            font-weight: 400;
-            letter-spacing: 1.6px;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: var(--text2);
-            transition: color 0.22s;
-            position: relative;
-            padding-bottom: 3px;
+            font-family: 'DM Sans', sans-serif; font-size: 0.70rem; font-weight: 400;
+            letter-spacing: 1.6px; text-transform: uppercase; text-decoration: none;
+            color: var(--text2); transition: color 0.22s;
+            position: relative; padding-bottom: 3px;
         }
-
         .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0; left: 0;
-            height: 1px; width: 0;
-            background: var(--accent);
-            transition: width 0.22s ease;
+            content: ''; position: absolute; bottom: 0; left: 0;
+            height: 1px; width: 0; background: var(--accent); transition: width 0.22s ease;
         }
-
         .nav-links a:hover { color: var(--primary); }
         .nav-links a:hover::after { width: 100%; }
         .nav-links a.active { color: var(--primary); }
@@ -101,12 +79,10 @@
 
         /* ── CONTAINER ── */
         .container {
-            max-width: 780px;
-            margin: 0 auto;
+            max-width: 780px; margin: 0 auto;
             padding: 6.5rem 2rem 5rem;
             animation: fadeUp 0.65s ease both;
         }
-
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(16px); }
             to   { opacity: 1; transform: translateY(0); }
@@ -114,148 +90,103 @@
 
         /* ── PAGE TITLE ── */
         .page-title {
-            font-family: 'Lora', serif;
-            font-size: 2.6rem;
-            font-weight: 500;
-            color: var(--primary);
-            letter-spacing: -0.3px;
-            margin-bottom: 0.25rem;
+            font-family: 'Lora', serif; font-size: 2.6rem; font-weight: 500;
+            color: var(--primary); letter-spacing: -0.3px; margin-bottom: 0.25rem;
         }
-
         .page-rule {
-            width: 40px;
-            height: 1px;
-            background: var(--accent);
-            opacity: 0.7;
-            margin: 1rem 0 2.5rem;
+            width: 40px; height: 1px; background: var(--accent);
+            opacity: 0.7; margin: 1rem 0 2.5rem;
         }
 
         /* ── SECTION LABEL ── */
         .section-label {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.66rem;
-            font-weight: 500;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--text3);
-            margin-bottom: 1.4rem;
-            margin-top: 3rem;
-            display: flex;
-            align-items: center;
-            gap: 0.9rem;
+            font-family: 'DM Sans', sans-serif; font-size: 0.66rem; font-weight: 500;
+            letter-spacing: 2px; text-transform: uppercase; color: var(--text3);
+            margin-bottom: 1.4rem; margin-top: 3rem;
+            display: flex; align-items: center; gap: 0.9rem;
         }
-
         .section-label::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: var(--border);
+            content: ''; flex: 1; height: 1px; background: var(--border);
         }
 
         /* ── CV ENTRY ── */
         .cv-entry {
-            display: grid;
-            grid-template-columns: 100px 1fr;
-            gap: 0 1.4rem;
-            padding: 1rem 0;
+            display: grid; grid-template-columns: 100px 1fr;
+            gap: 0 1.4rem; padding: 1rem 0;
             border-bottom: 1px solid var(--border-soft);
             align-items: start;
         }
-
-        .cv-entry:last-child {
-            border-bottom: none;
-        }
+        .cv-entry:last-child { border-bottom: none; }
 
         .cv-date {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.63rem;
-            font-weight: 500;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-            color: var(--accent);
-            padding-top: 0.22rem;
-            line-height: 1.4;
-            white-space: nowrap;
+            font-family: 'DM Sans', sans-serif; font-size: 0.63rem; font-weight: 500;
+            letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent);
+            padding-top: 0.22rem; line-height: 1.4; white-space: nowrap;
         }
 
-        .cv-body {}
-
         .cv-title {
-            font-family: 'Lora', serif;
-            font-size: 1.03rem;
-            font-weight: 500;
-            color: var(--primary);
-            line-height: 1.4;
-            margin-bottom: 0.18rem;
+            font-family: 'Lora', serif; font-size: 1.03rem; font-weight: 500;
+            color: var(--primary); line-height: 1.4; margin-bottom: 0.18rem;
         }
 
         .cv-detail {
-            font-family: 'Source Serif 4', Georgia, serif;
-            font-size: 0.91rem;
-            font-weight: 300;
-            font-style: italic;
-            color: var(--text2);
-            line-height: 1.5;
+            font-family: 'Source Serif 4', Georgia, serif; font-size: 0.91rem;
+            font-weight: 300; font-style: italic; color: var(--text2); line-height: 1.5;
+        }
+
+        /* ── COLORED LINK (same as journal-link in research.html) ── */
+        .cv-link {
+            color: var(--cyan);
+            text-decoration: none;
+            font-weight: 500;
+            font-style: normal;
+            border-bottom: 1px solid rgba(42, 157, 143, 0.35);
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .cv-link:hover {
+            color: var(--cyan-hover);
+            border-color: var(--cyan-hover);
         }
 
         /* ── DOWNLOAD BUTTON ── */
         .download-wrap {
-            margin-top: 3rem;
-            display: flex;
-            align-items: center;
-            gap: 1.2rem;
+            margin-top: 3rem; display: flex; align-items: center; gap: 1.2rem;
         }
-
         .pdf-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.55rem;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.68rem;
-            font-weight: 500;
-            letter-spacing: 1.6px;
-            text-transform: uppercase;
-            color: var(--primary);
-            text-decoration: none;
-            border: 1px solid var(--rule);
-            padding: 0.6rem 1.3rem;
-            border-radius: 2px;
-            background: transparent;
+            display: inline-flex; align-items: center; gap: 0.55rem;
+            font-family: 'DM Sans', sans-serif; font-size: 0.68rem; font-weight: 500;
+            letter-spacing: 1.6px; text-transform: uppercase; color: var(--primary);
+            text-decoration: none; border: 1px solid var(--rule); padding: 0.6rem 1.3rem;
+            border-radius: 2px; background: transparent;
             transition: background 0.2s, border-color 0.2s, color 0.2s;
         }
-
-        .pdf-btn i {
-            font-size: 0.72rem;
-            color: var(--accent);
-        }
-
+        .pdf-btn i { font-size: 0.72rem; color: var(--accent); }
         .pdf-btn:hover {
             background: var(--accent-light);
-            border-color: rgba(139, 111, 71, 0.35);
-            color: var(--accent-deep);
+            border-color: rgba(139, 111, 71, 0.35); color: var(--accent-deep);
         }
-
         .download-note {
-            font-family: 'Source Serif 4', Georgia, serif;
-            font-size: 0.88rem;
-            font-weight: 300;
-            font-style: italic;
-            color: var(--text3);
+            font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem;
+            font-weight: 300; font-style: italic; color: var(--text3);
         }
 
         /* ── FOOTER ── */
         .page-footer {
-            text-align: center;
-            padding: 2rem 1.5rem 2.5rem;
-            border-top: 1px solid var(--border-soft);
-            margin-top: 4rem;
+            text-align: center; padding: 2rem 1.5rem 2.5rem;
+            border-top: 1px solid var(--border-soft); margin-top: 4rem;
         }
-
-        .footer-copy {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.67rem;
-            letter-spacing: 0.8px;
-            color: var(--text3);
+        .footer-quran {
+            font-family: 'Amiri', 'Traditional Arabic', Georgia, serif;
+            direction: rtl; font-size: 1.45rem; color: var(--accent);
+            line-height: 2; opacity: 0.9; margin-bottom: 0.3rem;
+        }
+        .footer-ref {
+            font-family: 'Amiri', 'Traditional Arabic', Georgia, serif;
+            direction: rtl; font-size: 0.85rem; color: var(--text3);
+        }
+        .footer-divider {
+            font-family: 'DM Sans', sans-serif; color: var(--border);
+            font-size: 0.9rem; letter-spacing: 4px; margin: 0.9rem 0;
         }
 
         /* ── RESPONSIVE ── */
@@ -272,70 +203,78 @@
 </head>
 <body>
 
-    <nav>
-        <div class="nav-inner">
-            <a href="index.html" class="nav-brand"></a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="talks.html">Talks</a></li>
-                <li><a href="cv.html" class="active">CV</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container">
-
-        <h1 class="page-title">Curriculum Vitæ</h1>
-        <div class="page-rule"></div>
-
-        <!-- ── EDUCATION ── -->
-        <div class="section-label">Education</div>
-
-        <div class="cv-entry">
-            <div class="cv-date">2024 – Present</div>
-            <div class="cv-body">
-                <div class="cv-title">PhD in Mathematics</div>
-                <div class="cv-detail">University of Sherbrooke, Canada</div>
-            </div>
-        </div>
-
-        <div class="cv-entry">
-            <div class="cv-date">2022 – 2023</div>
-            <div class="cv-body">
-                <div class="cv-title">First year of Doctoral program in Mathematics</div>
-                <div class="cv-detail">University of Sidi Mohamed Ben Abdellah, Morocco</div>
-            </div>
-        </div>
-
-        <div class="cv-entry">
-            <div class="cv-date">2020 – 2022</div>
-            <div class="cv-body">
-                <div class="cv-title">Master's degree in Mathematics</div>
-                <div class="cv-detail">University of Sidi Mohamed Ben Abdellah, Morocco</div>
-            </div>
-        </div>
-
-        <div class="cv-entry">
-            <div class="cv-date">2016 – 2020</div>
-            <div class="cv-body">
-                <div class="cv-title">Bachelor's degree in Mathematics</div>
-                <div class="cv-detail">University of Moulay Ismail, Morocco</div>
-            </div>
-        </div>
-
-        <!-- ── FULL CV ── -->
-        <div class="section-label">Full CV</div>
-
-        <div class="download-wrap">
-            <a href="cv.pdf" target="_blank" class="pdf-btn">
-                <i class="fas fa-file-pdf"></i> Download PDF
-            </a>
-            <span class="download-note">Last updated January 2026</span>
-        </div>
-
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-brand"></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="talks.html">Talks</a></li>
+            <li><a href="cv.html" class="active">CV</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+        </ul>
     </div>
+</nav>
+
+<div class="container">
+
+    <h1 class="page-title">Curriculum Vitæ</h1>
+    <div class="page-rule"></div>
+
+    <!-- ── EDUCATION ── -->
+    <div class="section-label">Education</div>
+
+    <div class="cv-entry">
+        <div class="cv-date">2024 – Present</div>
+        <div class="cv-body">
+            <div class="cv-title">PhD in Mathematics</div>
+            <div class="cv-detail">
+                <a href="https://www.usherbrooke.ca/" target="_blank" class="cv-link">University of Sherbrooke</a>, Canada
+            </div>
+        </div>
+    </div>
+
+    <div class="cv-entry">
+        <div class="cv-date">2022 – 2023</div>
+        <div class="cv-body">
+            <div class="cv-title">First year of Doctoral program in Mathematics</div>
+            <div class="cv-detail">
+                <a href="https://www.usmba.ac.ma/" target="_blank" class="cv-link">University of Sidi Mohamed Ben Abdellah</a>, Morocco
+            </div>
+        </div>
+    </div>
+
+    <div class="cv-entry">
+        <div class="cv-date">2020 – 2022</div>
+        <div class="cv-body">
+            <div class="cv-title">Master's degree in Mathematics</div>
+            <div class="cv-detail">
+                <a href="https://www.usmba.ac.ma/" target="_blank" class="cv-link">University of Sidi Mohamed Ben Abdellah</a>, Morocco
+            </div>
+        </div>
+    </div>
+
+    <div class="cv-entry">
+        <div class="cv-date">2016 – 2020</div>
+        <div class="cv-body">
+            <div class="cv-title">Bachelor's degree in Mathematics</div>
+            <div class="cv-detail">
+                <a href="https://www.umi.ac.ma/" target="_blank" class="cv-link">University of Moulay Ismail</a>, Morocco
+            </div>
+        </div>
+    </div>
+
+    <!-- ── FULL CV ── -->
+    <div class="section-label">Full CV</div>
+
+    <div class="download-wrap">
+        <a href="cv.pdf" target="_blank" class="pdf-btn">
+            <i class="fas fa-file-pdf"></i> Download PDF
+        </a>
+        <span class="download-note">Last updated January 2026</span>
+    </div>
+
+</div>
 
 
 </body>
