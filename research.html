@@ -1,450 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research — Yassine Ait Mohamed</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        :root {
-            --bg:           #F5F4F0;
-            --bg2:          #ECEAE3;
-            --bg-nav:       rgba(245, 244, 240, 0.93);
-            --primary:      #1E2B3A;
-            --secondary:    #374B5E;
-            --text:         #1E2B3A;
-            --text2:        #5A6E82;
-            --text3:        #8299AD;
-            --accent:       #8B6F47;
-            --accent-deep:  #6E5334;
-            --accent-bar:   rgba(139, 111, 71, 0.25);
-            --rule:         rgba(30, 43, 58, 0.13);
-            --border:       rgba(30, 43, 58, 0.09);
-            --border-soft:  rgba(30, 43, 58, 0.05);
-            --shadow-sm:    0 1px 4px rgba(30, 43, 58, 0.06);
-            --green:        #4A7040;
-            --cyan:         #2A9D8F;
-            --cyan-hover:   #1E7268;
-        }
-
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Source Serif 4', Georgia, serif;
-            font-size: 0.92rem;
-            line-height: 1.65;
-            color: var(--text);
-            background-color: var(--bg);
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.018'/%3E%3C/svg%3E");
-        }
-
-        nav {
-            position: fixed; top: 0; width: 100%; z-index: 100;
-            padding: 0.95rem 2.5rem;
-            background: var(--bg-nav);
-            border-bottom: 1px solid var(--rule);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            box-shadow: var(--shadow-sm);
-        }
-        .nav-inner {
-            max-width: 1120px; margin: 0 auto;
-            display: flex; justify-content: space-between; align-items: center;
-        }
-        .nav-brand {
-            font-family: 'Lora', serif; font-size: 0.92rem; font-weight: 500;
-            color: var(--primary); text-decoration: none;
-        }
-        .nav-links { display: flex; gap: 2.2rem; list-style: none; }
-        .nav-links a {
-            font-family: 'DM Sans', sans-serif; font-size: 0.70rem; font-weight: 400;
-            letter-spacing: 1.6px; text-transform: uppercase; text-decoration: none;
-            color: var(--text2); transition: color 0.22s;
-            position: relative; padding-bottom: 3px;
-        }
-        .nav-links a::after {
-            content: ''; position: absolute; bottom: 0; left: 0;
-            height: 1px; width: 0; background: var(--accent); transition: width 0.22s ease;
-        }
-        .nav-links a:hover { color: var(--primary); }
-        .nav-links a:hover::after { width: 100%; }
-        .nav-links a.active { color: var(--primary); }
-        .nav-links a.active::after { width: 100%; }
-
-        .container {
-            max-width: 780px; margin: 0 auto;
-            padding: 6.5rem 2rem 5rem;
-            animation: fadeUp 0.65s ease both;
-        }
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(16px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-
-        .page-title {
-            font-family: 'Lora', serif; font-size: 2rem; font-weight: 500;
-            color: var(--primary); letter-spacing: -0.3px; margin-bottom: 0.25rem;
-        }
-        .page-rule {
-            width: 40px; height: 1px; background: var(--accent);
-            opacity: 0.7; margin: 1rem 0 2.5rem;
-        }
-
-        .section-label {
-            font-family: 'DM Sans', sans-serif; font-size: 0.66rem; font-weight: 500;
-            letter-spacing: 2px; text-transform: uppercase; color: var(--text3);
-            margin-bottom: 1.4rem; margin-top: 3rem;
-            display: flex; align-items: center; gap: 0.9rem;
-        }
-        .section-label::after {
-            content: ''; flex: 1; height: 1px; background: var(--border);
-        }
-
-        .paper-list {
-            list-style: none;
-            counter-reset: paper-counter;
-        }
-        .paper-item {
-            counter-increment: paper-counter;
-            display: grid;
-            grid-template-columns: 28px 1fr;
-            gap: 0 1.1rem;
-            margin-bottom: 2.2rem;
-            padding-bottom: 2.2rem;
-            border-bottom: 1px solid var(--border-soft);
-        }
-        .paper-item:last-child {
-            border-bottom: none; margin-bottom: 0; padding-bottom: 0;
-        }
-        .paper-item::before {
-            content: counter(paper-counter) ".";
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.72rem; font-weight: 400; color: var(--text3);
-            letter-spacing: 0.5px; padding-top: 0.25rem; text-align: right;
-        }
-
-        .paper-title {
-            font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 500;
-            color: var(--primary); line-height: 1.45; margin-bottom: 0.35rem;
-        }
-        .paper-venue {
-            font-family: 'Courier New', Courier, monospace; font-size: 0.82rem;
-            font-weight: 400; color: var(--text2); font-style: normal; margin-bottom: 0.45rem;
-        }
-
-        .journal-link {
-            color: var(--cyan) !important; text-decoration: none; font-weight: 500;
-            border-bottom: 1px solid rgba(42,157,143,0.35);
-            transition: color 0.2s, border-color 0.2s;
-        }
-        .journal-link:hover {
-            color: var(--cyan-hover) !important; border-color: var(--cyan-hover);
-        }
-
-        .badge {
-            display: inline-block; font-family: 'DM Sans', sans-serif;
-            font-size: 0.60rem; font-weight: 500; letter-spacing: 1px;
-            text-transform: uppercase; padding: 2px 8px; border-radius: 2px;
-            margin-right: 0.5rem; margin-bottom: 0.5rem;
-        }
-        .badge-submitted { background: rgba(90,110,130,0.10); color: var(--text2); }
-        .badge-published { background: rgba(74,112,64,0.10);  color: var(--green); }
-        .badge-toappear  { background: rgba(139,111,71,0.12); color: var(--accent); }
-        .badge-inprep    { background: rgba(90,110,130,0.08); color: var(--text3); }
-
-        .paper-links {
-            display: flex; gap: 0.9rem; flex-wrap: wrap; margin-top: 0.4rem;
-        }
-        .paper-link {
-            font-family: 'DM Sans', sans-serif; font-size: 0.65rem; font-weight: 500;
-            letter-spacing: 1.2px; text-transform: uppercase; color: var(--text2);
-            text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px;
-            transition: color 0.2s, border-color 0.2s;
-        }
-        .paper-link:hover { color: var(--accent); border-color: var(--accent); }
-
-        .abstract-toggle {
-            font-family: 'DM Sans', sans-serif; font-size: 0.65rem; font-weight: 500;
-            letter-spacing: 1.2px; text-transform: uppercase; color: var(--text3);
-            cursor: pointer; border: none; background: none; padding: 0;
-            border-bottom: 1px solid var(--border-soft); padding-bottom: 1px;
-            transition: color 0.2s, border-color 0.2s;
-        }
-        .abstract-toggle:hover { color: var(--accent); border-color: var(--accent); }
-
-        .abstract {
-            display: none;
-            margin-top: 0.9rem;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 0.80rem; font-weight: 400; font-style: normal;
-            color: var(--text2); line-height: 1.80;
-            padding-left: 1rem;
-            border-left: 2px solid var(--accent-bar);
-        }
-
-        .thesis-item { margin-bottom: 1rem; }
-        .thesis-title {
-            font-family: 'Lora', serif; font-size: 0.95rem; font-weight: 500;
-            color: var(--primary); margin-bottom: 0.2rem;
-        }
-        .thesis-meta {
-            font-family: 'Source Serif 4', Georgia, serif;
-            font-size: 0.85rem; font-weight: 300; color: var(--text2);
-        }
-
-        .note-item {
-            display: flex; align-items: baseline; gap: 0.6rem; margin-bottom: 0.85rem;
-        }
-        .note-dot { font-family: 'DM Sans', sans-serif; font-size: 0.65rem; color: var(--accent); flex-shrink: 0; }
-        .note-title { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.92rem; font-weight: 300; color: var(--secondary); }
-
-        .profiles-section {
-            display: flex; justify-content: center; align-items: center;
-            gap: 2rem; padding: 1.8rem 0 0.5rem; flex-wrap: wrap;
-        }
-        .profile-link {
-            display: flex; align-items: center; gap: 0.55rem;
-            text-decoration: none; color: var(--text3);
-            font-family: 'DM Sans', sans-serif; font-size: 0.68rem; font-weight: 400;
-            letter-spacing: 1.2px; text-transform: uppercase; transition: color 0.22s;
-        }
-        .profile-link:hover { color: var(--accent); }
-        .profile-link:hover .profile-icon,
-        .profile-link:hover .orcid-icon { opacity: 1; transform: translateY(-1px); }
-        .profile-icon { font-size: 1.1rem; opacity: 0.65; transition: opacity 0.22s, transform 0.22s; }
-        .orcid-icon {
-            width: 1.1rem; height: 1.1rem; opacity: 0.65;
-            transition: opacity 0.22s, transform 0.22s; vertical-align: middle;
-        }
-        .profiles-divider { width: 1px; height: 18px; background: var(--border); flex-shrink: 0; }
-
-        .page-footer {
-            text-align: center; padding: 2rem 1.5rem 2.5rem;
-            border-top: 1px solid var(--border-soft); margin-top: 4rem;
-        }
-        .footer-quran {
-            font-family: 'Amiri', 'Traditional Arabic', Georgia, serif;
-            direction: rtl; font-size: 1.45rem; color: var(--accent);
-            line-height: 2; opacity: 0.9; margin-bottom: 0.3rem;
-        }
-        .footer-ref {
-            font-family: 'Amiri', 'Traditional Arabic', Georgia, serif;
-            direction: rtl; font-size: 0.85rem; color: var(--text3);
-        }
-        .footer-divider {
-            font-family: 'DM Sans', sans-serif; color: var(--border);
-            font-size: 0.82rem; letter-spacing: 4px; margin: 0.9rem 0;
-        }
-
-        @media (max-width: 768px) {
-            .nav-inner { flex-direction: column; gap: 0.6rem; }
-            .nav-links { gap: 1.2rem; flex-wrap: wrap; justify-content: center; }
-            .container { padding: 5.5rem 1.5rem 3rem; }
-            .page-title { font-size: 2rem; }
-            .paper-item { grid-template-columns: 1fr; }
-            .paper-item::before { display: none; }
-            .profiles-section { gap: 1.2rem; }
-            .profiles-divider { display: none; }
-        }
-    </style>
-
+    <link rel="stylesheet" href="style.css">
     <script>
-        function toggleAbstract(id) {
-            const el = document.getElementById(id);
-            const btn = document.querySelector('[data-for="' + id + '"]');
-            if (el.style.display === 'block') {
-                el.style.display = 'none';
-                btn.textContent = 'Abstract ↓';
-            } else {
-                el.style.display = 'block';
-                btn.textContent = 'Abstract ↑';
-            }
-        }
+    function toggleAbstract(id) {
+        var el = document.getElementById(id);
+        var btn = document.querySelector('[data-for="' + id + '"]');
+        if (el.style.display === 'block') { el.style.display = 'none'; btn.textContent = 'Abstract ↓'; }
+        else { el.style.display = 'block'; btn.textContent = 'Abstract ↑'; }
+    }
     </script>
 </head>
 <body>
+<div class="masthead"><div class="masthead__inner">
+    <a href="index.html" class="masthead__title">Y. Ait Mohamed <span class="dot"></span></a>
+    <nav><ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html" class="active">Research</a></li>
+        <li><a href="talks.html">Talks</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="cv.html">CV</a></li>
+    </ul></nav>
+</div></div>
 
-<nav>
-    <div class="nav-inner">
-        <a href="index.html" class="nav-brand"></a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="research.html" class="active">Research</a></li>
-            <li><a href="talks.html">Talks</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <li><a href="teaching.html">Teaching</a></li>
+<div class="page-wrapper">
+<aside class="sidebar">
+    <div class="author__avatar"><img src="photo.jpg" alt="Yassine Ait Mohamed"></div>
+    <div class="author__content">
+        <h3 class="author__name">Yassine Ait Mohamed</h3>
+        <p class="author__bio">PhD student in Mathematics at the University of Sherbrooke</p>
+    </div>
+    <div class="author__urls-wrapper">
+        <span class="sidebar-label">Contact</span>
+        <ul class="author__urls">
+            <li><span><i class="fas fa-fw fa-location-dot"></i>Sherbrooke, Canada</span></li>
+            <li><span><i class="fas fa-fw fa-building-columns"></i>University of Sherbrooke</span></li>
+            <li><span><i class="fas fa-fw fa-door-open"></i>Office D3-1027-4</span></li>
+            <li><a href="mailto:yassine.ait.mohamed@usherbrooke.ca"><i class="fas fa-fw fa-envelope"></i>Email</a></li>
+            <div class="sep"></div><span class="sidebar-label">Academic</span>
+            <li><a href="https://orcid.org/0009-0002-2245-4217" target="_blank"><i class="fab fa-fw fa-orcid"></i>ORCID</a></li>
+            <li><a href="https://www.researchgate.net/profile/Yassine-Ait-Mohamed" target="_blank"><i class="fab fa-fw fa-researchgate"></i>ResearchGate</a></li>
+            <div class="sep"></div><span class="sidebar-label">Dev</span>
+            <li><a href="https://github.com/yassine-aitmohamed" target="_blank"><i class="fab fa-fw fa-github"></i>GitHub</a></li>
+            <div class="sep"></div><span class="sidebar-label">Documents</span>
+            <li><a href="cv.pdf" target="_blank"><i class="fas fa-fw fa-file-pdf"></i>Download CV</a></li>
         </ul>
     </div>
-</nav>
+</aside>
 
-<div class="container">
-
+<main class="page-content">
     <h1 class="page-title">Research</h1>
     <div class="page-rule"></div>
 
-    <!-- ── INTERESTS ── -->
     <div class="section-label">Research Interests</div>
-    <p style="font-family:'Source Serif 4',Georgia,serif; font-size:1rem; font-weight:300; color:var(--text2); line-height:1.8;">
-        Derivations theory, algebraic geometry, Lie groups, topological quantum field theories,
-        shifted symplectic geometry, Poisson geometry.
+    <p style="font-family:'Source Serif 4',Georgia,serif;font-size:1rem;font-weight:300;color:var(--text2);line-height:1.85;">
+        Derivations theory, algebraic geometry, Lie groups, topological quantum field theories, shifted symplectic geometry, Poisson geometry.
     </p>
 
-    <!-- ── DIFFERENTIAL GEOMETRY ── -->
     <div class="section-label">Differential Geometry</div>
-
     <ol class="paper-list">
-
         <li class="paper-item">
             <div class="paper-body">
-                <div class="paper-title">
-                    Poisson structures on 1-shifted coisotropics
-                    (with <a href="https://maxencemayrand.github.io/" class="journal-link">Maxence Mayrand</a>)
-                </div>
+                <div class="paper-title">Poisson structures on 1-shifted coisotropics (with <a href="https://maxencemayrand.github.io/" class="teal-link">Maxence Mayrand</a>)</div>
                 <div><span class="badge badge-inprep">In preparation</span></div>
-                <div class="paper-links">
-                    <button class="abstract-toggle" data-for="abs-g1" onclick="toggleAbstract('abs-g1')">Abstract ↓</button>
-                </div>
+                <div class="paper-links"><button class="abstract-toggle" data-for="abs-g1" onclick="toggleAbstract('abs-g1')">Abstract ↓</button></div>
                 <div id="abs-g1" class="abstract"></div>
             </div>
         </li>
-
     </ol>
 
-    <!-- ── ALGEBRA ── -->
     <div class="section-label">Algebra</div>
-
     <ol class="paper-list">
-
         <li class="paper-item">
             <div class="paper-body">
                 <div class="paper-title">On graded trivial extensions with homogeneous derivations</div>
                 <div><span class="badge badge-submitted">Submitted</span></div>
-                <div class="paper-links">
-                    <button class="abstract-toggle" data-for="abs-a1" onclick="toggleAbstract('abs-a1')">Abstract ↓</button>
-                </div>
-                <!-- ✦ CORRECTION : balise fermante déplacée après le contenu de l'abstract ✦ -->
-                <div id="abs-a1" class="abstract">
-                    Let $G$ be an arbitrary group, $R = \bigoplus_{\tau \in G} R_\tau$ a $G$-graded ring,
-                    and $M$ a graded $R$-bimodule. Every homogeneous derivation on the graded trivial
-                    extension $R \ltimes M$ admits a canonical decomposition into four component maps,
-                    extending the ungraded result of Mokhtari--Moafian--Vishki to the $G$-graded setting.
-                    The notion of a $\delta$-gr-simple ring is introduced, and a graded analogue of
-                    Posner's theorem is established in prime characteristic. For diagonal derivations
-                    $\delta = (d, D)$, the $\delta$-invariant gr-ideals of $R \ltimes M$ are characterized
-                    via the conditions $d(\mathfrak{a}) \subseteq \mathfrak{a}$ and $D(N) \subseteq N$,
-                    and $R \ltimes M$ is shown to be $\delta$-gr-simple relative to $0 \ltimes M$ if and
-                    only if $R$ is $d$-gr-simple and $M$ is $D$-gr-simple as a graded $R$-module. When
-                    $R$ is a commutative $d$-gr-simple ring of prime characteristic $p$, the ideal
-                    $\mathrm{N}_{\mathrm{gr}}(R) \ltimes M$ is identified as the unique gr-prime of
-                    $R \ltimes M$, and the preimage of a $\delta$-invariant gr-prime is proved to be integrally closed.
-                </div>
+                <div class="paper-links"><button class="abstract-toggle" data-for="abs-a1" onclick="toggleAbstract('abs-a1')">Abstract ↓</button></div>
+                <div id="abs-a1" class="abstract">Let $G$ be an arbitrary group, $R = \bigoplus_{\tau \in G} R_\tau$ a $G$-graded ring, and $M$ a graded $R$-bimodule. Every homogeneous derivation on the graded trivial extension $R \ltimes M$ admits a canonical decomposition into four component maps, extending the ungraded result of Mokhtari--Moafian--Vishki to the $G$-graded setting. The notion of a $\delta$-gr-simple ring is introduced, and a graded analogue of Posner's theorem is established in prime characteristic. For diagonal derivations $\delta = (d, D)$, the $\delta$-invariant gr-ideals of $R \ltimes M$ are characterized via the conditions $d(\mathfrak{a}) \subseteq \mathfrak{a}$ and $D(N) \subseteq N$, and $R \ltimes M$ is shown to be $\delta$-gr-simple relative to $0 \ltimes M$ if and only if $R$ is $d$-gr-simple and $M$ is $D$-gr-simple as a graded $R$-module.</div>
             </div>
         </li>
-
         <li class="paper-item">
             <div class="paper-body">
                 <div class="paper-title">On graded differential polynomial rings</div>
                 <div><span class="badge badge-submitted">Submitted</span></div>
-                <div class="paper-links">
-                    <button class="abstract-toggle" data-for="abs-a2" onclick="toggleAbstract('abs-a2')">Abstract ↓</button>
-                </div>
-                <div id="abs-a2" class="abstract">
-                    Let $R = \bigoplus_{\tau \in G} R_\tau$ be a $G$-graded ring, where $G$ is an arbitrary group, and let $\delta$ be a degree-preserving derivation on $R$. We study the graded differential polynomial ring $R[t;\delta]$ and establish the following results. The universal property of $R[t;\delta]$ is formulated in the category of graded rings, and structural isomorphisms under conjugate derivations, inner shifts, and matrix ring extensions are derived as consequences. If $R$ is gr-simple of characteristic zero and $\delta$ is dp-outer, then $R[t;\delta]$ is gr-simple; this constitutes the graded analogue of Amitsur's classical theorem. A complete characterization of gr-simplicity is obtained: $R[t;\delta]$ is gr-simple if and only if $R$ is $\delta$-gr-simple and the center $Z(R[t;\delta])$ is a graded field. This equivalence holds without any assumption on the characteristic. Furthermore, the gr-Noetherian property, left and right independently, is preserved under the formation of $R[t;\delta]$; in particular, the graded polynomial ring $R[t]$ inherits the gr-Noetherian property from $R$.
-                </div>
+                <div class="paper-links"><button class="abstract-toggle" data-for="abs-a2" onclick="toggleAbstract('abs-a2')">Abstract ↓</button></div>
+                <div id="abs-a2" class="abstract">Let $R = \bigoplus_{\tau \in G} R_\tau$ be a $G$-graded ring, where $G$ is an arbitrary group, and let $\delta$ be a degree-preserving derivation on $R$. We study the graded differential polynomial ring $R[t;\delta]$ and establish the following results. The universal property of $R[t;\delta]$ is formulated in the category of graded rings, and structural isomorphisms under conjugate derivations, inner shifts, and matrix ring extensions are derived as consequences. If $R$ is gr-simple of characteristic zero and $\delta$ is dp-outer, then $R[t;\delta]$ is gr-simple; this constitutes the graded analogue of Amitsur's classical theorem. A complete characterization of gr-simplicity is obtained: $R[t;\delta]$ is gr-simple if and only if $R$ is $\delta$-gr-simple and the center $Z(R[t;\delta])$ is a graded field.</div>
             </div>
         </li>
-
         <li class="paper-item">
             <div class="paper-body">
                 <div class="paper-title">Generalized homogeneous derivations on graded rings</div>
-                <div class="paper-venue">
-                    <a href="https://www.springer.com/journal/11202" target="_blank" rel="noopener" class="journal-link">Siberian Mathematical Journal</a>
-                </div>
+                <div class="paper-venue"><a href="https://www.springer.com/journal/11202" target="_blank" rel="noopener" class="teal-link">Siberian Mathematical Journal</a></div>
                 <div><span class="badge badge-toappear">To appear</span></div>
-                <div class="paper-links">
-                    <button class="abstract-toggle" data-for="abs-a3" onclick="toggleAbstract('abs-a3')">Abstract ↓</button>
-                </div>
-                <div id="abs-a3" class="abstract">
-                    We introduce a notion of generalized homogeneous derivations on graded rings as a natural extension of the homogeneous derivations defined by Kanunnikov. We then define gr-generalized derivations, which preserve the degrees of homogeneous components. Several significant results originally established for prime rings are extended to the setting of gr-prime rings, and we characterize conditions under which gr-semiprime rings contain nontrivial central graded ideals. In addition, we investigate the algebraic and module-theoretic structures of these maps, establish their functorial properties, and develop categorical frameworks that describe their derivation structures in both ring and module contexts.
-                </div>
+                <div class="paper-links"><button class="abstract-toggle" data-for="abs-a3" onclick="toggleAbstract('abs-a3')">Abstract ↓</button></div>
+                <div id="abs-a3" class="abstract">We introduce a notion of generalized homogeneous derivations on graded rings as a natural extension of the homogeneous derivations defined by Kanunnikov. We then define gr-generalized derivations, which preserve the degrees of homogeneous components. Several significant results originally established for prime rings are extended to the setting of gr-prime rings, and we characterize conditions under which gr-semiprime rings contain nontrivial central graded ideals.</div>
             </div>
         </li>
-
         <li class="paper-item">
             <div class="paper-body">
                 <div class="paper-title">On graded rings with homogeneous derivations</div>
-                <div class="paper-venue">
-                    <a href="https://doi.org/10.33044/revuma.4934" target="_blank" rel="noopener" class="journal-link">Revista de la Unión Matemática Argentina</a>
-                </div>
+                <div class="paper-venue"><a href="https://doi.org/10.33044/revuma.4934" target="_blank" rel="noopener" class="teal-link">Revista de la Unión Matemática Argentina</a></div>
                 <div><span class="badge badge-published">Published</span></div>
-                <div class="paper-links">
-                    <button class="abstract-toggle" data-for="abs-a4" onclick="toggleAbstract('abs-a4')">Abstract ↓</button>
-                </div>
-                <div id="abs-a4" class="abstract">
-                    We establish results related to homogeneous derivations, a concept introduced by Kanunnikov (2018). First, we prove the existence of a non-trivial family of derivations that are not homogeneous on graded rings. Furthermore, based on homogeneous derivations, we extend certain existing significant results in the context of prime (resp. semiprime) rings to gr-prime (resp. gr-semiprime) rings, such as Posner's and Herstein's theorems.
-                </div>
+                <div class="paper-links"><button class="abstract-toggle" data-for="abs-a4" onclick="toggleAbstract('abs-a4')">Abstract ↓</button></div>
+                <div id="abs-a4" class="abstract">We establish results related to homogeneous derivations, a concept introduced by Kanunnikov (2018). First, we prove the existence of a non-trivial family of derivations that are not homogeneous on graded rings. Furthermore, based on homogeneous derivations, we extend certain existing significant results in the context of prime (resp. semiprime) rings to gr-prime (resp. gr-semiprime) rings, such as Posner's and Herstein's theorems.</div>
             </div>
         </li>
-
     </ol>
 
-    <!-- ── THESIS ── -->
     <div class="section-label">Master's Thesis</div>
+    <div class="thesis-title">Divisors in Algebraic Geometry, Central Simple Algebras and Severi–Brauer Varieties</div>
+    <div class="thesis-meta" style="margin-top:0.2rem;">Sidi Mohamed Ben Abdellah University, 2022 &nbsp;·&nbsp; <a href="Documents research/master_thesis.pdf" target="_blank">PDF</a></div>
 
-    <div class="thesis-item">
-        <div class="thesis-title">Divisors in Algebraic Geometry, Central Simple Algebras and Severi–Brauer Varieties</div>
-        <div class="thesis-meta">
-            Sidi Mohamed Ben Abdellah University, 2022 &nbsp;·&nbsp;
-            <a href="Documents research/master_thesis.pdf" target="_blank"
-               style="color:var(--accent); text-decoration:none; border-bottom:1px solid var(--border); font-size:0.9rem;">PDF</a>
-        </div>
-    </div>
-
-    <!-- ── NOTES ── -->
     <div class="section-label">Expository Notes</div>
-
     <div class="note-item">
         <span class="note-dot">—</span>
-        <span class="note-title">
-            Note on Central Simple Algebras and the Brauer Group &nbsp;
-            <a href="Documents research/On_Simple_Algebras.pdf" target="_blank"
-               style="color:var(--accent); text-decoration:none; font-size:0.88rem; border-bottom:1px solid var(--border);">PDF</a>
-        </span>
+        <span class="note-title">Note on Central Simple Algebras and the Brauer Group &nbsp;<a href="Documents research/On_Simple_Algebras.pdf" target="_blank">PDF</a></span>
     </div>
-
     <div class="note-item">
         <span class="note-dot">—</span>
-        <span class="note-title">
-            Note on Sheaf Theory &nbsp;
-            <a href="Documents research/Note_on_sheaf_theory.pdf" target="_blank"
-               style="color:var(--accent); text-decoration:none; font-size:0.88rem; border-bottom:1px solid var(--border);">PDF</a>
-        </span>
+        <span class="note-title">Note on Sheaf Theory &nbsp;<a href="Documents research/Note_on_sheaf_theory.pdf" target="_blank">PDF</a></span>
     </div>
 
+    
+</main>
 </div>
 
-<footer class="page-footer">
-    <div class="profiles-section">
-        <a href="https://orcid.org/0009-0002-2245-4217" target="_blank" rel="noopener" class="profile-link" title="ORCID">
-            <svg class="orcid-icon" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                <path d="M128 0C57.3 0 0 57.3 0 128s57.3 128 128 128 128-57.3 128-128S198.7 0 128 0zM86.3 186.2H70.9V79.1h15.4v107.1zm-7.7-122c-5.4 0-9.7-4.4-9.7-9.8s4.3-9.8 9.7-9.8c5.4 0 9.7 4.4 9.7 9.8s-4.3 9.8-9.7 9.8zm113.7 122h-15.4v-52c0-12.4-.2-28.3-17.3-28.3-17.3 0-19.9 13.5-19.9 27.4v52.9h-15.4V79.1h14.8v14.6h.2c2.1-3.9 7.1-8 14.6-8 15.6 0 18.5 10.3 18.5 23.6v76.9z"/>
-            </svg>
-            ORCID
-        </a>
-        <div class="profiles-divider"></div>
-        <a href="https://www.researchgate.net/profile/Yassine-Ait-Mohamed" target="_blank" rel="noopener" class="profile-link" title="ResearchGate">
-            <i class="fab fa-researchgate profile-icon"></i>
-            ResearchGate
-        </a>
-    </div>
-</footer>
-
-</body>
-</html>
+</body></html>
