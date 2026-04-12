@@ -1,39 +1,35 @@
-/* ══════════════════════════════════════════
-   YASSINE AIT MOHAMED — ACADEMIC SITE
-   Layout: Hamza/Academic Pages template
-   Colors & fonts: Yassine's original palette
-   ══════════════════════════════════════════ */
+
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-    --bg:           #F2EEE9;
-    --bg2:          #E8E2DA;
-    --bg-sidebar:   #EAE5DF;
-    --primary:      #1A1A2E;
-    --secondary:    #3D3757;
-    --text:         #1A1A2E;
-    --text2:        #5C5478;
-    --text3:        #9B91B8;
-    --accent:       #C06E52;
-    --accent-deep:  #A0502F;
-    --accent-bar:   rgba(192, 110, 82, 0.22);
+    --bg:           #F5F4F0;
+    --bg2:          #ECEAE3;
+    --bg-sidebar:   #ECEAE3;
+    --primary:      #1E2B3A;
+    --secondary:    #374B5E;
+    --text:         #1E2B3A;
+    --text2:        #5A6E82;
+    --text3:        #8299AD;
+    --accent:       #8B6F47;
+    --accent-deep:  #6E5334;
+    --accent-bar:   rgba(139, 111, 71, 0.25);
 
-    /* Claude purple tones */
-    --claude-3:     #9B59F5;
-    --claude-dark:  #4B2D8A;
-    --claude-mid:   #6B4FA8;
-    --claude-soft:  rgba(155, 89, 245, 0.10);
+    /* accent aliases — same golden-brown throughout */
+    --claude-3:     #8B6F47;
+    --claude-dark:  #6E5334;
+    --claude-mid:   #8B6F47;
+    --claude-soft:  rgba(139, 111, 71, 0.10);
 
     /* Teal for links */
     --teal:         #2A9D8F;
     --teal-hover:   #1E7268;
 
-    --rule:         rgba(26, 26, 46, 0.12);
-    --border:       rgba(26, 26, 46, 0.08);
-    --border-soft:  rgba(26, 26, 46, 0.05);
-    --shadow-sm:    0 1px 4px rgba(26, 26, 46, 0.08);
-    --green:        #3A7040;
+    --rule:         rgba(30, 43, 58, 0.13);
+    --border:       rgba(30, 43, 58, 0.09);
+    --border-soft:  rgba(30, 43, 58, 0.05);
+    --shadow-sm:    0 1px 4px rgba(30, 43, 58, 0.06);
+    --green:        #4A7040;
 }
 
 html { scroll-behavior: smooth; }
@@ -48,7 +44,7 @@ body {
 /* ══ MASTHEAD ══ */
 .masthead {
     position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-    background: rgba(242, 238, 233, 0.96);
+    background: rgba(245, 244, 240, 0.96);
     border-bottom: 1px solid var(--rule);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -66,7 +62,7 @@ body {
 }
 .masthead__title .dot {
     display: inline-block; width: 6px; height: 6px; border-radius: 50%;
-    background: var(--claude-3); margin-left: 6px;
+    background: var(--accent); margin-left: 6px;
     vertical-align: middle; margin-bottom: 2px;
 }
 .nav-links {
@@ -81,12 +77,12 @@ body {
 }
 .nav-links a::after {
     content: ''; position: absolute; bottom: 4px; left: 0.85rem; right: 0.85rem;
-    height: 1px; background: var(--claude-3);
+    height: 1px; background: var(--accent);
     transform: scaleX(0); transition: transform 0.22s ease; transform-origin: left;
 }
 .nav-links a:hover { color: var(--primary); }
 .nav-links a:hover::after { transform: scaleX(1); }
-.nav-links a.active { color: var(--claude-dark); font-weight: 500; }
+.nav-links a.active { color: var(--accent-deep); font-weight: 500; }
 .nav-links a.active::after { transform: scaleX(1); }
 
 /* ══ PAGE LAYOUT ══ */
@@ -115,12 +111,12 @@ body {
 .author__avatar img {
     width: 155px; height: 155px; border-radius: 50%;
     object-fit: cover;
-    border: 2px solid rgba(155, 89, 245, 0.25);
-    box-shadow: 0 6px 24px rgba(75, 45, 138, 0.18), 0 0 0 5px var(--bg-sidebar), 0 0 0 7px rgba(155,89,245,0.12);
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 32px rgba(30, 43, 58, 0.14), 0 0 0 5px var(--bg-sidebar), 0 0 0 6px rgba(30,43,58,0.07);
     transition: box-shadow 0.3s;
 }
 .author__avatar img:hover {
-    box-shadow: 0 10px 32px rgba(75, 45, 138, 0.28), 0 0 0 5px var(--bg-sidebar), 0 0 0 7px rgba(155,89,245,0.22);
+    box-shadow: 0 10px 36px rgba(30, 43, 58, 0.20), 0 0 0 5px var(--bg-sidebar), 0 0 0 6px rgba(30,43,58,0.12);
 }
 
 .author__content { text-align: center; margin-bottom: 1.5rem; }
@@ -150,12 +146,12 @@ body {
     transition: color 0.2s, background 0.2s;
 }
 .author__urls li a:hover {
-    color: var(--claude-mid);
-    background: var(--claude-soft);
+    color: var(--accent-deep);
+    background: rgba(139, 111, 71, 0.10);
 }
 .author__urls li a i,
 .author__urls li span i {
-    font-size: 0.82rem; color: var(--claude-3); width: 16px;
+    font-size: 0.82rem; color: var(--accent); width: 16px;
     text-align: center; opacity: 0.72;
 }
 .author__urls li a:hover i { opacity: 1; }
@@ -189,12 +185,12 @@ body {
 }
 .subtitle {
     font-family: 'DM Sans', sans-serif; font-size: 0.70rem; font-weight: 400;
-    letter-spacing: 1.5px; text-transform: uppercase; color: var(--claude-mid);
+    letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent);
     margin-bottom: 0.5rem;
 }
 .page-rule {
     width: 48px; height: 2px;
-    background: linear-gradient(90deg, var(--claude-3), var(--accent));
+    background: linear-gradient(90deg, var(--accent), var(--accent-deep));
     margin: 0.9rem 0 2rem; border-radius: 2px;
 }
 
@@ -228,12 +224,12 @@ body {
     font-family: 'DM Sans', sans-serif; font-size: 0.60rem; font-weight: 500;
     letter-spacing: 1px; text-transform: uppercase;
     padding: 3px 10px; border-radius: 20px;
-    background: var(--claude-soft);
-    border: 1px solid rgba(155, 89, 245, 0.20);
-    color: var(--claude-mid);
+    background: rgba(139, 111, 71, 0.10);
+    border: 1px solid rgba(139, 111, 71, 0.20);
+    color: var(--accent-deep);
     transition: background 0.2s, border-color 0.2s;
 }
-.tag:hover { background: rgba(155, 89, 245, 0.18); border-color: rgba(155, 89, 245, 0.35); }
+.tag:hover { background: rgba(139, 111, 71, 0.18); border-color: rgba(139, 111, 71, 0.35); }
 
 /* ══ NEWS ITEMS ══ */
 .news-item {
@@ -269,7 +265,7 @@ body {
 .paper-item::before {
     content: counter(paper-counter) ".";
     font-family: 'DM Sans', sans-serif; font-size: 0.72rem;
-    font-weight: 400; color: var(--claude-3);
+    font-weight: 400; color: var(--accent);
     padding-top: 0.25rem; text-align: right;
 }
 .paper-title {
@@ -286,10 +282,10 @@ body {
     text-transform: uppercase; padding: 2px 9px; border-radius: 20px;
     margin-right: 0.4rem; margin-bottom: 0.45rem;
 }
-.badge-submitted { background: rgba(155,89,245,0.10); color: var(--claude-mid); border: 1px solid rgba(155,89,245,0.20); }
-.badge-published  { background: rgba(58,112,64,0.10);  color: var(--green); border: 1px solid rgba(58,112,64,0.20); }
-.badge-toappear   { background: rgba(192,110,82,0.10); color: var(--accent); border: 1px solid rgba(192,110,82,0.20); }
-.badge-inprep     { background: rgba(155,89,245,0.06); color: var(--text3); border: 1px solid rgba(155,89,245,0.12); }
+.badge-submitted { background: rgba(90,110,130,0.10); color: var(--text2); border: 1px solid rgba(90,110,130,0.18); }
+.badge-published  { background: rgba(74,112,64,0.10);  color: var(--green); border: 1px solid rgba(74,112,64,0.20); }
+.badge-toappear   { background: rgba(139,111,71,0.12); color: var(--accent); border: 1px solid rgba(139,111,71,0.22); }
+.badge-inprep     { background: rgba(90,110,130,0.08); color: var(--text3); border: 1px solid rgba(90,110,130,0.13); }
 .paper-links { display: flex; gap: 0.9rem; flex-wrap: wrap; margin-top: 0.4rem; }
 .paper-link, .abstract-toggle {
     font-family: 'DM Sans', sans-serif; font-size: 0.65rem; font-weight: 500;
@@ -302,13 +298,13 @@ body {
     border-bottom: 1px solid var(--border-soft); padding-bottom: 1px;
     color: var(--text3);
 }
-.paper-link:hover, .abstract-toggle:hover { color: var(--claude-mid); border-color: var(--claude-3); }
+.paper-link:hover, .abstract-toggle:hover { color: var(--accent-deep); border-color: var(--accent); }
 .abstract {
     display: none; margin-top: 0.9rem;
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.80rem; color: var(--text2); line-height: 1.80;
     padding-left: 1rem;
-    border-left: 2px solid rgba(155, 89, 245, 0.30);
+    border-left: 2px solid rgba(139, 111, 71, 0.30);
 }
 
 /* ══ TALKS ══ */
@@ -320,7 +316,7 @@ body {
 .talk-item:last-child { border-bottom: none; }
 .talk-date {
     font-family: 'DM Sans', sans-serif; font-size: 0.63rem; font-weight: 500;
-    letter-spacing: 1.2px; text-transform: uppercase; color: var(--claude-3);
+    letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent);
     padding-top: 0.22rem; line-height: 1.4;
 }
 .talk-title {
@@ -338,7 +334,7 @@ body {
     text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px;
     transition: color 0.2s, border-color 0.2s; display: inline-block; margin-top: 0.2rem;
 }
-.talk-link:hover { color: var(--claude-mid); border-color: var(--claude-3); }
+.talk-link:hover { color: var(--accent-deep); border-color: var(--accent); }
 
 /* ══ THESIS & NOTES ══ */
 .thesis-title {
@@ -407,11 +403,11 @@ body {
     box-shadow: 0 2px 6px rgba(26,26,46,0.06);
 }
 .material-card:hover {
-    border-color: rgba(155, 89, 245, 0.35);
-    background: var(--claude-soft);
+    border-color: rgba(139, 111, 71, 0.40);
+    background: rgba(139, 111, 71, 0.10);
     transform: translateY(-2px);
 }
-.material-card i { font-size: 1rem; color: var(--claude-mid); opacity: 0.75; }
+.material-card i { font-size: 1rem; color: var(--accent); opacity: 0.75; }
 .material-card:hover i { opacity: 1; }
 
 /* ══ CV ══ */
@@ -451,10 +447,10 @@ body {
     border-radius: 4px; background: transparent;
     transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
-.pdf-btn i { font-size: 0.72rem; color: var(--claude-3); }
+.pdf-btn i { font-size: 0.72rem; color: var(--accent); }
 .pdf-btn:hover {
-    background: var(--claude-soft);
-    border-color: rgba(155,89,245,0.35); color: var(--claude-dark);
+    background: rgba(139, 111, 71, 0.10);
+    border-color: rgba(139, 111, 71, 0.35); color: var(--accent-deep);
 }
 
 /* ══ FOOTER ══ */
@@ -467,7 +463,7 @@ body {
 }
 .footer-quran {
     font-family: 'Amiri', 'Traditional Arabic', Georgia, serif;
-    direction: rtl; font-size: 1.1rem; color: var(--claude-mid); opacity: 0.80;
+    direction: rtl; font-size: 1.1rem; color: var(--accent); opacity: 0.90;
 }
 .footer-ref {
     font-family: 'Amiri', 'Traditional Arabic', Georgia, serif;
