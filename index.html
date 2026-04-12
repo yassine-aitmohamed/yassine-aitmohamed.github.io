@@ -1,308 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yassine Ait Mohamed - Mathematics | University of Sherbrooke</title>
-    <meta name="description" content="Yassine Ait Mohamed, PhD student in Mathematics at University of Sherbrooke. Research in differential geometry, Poisson structures, shifted symplectic geometry, and algebraic geometry under supervision of Prof. Maxence Mayrand.">
-    <meta name="keywords" content="Yassine Ait Mohamed, mathematics, differential geometry, Poisson geometry, shifted symplectic geometry, algebraic geometry, Lie groups, TQFT, University of Sherbrooke, Maxence Mayrand">
-    <meta name="author" content="Yassine Ait Mohamed">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Yassine Ait Mohamed - Mathematics">
-    <meta property="og:description" content="Research in differential geometry, Poisson structures, and shifted symplectic geometry at University of Sherbrooke">
-    <meta property="og:url" content="https://yassine-aitmohamed.github.io/">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://yassine-aitmohamed.github.io/photo.jpg">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Yassine Ait Mohamed - Mathematics">
-    <meta name="twitter:description" content="Research in differential geometry, Poisson structures, and shifted symplectic geometry">
-    <link rel="canonical" href="https://yassine-aitmohamed.github.io/">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Yassine Ait Mohamed",
-      "url": "https://yassine-aitmohamed.github.io/",
-      "image": "https://yassine-aitmohamed.github.io/photo.jpg",
-      "jobTitle": "PhD Student in Mathematics",
-      "affiliation": {"@type": "Organization","name": "University of Sherbrooke"},
-      "alumniOf": "University of Sidi Mohamed Ben Abdellah",
-      "email": "yassine.ait.mohamed@usherbrooke.ca",
-      "sameAs": ["https://github.com/yassine-aitmohamed"],
-      "knowsAbout": ["Differential Geometry","Poisson Geometry","Shifted Symplectic Geometry","Algebraic Geometry","Lie Groups","Topological Quantum Field Theories"]
-    }
-    </script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yassine Ait Mohamed — Mathematics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        :root {
-            --bg:           #F5F4F0;
-            --bg2:          #ECEAE3;
-            --bg-nav:       rgba(245, 244, 240, 0.93);
-            --primary:      #1E2B3A;
-            --secondary:    #374B5E;
-            --text:         #1E2B3A;
-            --text2:        #5A6E82;
-            --text3:        #8299AD;
-            --accent:       #8B6F47;
-            --accent-deep:  #6E5334;
-            --accent-light: rgba(139, 111, 71, 0.10);
-            --rule:         rgba(30, 43, 58, 0.13);
-            --border:       rgba(30, 43, 58, 0.09);
-            --border-soft:  rgba(30, 43, 58, 0.05);
-            --shadow-sm:    0 1px 4px rgba(30, 43, 58, 0.06);
-            --shadow-photo: 0 8px 32px rgba(30, 43, 58, 0.14);
-            --cyan:         #2A9D8F;
-            --cyan-hover:   #1E7268;
-        }
-
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Source Serif 4', Georgia, serif;
-            line-height: 1.7;
-            color: var(--text);
-            background-color: var(--bg);
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.018'/%3E%3C/svg%3E");
-        }
-
-        nav {
-            position: fixed; top: 0; width: 100%; z-index: 100;
-            padding: 0.95rem 2.5rem;
-            background: var(--bg-nav);
-            border-bottom: 1px solid var(--rule);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            box-shadow: var(--shadow-sm);
-        }
-        .nav-inner {
-            max-width: 1120px; margin: 0 auto;
-            display: flex; justify-content: space-between; align-items: center;
-        }
-        .nav-brand {
-            font-family: 'Lora', serif; font-size: 1rem; font-weight: 500;
-            color: var(--primary); letter-spacing: 0.3px; text-decoration: none;
-        }
-        .nav-links { display: flex; gap: 2.2rem; list-style: none; }
-        .nav-links a {
-            font-family: 'DM Sans', sans-serif; font-size: 0.70rem; font-weight: 400;
-            letter-spacing: 1.6px; text-transform: uppercase; text-decoration: none;
-            color: var(--text2); transition: color 0.22s;
-            position: relative; padding-bottom: 3px;
-        }
-        .nav-links a::after {
-            content: ''; position: absolute; bottom: 0; left: 0;
-            height: 1px; width: 0; background: var(--accent); transition: width 0.22s ease;
-        }
-        .nav-links a:hover { color: var(--primary); }
-        .nav-links a:hover::after { width: 100%; }
-
-        .hero {
-            min-height: 100vh;
-            display: flex; align-items: center; justify-content: center;
-            padding: 7rem 2.5rem 5rem;
-        }
-        .hero-content {
-            max-width: 1060px; width: 100%;
-            display: grid; grid-template-columns: 1fr 260px;
-            gap: 5rem; align-items: center;
-        }
-
-        .hero-text h1 {
-            font-family: 'Lora', serif; font-size: 2.9rem; font-weight: 500;
-            line-height: 1.18; margin-bottom: 0.3rem;
-            color: var(--primary); letter-spacing: -0.3px;
-        }
-
-        .affiliation {
-            font-family: 'DM Sans', sans-serif; font-size: 0.72rem; font-weight: 400;
-            letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent);
-            margin-bottom: 0.3rem;
-        }
-
-        .office-line {
-            font-family: 'DM Sans', sans-serif; font-size: 0.65rem; font-weight: 400;
-            letter-spacing: 1.2px; text-transform: uppercase; color: var(--text3);
-            margin-bottom: 1.6rem;
-        }
-
-        .office-line a {
-            color: var(--text3); text-decoration: none;
-            border-bottom: 1px solid var(--border-soft);
-            transition: color 0.2s, border-color 0.2s;
-        }
-        .office-line a:hover { color: var(--accent); border-color: var(--accent); }
-
-        .rule {
-            width: 40px; height: 1px; background: var(--accent);
-            margin-bottom: 1.6rem; opacity: 0.7;
-        }
-
-        .hero-text .desc {
-            font-family: 'Source Serif 4', Georgia, serif; font-weight: 300;
-            color: var(--secondary); font-size: 1.07rem;
-            margin-bottom: 2rem; line-height: 1.8;
-        }
-
-        .journal-link {
-            color: var(--cyan) !important; font-weight: 500;
-            text-decoration: none;
-            border-bottom: 1px solid rgba(42,157,143,0.35) !important;
-            transition: color 0.2s, border-color 0.2s;
-        }
-        .journal-link:hover {
-            color: var(--cyan-hover) !important;
-            border-color: var(--cyan-hover) !important;
-        }
-
-        .hero-text .desc a {
-            color: var(--primary); text-decoration: none; font-weight: 500;
-            border-bottom: 1px solid var(--rule); transition: border-color 0.2s, color 0.2s;
-        }
-        .hero-text .desc a:hover { color: var(--accent-deep); border-color: var(--accent); }
-
-        .section-label {
-            font-family: 'DM Sans', sans-serif; font-size: 0.66rem; font-weight: 500;
-            letter-spacing: 2px; text-transform: uppercase; color: var(--text3);
-            margin-top: 1.8rem; margin-bottom: 0.55rem;
-            display: flex; align-items: center; gap: 0.7rem;
-        }
-        .section-label::after {
-            content: ''; flex: 1; height: 1px; background: var(--border); max-width: 60px;
-        }
-
-        .contact-text {
-            font-family: 'Source Serif 4', Georgia, serif; font-weight: 300;
-            color: var(--secondary); font-size: 1.02rem; line-height: 1.75;
-        }
-        .contact-text a {
-            color: var(--primary); text-decoration: none; font-weight: 400;
-            border-bottom: 1px solid var(--rule); transition: border-color 0.2s, color 0.2s;
-        }
-        .contact-text a:hover { color: var(--accent-deep); border-color: var(--accent); }
-
-        .hero-photo {
-            display: flex; flex-direction: column; align-items: center; gap: 1.4rem;
-        }
-        .photo-wrapper {
-            width: 230px; height: 230px; border-radius: 50%; overflow: hidden;
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-photo), 0 0 0 5px var(--bg), 0 0 0 6px rgba(30,43,58,0.07);
-        }
-        .photo-wrapper img { width: 100%; height: 100%; object-fit: cover; }
-        .photo-links { display: flex; gap: 1.1rem; }
-        .photo-links a {
-            display: flex; align-items: center; justify-content: center;
-            width: 32px; height: 32px; border-radius: 50%;
-            border: 1px solid var(--border); color: var(--text2);
-            font-size: 0.78rem; text-decoration: none;
-            transition: color 0.2s, border-color 0.2s, background 0.2s;
-            background: transparent;
-        }
-        .photo-links a:hover {
-            color: var(--primary); border-color: var(--accent); background: var(--accent-light);
-        }
-
-        .page-footer {
-            text-align: center; padding: 2rem 1.5rem 2.5rem;
-            border-top: 1px solid var(--border-soft);
-        }
-        .footer-quran {
-            font-family: 'Amiri', 'Traditional Arabic', Georgia, serif;
-            direction: rtl; font-size: 1.45rem; color: var(--accent);
-            line-height: 2; opacity: 0.9; margin-bottom: 0.3rem;
-        }
-        .footer-ref {
-            font-family: 'Amiri', 'Traditional Arabic', Georgia, serif;
-            direction: rtl; font-size: 0.85rem; color: var(--text3); letter-spacing: 0.3px;
-        }
-        .footer-divider {
-            font-family: 'DM Sans', sans-serif; color: var(--border);
-            font-size: 0.9rem; letter-spacing: 4px; margin: 0.9rem 0;
-        }
-
-        .hero-text, .hero-photo { animation: fadeUp 0.7s ease both; }
-        .hero-photo { animation-delay: 0.15s; }
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(18px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-
-        @media (max-width: 800px) {
-            .hero-content { grid-template-columns: 1fr; text-align: center; gap: 3rem; }
-            .hero-photo { order: -1; }
-            .photo-wrapper { width: 190px; height: 190px; margin: 0 auto; }
-            .hero-text h1 { font-size: 2.2rem; }
-            .rule { margin: 0 auto 1.6rem; }
-            .section-label::after { display: none; }
-            .photo-links { justify-content: center; }
-            .nav-inner { flex-direction: column; gap: 0.6rem; }
-            .nav-links { gap: 1.2rem; flex-wrap: wrap; justify-content: center; }
-        }
-        @media (max-width: 480px) {
-            .hero-text h1 { font-size: 1.85rem; }
-            .hero { padding: 5.5rem 1.5rem 3rem; }
-        }
-    </style>
-    <meta name="google-site-verification" content="ILZ98lmrw4L99SluEfjDH4MSKWjuuGOyviwQfqcEkb8" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="masthead"><div class="masthead__inner">
+    <a href="index.html" class="masthead__title">Y. Ait Mohamed <span class="dot"></span></a>
+    <nav><ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="talks.html">Talks</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="cv.html">CV</a></li>
+    </ul></nav>
+</div></div>
 
-<nav>
-    <div class="nav-inner">
-        <a href="index.html" class="nav-brand"></a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="talks.html">Talks</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <li><a href="teaching.html">Teaching</a></li>
+<div class="page-wrapper">
+<aside class="sidebar">
+    <div class="author__avatar"><img src="photo.jpg" alt="Yassine Ait Mohamed"></div>
+    <div class="author__content">
+        <h3 class="author__name">Yassine Ait Mohamed</h3>
+        <p class="author__bio">PhD student in Mathematics at the University of Sherbrooke</p>
+    </div>
+    <div class="author__urls-wrapper">
+        <span class="sidebar-label">Contact</span>
+        <ul class="author__urls">
+            <li><span><i class="fas fa-fw fa-location-dot"></i>Sherbrooke, Canada</span></li>
+            <li><span><i class="fas fa-fw fa-building-columns"></i>University of Sherbrooke</span></li>
+            <li><span><i class="fas fa-fw fa-door-open"></i>Office D3-1027-4</span></li>
+            <li><a href="mailto:yassine.ait.mohamed@usherbrooke.ca"><i class="fas fa-fw fa-envelope"></i>Email</a></li>
+            <div class="sep"></div><span class="sidebar-label">Academic</span>
+            <li><a href="https://orcid.org/0009-0002-2245-4217" target="_blank"><i class="fab fa-fw fa-orcid"></i>ORCID</a></li>
+            <li><a href="https://www.researchgate.net/profile/Yassine-Ait-Mohamed" target="_blank"><i class="fab fa-fw fa-researchgate"></i>ResearchGate</a></li>
+            <div class="sep"></div><span class="sidebar-label">Dev</span>
+            <li><a href="https://github.com/yassine-aitmohamed" target="_blank"><i class="fab fa-fw fa-github"></i>GitHub</a></li>
+            <div class="sep"></div><span class="sidebar-label">Documents</span>
+            <li><a href="cv.pdf" target="_blank"><i class="fas fa-fw fa-file-pdf"></i>Download CV</a></li>
         </ul>
     </div>
-</nav>
+</aside>
 
-<section class="hero">
-    <div class="hero-content">
+<main class="page-content">
+    <h1 class="page-title">Yassine Ait Mohamed</h1>
+    <div class="subtitle">PhD Student in Mathematics</div>
+    <div class="page-rule"></div>
 
-        <div class="hero-text">
-            <h1>Yassine Ait Mohamed</h1>
-            <div class="office-line">
-                Office &nbsp;: D3-1027-4
-                &nbsp;&middot;&nbsp;
-                <a href="mailto:yassine.ait.mohamed@usherbrooke.ca">yassine.ait.mohamed@usherbrooke.ca</a>
-            </div>
+    <p class="intro-text">
+        I am a PhD student in Mathematics at the
+        <a href="https://www.usherbrooke.ca/mathematiques/" target="_blank" rel="noopener">University of Sherbrooke</a>,
+        under the supervision of
+        <a href="https://maxencemayrand.github.io/" target="_blank" rel="noopener">Prof. Maxence Mayrand</a>.
+        Before that, I was a PhD student at the
+        <a href="https://www.usmba.ac.ma/" target="_blank" rel="noopener">University of Sidi Mohamed Ben Abdellah</a>,
+        supervised by <a href="https://scholar.google.com/citations?hl=fr&user=D2ZlnJIAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Prof. Lahcen Oukhtite</a>.
+    </p>
 
-            <div class="rule"></div>
-
-            <p class="desc">
-                I am a PhD student in Mathematics at the
-                <a href="https://www.usherbrooke.ca/mathematiques/" target="_blank" rel="noopener" class="journal-link">University of Sherbrooke</a>,
-                under the supervision of
-                <a href="https://maxencemayrand.github.io/" target="_blank" rel="noopener" class="journal-link">Prof. Maxence Mayrand</a>.
-                Before that, I was a PhD student at the
-                <a href="https://www.usmba.ac.ma/" target="_blank" rel="noopener" class="journal-link">University of Sidi Mohamed Ben Abdellah</a>,
-                supervised by
-                <a href="https://scholar.google.com/citations?hl=fr&user=D2ZlnJIAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener" class="journal-link">Prof. Lahcen Oukhtite</a>.
-            </p>
-        </div>
-
-        <div class="hero-photo">
-            <div class="photo-wrapper">
-                <img src="photo.jpg" alt="Yassine Ait Mohamed">
-            </div>
-        </div>
-
+    <div class="section-label">Research Interests</div>
+    <div class="interest-tags">
+        <span class="tag">Differential Geometry</span>
+        <span class="tag">Poisson Geometry</span>
+        <span class="tag">Shifted Symplectic Geometry</span>
+        <span class="tag">Algebraic Geometry</span>
+        <span class="tag">Lie Groups</span>
+        <span class="tag">TQFT</span>
+        <span class="tag">Derivations Theory</span>
     </div>
-</section>
 
+    <div class="section-label">Recent News</div>
+    <div class="news-item">
+        <span class="news-date">Hiver 2026</span>
+        <span class="news-text">Teaching <em>Analyse I (MAT129)</em> at Université de Sherbrooke.</span>
+    </div>
+    <div class="news-item">
+        <span class="news-date">Nov 2025</span>
+        <span class="news-text">Talk: <em>Poisson structures on 1-shifted coisotropics</em> — Séminaire SAG, Université de Sherbrooke.</span>
+    </div>
+    <div class="news-item">
+        <span class="news-date">2025</span>
+        <span class="news-text">Paper <em>Generalized homogeneous derivations on graded rings</em> accepted in <a href="https://www.springer.com/journal/11202" target="_blank">Siberian Mathematical Journal</a>.</span>
+    </div>
+    <div class="news-item">
+        <span class="news-date">2024</span>
+        <span class="news-text">Paper <em>On graded rings with homogeneous derivations</em> published in <a href="https://doi.org/10.33044/revuma.4934" target="_blank">Revista de la Unión Matemática Argentina</a>.</span>
+    </div>
+    <div class="news-item">
+        <span class="news-date">2024</span>
+        <span class="news-text">Joined the University of Sherbrooke as PhD student under Prof. Maxence Mayrand.</span>
+    </div>
+</main>
+</div>
 
-
-</body>
-</html>
+<footer class="page-footer">
+    <div><div class="footer-quran">وَقُل رَّبِّ زِدۡنِي عِلۡمٗا</div><div class="footer-ref">طه، ١١٤</div></div>
+    <div class="footer-copy">© Yassine Ait Mohamed · University of Sherbrooke</div>
+</footer>
+</body></html>
