@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="masthead"><div class="masthead__inner">
+    <a href="index.html" class="masthead__site-title">Yassine Ait Mohamed<span class="dot"></span></a>
+    <nav><ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="talks.html">Talks</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="cv.html">CV</a></li>
+    </ul></nav>
+</div></div>
+<div class="page-wrapper">
+<aside class="sidebar">
+    <div class="author__avatar"><img src="photo.jpg" alt="Yassine Ait Mohamed"></div>
+    <div class="author__urls-wrapper">
+        <span class="sidebar-label">Contact</span>
+        <ul class="author__urls">
+            <li><span><i class="fas fa-fw fa-location-dot"></i>Sherbrooke, Canada</span></li>
+            <li><span><i class="fas fa-fw fa-building-columns"></i>University of Sherbrooke</span></li>
+            <li><span><i class="fas fa-fw fa-door-open"></i>Office D3-1027-4</span></li>
+            <li>
+                <a href="mailto:yassine.ait.mohamed@usherbrooke.ca"><i class="fas fa-fw fa-envelope"></i>Email</a>
+                <button onclick="navigator.clipboard.writeText('yassine.ait.mohamed@usherbrooke.ca').then(()=>{this.textContent='✓';setTimeout(()=>{this.textContent='copy'},1500)})"
+                    style="font-family:'DM Sans',sans-serif;font-size:0.60rem;font-weight:500;letter-spacing:0.8px;text-transform:uppercase;color:var(--accent);background:none;border:none;border-bottom:1px solid rgba(139,111,71,0.35);padding:0 0 1px;cursor:pointer;margin-left:6px;">copy</button>
+            </li>
+            <div class="sep"></div><span class="sidebar-label">Academic</span>
+            <li><a href="https://orcid.org/0009-0002-2245-4217" target="_blank"><i class="fab fa-fw fa-orcid"></i>ORCID</a></li>
+            <li><a href="https://www.researchgate.net/profile/Yassine-Ait-Mohamed" target="_blank"><i class="fab fa-fw fa-researchgate"></i>ResearchGate</a></li>
+            <div class="sep"></div><span class="sidebar-label">Dev</span>
+        </ul>
+    </div>
+</aside>
+<main class="page-content">
+    <h1 class="page-title">Yassine Ait Mohamed</h1>
+    <div class="page-rule"></div>
+    <p class="intro-text">
+        I am a PhD student in Mathematics at the
+        <a href="https://www.usherbrooke.ca/mathematiques/" target="_blank" rel="noopener">University of Sherbrooke</a>,
+        under the supervision of
+        <a href="https://maxencemayrand.github.io/" target="_blank" rel="noopener">Prof. Maxence Mayrand</a>.
+        Before that, I was a PhD student at the
+        <a href="https://www.usmba.ac.ma/" target="_blank" rel="noopener">University of Sidi Mohamed Ben Abdellah</a>,
+        supervised by <a href="https://scholar.google.com/citations?hl=fr&user=D2ZlnJIAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Prof. Lahcen Oukhtite</a>.
+    </p>
+  
+</main>
+</div>
+</body></html>
