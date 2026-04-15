@@ -1,7 +1,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-    --bg:          #F5F4F0;
+    --bg:          #FFFFFF;
     --bg2:         #ECEAE3;
     --primary:     #1E2B3A;
     --secondary:   #374B5E;
@@ -26,7 +26,7 @@ body {
 /* MASTHEAD */
 .masthead {
     position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-    background: rgba(245,244,240,0.97);
+    background: rgba(255,255,255,0.97);
     backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
     height: 56px;
 }
@@ -71,7 +71,7 @@ body {
     gap: 3rem;
 }
 
-/* SIDEBAR — clean, no background, no borders */
+/* SIDEBAR */
 .sidebar {
     width: 220px; flex-shrink: 0;
     padding-top: 3rem;
