@@ -328,9 +328,23 @@ body {
 .footer-copy { font-family: 'DM Sans', sans-serif; font-size: 0.65rem; color: var(--text3); }
 
 /* RESPONSIVE */
+.mobile-photo { display: none; }
+
 @media (max-width: 900px) {
     .sidebar { display: none; }
     .page-wrapper { padding: 0 1.5rem; }
+    .mobile-photo {
+        display: flex;
+        justify-content: center;
+        padding: 2rem 0 0.5rem;
+        width: 100%;
+    }
+    .mobile-photo img {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
 }
 @media (max-width: 600px) {
     .masthead__inner { padding: 0 1rem; }
