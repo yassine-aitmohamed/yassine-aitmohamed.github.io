@@ -1,18 +1,18 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-    --bg:          #FFFFFF;
-    --bg2:         #ECEAE3;
-    --primary:     #1E2B3A;
-    --secondary:   #374B5E;
+    --bg:          #FDFAF6;
+    --bg2:         #E8E2D6;
+    --primary:     #2B5A8A;
+    --secondary:   #3A8B4A;
     --text:        #1E2B3A;
     --text2:       #5A6E82;
     --text3:       #8299AD;
-    --accent:      #8B6F47;
-    --accent-deep: #6E5334;
-    --teal:        #2A9D8F;
-    --teal-hover:  #1E7268;
-    --green:       #4A7040;
+    --accent:      #C1440E;
+    --accent-deep: #B5472A;
+    --teal:        #2A8A7A;
+    --teal-hover:  #1E6B5E;
+    --green:       #3A8B4A;
 }
 
 html { scroll-behavior: smooth; }
@@ -26,7 +26,7 @@ body {
 /* MASTHEAD */
 .masthead {
     position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-    background: rgba(255,255,255,0.97);
+    background: rgba(253,250,246,0.97);
     backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
     height: 56px;
 }
@@ -154,7 +154,7 @@ body {
     font-family: 'DM Sans', sans-serif; font-size: 0.60rem; font-weight: 500;
     letter-spacing: 1px; text-transform: uppercase;
     padding: 3px 10px; border-radius: 20px;
-    background: rgba(139,111,71,0.10); border: 1px solid rgba(139,111,71,0.20);
+    background: rgba(193,68,14,0.10); border: 1px solid rgba(193,68,14,0.20);
     color: var(--accent-deep);
 }
 
@@ -197,8 +197,8 @@ body {
     margin-right: 0.35rem; margin-bottom: 0.35rem;
 }
 .badge-submitted { background: rgba(90,110,130,0.10); color: var(--text2); border: 1px solid rgba(90,110,130,0.18); }
-.badge-published  { background: rgba(74,112,64,0.10);  color: var(--green); border: 1px solid rgba(74,112,64,0.20); }
-.badge-toappear   { background: rgba(139,111,71,0.12); color: var(--accent); border: 1px solid rgba(139,111,71,0.22); }
+.badge-published  { background: rgba(58,139,74,0.10);  color: var(--green); border: 1px solid rgba(58,139,74,0.20); }
+.badge-toappear   { background: rgba(193,68,14,0.12); color: var(--accent); border: 1px solid rgba(193,68,14,0.22); }
 .badge-inprep     { background: rgba(90,110,130,0.08); color: var(--text3); border: 1px solid rgba(90,110,130,0.13); }
 .paper-links { display: flex; gap: 0.9rem; flex-wrap: wrap; margin-top: 0.35rem; }
 .paper-link {
@@ -218,7 +218,7 @@ body {
     font-family: 'Courier New', monospace;
     font-size: 0.80rem; color: var(--text2); line-height: 1.80;
     padding-left: 1rem;
-    border-left: 2px solid rgba(139,111,71,0.30);
+    border-left: 2px solid rgba(193,68,14,0.30);
 }
 
 /* TALKS */
@@ -281,7 +281,7 @@ body {
     width: 44px; height: 44px; background: var(--bg2); border-radius: 6px;
     text-decoration: none; transition: background 0.2s, transform 0.2s;
 }
-.material-card:hover { background: rgba(139,111,71,0.15); transform: translateY(-2px); }
+.material-card:hover { background: rgba(193,68,14,0.15); transform: translateY(-2px); }
 .material-card i { font-size: 1rem; color: var(--accent); opacity: 0.75; }
 .material-card:hover i { opacity: 1; }
 
@@ -307,12 +307,12 @@ body {
     display: inline-flex; align-items: center; gap: 0.55rem;
     font-family: 'DM Sans', sans-serif; font-size: 0.68rem; font-weight: 500;
     letter-spacing: 1.6px; text-transform: uppercase; color: var(--primary);
-    text-decoration: none; border: 1px solid rgba(30,43,58,0.2);
+    text-decoration: none; border: 1px solid rgba(43,90,138,0.2);
     padding: 0.6rem 1.3rem; border-radius: 4px; background: transparent;
     transition: background 0.2s, color 0.2s;
 }
 .pdf-btn i { font-size: 0.72rem; color: var(--accent); }
-.pdf-btn:hover { background: rgba(139,111,71,0.10); color: var(--accent-deep); }
+.pdf-btn:hover { background: rgba(193,68,14,0.10); color: var(--accent-deep); }
 
 /* FOOTER */
 .page-footer {
