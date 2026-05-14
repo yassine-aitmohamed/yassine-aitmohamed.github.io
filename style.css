@@ -140,7 +140,7 @@ body {
 
 /* INTRO */
 .intro-text {
-    font-size: 1.02rem; font-weight: 300; color: var(--secondary);
+    font-size: 1.02rem; font-weight: 300; color: var(--primary);
     line-height: 1.85; margin-bottom: 1.5rem;
 }
 .intro-text a, a.teal-link {
