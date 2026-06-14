@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 
-    <!-- ── Paper link buttons (PDF + arXiv) ── -->
     <style>
         .paper-link-btn {
             display: inline-flex;
@@ -96,7 +95,7 @@
         Derivations theory, algebraic geometry, Lie groups, topological quantum field theories, shifted symplectic geometry, Poisson geometry.
     </p>
 
-    <div class="section-label">Differential Geometry</div>
+    <div class="section-label">Poisson Geometry</div>
     <ol class="paper-list">
         <li class="paper-item">
             <div class="paper-body">
@@ -120,13 +119,6 @@
                 <div><span class="badge badge-submitted">Submitted</span></div>
                 <div class="paper-links">
                     <button class="abstract-toggle" data-for="abs-a1" onclick="toggleAbstract('abs-a1')">Abstract ↓</button>
-                    <!-- Replace href values with your actual PDF path and arXiv ID -->
-                    <a href="Documents research/graded_trivial_extensions.pdf" class="paper-link-btn pdf-btn" target="_blank">
-                        <i class="fas fa-file-pdf"></i> PDF
-                    </a>
-                    <a href="https://arxiv.org/abs/XXXX.XXXXX" class="paper-link-btn arxiv-btn" target="_blank">
-                        arXiv
-                    </a>
                 </div>
                 <div id="abs-a1" class="abstract">Let $G$ be an arbitrary group, $R = \bigoplus_{\tau \in G} R_\tau$ a $G$-graded ring,
 and $M$ a graded $R$-bimodule. We show that every homogeneous derivation on the graded
@@ -148,19 +140,30 @@ $M$ is $D$-gr-simple as a graded $R$-module.</div>
                 <div><span class="badge badge-submitted">Submitted</span></div>
                 <div class="paper-links">
                     <button class="abstract-toggle" data-for="abs-a2" onclick="toggleAbstract('abs-a2')">Abstract ↓</button>
-                    <!-- Replace href values with your actual PDF path and arXiv ID -->
                     <a href="Documents research/graded_diff_polynomial_rings.pdf" class="paper-link-btn pdf-btn" target="_blank">
                         <i class="fas fa-file-pdf"></i> PDF
                     </a>
-                    <a href="https://arxiv.org/abs/XXXX.XXXXX" class="paper-link-btn arxiv-btn" target="_blank">
-                        arXiv
-                    </a>
                 </div>
-                <div id="abs-a2" class="abstract">We study differential polynomial rings $R[t;\delta]$ over $\Gamma$-graded rings, where $\Gamma$ is an arbitrary group. We show that $R[t;\delta]$ admits a $\Gamma$-grading compatible with that of $R$ if and only if $\delta$ is a $\gamma$-derivation for some $\gamma \in C_\Gamma(\Gamma_R)$, and we characterize the resulting graded ring by a universal property. We prove that $R[t;\delta]$ is gr-simple if and only if $R$ is $\delta$-gr-simple and $Z(R[t;\delta])$ is a graded field; in characteristic zero, this reduces to $\delta$-gr-simplicity of $R$ and $\gamma$-outerness of $\delta$, extending Jordan's simplicity criterion to the graded setting. We further show that $R[t;\delta]$ is gr-prime if and only if $R$ is $\delta$-gr-prime, and that gr-Noetherianity of $R$ passes to $R[t;\delta]$, recovering a graded Hilbert basis theorem as a special case. When $\Gamma$ is abelian, gr-simplicity and gr-primality are shown to be invariants of homogeneous graded Morita equivalence, and every ring homogeneously graded equivalent to $R[t;\delta]$ via a compatible idempotent is again a graded differential polynomial ring.</div>
+                <div id="abs-a2" class="abstract">Let $R$ be a group-graded ring and $\delta$ a derivation of $R$.
+We characterize when the differential polynomial ring $R[t;\delta]$
+admits a compatible grading: this happens precisely when $\delta$
+shifts each homogeneous component by a fixed degree that centralizes
+the support, in which case the grading is unique. We then establish
+graded analogues of the classical simplicity theorems of Jordan and
+of \"{O}inert--Silvestrov. In characteristic zero, $R[t;\delta]$ is
+gr-simple if and only if $R$ is $\delta$-gr-simple and $\delta$ is
+strongly $\gamma$-outer, meaning that no positive integer multiple
+of $\delta$ is $\gamma$-inner; this holds with no rationality
+assumption on $R$ and strictly extends Jordan's theorem. In
+arbitrary characteristic, under orderability and regularity
+hypotheses, gr-simplicity is equivalent to $\delta$-gr-simplicity of
+$R$ together with $Z(R[t;\delta])$ being a graded field, which is a graded form of the \"{O}inert--Silvestrov center criterion. We also show that gr-primality and gr-Noetherianity each transfer from $R$ to $R[t;\delta]$, and that any ring homogeneously graded Morita
+equivalent to $R[t;\delta]$ through a compatible idempotent is
+itself a graded differential polynomial ring.</div>
             </div>
         </li>
 
-        <!-- Paper A3 -->
+       
         <li class="paper-item">
             <div class="paper-body">
                 <div class="paper-title">Generalized homogeneous derivations on graded rings</div>
@@ -168,19 +171,12 @@ $M$ is $D$-gr-simple as a graded $R$-module.</div>
                 <div><span class="badge badge-toappear">To appear</span></div>
                 <div class="paper-links">
                     <button class="abstract-toggle" data-for="abs-a3" onclick="toggleAbstract('abs-a3')">Abstract ↓</button>
-                    <!-- Replace href values with your actual PDF path and arXiv ID -->
-                    <a href="Documents research/generalized_homogeneous_derivations.pdf" class="paper-link-btn pdf-btn" target="_blank">
-                        <i class="fas fa-file-pdf"></i> PDF
-                    </a>
-                    <a href="https://arxiv.org/abs/XXXX.XXXXX" class="paper-link-btn arxiv-btn" target="_blank">
-                        arXiv
-                    </a>
                 </div>
                 <div id="abs-a3" class="abstract">We introduce a notion of generalized homogeneous derivations on graded rings as a natural extension of the homogeneous derivations defined by Kanunnikov. We then define gr-generalized derivations, which preserve the degrees of homogeneous components. Several significant results originally established for prime rings are extended to the setting of gr-prime rings, and we characterize conditions under which gr-semiprime rings contain nontrivial central graded ideals.</div>
             </div>
         </li>
 
-        <!-- Paper A4 -->
+        
         <li class="paper-item">
             <div class="paper-body">
                 <div class="paper-title">On graded rings with homogeneous derivations</div>
@@ -188,13 +184,6 @@ $M$ is $D$-gr-simple as a graded $R$-module.</div>
                 <div><span class="badge badge-published">Published</span></div>
                 <div class="paper-links">
                     <button class="abstract-toggle" data-for="abs-a4" onclick="toggleAbstract('abs-a4')">Abstract ↓</button>
-                    <!-- Replace href values with your actual PDF path and arXiv ID -->
-                    <a href="Documents research/graded_rings_homogeneous_derivations.pdf" class="paper-link-btn pdf-btn" target="_blank">
-                        <i class="fas fa-file-pdf"></i> PDF
-                    </a>
-                    <a href="https://arxiv.org/abs/XXXX.XXXXX" class="paper-link-btn arxiv-btn" target="_blank">
-                        arXiv
-                    </a>
                 </div>
                 <div id="abs-a4" class="abstract">We establish results related to homogeneous derivations, a concept introduced by Kanunnikov (2018). First, we prove the existence of a non-trivial family of derivations that are not homogeneous on graded rings. Furthermore, based on homogeneous derivations, we extend certain existing significant results in the context of prime (resp. semiprime) rings to gr-prime (resp. gr-semiprime) rings, such as Posner's and Herstein's theorems.</div>
             </div>
