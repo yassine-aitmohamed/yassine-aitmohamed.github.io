@@ -1,211 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research — Yassine Ait Mohamed</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications — Yassine Ait Mohamed</title>
+    <link rel="stylesheet" href="https://ehbergou.github.io/assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        .paper-link-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.3em;
-            font-size: 0.76rem;
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 500;
-            padding: 0.18em 0.65em;
-            border-radius: 4px;
-            text-decoration: none;
-            transition: background 0.15s, color 0.15s, border-color 0.15s;
-            border: 1px solid;
-            margin-right: 0.35em;
-            cursor: pointer;
-            vertical-align: middle;
-        }
-        .paper-link-btn.pdf-btn {
-            color: #c0392b;
-            border-color: #e57368;
-            background: transparent;
-        }
-        .paper-link-btn.pdf-btn:hover {
-            background: #e57368;
-            color: #fff;
-        }
-        .paper-link-btn.arxiv-btn {
-            color: #2c7a7b;
-            border-color: #2c7a7b;
-            background: transparent;
-        }
-        .paper-link-btn.arxiv-btn:hover {
-            background: #2c7a7b;
-            color: #fff;
-        }
-    </style>
+        .author__avatar img { border-radius: 50%; }
 
+        .pub-list { list-style: none; padding: 0; margin: 0 0 32px; }
+        .pub-list li {
+            margin-bottom: 14px;
+            padding: 12px 14px;
+            background: #f9f9f9;
+            border-left: 3px solid #6f777d;
+            font-size: 0.88em;
+            line-height: 1.6;
+        }
+        .pub-title { font-weight: 700; font-style: italic; }
+        .pub-journal { color: #444; }
+        .pub-links { margin-top: 4px; }
+        .pub-links a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 0.9em;
+        }
+        .pub-links a:hover { text-decoration: underline; }
+        .pub-tag {
+            display: inline-block;
+            background: #e8f0fe;
+            color: #1a56db;
+            font-size: 0.78em;
+            padding: 1px 7px;
+            border-radius: 10px;
+            margin-right: 6px;
+        }
+        .abstract-box {
+            display: none;
+            margin-top: 8px;
+            padding: 10px 12px;
+            background: #f0f0f0;
+            border-left: 2px solid #aaa;
+            font-size: 0.85em;
+            line-height: 1.6;
+            color: #333;
+        }
+        .toggle-btn {
+            font-size: 0.8em;
+            color: #0066cc;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+            text-decoration: underline;
+        }
+        .note-item { margin-bottom: 6px; font-size: 0.88em; }
+    </style>
     <script>
     function toggleAbstract(id) {
         var el = document.getElementById(id);
-        var btn = document.querySelector('[data-for="' + id + '"]');
-        if (el.style.display === 'block') { el.style.display = 'none'; btn.textContent = 'Abstract ↓'; }
-        else { el.style.display = 'block'; btn.textContent = 'Abstract ↑'; }
+        el.style.display = (el.style.display === 'block') ? 'none' : 'block';
     }
     </script>
 </head>
-<body>
-<div class="masthead"><div class="masthead__inner">
-    <a href="index.html" class="masthead__site-title">Yassine Ait Mohamed<span class=""></span></a>
-    <nav><ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="research.html" class="active">Research</a></li>
-        <li><a href="talks.html">Talks</a></li>
-        <li><a href="teaching.html">Teaching</a></li>
-        <li><a href="cv.html">CV</a></li>
-    </ul></nav>
-</div></div>
+<body class="layout--single">
 
-<div class="page-wrapper">
-<aside class="sidebar">
-    <div class="author__avatar"><img src="photo.jpg" alt="Yassine Ait Mohamed"></div>
-    <div class="author__content">
+<div class="masthead">
+    <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+            <nav id="site-nav" class="greedy-nav">
+                <a class="site-title" href="index.html">Yassine Ait Mohamed</a>
+                <ul class="visible-links">
+                    <li class="masthead__menu-item"><a href="research.html">Publications</a></li>
+                    <li class="masthead__menu-item"><a href="talks.html">Talks</a></li>
+                    <li class="masthead__menu-item"><a href="cv.html">CV</a></li>
+                    <li class="masthead__menu-item"><a href="teaching.html">Teaching</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-    <div class="author__urls-wrapper">
-        <span class="sidebar-label">Contact</span>
-        <ul class="author__urls">
-            <li><span><i class="fas fa-fw fa-location-dot"></i>Sherbrooke, Canada</span></li>
-            <li><span><i class="fas fa-fw fa-building-columns"></i>University of Sherbrooke</span></li>
-            <li><span><i class="fas fa-fw fa-door-open"></i>Office D3-1027-4</span></li>
-            <li><a href="mailto:yassine.ait.mohamed@usherbrooke.ca"><i class="fas fa-fw fa-envelope"></i>Email</a></li>
-            <div class="sep"></div><span class="sidebar-label">Academic</span>
-            <li><a href="https://orcid.org/0009-0002-2245-4217" target="_blank"><i class="fab fa-fw fa-orcid"></i>ORCID</a></li>
-            <li><a href="https://www.voscours.fr/professeur/yassine-ait-mohamed.htm" target="_blank"><i class="fas fa-fw fa-chalkboard-teacher"></i>VosCours</a></li>
-            <div class="sep"></div><span class="sidebar-label">Dev</span>
-        </ul>
-    </div>
-</aside>
-
-<main class="page-content">
-    <h1 class="page-title">Research</h1>
-    <div class="page-rule"></div>
-
-    <div class="section-label">Research Interests</div>
-    <p style="font-family:'Source Serif 4',Georgia,serif;font-size:1rem;font-weight:300;color:var(--text2);line-height:1.85;">
-        Derivations theory, algebraic geometry, Lie groups, topological quantum field theories, shifted symplectic geometry, Poisson geometry.
-    </p>
-
-    <div class="section-label">Poisson Geometry</div>
-    <ol class="paper-list">
-        <li class="paper-item">
-            <div class="paper-body">
-                <div class="paper-title">Poisson structures on 1-shifted coisotropics (with <a href="https://maxencemayrand.github.io/" class="teal-link">Maxence Mayrand</a>)</div>
-                <div><span class="badge badge-inprep">In progress</span></div>
-                <div class="paper-links">
-                    <button class="abstract-toggle" data-for="abs-g1" onclick="toggleAbstract('abs-g1')">Abstract ↓</button>
-                </div>
-                <div id="abs-g1" class="abstract"></div>
-            </div>
-        </li>
-    </ol>
-
-    <div class="section-label">Algebra</div>
-    <ol class="paper-list">
-
-        <!-- Paper A1 -->
-        <li class="paper-item">
-            <div class="paper-body">
-                <div class="paper-title">On graded trivial extensions with homogeneous derivations</div>
-                <div><span class="badge badge-submitted">Submitted</span></div>
-                <div class="paper-links">
-                    <button class="abstract-toggle" data-for="abs-a1" onclick="toggleAbstract('abs-a1')">Abstract ↓</button>
-                </div>
-                <div id="abs-a1" class="abstract">Let $G$ be an arbitrary group, $R = \bigoplus_{\tau \in G} R_\tau$ a $G$-graded ring,
-and $M$ a graded $R$-bimodule. We show that every homogeneous derivation on the graded
-trivial extension $R \ltimes M$ decomposes canonically into four component maps, a graded
-analogue of a result of Mokhtari--Moafian--Vishki. We introduce the notion of a
-$\delta$-gr-simple ring and prove a graded analogue of Posner's theorem in prime
-characteristic. For diagonal derivations $\delta = (d, D)$, we characterize the
-$\delta$-invariant gr-ideals of $R \ltimes M$ via the conditions $d(\mathfrak{a})
-\subseteq \mathfrak{a}$ and $D(N) \subseteq N$; in particular, $R \ltimes M$ is
-$\delta$-gr-simple relative to $0 \ltimes M$ if and only if $R$ is $d$-gr-simple and
-$M$ is $D$-gr-simple as a graded $R$-module.</div>
-            </div>
-        </li>
-
-        <!-- Paper A2 -->
-        <li class="paper-item">
-            <div class="paper-body">
-                <div class="paper-title">Graded differential polynomial rings</div>
-                <div><span class="badge badge-submitted">Submitted</span></div>
-                <div class="paper-links">
-                    <button class="abstract-toggle" data-for="abs-a2" onclick="toggleAbstract('abs-a2')">Abstract ↓</button>
-                    <a href="Documents research/graded_diff_polynomial_rings.pdf" class="paper-link-btn pdf-btn" target="_blank">
-                        <i class="fas fa-file-pdf"></i> PDF
-                    </a>
-                </div>
-                <div id="abs-a2" class="abstract">Let $R$ be a group-graded ring and $\delta$ a derivation of $R$.
-We characterize when the differential polynomial ring $R[t;\delta]$
-admits a compatible grading: this happens precisely when $\delta$
-shifts each homogeneous component by a fixed degree that centralizes
-the support, in which case the grading is unique. We then establish
-graded analogues of the classical simplicity theorems of Jordan and
-of \"{O}inert--Silvestrov. In characteristic zero, $R[t;\delta]$ is
-gr-simple if and only if $R$ is $\delta$-gr-simple and $\delta$ is
-strongly $\gamma$-outer, meaning that no positive integer multiple
-of $\delta$ is $\gamma$-inner; this holds with no rationality
-assumption on $R$ and strictly extends Jordan's theorem. In
-arbitrary characteristic, under orderability and regularity
-hypotheses, gr-simplicity is equivalent to $\delta$-gr-simplicity of
-$R$ together with $Z(R[t;\delta])$ being a graded field, which is a graded form of the \"{O}inert--Silvestrov center criterion. We also show that gr-primality and gr-Noetherianity each transfer from $R$ to $R[t;\delta]$, and that any ring homogeneously graded Morita
-equivalent to $R[t;\delta]$ through a compatible idempotent is
-itself a graded differential polynomial ring.</div>
-            </div>
-        </li>
-
-       
-        <li class="paper-item">
-            <div class="paper-body">
-                <div class="paper-title">Generalized homogeneous derivations on graded rings</div>
-                <div class="paper-venue"><a href="https://www.springer.com/journal/11202" target="_blank" rel="noopener" class="teal-link">Siberian Mathematical Journal</a></div>
-                <div><span class="badge badge-toappear">To appear</span></div>
-                <div class="paper-links">
-                    <button class="abstract-toggle" data-for="abs-a3" onclick="toggleAbstract('abs-a3')">Abstract ↓</button>
-                </div>
-                <div id="abs-a3" class="abstract">We introduce a notion of generalized homogeneous derivations on graded rings as a natural extension of the homogeneous derivations defined by Kanunnikov. We then define gr-generalized derivations, which preserve the degrees of homogeneous components. Several significant results originally established for prime rings are extended to the setting of gr-prime rings, and we characterize conditions under which gr-semiprime rings contain nontrivial central graded ideals.</div>
-            </div>
-        </li>
-
-        
-        <li class="paper-item">
-            <div class="paper-body">
-                <div class="paper-title">On graded rings with homogeneous derivations</div>
-                <div class="paper-venue"><a href="https://doi.org/10.33044/revuma.4934" target="_blank" rel="noopener" class="teal-link">Revista de la Unión Matemática Argentina</a></div>
-                <div><span class="badge badge-published">Published</span></div>
-                <div class="paper-links">
-                    <button class="abstract-toggle" data-for="abs-a4" onclick="toggleAbstract('abs-a4')">Abstract ↓</button>
-                </div>
-                <div id="abs-a4" class="abstract">We establish results related to homogeneous derivations, a concept introduced by Kanunnikov (2018). First, we prove the existence of a non-trivial family of derivations that are not homogeneous on graded rings. Furthermore, based on homogeneous derivations, we extend certain existing significant results in the context of prime (resp. semiprime) rings to gr-prime (resp. gr-semiprime) rings, such as Posner's and Herstein's theorems.</div>
-            </div>
-        </li>
-
-    </ol>
-
-    <div class="section-label">Master's Thesis</div>
-    <div class="thesis-title">Divisors in Algebraic Geometry, Central Simple Algebras and Severi–Brauer Varieties</div>
-    <div class="thesis-meta" style="margin-top:0.2rem;">Sidi Mohamed Ben Abdellah University, 2022 &nbsp;·&nbsp; <a href="Documents research/master_thesis.pdf" target="_blank">PDF</a></div>
-
-    <div class="section-label">Expository Notes</div>
-    <div class="note-item">
-        <span class="note-dot">—</span>
-        <span class="note-title">Note on Central Simple Algebras and the Brauer Group &nbsp;<a href="Documents research/On_Simple_Algebras.pdf" target="_blank">PDF</a></span>
-    </div>
-    <div class="note-item">
-        <span class="note-dot">—</span>
-        <span class="note-title">Note on Sheaf Theory &nbsp;<a href="Documents research/Note_on_sheaf_theory.pdf" target="_blank">PDF</a></span>
-    </div>
-
-</main>
 </div>
 
-</body></html>
+<div id="main" role="main">
+    <div class="sidebar sticky">
+        <div itemscope itemtype="https://schema.org/Person">
+            <div class="author__avatar">
+                <img src="photo.jpg" alt="Yassine Ait Mohamed" itemprop="image">
+            </div>
+            <div class="author__content">
+                <h3 class="author__name" itemprop="name">Yassine Ait Mohamed</h3>
+                <div class="author__bio">PhD Candidate in Mathematics<br>University of Sherbrooke, Canada</div>
+            </div>
+            <div class="author__urls-wrapper">
+                <ul class="author__urls social-icons">
+                    <li><span><i class="fas fa-fw fa-map-marker-alt"></i> Sherbrooke, Canada</span></li>
+                    <li><span><i class="fas fa-fw fa-door-open"></i> Office D3-1027-4</span></li>
+                    <li><a href="mailto:yassine.ait.mohamed@usherbrooke.ca"><i class="fas fa-fw fa-envelope"></i> yassine.ait.mohamed@usherbrooke.ca</a></li>
+                    <li><a href="https://orcid.org/0009-0002-2245-4217" target="_blank"><i class="fab fa-fw fa-orcid"></i> ORCID</a></li>
+                    <li><a href="https://github.com/yassine-aitmohamed" target="_blank"><i class="fab fa-fw fa-github"></i> GitHub</a></li>
+                    <li><a href="https://www.voscours.fr/professeur/yassine-ait-mohamed.htm" target="_blank"><i class="fas fa-fw fa-chalkboard-teacher"></i> VosCours</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <article class="page">
+        <div class="page__inner-wrap">
+            <section class="page__content">
+
+                <h1>Publications</h1>
+
+                <p style="font-size:0.85em;color:#555;">
+                    Research interests: derivations theory, algebraic geometry, Lie groups, topological quantum field theories, shifted symplectic geometry, Poisson geometry.
+                </p>
+
+                <!-- Poisson Geometry -->
+                <h2>Poisson Geometry</h2>
+                <ul class="pub-list">
+                    <li>
+                        <strong>Y. Ait Mohamed</strong>, M. Mayrand.
+                        <span class="pub-title">Poisson structures on 1-shifted coisotropics</span>.
+                        <span class="pub-journal">In progress.</span>
+                        <div class="pub-links">
+                            <button class="toggle-btn" onclick="toggleAbstract('abs-g1')">[Abstract]</button>
+                        </div>
+                        <div class="abstract-box" id="abs-g1"></div>
+                    </li>
+                </ul>
+
+                <!-- Algebra -->
+                <h2>Algebra</h2>
+                <ul class="pub-list">
+
+                    <li>
+                        <strong>Y. Ait Mohamed</strong>.
+                        <span class="pub-title">On graded trivial extensions with homogeneous derivations</span>.
+                        <span class="pub-journal">Submitted.</span>
+                        <div class="pub-links">
+                            <button class="toggle-btn" onclick="toggleAbstract('abs-a1')">[Abstract]</button>
+                        </div>
+                        <div class="abstract-box" id="abs-a1">Let $G$ be an arbitrary group, $R = \bigoplus_{\tau \in G} R_\tau$ a $G$-graded ring,
+and $M$ a graded $R$-bimodule. We show that every homogeneous derivation on the graded
+trivial extension $R \ltimes M$ decomposes canonically into four component maps, a graded
+analogue of a result of Mokhtari–Moafian–Vishki. We introduce the notion of a
+$\delta$-gr-simple ring and prove a graded analogue of Posner's theorem in prime
+characteristic.</div>
+                    </li>
+
+                    <li>
+                        <strong>Y. Ait Mohamed</strong>.
+                        <span class="pub-title">Graded differential polynomial rings</span>.
+                        <span class="pub-journal">Submitted.</span>
+                        <div class="pub-links">
+                            <button class="toggle-btn" onclick="toggleAbstract('abs-a2')">[Abstract]</button>
+                            <a href="Documents research/graded_diff_polynomial_rings.pdf" target="_blank">[PDF]</a>
+                        </div>
+                        <div class="abstract-box" id="abs-a2">Let $R$ be a group-graded ring and $\delta$ a derivation of $R$.
+We characterize when the differential polynomial ring $R[t;\delta]$ admits a compatible grading.
+We establish graded analogues of the classical simplicity theorems of Jordan and of Öinert–Silvestrov.
+We also show that gr-primality and gr-Noetherianity each transfer from $R$ to $R[t;\delta]$.</div>
+                    </li>
+
+                    <li>
+                        <strong>Y. Ait Mohamed</strong>.
+                        <span class="pub-title">Generalized homogeneous derivations on graded rings</span>.
+                        <span class="pub-journal"><em><a href="https://www.springer.com/journal/11202" target="_blank">Siberian Mathematical Journal</a></em>. To appear.</span>
+                        <div class="pub-links">
+                            <button class="toggle-btn" onclick="toggleAbstract('abs-a3')">[Abstract]</button>
+                        </div>
+                        <div class="abstract-box" id="abs-a3">We introduce a notion of generalized homogeneous derivations on graded rings as a natural extension of the homogeneous derivations defined by Kanunnikov. Several significant results originally established for prime rings are extended to the setting of gr-prime rings, and we characterize conditions under which gr-semiprime rings contain nontrivial central graded ideals.</div>
+                    </li>
+
+                    <li>
+                        <strong>Y. Ait Mohamed</strong>.
+                        <span class="pub-title">On graded rings with homogeneous derivations</span>.
+                        <span class="pub-journal"><em><a href="https://doi.org/10.33044/revuma.4934" target="_blank">Revista de la Unión Matemática Argentina</a></em>. Published.</span>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.33044/revuma.4934" target="_blank">[Journal]</a>
+                            <button class="toggle-btn" onclick="toggleAbstract('abs-a4')">[Abstract]</button>
+                        </div>
+                        <div class="abstract-box" id="abs-a4">We establish results related to homogeneous derivations, a concept introduced by Kanunnikov (2018). We extend certain existing significant results in the context of prime (resp. semiprime) rings to gr-prime (resp. gr-semiprime) rings, such as Posner's and Herstein's theorems.</div>
+                    </li>
+
+                </ul>
+
+                <!-- Master Thesis -->
+                <h2>Master's Thesis</h2>
+                <ul class="pub-list">
+                    <li>
+                        <strong>Y. Ait Mohamed</strong>.
+                        <span class="pub-title">Divisors in Algebraic Geometry, Central Simple Algebras and Severi–Brauer Varieties</span>.
+                        <span class="pub-journal">Sidi Mohamed Ben Abdellah University, 2022.</span>
+                        <div class="pub-links">
+                            <a href="Documents research/master_thesis.pdf" target="_blank">[PDF]</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- Expository Notes -->
+                <h2>Expository Notes</h2>
+                <ul class="pub-list">
+                    <li>
+                        <span class="pub-title">Note on Central Simple Algebras and the Brauer Group</span>.
+                        <div class="pub-links"><a href="Documents research/On_Simple_Algebras.pdf" target="_blank">[PDF]</a></div>
+                    </li>
+                    <li>
+                        <span class="pub-title">Note on Sheaf Theory</span>.
+                        <div class="pub-links"><a href="Documents research/Note_on_sheaf_theory.pdf" target="_blank">[PDF]</a></div>
+                    </li>
+                </ul>
+
+            </section>
+        </div>
+    </article>
+</div>
+
+<div id="footer" class="page__footer">
+    <footer>
+        <div class="page__footer-copyright">&copy; 2026 Yassine Ait Mohamed</div>
+    </footer>
+</div>
+
+</body>
+</html>
