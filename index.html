@@ -6,110 +6,20 @@
     <title>Yassine Ait Mohamed</title>
     <meta name="description" content="Yassine Ait Mohamed — PhD Candidate in Mathematics at the University of Sherbrooke, Canada.">
     <meta name="author" content="Yassine Ait Mohamed">
-
-    <!-- Minimal Mistakes CSS (same base as Hassan's page) -->
     <link rel="stylesheet" href="https://ehbergou.github.io/assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <!-- Claude / Anthropic brand palette overrides -->
     <style>
-        /* ── Claude brand tokens ──────────────────────────── */
-        :root {
-            --cl-dark:        #141413;
-            --cl-light:       #faf9f5;
-            --cl-mid-gray:    #b0aea5;
-            --cl-light-gray:  #e8e6dc;
-            --cl-orange:      #d97757;   /* primary accent */
-            --cl-blue:        #6a9bcc;   /* secondary accent */
-            --cl-green:       #788c5d;   /* tertiary accent */
-        }
-
-        /* ── Global backgrounds & text ───────────────────── */
-        body {
-            background-color: var(--cl-light);
-            color: var(--cl-dark);
-        }
-
-        /* ── Masthead ─────────────────────────────────────── */
-        .masthead,
-        .masthead__inner-wrap,
-        .greedy-nav {
-            background-color: #141413 !important;
-            border-bottom: 2px solid var(--cl-orange) !important;
-        }
-        .masthead a,
-        .masthead .site-title,
-        .greedy-nav a,
-        .greedy-nav .site-title {
-            color: #faf9f5 !important;
-        }
-        .greedy-nav a:hover {
-            color: var(--cl-orange) !important;
-        }
-
-        /* ── Sidebar ──────────────────────────────────────── */
-        .sidebar {
-            background-color: var(--cl-light-gray) !important;
-        }
-        .author__name {
-            color: var(--cl-dark) !important;
-        }
-        .author__bio {
-            color: #4a4845 !important;
-        }
-
-        /* ── Links ────────────────────────────────────────── */
-        a {
-            color: var(--cl-orange) !important;
-        }
-        a:hover {
-            color: var(--cl-blue) !important;
-            text-decoration: underline;
-        }
-
-        /* ── Research blocks ──────────────────────────────── */
+        .page__content p { font-size: 0.85em; }
+        .author__avatar img { border-radius: 50%; }
         .research-block {
-            border-left: 3px solid var(--cl-orange);
+            border-left: 3px solid #6f777d;
             padding-left: 1em;
             margin-bottom: 1em;
         }
-        .research-block:nth-of-type(2) { border-left-color: var(--cl-blue); }
-        .research-block:nth-of-type(3) { border-left-color: var(--cl-green); }
-
-        /* ── Page headings ────────────────────────────────── */
-        h2 {
-            color: var(--cl-dark) !important;
-            border-bottom: 1px solid var(--cl-light-gray);
-            padding-bottom: 0.3em;
-        }
-
-        /* ── Avatar ───────────────────────────────────────── */
-        .author__avatar img {
-            border-radius: 50%;
-            border: 3px solid var(--cl-orange);
-        }
-
-        /* ── Social icons ─────────────────────────────────── */
-        .author__urls li i {
-            color: var(--cl-orange) !important;
-        }
-
-        /* ── Footer ───────────────────────────────────────── */
-        .page__footer {
-            background-color: var(--cl-dark) !important;
-            color: var(--cl-mid-gray) !important;
-        }
-        .page__footer a {
-            color: var(--cl-orange) !important;
-        }
-
-        /* ── Body font size ───────────────────────────────── */
-        .page__content p { font-size: 0.85em; }
     </style>
 </head>
 <body class="layout--single">
 
-<!-- Masthead -->
 <div class="masthead">
     <div class="masthead__inner-wrap">
         <div class="masthead__menu">
@@ -126,17 +36,14 @@
     </div>
 </div>
 
-<!-- Main -->
 <div id="main" role="main">
     <div class="sidebar sticky">
         <div itemscope itemtype="https://schema.org/Person">
 
-            <!-- Photo -->
             <div class="author__avatar">
                 <img src="photo.jpg" alt="Yassine Ait Mohamed" itemprop="image">
             </div>
 
-            <!-- Name & title -->
             <div class="author__content">
                 <h3 class="author__name" itemprop="name">Yassine Ait Mohamed</h3>
                 <div class="author__bio" itemprop="description">
@@ -144,7 +51,6 @@
                 </div>
             </div>
 
-            <!-- Links -->
             <div class="author__urls-wrapper">
                 <ul class="author__urls social-icons">
                     <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
@@ -152,7 +58,7 @@
                         <span itemprop="name">Sherbrooke, Canada</span>
                     </li>
                     <li>
-                        <i class="fas fa-fw fa-building" aria-hidden="true"></i>
+                        <i class="fas fa-fw fa-door-open" aria-hidden="true"></i>
                         Office D3-1027-4
                     </li>
                     <li>
@@ -173,29 +79,41 @@
                             GitHub
                         </a>
                     </li>
+                    <li>
+                        <a href="https://www.voscours.fr/professeur/yassine-ait-mohamed.htm" target="_blank" rel="noopener">
+                            <i class="fas fa-fw fa-chalkboard-teacher" aria-hidden="true"></i>
+                            VosCours
+                        </a>
+                    </li>
                 </ul>
             </div>
 
         </div>
     </div>
 
-    <!-- Content -->
     <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
         <div class="page__inner-wrap">
             <section class="page__content" itemprop="text">
 
                 <p>
                     I am a PhD candidate in Mathematics at the
-                    <a href="https://www.usherbrooke.ca/mathematiques/" target="_blank" rel="noopener">University of Sherbrooke</a>,
+                    <a href="https://www.usherbrooke.ca/mathematiques/" target="_blank">University of Sherbrooke</a>,
                     Canada, under the supervision of
-                    <a href="https://maxencemayrand.github.io/" target="_blank" rel="noopener">Prof. Maxence Mayrand</a>.
+                    <a href="https://maxencemayrand.github.io/" target="_blank">Prof. Maxence Mayrand</a>.
                 </p>
 
                 <p>
                     Prior to this, I was a PhD student at the
-                    <a href="https://www.usmba.ac.ma/" target="_blank" rel="noopener">University of Sidi Mohamed Ben Abdellah</a>,
-                    supervised by
-                    <a href="https://scholar.google.com/citations?hl=fr&user=D2ZlnJIAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Prof. Lahcen Oukhtite</a>.
+                    <a href="https://www.usmba.ac.ma/" target="_blank">University of Sidi Mohamed Ben Abdellah</a>,
+                    Morocco, supervised by
+                    <a href="https://scholar.google.com/citations?hl=fr&user=D2ZlnJIAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Prof. Lahcen Oukhtite</a>.
+                </p>
+
+                <p>
+                    I completed my Master's in Mathematics in 2022 at the
+                    <a href="https://www.usmba.ac.ma/" target="_blank">University of Sidi Mohamed Ben Abdellah</a>.
+                    My master's thesis focused on
+                    <em>Divisors in Algebraic Geometry, Central Simple Algebras and Severi–Brauer Varieties</em>.
                 </p>
 
                 <h2 id="research-interests">Research Interests</h2>
@@ -206,15 +124,16 @@
                 </p>
 
                 <div class="research-block">
-                    <p><strong>Algebra:</strong> Study of derivations on graded rings, including homogeneous and
-                    generalized homogeneous derivations; differential polynomial rings and their gr-simplicity;
-                    graded trivial extensions; Posner-type theorems for gr-prime and gr-semiprime rings.</p>
+                    <p><strong>Algebra:</strong> Derivations theory on graded rings; homogeneous and generalized
+                    homogeneous derivations; differential polynomial rings and their gr-simplicity;
+                    graded trivial extensions; Posner-type and Herstein-type theorems for gr-prime
+                    and gr-semiprime rings.</p>
                 </div>
 
                 <div class="research-block">
                     <p><strong>Poisson &amp; Symplectic Geometry:</strong> Poisson structures on shifted coisotropics
-                    in the framework of derived algebraic geometry; shifted symplectic geometry; topological
-                    quantum field theories; Lie groups and their geometric representations.</p>
+                    in the framework of derived algebraic geometry; shifted symplectic geometry;
+                    topological quantum field theories; Lie groups and their geometric representations.</p>
                 </div>
 
                 <div class="research-block">
@@ -227,7 +146,6 @@
     </article>
 </div>
 
-<!-- Footer -->
 <div id="footer" class="page__footer">
     <footer>
         <div class="page__footer-copyright">
