@@ -1,18 +1,17 @@
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-    /* Surfaces â€” al-folio dark */
+    /* Surfaces — al-folio dark */
     --bg:        #1C1C1D;
     --bg-soft:   #232326;
     --bg-card:   #212529;
 
-    /* Structure â€” al-folio text (dark) */
+    /* Structure — al-folio text (dark) */
     --pine:      #E8E8E8;
     --pine-deep: #FFFFFF;
     --moss:      #4CAF50;
 
-    /* Accents â€” al-folio dark theme cyan */
+    /* Accents — al-folio dark theme cyan */
     --rust:      #2698BA;
     --rust-deep: #4FB8DA;
     --amber:     #2698BA;
@@ -43,7 +42,13 @@ body {
     font-size: 18px;
     line-height: 1.72;
     color: var(--ink);
-    background: var(--bg);
+    background:
+        linear-gradient(180deg, rgba(28,28,29,0.55) 0%, rgba(28,28,29,0.88) 55%, var(--bg) 85%),
+        url('bg-tremblant.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -96,8 +101,7 @@ body {
 /* ============================ LAYOUT ============================ */
 .page-container {
     max-width: var(--maxw); margin: var(--head) auto 0;
-    min-height: calc(100vh - var(--head));
-    padding: 3.2rem 2.2rem 5rem;
+    padding: 3.2rem 2.2rem 3rem;
 }
 .content-narrow { max-width: 840px; }
 
@@ -106,6 +110,9 @@ body {
     display: grid; grid-template-columns: 1fr 260px; gap: 3.6rem;
     align-items: start; margin-bottom: 1rem;
 }
+.about-bio { text-align: center; }
+.about-bio .hero__name { margin-left: auto; margin-right: auto; }
+.about-bio .intro-text { margin: 0 auto; text-align: center; }
 .about-card { padding-top: 0.3rem; }
 .author__avatar { text-align: center; margin-bottom: 1.3rem; }
 .author__avatar img {
@@ -427,7 +434,10 @@ a.teal-link:hover, .intro-text a:hover, .cv-link:hover { color: var(--rust-deep)
 /* ============================ FOOTER (al-folio dark bar) ============================ */
 .site-footer {
     width: 100%; margin: 3rem 0 0; padding: 2.4rem 2.2rem 2.6rem;
-    background: var(--footer-bg);
+    background:
+        linear-gradient(rgba(20,20,21,0.88), rgba(20,20,21,0.88)),
+        url('bg-algonquin.webp');
+    background-repeat: no-repeat; background-size: cover; background-position: center;
     display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;
     font-family: 'Roboto', sans-serif; font-size: 0.82rem; color: var(--footer-text);
 }
