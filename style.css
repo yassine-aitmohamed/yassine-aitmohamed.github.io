@@ -2,30 +2,35 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-    /* Surfaces — warm parchment */
-    --bg:        #FBF7EF;
-    --bg-soft:   #F4ECDC;
-    --bg-card:   #FFFDF8;
+    /* Surfaces â€” al-folio dark */
+    --bg:        #1C1C1D;
+    --bg-soft:   #232326;
+    --bg-card:   #212529;
 
-    /* Structure — Sherbrooke pine green */
-    --pine:      #1F4E37;
-    --pine-deep: #153A28;
-    --moss:      #4E7A4E;
+    /* Structure â€” al-folio text (dark) */
+    --pine:      #E8E8E8;
+    --pine-deep: #FFFFFF;
+    --moss:      #4CAF50;
 
-    /* Accents — autumn */
-    --rust:      #BD4B1B;
-    --rust-deep: #93360F;
-    --amber:     #C9881E;
-    --amber-soft:#E2AB46;
+    /* Accents â€” al-folio dark theme cyan */
+    --rust:      #2698BA;
+    --rust-deep: #4FB8DA;
+    --amber:     #2698BA;
+    --amber-soft:#6FC7E3;
 
     /* Ink */
-    --ink:       #2C2620;
-    --ink-soft:  #5C5347;
-    --ink-faint: #948A78;
+    --ink:       #E8E8E8;
+    --ink-soft:  #B7B7B7;
+    --ink-faint: #828282;
 
     /* Lines */
-    --line:      rgba(31,78,55,0.14);
-    --line-warm: rgba(189,75,27,0.22);
+    --line:      rgba(255,255,255,0.12);
+    --line-warm: rgba(38,152,186,0.35);
+
+    /* Footer (al-folio dark bar) */
+    --footer-bg:   #141415;
+    --footer-text: #C9C9C9;
+    --footer-link: #FFFFFF;
 
     --maxw: 1140px;
     --head: 60px;
@@ -34,27 +39,23 @@
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
 body {
-    font-family: 'Source Serif 4', Georgia, serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     line-height: 1.72;
     color: var(--ink);
-    background:
-        radial-gradient(1100px 520px at 85% -8%, rgba(201,136,30,0.10), transparent 60%),
-        radial-gradient(900px 480px at -5% 4%, rgba(31,78,55,0.07), transparent 60%),
-        var(--bg);
-    background-attachment: fixed;
+    background: var(--bg);
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
 
-::selection { background: rgba(189,75,27,0.18); color: var(--pine-deep); }
+::selection { background: rgba(38,152,186,0.35); color: var(--pine-deep); }
 
 /* ============================ MASTHEAD ============================ */
 .masthead {
     position: fixed; inset: 0 0 auto 0; z-index: 200;
     height: var(--head);
-    background: rgba(251,247,239,0.86);
+    background: rgba(28,28,29,0.92);
     backdrop-filter: saturate(160%) blur(16px);
     -webkit-backdrop-filter: saturate(160%) blur(16px);
     border-bottom: 1px solid var(--line);
@@ -62,10 +63,10 @@ body {
 .masthead__inner {
     max-width: var(--maxw); margin: 0 auto; height: 100%;
     padding: 0 2.2rem;
-    display: flex; justify-content: space-between; align-items: center;
+    display: flex; justify-content: flex-end; align-items: center;
 }
 .masthead__site-title {
-    font-family: 'Lora', serif; font-size: 1.16rem; font-weight: 600;
+    font-family: 'Roboto Slab', serif; font-size: 1.16rem; font-weight: 600;
     color: var(--pine); text-decoration: none; letter-spacing: -0.2px;
     display: inline-flex; align-items: center; gap: 8px; position: relative;
 }
@@ -76,7 +77,7 @@ body {
 }
 .nav-links { list-style: none; display: flex; gap: 0.1rem; }
 .nav-links a {
-    font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 500;
+    font-family: 'Roboto', sans-serif; font-size: 0.78rem; font-weight: 500;
     letter-spacing: 1.7px; text-transform: uppercase; text-decoration: none;
     color: var(--ink-soft); padding: 0.5rem 0.85rem; position: relative;
     transition: color .2s;
@@ -110,14 +111,14 @@ body {
 .author__avatar img {
     width: 168px; height: 168px; border-radius: 50%; object-fit: cover;
     border: 3px solid var(--bg-card);
-    box-shadow: 0 0 0 1px var(--line), 0 14px 34px -16px rgba(31,78,55,0.45);
+    box-shadow: 0 0 0 1px var(--line), 0 14px 34px -16px rgba(0,0,0,0.6);
 }
 .author__urls-wrapper { padding-top: 0.4rem; }
 .author__urls { list-style: none; }
 .author__urls li { margin-bottom: 0.12rem; }
 .author__urls li a,
 .author__urls li span {
-    font-family: 'DM Sans', sans-serif; font-size: 0.88rem; color: var(--ink-soft);
+    font-family: 'Roboto', sans-serif; font-size: 0.88rem; color: var(--ink-soft);
     text-decoration: none; display: flex; align-items: center; gap: 0.6rem;
     padding: 0.2rem 0; transition: color .18s;
 }
@@ -127,14 +128,14 @@ body {
 }
 .author__urls li a:hover i { opacity: 1; }
 .copy-btn {
-    font-family: 'DM Sans', sans-serif; font-size: 0.6rem; font-weight: 600;
+    font-family: 'Roboto', sans-serif; font-size: 0.6rem; font-weight: 600;
     letter-spacing: .8px; text-transform: uppercase; color: var(--rust);
     background: none; border: none; border-bottom: 1px solid var(--line-warm);
     padding: 0 0 1px; cursor: pointer; margin-left: 6px;
 }
 .sep { height: 0.7rem; display: block; }
 .sidebar-label {
-    font-family: 'DM Sans', sans-serif; font-size: 0.66rem; font-weight: 600;
+    font-family: 'Roboto', sans-serif; font-size: 0.66rem; font-weight: 600;
     letter-spacing: 2px; text-transform: uppercase; color: var(--ink-faint);
     padding: 0.55rem 0 0.25rem; display: block;
 }
@@ -143,7 +144,7 @@ body {
 @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 
 .page-title {
-    font-family: 'Lora', serif; font-weight: 500;
+    font-family: 'Roboto Slab', serif; font-weight: 500;
     font-size: clamp(2.2rem, 4.4vw, 3rem); line-height: 1.05;
     color: var(--pine); letter-spacing: -0.5px; margin-bottom: 0.35rem;
     animation: fadeUp .55s ease both;
@@ -158,7 +159,7 @@ body {
 
 /* Section labels with seed tick */
 .section-label {
-    font-family: 'DM Sans', sans-serif; font-size: 0.74rem; font-weight: 600;
+    font-family: 'Roboto', sans-serif; font-size: 0.74rem; font-weight: 600;
     letter-spacing: 2.4px; text-transform: uppercase; color: var(--pine);
     margin: 2.8rem 0 1.1rem; display: flex; align-items: center; gap: 0.6rem;
 }
@@ -171,22 +172,22 @@ body {
 .hero { position: relative; padding-top: 0.6rem; }
 .hero__glyph {
     position: absolute; right: -0.5rem; top: -1.5rem; z-index: 0;
-    font-family: 'Lora', serif; font-style: italic; font-size: 11rem;
-    line-height: 1; color: rgba(201,136,30,0.14); pointer-events: none; user-select: none;
+    font-family: 'Roboto Slab', serif; font-style: italic; font-size: 11rem;
+    line-height: 1; color: rgba(38,152,186,0.12); pointer-events: none; user-select: none;
 }
 .hero__eyebrow {
-    font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 600;
+    font-family: 'Roboto', sans-serif; font-size: 0.78rem; font-weight: 600;
     letter-spacing: 2.6px; text-transform: uppercase; color: var(--rust);
     margin-bottom: 0.8rem; animation: fadeUp .5s ease both;
 }
 .hero__name {
-    font-family: 'Lora', serif; font-weight: 600;
+    font-family: 'Roboto Slab', serif; font-weight: 600;
     font-size: clamp(2.6rem, 6vw, 4.1rem); line-height: 1.02; letter-spacing: -1px;
     color: var(--pine); margin-bottom: 0.5rem; position: relative; z-index: 1;
     animation: fadeUp .6s .05s ease both;
 }
 .hero__role {
-    font-family: 'Source Serif 4', serif; font-style: italic; font-weight: 400;
+    font-family: 'Roboto', sans-serif; font-style: italic; font-weight: 400;
     font-size: 1.2rem; color: var(--rust-deep); margin-bottom: 1.6rem;
     animation: fadeUp .6s .12s ease both;
 }
@@ -209,31 +210,31 @@ a.teal-link:hover, .intro-text a:hover, .cv-link:hover { color: var(--rust-deep)
 .focus-row {
     background: var(--bg-card); border: 1px solid var(--line);
     border-left: 3px solid var(--amber); border-radius: 10px;
-    padding: 1rem 1.2rem; box-shadow: 0 10px 26px -22px rgba(31,78,55,0.5);
+    padding: 1rem 1.2rem; box-shadow: 0 10px 26px -22px rgba(0,0,0,0.6);
 }
 .focus-row h3 {
-    font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 600;
+    font-family: 'Roboto', sans-serif; font-size: 0.7rem; font-weight: 600;
     letter-spacing: 1.8px; text-transform: uppercase; color: var(--ink-faint);
     margin-bottom: 0.3rem;
 }
 .focus-row p { font-size: 1rem; color: var(--ink-soft); font-weight: 300; line-height: 1.55; }
 .focus-formula {
-    font-family: 'Lora', serif; font-style: italic; font-size: 1.18rem; color: var(--pine);
+    font-family: 'Roboto Slab', serif; font-style: italic; font-size: 1.18rem; color: var(--pine);
 }
 
 /* Interest tags */
 .interest-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.6rem 0 0.5rem; }
 .tag {
-    font-family: 'DM Sans', sans-serif; font-size: 0.72rem; font-weight: 500;
+    font-family: 'Roboto', sans-serif; font-size: 0.72rem; font-weight: 500;
     letter-spacing: .6px; padding: 4px 12px; border-radius: 20px;
-    background: rgba(31,78,55,0.07); border: 1px solid var(--line); color: var(--pine);
+    background: rgba(38,152,186,0.12); border: 1px solid var(--line); color: var(--pine);
     transition: background .18s, transform .18s;
 }
-.tag:hover { background: rgba(189,75,27,0.1); transform: translateY(-2px); }
+.tag:hover { background: rgba(38,152,186,0.2); transform: translateY(-2px); }
 
 /* ============================ PAPERS ============================ */
 .research-lead {
-    font-family: 'Source Serif 4', serif; font-size: 1.06rem; font-weight: 300;
+    font-family: 'Roboto', sans-serif; font-size: 1.06rem; font-weight: 300;
     color: var(--ink-soft); line-height: 1.85; max-width: 66ch;
 }
 .paper-list { list-style: none; counter-reset: paper; }
@@ -249,7 +250,7 @@ a.teal-link:hover, .intro-text a:hover, .cv-link:hover { color: var(--rust-deep)
 }
 .paper-item::before {
     content: counter(paper, decimal-leading-zero);
-    font-family: 'DM Sans', sans-serif; font-size: 0.8rem; font-weight: 600;
+    font-family: 'Roboto', sans-serif; font-size: 0.8rem; font-weight: 600;
     color: var(--amber); padding-top: 0.45rem; text-align: right;
 }
 .paper-body {
@@ -259,16 +260,16 @@ a.teal-link:hover, .intro-text a:hover, .cv-link:hover { color: var(--rust-deep)
 }
 .paper-body:hover {
     transform: translateY(-3px); border-color: var(--line-warm);
-    box-shadow: 0 18px 38px -26px rgba(31,78,55,0.55);
+    box-shadow: 0 18px 38px -26px rgba(0,0,0,0.65);
 }
 .paper-title {
-    font-family: 'Lora', serif; font-size: 1.16rem; font-weight: 500;
+    font-family: 'Roboto Slab', serif; font-size: 1.16rem; font-weight: 500;
     color: var(--pine); line-height: 1.42; margin-bottom: 0.4rem;
 }
 .paper-title a { color: var(--rust); text-decoration: none; border-bottom: 1px solid var(--line-warm); }
 .paper-title a:hover { color: var(--rust-deep); }
 .paper-venue {
-    font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--ink-soft);
+    font-family: 'Roboto', sans-serif; font-size: 0.9rem; color: var(--ink-soft);
     margin-bottom: 0.4rem;
 }
 
@@ -276,7 +277,7 @@ a.teal-link:hover, .intro-text a:hover, .cv-link:hover { color: var(--rust-deep)
 .paper-frame {
     background: var(--bg-card); border: 1px solid var(--line);
     border-radius: 12px; padding: 1.5rem 1.8rem 1.5rem 1.6rem;
-    box-shadow: 0 14px 32px -26px rgba(31,78,55,0.4);
+    box-shadow: 0 14px 32px -26px rgba(0,0,0,0.5);
 }
 .paper-list-simple { list-style: none; margin: 0; padding: 0; }
 .paper-entry {
@@ -293,36 +294,36 @@ a.teal-link:hover, .intro-text a:hover, .cv-link:hover { color: var(--rust-deep)
 }
 .paper-entry:first-child::before { top: 0.4rem; }
 .badge {
-    display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 0.68rem;
+    display: inline-block; font-family: 'Roboto', sans-serif; font-size: 0.68rem;
     font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
     padding: 3px 11px; border-radius: 20px; margin: 0.3rem 0.3rem 0.3rem 0;
 }
-.badge-published { background: rgba(78,122,78,0.14); color: var(--moss);  border: 1px solid rgba(78,122,78,0.3); }
-.badge-toappear  { background: rgba(201,136,30,0.16); color: var(--amber); border: 1px solid rgba(201,136,30,0.32); }
-.badge-submitted { background: rgba(92,83,71,0.1);   color: var(--ink-soft); border: 1px solid rgba(92,83,71,0.2); }
-.badge-inprep    { background: rgba(189,75,27,0.1);  color: var(--rust);  border: 1px solid var(--line-warm); }
+.badge-published { background: rgba(76,175,80,0.16); color: var(--moss);  border: 1px solid rgba(76,175,80,0.35); }
+.badge-toappear  { background: rgba(38,152,186,0.18); color: var(--amber); border: 1px solid rgba(38,152,186,0.35); }
+.badge-submitted { background: rgba(255,255,255,0.07); color: var(--ink-soft); border: 1px solid rgba(255,255,255,0.16); }
+.badge-inprep    { background: rgba(38,152,186,0.12); color: var(--rust);  border: 1px solid var(--line-warm); }
 .paper-links { display: flex; gap: 0.9rem; flex-wrap: wrap; margin-top: 0.4rem; }
 .abstract-toggle {
-    font-family: 'DM Sans', sans-serif; font-size: 0.74rem; font-weight: 600;
+    font-family: 'Roboto', sans-serif; font-size: 0.74rem; font-weight: 600;
     letter-spacing: 1.2px; text-transform: uppercase; cursor: pointer;
     background: none; border: none; padding: 0; color: var(--ink-faint); transition: color .18s;
 }
 .abstract-toggle:hover { color: var(--rust-deep); }
 .abstract {
-    display: none; margin-top: 0.85rem; font-family: 'Source Serif 4', serif;
+    display: none; margin-top: 0.85rem; font-family: 'Roboto', sans-serif;
     font-size: 0.98rem; color: var(--ink-soft); line-height: 1.78;
     padding-left: 1rem; border-left: 2px solid var(--line-warm);
 }
 .paper-link-btn {
     display: inline-flex; align-items: center; gap: 0.3em; font-size: 0.74rem;
-    font-family: 'DM Sans', sans-serif; font-weight: 600; padding: 0.2em 0.7em;
+    font-family: 'Roboto', sans-serif; font-weight: 600; padding: 0.2em 0.7em;
     border-radius: 5px; text-decoration: none; border: 1px solid; cursor: pointer;
     transition: background .15s, color .15s;
 }
 .paper-link-btn.pdf-btn   { color: var(--rust-deep); border-color: var(--line-warm); }
 .paper-link-btn.pdf-btn:hover   { background: var(--rust); color: #fff; border-color: var(--rust); }
 .paper-link-btn.arxiv-btn { color: var(--pine); border-color: var(--line); }
-.paper-link-btn.arxiv-btn:hover { background: var(--pine); color: #fff; border-color: var(--pine); }
+.paper-link-btn.arxiv-btn:hover { background: var(--rust); color: #fff; border-color: var(--rust); }
 
 /* ============================ TALKS ============================ */
 .talk-item {
@@ -331,17 +332,17 @@ a.teal-link:hover, .intro-text a:hover, .cv-link:hover { color: var(--rust-deep)
 }
 .talk-item:first-of-type { border-top: none; }
 .talk-date {
-    font-family: 'DM Sans', sans-serif; font-size: 0.76rem; font-weight: 600;
+    font-family: 'Roboto', sans-serif; font-size: 0.76rem; font-weight: 600;
     letter-spacing: 1px; text-transform: uppercase; color: var(--rust);
     padding-top: 0.25rem;
 }
 .talk-title {
-    font-family: 'Lora', serif; font-size: 1.16rem; font-weight: 500;
+    font-family: 'Roboto Slab', serif; font-size: 1.16rem; font-weight: 500;
     color: var(--pine); line-height: 1.42; margin-bottom: 0.2rem;
 }
 .talk-location { font-style: italic; font-weight: 300; color: var(--ink-soft); line-height: 1.5; }
 .talk-link {
-    font-family: 'DM Sans', sans-serif; font-size: 0.74rem; font-weight: 600;
+    font-family: 'Roboto', sans-serif; font-size: 0.74rem; font-weight: 600;
     letter-spacing: 1px; text-transform: uppercase; color: var(--rust);
     text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;
     margin-top: 0.4rem; transition: color .18s;
@@ -351,7 +352,7 @@ a.teal-link:hover, .intro-text a:hover, .cv-link:hover { color: var(--rust-deep)
 
 /* ============================ THESIS & NOTES ============================ */
 .thesis-title {
-    font-family: 'Lora', serif; font-size: 1.16rem; font-weight: 500;
+    font-family: 'Roboto Slab', serif; font-size: 1.16rem; font-weight: 500;
     color: var(--pine); margin-bottom: 0.25rem; line-height: 1.4;
 }
 .thesis-meta { font-weight: 300; color: var(--ink-soft); }
@@ -369,11 +370,11 @@ a.teal-link:hover, .intro-text a:hover, .cv-link:hover { color: var(--rust-deep)
     transition: background .18s;
 }
 .timeline-row:first-child { border-top: none; }
-.timeline-row:hover { background: rgba(201,136,30,0.06); }
+.timeline-row:hover { background: rgba(38,152,186,0.08); }
 .term-badge {
-    font-family: 'DM Sans', sans-serif; font-size: 0.72rem; font-weight: 600;
+    font-family: 'Roboto', sans-serif; font-size: 0.72rem; font-weight: 600;
     letter-spacing: 0.8px; text-transform: uppercase; color: var(--rust-deep);
-    background: rgba(189,75,27,0.09); border: 1px solid var(--line-warm);
+    background: rgba(38,152,186,0.14); border: 1px solid var(--line-warm);
     border-radius: 20px; padding: 3px 10px; text-align: center; white-space: nowrap;
     justify-self: start;
 }
@@ -381,7 +382,7 @@ a.teal-link:hover, .intro-text a:hover, .cv-link:hover { color: var(--rust-deep)
 .course-name a { color: var(--pine); text-decoration: none; transition: color .18s; border-bottom: 1px solid transparent; }
 .course-name a:hover { color: var(--rust-deep); border-color: var(--line-warm); }
 .course-code {
-    font-family: 'DM Sans', sans-serif; font-size: 0.72rem; font-weight: 600;
+    font-family: 'Roboto', sans-serif; font-size: 0.72rem; font-weight: 600;
     color: var(--ink-faint); letter-spacing: 0.5px; margin-left: 0.3rem;
 }
 .institution { font-style: italic; font-weight: 300; color: var(--ink-soft); }
@@ -395,7 +396,7 @@ a.teal-link:hover, .intro-text a:hover, .cv-link:hover { color: var(--rust-deep)
     text-decoration: none; transition: background .18s, transform .18s;
     border: 1px solid var(--line);
 }
-.material-card:hover { background: rgba(189,75,27,0.14); transform: translateY(-3px); }
+.material-card:hover { background: rgba(38,152,186,0.18); transform: translateY(-3px); }
 .material-card i { font-size: 1.15rem; color: var(--rust); opacity: .8; }
 .material-card:hover i { opacity: 1; }
 
@@ -406,40 +407,40 @@ a.teal-link:hover, .intro-text a:hover, .cv-link:hover { color: var(--rust-deep)
 }
 .cv-entry:first-of-type { border-top: none; }
 .cv-date {
-    font-family: 'DM Sans', sans-serif; font-size: 0.76rem; font-weight: 600;
+    font-family: 'Roboto', sans-serif; font-size: 0.76rem; font-weight: 600;
     letter-spacing: 1px; text-transform: uppercase; color: var(--rust);
     padding-top: 0.25rem; white-space: nowrap;
 }
-.cv-title { font-family: 'Lora', serif; font-size: 1.16rem; font-weight: 500; color: var(--pine); line-height: 1.4; margin-bottom: 0.15rem; }
+.cv-title { font-family: 'Roboto Slab', serif; font-size: 1.16rem; font-weight: 500; color: var(--pine); line-height: 1.4; margin-bottom: 0.15rem; }
 .cv-detail { font-weight: 300; font-style: italic; color: var(--ink-soft); line-height: 1.5; }
 .pdf-btn {
     display: inline-flex; align-items: center; gap: 0.55rem; margin-top: 2rem;
-    font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 600;
+    font-family: 'Roboto', sans-serif; font-size: 0.78rem; font-weight: 600;
     letter-spacing: 1.4px; text-transform: uppercase; color: var(--pine);
     text-decoration: none; border: 1px solid var(--line); padding: 0.65rem 1.4rem;
     border-radius: 6px; transition: background .18s, color .18s, border-color .18s;
 }
 .pdf-btn i { color: var(--rust); }
-.pdf-btn:hover { background: var(--pine); color: #fff; border-color: var(--pine); }
-.pdf-btn:hover i { color: var(--amber-soft); }
+.pdf-btn:hover { background: var(--rust); color: #fff; border-color: var(--rust); }
+.pdf-btn:hover i { color: #fff; }
 
-/* ============================ FOOTER ============================ */
+/* ============================ FOOTER (al-folio dark bar) ============================ */
 .site-footer {
-    max-width: var(--maxw); margin: 0 auto; padding: 2.4rem 2.2rem 3rem;
-    border-top: 1px solid var(--line); margin-top: 3rem;
+    width: 100%; margin: 3rem 0 0; padding: 2.4rem 2.2rem 2.6rem;
+    background: var(--footer-bg);
     display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;
-    font-family: 'DM Sans', sans-serif; font-size: 0.82rem; color: var(--ink-faint);
+    font-family: 'Roboto', sans-serif; font-size: 0.82rem; color: var(--footer-text);
 }
 .footer-social { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.7rem; }
 .footer-social a {
     width: 38px; height: 38px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    border: 1px solid var(--line); color: var(--rust); font-size: 1rem;
+    border: 1px solid rgba(255,255,255,0.18); color: var(--footer-link); font-size: 1rem;
     transition: background .18s, color .18s, transform .18s, border-color .18s;
 }
-.footer-social a:hover { background: var(--pine); color: #fff; border-color: var(--pine); transform: translateY(-3px); }
-.footer-copy { display: flex; align-items: center; gap: 0.6rem; }
-.footer-ornament { color: var(--amber); font-size: 1rem; }
+.footer-social a:hover { background: var(--rust); color: #fff; border-color: var(--rust); transform: translateY(-3px); }
+.footer-copy { display: flex; align-items: center; gap: 0.6rem; color: var(--footer-text); }
+.footer-ornament { color: var(--rust); font-size: 1rem; }
 
 /* ============================ REVEAL ON SCROLL ============================ */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s cubic-bezier(.22,1,.36,1); }
