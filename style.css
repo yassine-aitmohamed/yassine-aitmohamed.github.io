@@ -35,20 +35,33 @@
     --head: 60px;
 }
 
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; background: var(--bg); }
+
+/* ============================ SITE BACKGROUND (two photos assembled) ============================ */
+html::before {
+    content: ''; position: fixed; inset: 0; z-index: -2; pointer-events: none;
+    background-image: url('bg-tremblant.jpg'), url('bg-algonquin.jpg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top center, bottom center;
+    background-size: 100% 60%, 100% 55%;
+}
+html::after {
+    content: ''; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background: linear-gradient(180deg,
+        rgba(15,15,16,0.58) 0%,
+        rgba(15,15,16,0.74) 20%,
+        rgba(15,15,16,0.92) 45%,
+        rgba(15,15,16,0.92) 55%,
+        rgba(15,15,16,0.74) 80%,
+        rgba(15,15,16,0.58) 100%);
+}
 
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     line-height: 1.72;
     color: var(--ink);
-    background:
-        linear-gradient(180deg, rgba(28,28,29,0.55) 0%, rgba(28,28,29,0.88) 55%, var(--bg) 85%),
-        url('bg-tremblant.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-    background-attachment: fixed;
+    background: transparent;
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -128,6 +141,7 @@ body {
     font-family: 'Roboto', sans-serif; font-size: 0.88rem; color: var(--ink-soft);
     text-decoration: none; display: flex; align-items: center; gap: 0.6rem;
     padding: 0.2rem 0; transition: color .18s;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.5);
 }
 .author__urls li a:hover { color: var(--rust-deep); }
 .author__urls li a i, .author__urls li span i {
@@ -145,6 +159,7 @@ body {
     font-family: 'Roboto', sans-serif; font-size: 0.66rem; font-weight: 600;
     letter-spacing: 2px; text-transform: uppercase; color: var(--ink-faint);
     padding: 0.55rem 0 0.25rem; display: block;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.5);
 }
 
 /* ============================ MAIN ============================ */
@@ -154,6 +169,7 @@ body {
     font-family: 'Roboto Slab', serif; font-weight: 500;
     font-size: clamp(2.2rem, 4.4vw, 3rem); line-height: 1.05;
     color: var(--pine); letter-spacing: -0.5px; margin-bottom: 0.35rem;
+    text-shadow: 0 2px 14px rgba(0,0,0,0.6);
     animation: fadeUp .55s ease both;
 }
 .page-rule {
@@ -169,6 +185,7 @@ body {
     font-family: 'Roboto', sans-serif; font-size: 0.74rem; font-weight: 600;
     letter-spacing: 2.4px; text-transform: uppercase; color: var(--pine);
     margin: 2.8rem 0 1.1rem; display: flex; align-items: center; gap: 0.6rem;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.5);
 }
 .section-label::before {
     content: ''; width: 18px; height: 2px; border-radius: 2px;
@@ -191,16 +208,19 @@ body {
     font-family: 'Roboto Slab', serif; font-weight: 600;
     font-size: clamp(2.6rem, 6vw, 4.1rem); line-height: 1.02; letter-spacing: -1px;
     color: var(--pine); margin-bottom: 0.5rem; position: relative; z-index: 1;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.65);
     animation: fadeUp .6s .05s ease both;
 }
 .hero__role {
     font-family: 'Roboto', sans-serif; font-style: italic; font-weight: 400;
     font-size: 1.2rem; color: var(--rust-deep); margin-bottom: 1.6rem;
+    text-shadow: 0 1px 10px rgba(0,0,0,0.6);
     animation: fadeUp .6s .12s ease both;
 }
 .intro-text {
     font-size: 1.2rem; font-weight: 300; line-height: 1.85; color: var(--ink);
     max-width: 60ch; position: relative; z-index: 1;
+    text-shadow: 0 1px 10px rgba(0,0,0,0.55);
     animation: fadeUp .6s .18s ease both;
 }
 a.teal-link, .intro-text a, .cv-link {
@@ -434,10 +454,10 @@ a.teal-link:hover, .intro-text a:hover, .cv-link:hover { color: var(--rust-deep)
 /* ============================ FOOTER (al-folio dark bar) ============================ */
 .site-footer {
     width: 100%; margin: 3rem 0 0; padding: 2.4rem 2.2rem 2.6rem;
-    background:
-        linear-gradient(rgba(20,20,21,0.88), rgba(20,20,21,0.88)),
-        url('bg-algonquin.webp');
-    background-repeat: no-repeat; background-size: cover; background-position: center;
+    background: rgba(15,15,16,0.55);
+    backdrop-filter: saturate(140%) blur(6px);
+    -webkit-backdrop-filter: saturate(140%) blur(6px);
+    border-top: 1px solid var(--line);
     display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;
     font-family: 'Roboto', sans-serif; font-size: 0.82rem; color: var(--footer-text);
 }
