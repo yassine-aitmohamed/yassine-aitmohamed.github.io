@@ -7,6 +7,27 @@
   <meta name="description" content="Yassine Ait Mohamed — PhD Candidate in Mathematics at the University of Sherbrooke, Canada.">
   <meta name="author" content="Yassine Ait Mohamed">
   <link rel="stylesheet" href="style.css">
+  <style>
+    #about .profile-grid {
+      grid-template-columns: minmax(0, 1fr) minmax(220px, 360px);
+    }
+    #tools .tools-list .feature-row {
+      grid-template-columns: minmax(0, 1fr) auto;
+    }
+    @media (max-width: 900px) {
+      #about .profile-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(180px, 300px);
+      }
+    }
+    @media (max-width: 640px) {
+      #about .profile-grid {
+        grid-template-columns: 1fr;
+      }
+      #about .profile-photo-wrap {
+        max-width: 300px;
+      }
+    }
+  </style>
 </head>
 <body>
 <header class="site-header">
@@ -29,55 +50,39 @@
 
 <main class="site-main site-main--compact">
   <section class="home-section home-section--first" id="about">
-    <div class="home-section__grid">
-      <div>
-        <div class="section-kicker">About</div>
-        <h2 class="home-section__title">About</h2>
+    <div class="profile-grid reveal">
+      <div class="profile-copy">
+        <p>
+          I am a PhD candidate in Mathematics at the
+          <a href="https://www.usherbrooke.ca/mathematiques/" target="_blank" rel="noopener">University of Sherbrooke</a>,
+          under the supervision of
+          <a href="https://maxencemayrand.github.io/" target="_blank" rel="noopener">Prof. Maxence Mayrand</a>.
+          Before that, I was a PhD student at the
+          <a href="https://www.usmba.ac.ma/" target="_blank" rel="noopener">University of Sidi Mohamed Ben Abdellah</a>,
+          supervised by
+          <a href="https://scholar.google.com/citations?hl=fr&user=D2ZlnJIAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Prof. Lahcen Oukhtite</a>.
+        </p>
+        <p>
+          My current interests include Poisson geometry, shifted symplectic geometry,
+          algebraic geometry, Lie theory, topological quantum field theories,
+          and derivations of graded rings.
+        </p>
       </div>
-      <div class="profile-grid reveal">
-        <div class="profile-photo-wrap">
-          <img class="profile-photo" src="photo.jpg" alt="Yassine Ait Mohamed">
-        </div>
-        <div class="profile-copy">
-          <p>
-            I am a PhD candidate in Mathematics at the
-            <a href="https://www.usherbrooke.ca/mathematiques/" target="_blank" rel="noopener">University of Sherbrooke</a>,
-            under the supervision of
-            <a href="https://maxencemayrand.github.io/" target="_blank" rel="noopener">Prof. Maxence Mayrand</a>.
-            Before that, I was a PhD student at the
-            <a href="https://www.usmba.ac.ma/" target="_blank" rel="noopener">University of Sidi Mohamed Ben Abdellah</a>,
-            supervised by
-            <a href="https://scholar.google.com/citations?hl=fr&user=D2ZlnJIAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Prof. Lahcen Oukhtite</a>.
-          </p>
-          <p>
-            My current interests include Poisson geometry, shifted symplectic geometry,
-            algebraic geometry, Lie theory, topological quantum field theories,
-            and derivations of graded rings.
-          </p>
-          <ul class="meta-list">
-            <li><span>Location</span><span>Sherbrooke, Canada</span></li>
-            <li><span>Institution</span><span>University of Sherbrooke</span></li>
-            <li><span>Office</span><span>D3-1027-4</span></li>
-            <li><span>Email</span><span><a href="mailto:yassine.ait.mohamed@usherbrooke.ca">yassine.ait.mohamed@usherbrooke.ca</a></span></li>
-          </ul>
-        </div>
+      <div class="profile-photo-wrap">
+        <img class="profile-photo" src="photo.jpg" alt="Yassine Ait Mohamed">
       </div>
     </div>
   </section>
 
-  <section class="home-section" id="explore">
+  <section class="home-section" id="tools">
     <div class="home-section__grid">
       <div>
-        <div class="section-kicker">Explore</div>
-        <h2 class="home-section__title">Explore</h2>
+        <div class="section-kicker">Tools</div>
+        <h2 class="home-section__title">Tools</h2>
       </div>
-      <div class="feature-list reveal">
-        <a class="feature-row" href="research.html"><span class="feature-row__index">01</span><span class="feature-row__title">Research & publications</span><span class="feature-row__arrow">→</span></a>
-        <a class="feature-row" href="talks.html"><span class="feature-row__index">02</span><span class="feature-row__title">Talks & seminars</span><span class="feature-row__arrow">→</span></a>
-        <a class="feature-row" href="teaching.html"><span class="feature-row__index">03</span><span class="feature-row__title">Teaching & course materials</span><span class="feature-row__arrow">→</span></a>
-        <a class="feature-row" href="cv.html"><span class="feature-row__index">04</span><span class="feature-row__title">Curriculum vitae</span><span class="feature-row__arrow">→</span></a>
-        <a class="feature-row" href="https://vanovamaths.github.io/vanolib/" target="_blank" rel="noopener"><span class="feature-row__index">05</span><span class="feature-row__title">Vanolib</span><span class="feature-row__arrow">↗</span></a>
-        <a class="feature-row" href="https://vanovamaths.github.io/VanovaTikZSketch/" target="_blank" rel="noopener"><span class="feature-row__index">06</span><span class="feature-row__title">VanovaTikZSketch</span><span class="feature-row__arrow">↗</span></a>
+      <div class="feature-list tools-list reveal">
+        <a class="feature-row" href="https://vanovamaths.github.io/vanolib/" target="_blank" rel="noopener"><span class="feature-row__title">Vanolib</span><span class="feature-row__arrow">↗</span></a>
+        <a class="feature-row" href="https://vanovamaths.github.io/VanovaTikZSketch/" target="_blank" rel="noopener"><span class="feature-row__title">VanovaTikZSketch</span><span class="feature-row__arrow">↗</span></a>
       </div>
     </div>
   </section>
