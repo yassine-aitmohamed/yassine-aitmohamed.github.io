@@ -610,72 +610,8 @@ a:focus-visible,button:focus-visible { outline:2px solid var(--accent); outline-
 .profile-copy a { color: #d97757; }
 .profile-copy a:hover { color: #eda58c; }
 
-/* Day/night palettes. The photo always uses its original, unfiltered pixels. */
-:root[data-theme="light"] {
- color-scheme: light;
- --paper: #fdfbf7; --paper-2: #f7eee5; --ink: #0b203c;
- --muted: #55647b; --line: rgba(38,62,94,.20); --line-strong: rgba(38,62,94,.32);
- --accent: #b85838; --accent-dark: #a94d30;
-}
-html[data-theme="light"] body { background: var(--paper); }
-html[data-theme="light"] .site-header { background: rgba(253,251,247,.94); }
-html[data-theme="light"] .contact-band { background: #fcf5ed; }
-html[data-theme="light"] .feature-row, html[data-theme="light"] .feature-row__arrow { color: var(--ink); }
-html[data-theme="light"] .feature-row:hover, html[data-theme="light"] .feature-row:hover .feature-row__arrow { color: var(--accent); }
-html[data-theme="light"] .profile-copy a { color: #b85838; }
-html[data-theme="light"] .profile-copy a:hover { color: #903d24; }
-html[data-theme="light"] .abstract { color: #253a51; background: rgba(184,88,56,.045); }
-html[data-theme="light"] .geometry-surface { opacity: .62; }
-.theme-toggle {
- flex-shrink: 0; display: inline-flex; align-items: center; gap: 8px;
- border: 1px solid var(--line-strong); border-radius: 100px; background: transparent;
- color: var(--ink); padding: 7px 13px; min-height: 40px; cursor: pointer;
- font: 400 .95rem/1.4 var(--serif);
- transition: border-color .2s, background-color .2s, color .2s;
-}
-.theme-toggle[hidden] { display: none; }
-.theme-toggle:hover { border-color: var(--accent); background: var(--paper-2); }
-.theme-toggle__icon { font-family: Arial, sans-serif; font-size: 1.15rem; line-height: 1; }
-.site-header__inner { gap: 24px; }
-.profile-photo-wrap { display: flex; align-items: center; justify-content: flex-end; min-height: 445px; overflow: visible; }
-.profile-photo {
- position: relative; left: auto; bottom: auto; transform: none;
- width: min(100%, 425px); height: 460px; max-width: 100%;
- object-fit: cover; object-position: 50% 25%;
- border-radius: 46% 54% 48% 52% / 49% 44% 56% 51%;
- filter: none; opacity: 1; mix-blend-mode: normal;
- mask-image: none; -webkit-mask-image: none; box-shadow: none;
-}
-@media (max-width: 1050px) {
- .profile-photo-wrap { min-height: 410px; }
- .profile-photo { width: 100%; height: 400px; }
-}
-@media (max-width: 760px) {
- .site-header__inner { display: grid; grid-template-columns: 1fr auto; gap: 8px 16px; padding-top: 10px; padding-bottom: 10px; }
- .site-header nav { grid-column: 1 / -1; grid-row: 2; width: 100%; }
- .theme-toggle { grid-column: 2; grid-row: 1; justify-self: end; min-height: 34px; padding: 4px 11px; }
- .profile-photo-wrap { justify-content: center; height: auto; min-height: 0; padding: 22px 0 28px; margin: 0 auto; }
- .profile-photo { width: min(80%, 320px); height: auto; aspect-ratio: .93; }
- html { scroll-padding-top: 130px; }
-}
-
-/* Open homepage sections and an original-pixel portrait silhouette. */
+/* Keep the morning design, without homepage section divider rules. */
 .home-page .site-header__inner::after { display: none; }
-.home-page .home-section, .home-page .contact-band__inner, .home-page .site-footer { border-top: 0; }
-.profile-photo-wrap { height: 490px; min-height: 0; display: block; position: relative; }
-.profile-photo {
- position: absolute; top: -20px; bottom: auto; left: 50%; transform: translateX(-50%);
- width: min(112%, 560px); height: auto; max-width: none; aspect-ratio: auto;
- border-radius: 0; object-fit: contain; filter: none; opacity: 1; mix-blend-mode: normal;
- -webkit-mask-image: url('portrait-mask.svg?v=2'); mask-image: url('portrait-mask.svg?v=2');
- -webkit-mask-size: 100% 100%; mask-size: 100% 100%;
- -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
-}
-@media (max-width: 1050px) and (min-width: 761px) {
- .profile-photo-wrap { height: 445px; }
- .profile-photo { width: 155%; }
-}
-@media (max-width: 760px) {
- .profile-photo-wrap { height: clamp(310px,95vw,425px); min-height: 0; padding: 0; margin: 18px auto 0; }
- .profile-photo { width: min(115%,460px); top: 0; }
-}
+.home-page .home-section,
+.home-page .contact-band__inner,
+.home-page .site-footer { border-top: 0; }

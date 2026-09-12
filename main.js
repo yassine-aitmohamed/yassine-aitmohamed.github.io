@@ -1,29 +1,5 @@
 // Progressive enhancement: all page content stays readable without animation.
 document.addEventListener('DOMContentLoaded', () => {
- const root = document.documentElement;
- const themeButton = document.querySelector('.theme-toggle');
- function showTheme(theme) {
-  root.dataset.theme = theme;
-  if (!themeButton) return;
-  const dark = theme === 'dark';
-  themeButton.setAttribute('aria-pressed', String(dark));
-  themeButton.setAttribute('aria-label', dark ? 'Switch to day mode' : 'Switch to night mode');
-  themeButton.querySelector('.theme-toggle__icon').textContent = dark ? '☀' : '☾';
-  themeButton.querySelector('.theme-toggle__text').textContent = dark ? 'Day' : 'Night';
- }
- if (themeButton) {
-  showTheme(root.dataset.theme === 'dark' ? 'dark' : 'light');
-  themeButton.hidden = false;
-  themeButton.addEventListener('click', () => {
-   const theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
-   showTheme(theme);
-   try { localStorage.setItem('yam-theme', theme); } catch (_) {}
-  });
-  window.addEventListener('storage', event => {
-   if (event.key === 'yam-theme') showTheme(event.newValue === 'dark' ? 'dark' : 'light');
-  });
- }
-
  const motion = matchMedia('(prefers-reduced-motion: reduce)');
  const items = document.querySelectorAll('.reveal');
  if ('IntersectionObserver' in window && !motion.matches) {
