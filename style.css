@@ -605,3 +605,7 @@ a:focus-visible,button:focus-visible { outline:2px solid var(--accent); outline-
  .profile-photo-wrap { min-height: 0; }
  .profile-photo { width: 112%; bottom: -35px; }
 }
+
+/* Terracotta accents requested for the introduction links. */
+.profile-copy a { color: #d97757; }
+.profile-copy a:hover { color: #eda58c; }
