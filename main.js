@@ -35,15 +35,16 @@ document.addEventListener('DOMContentLoaded', () => {
   ctx.setTransform(ratio,0,0,ratio,0,0); draw();
  }
  function point(u,v) {
-  const wave=Math.sin(u*7.5-v*2.1+time)*.12;
-  return [u*width,height*(.91-.51*u+(v-.5)*(.13+u*.54)+wave*u+pointer*u*.025)];
+  const crest = Math.exp(-Math.pow((u - .62 - Math.sin(time)*.018) / .16, 2));
+  const wave = Math.sin(u*7.5-v*2.1+time)*.035;
+  return [u*width,height*(.96-.38*u*u-.40*crest-.34*Math.pow(u,8)+(v-.5)*(.06+.68*u)+wave*u+pointer*u*.025)];
  }
  function stroke(points,color) {
   ctx.beginPath(); points.forEach((p,i) => i ? ctx.lineTo(...p) : ctx.moveTo(...p)); ctx.strokeStyle=color; ctx.lineWidth=.7; ctx.stroke();
  }
  function draw() {
   ctx.clearRect(0,0,width,height);
-  for(let row=0;row<=24;row++) { const points=[]; for(let col=0;col<=70;col++) points.push(point(col/70,row/24)); stroke(points,row%4===0 ? 'rgba(219,151,106,.52)' : 'rgba(219,151,106,.26)'); }
+  for(let row=0;row<=24;row++) { const points=[]; for(let col=0;col<=70;col++) points.push(point(col/70,row/24)); stroke(points,row%4===0 ? 'rgba(219,151,106,.68)' : 'rgba(219,151,106,.38)'); }
   for(let col=0;col<=44;col++) { const points=[]; for(let row=0;row<=30;row++) points.push(point(col/44,row/30)); stroke(points,'rgba(117,172,216,.23)'); }
  }
  function tick(now) {
