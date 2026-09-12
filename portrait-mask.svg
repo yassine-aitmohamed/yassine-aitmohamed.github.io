@@ -1,4 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1525 1632">
-<defs><linearGradient id="hem" gradientUnits="userSpaceOnUse" x1="0" y1="1060" x2="0" y2="1340"><stop stop-color="white"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient></defs>
-<path fill="url(#hem)" d="M764 75 C802 56 858 63 900 80 L918 75 C958 82 1014 132 1048 185 C1068 223 1097 255 1095 301 L1082 332 C1092 394 1065 475 1060 538 C1082 545 1068 617 1049 644 L1031 762 L1066 825 C1128 886 1235 881 1320 919 C1397 938 1478 1004 1525 1040 L1525 1632 L0 1632 L0 1299 C49 1212 110 1192 148 1130 C200 1013 277 962 362 930 L529 872 L585 845 C547 791 547 734 536 677 C518 652 508 602 515 567 L511 535 L516 502 C493 452 496 388 491 340 C482 280 513 218 544 184 C550 150 589 135 606 119 C645 109 681 80 723 81 Z"/>
+<defs>
+<linearGradient id="hem" gradientUnits="userSpaceOnUse" x1="0" y1="1060" x2="0" y2="1340"><stop stop-color="white"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient>
+<linearGradient id="side" gradientUnits="userSpaceOnUse" x1="1280" y1="0" x2="1470" y2="0"><stop stop-color="white"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient>
+<mask id="edge" maskUnits="userSpaceOnUse" x="0" y="0" width="1525" height="1632"><rect width="1525" height="1632" fill="url(#side)"/></mask>
+</defs>
+<path mask="url(#edge)" fill="url(#hem)" d="M766 88 C804 66 856 75 889 78 L913 89 C960 105 1001 143 1029 187 C1052 224 1073 263 1078 299 L1068 326 C1082 389 1060 460 1047 525 C1061 542 1058 594 1040 628 L1020 750 L1048 824 C1080 874 1165 904 1264 923 C1370 963 1480 1040 1525 1100 L1525 1632 L0 1632 L0 1320 C75 1220 126 1170 163 1126 C215 1037 289 986 390 955 L544 889 L596 864 C554 803 550 735 540 674 C520 644 515 606 520 568 L518 541 L527 504 C510 451 511 390 509 341 C501 282 528 227 558 194 C570 160 604 148 620 134 C657 121 694 91 733 91 Z"/>
 </svg>
