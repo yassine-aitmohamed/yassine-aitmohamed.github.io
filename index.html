@@ -7,29 +7,9 @@
   <meta name="description" content="Yassine Ait Mohamed — PhD Candidate in Mathematics at the University of Sherbrooke, Canada.">
   <meta name="author" content="Yassine Ait Mohamed">
   <link rel="stylesheet" href="style.css">
-  <style>
-    #about .profile-grid {
-      grid-template-columns: minmax(0, 1fr) minmax(220px, 360px);
-    }
-    #tools .tools-list .feature-row {
-      grid-template-columns: minmax(0, 1fr) auto;
-    }
-    @media (max-width: 900px) {
-      #about .profile-grid {
-        grid-template-columns: minmax(0, 1fr) minmax(180px, 300px);
-      }
-    }
-    @media (max-width: 640px) {
-      #about .profile-grid {
-        grid-template-columns: 1fr;
-      }
-      #about .profile-photo-wrap {
-        max-width: 300px;
-      }
-    }
-  </style>
+
 </head>
-<body>
+<body class="home-page">
 <header class="site-header">
   <div class="site-header__inner">
     <a class="brand" href="index.html" aria-label="Yassine Ait Mohamed — Home">
@@ -50,8 +30,10 @@
 
 <main class="site-main site-main--compact">
   <section class="home-section home-section--first" id="about">
+    <canvas class="geometry-surface" aria-hidden="true"></canvas>
     <div class="profile-grid reveal">
       <div class="profile-copy">
+        <h1 class="profile-title">Yassine Ait Mohamed</h1>
         <p>
           I am a PhD candidate in Mathematics at the
           <a href="https://www.usherbrooke.ca/mathematiques/" target="_blank" rel="noopener">University of Sherbrooke</a>,
@@ -69,7 +51,7 @@
         </p>
       </div>
       <div class="profile-photo-wrap">
-        <img class="profile-photo" src="photo.jpg" alt="Yassine Ait Mohamed">
+        <img class="profile-photo" src="portrait-navy.png" width="1448" height="1086" fetchpriority="high" decoding="async" alt="Yassine Ait Mohamed">
       </div>
     </div>
   </section>
