@@ -665,9 +665,9 @@ html[data-theme="light"] .geometry-surface { opacity: .62; }
 .profile-photo-wrap { height: 490px; min-height: 0; display: block; position: relative; }
 .profile-photo {
  position: absolute; top: -20px; bottom: auto; left: 50%; transform: translateX(-50%);
- width: min(120%, 600px); height: auto; max-width: none; aspect-ratio: auto;
+ width: min(112%, 560px); height: auto; max-width: none; aspect-ratio: auto;
  border-radius: 0; object-fit: contain; filter: none; opacity: 1; mix-blend-mode: normal;
- -webkit-mask-image: url('portrait-mask.svg'); mask-image: url('portrait-mask.svg');
+ -webkit-mask-image: url('portrait-mask.svg?v=2'); mask-image: url('portrait-mask.svg?v=2');
  -webkit-mask-size: 100% 100%; mask-size: 100% 100%;
  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
 }
