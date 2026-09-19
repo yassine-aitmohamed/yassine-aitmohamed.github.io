@@ -19,7 +19,7 @@
 
   <link
     rel="stylesheet"
-    href="style.css?v=20260918-style5-research"
+    href="style.css?v=20260918-research-bullets"
   >
 
 
@@ -30,7 +30,6 @@
       tex: {
         inlineMath: [['$', '$']]
       },
-
       options: {
         skipHtmlTags: [
           'script',
@@ -43,12 +42,42 @@
     };
   </script>
 
-
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"
     id="MathJax-script"
     async>
   </script>
+
+
+  <!--
+    Bullets uniquement pour les articles de la section Papers.
+    Rien devant Master's thesis ou Expository notes.
+  -->
+
+  <style>
+
+    .papers-block .paper-entry {
+      position: relative;
+      padding-left: 24px;
+    }
+
+    .papers-block .paper-entry::before {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      top: 0.55em;
+
+      width: 9px;
+      height: 9px;
+
+      border-radius: 50%;
+
+      background: var(--accent);
+    }
+
+  </style>
 
 </head>
 
@@ -56,9 +85,9 @@
 <body>
 
 
-<!-- =========================
+<!-- ==================================================
      HEADER
-     ========================= -->
+     ================================================== -->
 
 <header class="site-header">
 
@@ -117,9 +146,9 @@
 
 
 
-<!-- =========================
+<!-- ==================================================
      MAIN
-     ========================= -->
+     ================================================== -->
 
 <main class="page-container">
 
@@ -155,23 +184,16 @@
 
 
 
-    <!-- =========================
+    <!-- ==================================================
          PAPERS
-         ========================= -->
+         ================================================== -->
 
     <div class="section-label reveal">
       Papers
     </div>
 
 
-    <!--
-      ONE SINGLE BLOCK.
-
-      All papers are inside this block.
-      No individual card or separator.
-    -->
-
-    <div class="paper-frame reveal">
+    <div class="paper-frame papers-block reveal">
 
       <ul class="paper-list-simple">
 
@@ -190,7 +212,9 @@
               href="https://maxencemayrand.github.io/"
               target="_blank"
               rel="noopener">
+
               Maxence Mayrand
+
             </a>
 
             )
@@ -211,7 +235,9 @@
         <li class="paper-entry has-badge">
 
           <div class="paper-title">
+
             Graded differential polynomial rings
+
           </div>
 
 
@@ -226,14 +252,18 @@
               href="Documents research/gpd.pdf"
               target="_blank"
               class="teal-link">
+
               PDF ↗
+
             </a>
 
 
             <button
               class="abstract-toggle"
               data-for="abs-a2">
+
               Abstract ↓
+
             </button>
 
           </div>
@@ -248,10 +278,9 @@
             where $\Gamma$ is an arbitrary group.
 
             We show that $R[t;\delta]$ admits a
-            $\Gamma$-grading compatible with that of
-            $R$ if and only if $\delta$ is a
-            $\gamma$-derivation for some
-            $\gamma\in C_\Gamma(\Gamma_R)$,
+            $\Gamma$-grading compatible with that of $R$
+            if and only if $\delta$ is a $\gamma$-derivation
+            for some $\gamma\in C_\Gamma(\Gamma_R)$,
             and that this grading is unique once
             $\deg(t)=\gamma$ is fixed;
 
@@ -262,21 +291,20 @@
             by a universal property.
 
             We prove a characteristic-free center criterion
-            for gr-simplicity whenever
-            $Z(R[t;\delta])$ is a graded subring;
+            for gr-simplicity whenever $Z(R[t;\delta])$
+            is a graded subring;
 
-            in characteristic zero, gr-simplicity is
-            equivalent to $\delta$-gr-simplicity of $R$
-            and $\gamma$-outerness of $\delta$,
+            in characteristic zero, gr-simplicity is equivalent
+            to $\delta$-gr-simplicity of $R$ and
+            $\gamma$-outerness of $\delta$,
             extending Jordan's simplicity criterion
             to the graded setting.
 
-            We further show that $R[t;\delta]$ is
-            gr-prime if and only if $R$ is
-            $\delta$-gr-prime, and that
-            gr-Noetherianity of $R$ passes to
-            $R[t;\delta]$, recovering a graded Hilbert
-            basis theorem as a special case.
+            We further show that $R[t;\delta]$ is gr-prime
+            if and only if $R$ is $\delta$-gr-prime,
+            and that gr-Noetherianity of $R$ passes to
+            $R[t;\delta]$, recovering a graded Hilbert basis
+            theorem as a special case.
 
             When $\Gamma$ is abelian, gr-simplicity
             and gr-primality are shown to be invariants
@@ -296,7 +324,9 @@
         <li class="paper-entry has-badge">
 
           <div class="paper-title">
+
             Generalized homogeneous derivations on graded rings
+
           </div>
 
 
@@ -325,14 +355,18 @@
               href="Documents research/ghdogr.pdf"
               target="_blank"
               class="teal-link">
+
               PDF ↗
+
             </a>
 
 
             <button
               class="abstract-toggle"
               data-for="abs-a3">
+
               Abstract ↓
+
             </button>
 
           </div>
@@ -369,7 +403,9 @@
         <li class="paper-entry has-badge">
 
           <div class="paper-title">
+
             On graded rings with homogeneous derivations
+
           </div>
 
 
@@ -398,14 +434,18 @@
               href="Documents research/ogrwhd.pdf"
               target="_blank"
               class="teal-link">
+
               PDF ↗
+
             </a>
 
 
             <button
               class="abstract-toggle"
               data-for="abs-a4">
+
               Abstract ↓
+
             </button>
 
           </div>
@@ -440,9 +480,9 @@
 
 
 
-    <!-- =========================
+    <!-- ==================================================
          MASTER'S THESIS
-         ========================= -->
+         ================================================== -->
 
     <div class="section-label reveal">
       Master's thesis
@@ -472,7 +512,9 @@
             <a
               href="Documents research/master_thesis.pdf"
               target="_blank">
+
               PDF ↗
+
             </a>
 
           </div>
@@ -485,9 +527,9 @@
 
 
 
-    <!-- =========================
+    <!-- ==================================================
          EXPOSITORY NOTES
-         ========================= -->
+         ================================================== -->
 
     <div class="section-label reveal">
       Expository notes
@@ -509,7 +551,9 @@
             <a
               href="Documents research/On_Simple_Algebras.pdf"
               target="_blank">
+
               PDF ↗
+
             </a>
 
           </span>
@@ -527,7 +571,9 @@
             <a
               href="Documents research/Note_on_sheaf_theory.pdf"
               target="_blank">
+
               PDF ↗
+
             </a>
 
           </span>
@@ -546,9 +592,9 @@
 
 
 
-<!-- =========================
+<!-- ==================================================
      FOOTER
-     ========================= -->
+     ================================================== -->
 
 <footer class="site-footer">
 
@@ -564,13 +610,12 @@
 
 
 
-<!-- =========================
+<!-- ==================================================
      JAVASCRIPT
-     ========================= -->
+     ================================================== -->
 
-<script src="main.js?v=20260918-style5-research"></script>
+<script src="main.js?v=20260918-research-bullets"></script>
 
 
 </body>
-
 </html>
