@@ -1,170 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
   <title>Yassine Ait Mohamed — Mathematics</title>
-  <meta name="description" content="Yassine Ait Mohamed — PhD Candidate in Mathematics at the University of Sherbrooke, Canada.">
-  <meta name="author" content="Yassine Ait Mohamed">
-  <link rel="stylesheet" href="style.css?v=20261001">
-  <link rel="stylesheet" href="home.css?v=20261001">
+
+  <meta
+    name="description"
+    content="Yassine Ait Mohamed — PhD Candidate in Mathematics at the University of Sherbrooke, Canada."
+  >
+
+  <meta
+    name="author"
+    content="Yassine Ait Mohamed"
+  >
+
+  <link
+    rel="stylesheet"
+    href="style.css?v=20260918-final"
+  >
 </head>
 
-<body class="organic-home">
 
-  <aside class="home-sidebar" aria-label="Site navigation">
-    <a class="home-monogram" href="index.html" aria-label="Yassine Ait Mohamed — Home">YA</a>
+<body class="home-page">
 
-    <nav class="home-nav" aria-label="Main navigation">
-      <a class="active" href="index.html" aria-current="page">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V21h13V9.5"/><path d="M9.5 21v-6h5v6"/></svg>
-        <span>Home</span>
-      </a>
 
-      <a href="research.html">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"/><path d="M15 3v4h4"/><path d="M9 11h6M9 15h6"/></svg>
-        <span>Research</span>
-      </a>
+<!-- ==================================================
+     HEADER
+     ================================================== -->
 
-      <a href="talks.html">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-        <span>Talks</span>
-      </a>
+<header class="site-header">
 
-      <a href="teaching.html">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-5 9 5-9 5z"/><path d="M7 12.5V17c2.6 2 7.4 2 10 0v-4.5"/><path d="M21 10v6"/></svg>
-        <span>Teaching</span>
-      </a>
+  <div class="site-header__inner">
 
-      <a href="#tools">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.4 2.4-3-3z"/></svg>
-        <span>Tools</span>
-      </a>
+    <a
+      class="site-brand"
+      href="index.html">
+      Yassine Ait Mohamed
+    </a>
 
-      <a href="cv.html">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"/><path d="M15 3v4h4"/><path d="M9 11h6M9 15h6"/></svg>
-        <span>CV</span>
-      </a>
 
-      <a href="#contact">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
-        <span>Contact</span>
-      </a>
+    <nav aria-label="Main navigation">
+
+      <ul class="nav-links">
+
+        <li>
+          <a
+            class="active"
+            href="index.html">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="research.html">
+            Research
+          </a>
+        </li>
+
+        <li>
+          <a href="talks.html">
+            Talks
+          </a>
+        </li>
+
+        <li>
+          <a href="teaching.html">
+            Teaching
+          </a>
+        </li>
+
+        <li>
+          <a href="cv.html">
+            CV
+          </a>
+        </li>
+
+        <li>
+          <a href="#contact">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
     </nav>
 
-    <div class="home-sidebar-spacer"></div>
-
-    <div class="home-socials" aria-label="Social links">
-      <a href="https://github.com/yassine-aitmohamed" target="_blank" rel="noopener" aria-label="GitHub">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.5 1.4-4.5-2.2-6-2.7"/><path d="M15 22v-3.9c0-1.1.1-1.8-.5-2.5 2.9-.3 6-1.4 6-6.5a5.1 5.1 0 0 0-1.4-3.5 4.7 4.7 0 0 0-.1-3.5s-1.1-.4-3.6 1.3a12.5 12.5 0 0 0-6.5 0C6.4 1.7 5.3 2.1 5.3 2.1a4.7 4.7 0 0 0-.1 3.5A5.1 5.1 0 0 0 3.8 9c0 5.1 3.1 6.2 6 6.5-.4.4-.7 1-.7 2V22"/></svg>
-      </a>
-      <a href="mailto:yassine.ait.mohamed@usherbrooke.ca" aria-label="Email">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
-      </a>
-    </div>
-  </aside>
-
-  <div class="home-shell">
-    <div class="home-utility" aria-label="Language">
-      <span class="is-active">EN</span>
-      <span class="is-disabled" aria-disabled="true">FR</span>
-      <svg class="home-search-mark" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
-        <circle cx="11" cy="11" r="6.8"></circle>
-        <path d="m16 16 5 5"></path>
-      </svg>
-    </div>
-
-    <main>
-      <section class="organic-hero" id="about">
-        <span class="home-wave home-wave--mint" aria-hidden="true"></span>
-        <span class="home-wave home-wave--peach" aria-hidden="true"></span>
-
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <p class="hero-kicker">MATHEMATICS</p>
-
-            <h1 class="hero-title">Yassine<br>Ait Mohamed</h1>
-
-            <p class="hero-position">
-              PhD Candidate in Mathematics<br>
-              Université de Sherbrooke
-            </p>
-
-            <p class="hero-intro">
-              I am a PhD candidate in Mathematics at the
-              <a href="https://www.usherbrooke.ca/mathematiques/" target="_blank" rel="noopener">University of Sherbrooke</a>,
-              under the supervision of
-              <a href="https://maxencemayrand.github.io/" target="_blank" rel="noopener">Prof. Maxence Mayrand</a>.
-              Before that, I was a PhD student at the
-              <a href="https://www.usmba.ac.ma/" target="_blank" rel="noopener">University of Sidi Mohamed Ben Abdellah</a>,
-              supervised by
-              <a href="https://scholar.google.com/citations?hl=fr&user=D2ZlnJIAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Prof. Lahcen Oukhtite</a>.
-            </p>
-
-            <p class="hero-intro">
-              My current interests include Poisson geometry, shifted symplectic geometry,
-              algebraic geometry, Lie theory, topological quantum field theories,
-              and derivations of graded rings.
-            </p>
-          </div>
-
-          <figure class="hero-portrait">
-            <img src="photo.jpg" alt="Yassine Ait Mohamed" fetchpriority="high" decoding="async">
-          </figure>
-        </div>
-      </section>
-
-      <div class="home-content">
-        <section class="home-section" id="tools" aria-labelledby="tools-title">
-          <h2 class="home-section-heading" id="tools-title">Tools</h2>
-
-          <div class="home-tools-grid">
-            <a class="home-tool-card" href="https://vanovamaths.github.io/vanolib/" target="_blank" rel="noopener">
-              <h3>Vanolib</h3>
-              <p>A Python library for computations in vertex algebras.</p>
-              <span class="home-tool-arrow" aria-hidden="true">→</span>
-            </a>
-
-            <a class="home-tool-card" href="https://vanovamaths.github.io/VanovaTikZSketch/" target="_blank" rel="noopener">
-              <h3>VanovaTikZSketch</h3>
-              <p>A LaTeX package for drawing vertex algebra diagrams.</p>
-              <span class="home-tool-arrow" aria-hidden="true">→</span>
-            </a>
-          </div>
-        </section>
-
-        <section class="home-section" id="contact" aria-labelledby="contact-title">
-          <h2 class="home-section-heading" id="contact-title">Contact</h2>
-
-          <div class="home-contact-grid">
-            <div class="home-contact-card">
-              <div class="contact-row">
-                <span class="contact-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
-                </span>
-                <a href="mailto:yassine.ait.mohamed@usherbrooke.ca">yassine.ait.mohamed@usherbrooke.ca</a>
-              </div>
-
-              <div class="contact-row">
-                <span class="contact-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M12 21s6-5.1 6-11a6 6 0 1 0-12 0c0 5.9 6 11 6 11Z"/><circle cx="12" cy="10" r="2"/></svg>
-                </span>
-                <span>
-                  University of Sherbrooke<br>
-                  D3-1027-4<br>
-                  Sherbrooke, Canada
-                </span>
-              </div>
-            </div>
-
-            <div class="home-contact-photo" aria-hidden="true">
-              <img src="bg-tremblant.jpg" alt="" loading="lazy" decoding="async">
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
   </div>
+
+</header>
+
+
+
+<!-- ==================================================
+     MAIN
+     ================================================== -->
+
+<main class="site-main">
+
+
+  <!-- ==================================================
+       INTRODUCTION
+       ================================================== -->
+
+  <section
+    class="home-intro reveal"
+    id="about">
+
+    <div class="home-intro__copy">
+
+      <p>
+        I am a PhD candidate in Mathematics at the
+
+        <a
+          href="https://www.usherbrooke.ca/mathematiques/"
+          target="_blank"
+          rel="noopener">
+
+          University of Sherbrooke
+
+        </a>,
+
+        under the supervision of
+
+        <a
+          href="https://maxencemayrand.github.io/"
+          target="_blank"
+          rel="noopener">
+
+          Prof. Maxence Mayrand
+
+        </a>.
+
+        Before that, I was a PhD student at the
+
+        <a
+          href="https://www.usmba.ac.ma/"
+          target="_blank"
+          rel="noopener">
+
+          University of Sidi Mohamed Ben Abdellah
+
+        </a>,
+
+        supervised by
+
+        <a
+          href="https://scholar.google.com/citations?hl=fr&user=D2ZlnJIAAAAJ&view_op=list_works&sortby=pubdate"
+          target="_blank"
+          rel="noopener">
+
+          Prof. Lahcen Oukhtite
+
+        </a>.
+      </p>
+
+
+      <p>
+        My current interests include Poisson geometry,
+        shifted symplectic geometry,
+        algebraic geometry,
+        Lie theory,
+        topological quantum field theories,
+        and derivations of graded rings.
+      </p>
+
+    </div>
+
+
+
+    <!-- PROFILE PHOTO -->
+
+    <div class="profile-photo-wrap">
+
+      <img
+        class="profile-photo"
+        src="photo.jpg"
+        alt="Yassine Ait Mohamed"
+        fetchpriority="high"
+        decoding="async"
+      >
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       BOTTOM — TOOLS + CONTACT
+       ================================================== -->
+
+  <section class="home-bottom reveal">
+
+
+    <!-- TOOLS -->
+
+    <div class="home-bottom__tools">
+
+      <h2>
+        Tools
+      </h2>
+
+
+      <div class="tools-inline">
+
+        <a
+          href="https://vanovamaths.github.io/vanolib/"
+          target="_blank"
+          rel="noopener">
+
+          Vanolib
+          <span>↗</span>
+
+        </a>
+
+
+        <a
+          href="https://vanovamaths.github.io/VanovaTikZSketch/"
+          target="_blank"
+          rel="noopener">
+
+          VanovaTikZSketch
+          <span>↗</span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- CONTACT -->
+
+    <div
+      class="home-bottom__contact"
+      id="contact">
+
+      <h2>
+        Contact
+      </h2>
+
+
+      <div class="contact-inline">
+
+
+        <!-- EMAIL -->
+
+        <div class="contact-item">
+
+          <span class="contact-label">
+            Email
+          </span>
+
+          <a href="mailto:yassine.ait.mohamed@usherbrooke.ca">
+
+            yassine.ait.mohamed@usherbrooke.ca
+
+          </a>
+
+        </div>
+
+
+
+        <!-- INSTITUTION -->
+
+        <div class="contact-item">
+
+          <span class="contact-label">
+            Institution
+          </span>
+
+          <span class="contact-value">
+            University of Sherbrooke
+          </span>
+
+        </div>
+
+
+
+        <!-- OFFICE -->
+
+        <div class="contact-item">
+
+          <span class="contact-label">
+            Office
+          </span>
+
+          <span class="contact-value">
+            D3-1027-4 · Sherbrooke, Canada
+          </span>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+</main>
+
+
+
+<!-- ==================================================
+     FOOTER
+     ================================================== -->
+
+<footer class="site-footer">
+
+  <span>
+    © Yassine Ait Mohamed
+  </span>
+
+  <span>
+    Mathematics · University of Sherbrooke
+  </span>
+
+</footer>
+
+
+
+<script src="main.js?v=20260918-final"></script>
+
 
 </body>
 </html>
