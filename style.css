@@ -6,9 +6,9 @@
   --ink: #111827;
   --body: #374151;
   --muted: #7b8493;
-  --accent: #245f73;
-  --accent-hover: #18495a;
-  --accent-soft: #edf4f6;
+  --accent: #c76f4b;
+  --accent-hover: #a95737;
+  --accent-soft: #f7eee9;
   --border: #e3e7ea;
   --green-bg: #edf6f1;
   --green: #2e6b50;
@@ -51,6 +51,16 @@ a:hover {
   text-decoration-thickness: 2px;
 }
 
+/* All site links use the soft cloud-orange accent. */
+body a:not(.site-brand) {
+  color: var(--accent);
+}
+
+body a:not(.site-brand):hover {
+  color: var(--accent-hover);
+}
+
+
 /* ==================================================
    HEADER
    ================================================== */
@@ -74,12 +84,12 @@ a:hover {
 .site-brand {
   color: var(--ink);
   font-family: var(--serif);
-  font-size: clamp(2.8rem, 7.6vw, 5.35rem);
+  font-size: clamp(2rem, 4.3vw, 3.25rem);
   font-weight: 600;
   line-height: .88;
   letter-spacing: -.048em;
   text-decoration: none;
-  text-wrap: balance;
+  white-space: nowrap;
 }
 
 .site-brand:hover {
@@ -177,7 +187,7 @@ a:hover {
 
 .home-intro__copy a {
   color: var(--accent);
-  text-decoration-color: rgba(36, 95, 115, .35);
+  text-decoration-color: rgba(199, 111, 75, .38);
 }
 
 .profile-title { display: none; }
@@ -715,7 +725,7 @@ a:hover {
   }
 
   .site-brand {
-    font-size: clamp(2.75rem, 14vw, 4.3rem);
+    font-size: clamp(1.65rem, 8vw, 2.3rem);
   }
 
   .nav-links {
