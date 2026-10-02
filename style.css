@@ -97,6 +97,21 @@ body a:not(.site-brand):hover {
   text-decoration: none;
 }
 
+
+.site-header--inner-page .site-header__inner {
+  grid-template-columns: 1fr;
+  align-items: center;
+  padding-top: 24px;
+}
+
+.site-header--inner-page nav {
+  justify-self: start;
+}
+
+.site-header--inner-page .nav-links {
+  justify-content: flex-start;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
