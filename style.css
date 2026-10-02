@@ -6,9 +6,9 @@
   --ink: #f4eee8;
   --body: #ddd5cd;
   --muted: #a99e95;
-  --accent: #d88968;
-  --accent-hover: #f0b193;
-  --accent-soft: rgba(216, 137, 104, 0.12);
+  --accent: #79b7ff;
+  --accent-hover: #b4d7ff;
+  --accent-soft: rgba(121, 183, 255, 0.12);
   --border: rgba(210, 176, 158, 0.18);
   --green-bg: rgba(74, 168, 124, 0.14);
   --green: #8bddb5;
@@ -246,7 +246,7 @@ body a:not(.site-brand):hover {
 
 .home-intro__copy a {
   color: var(--accent);
-  text-decoration-color: rgba(216, 137, 104, .42);
+  text-decoration-color: rgba(121, 183, 255, .42);
 }
 
 .profile-title { display: none; }
