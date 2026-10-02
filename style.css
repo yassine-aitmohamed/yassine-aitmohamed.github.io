@@ -451,18 +451,50 @@ a:hover {
   width:
     min(
       100%,
-      370px
+      360px
     );
 
   aspect-ratio: 1 / 1;
 
   justify-self: end;
 
+  padding: 10px;
+
   overflow: hidden;
+
+  border:
+    1px solid
+    rgba(
+      120,
+      95,
+      72,
+      0.18
+    );
 
   border-radius: 50%;
 
-  background: #e7e1da;
+  background:
+    linear-gradient(
+      145deg,
+      #f8f4ef,
+      #e9ded2
+    );
+
+  box-shadow:
+    0 12px 30px
+    rgba(
+      0,
+      0,
+      0,
+      0.08
+    ),
+    inset 0 1px 0
+    rgba(
+      255,
+      255,
+      255,
+      0.65
+    );
 
 }
 
@@ -474,18 +506,12 @@ a:hover {
 
   object-fit: cover;
 
-  /*
-    Ajuste seulement ce nombre
-    si tu veux déplacer le visage.
-
-    35% = plus vers le haut
-    45% = plus vers le bas
-  */
-
   object-position:
     50% 38%;
 
   border-radius: 50%;
+
+  display: block;
 
 }
 
