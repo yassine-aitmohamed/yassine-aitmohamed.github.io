@@ -30,10 +30,10 @@ body {
   background-color: #f7f8f6;
   background-image:
     linear-gradient(
-      rgba(249, 250, 248, 0.72),
-      rgba(249, 250, 248, 0.80)
+      rgba(248, 250, 250, 0.56),
+      rgba(248, 250, 250, 0.68)
     ),
-    url("site-background-sherbrooke-autumn.webp");
+    url("https://live.staticflickr.com/708/21937436900_92b83164f4.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -137,7 +137,7 @@ body a:not(.site-brand):hover {
   position: relative;
   display: block;
   padding: 3px 0 7px;
-  color: var(--ink);
+  color: var(--accent);
   font-size: .93rem;
   font-weight: 400;
   text-decoration: none;
