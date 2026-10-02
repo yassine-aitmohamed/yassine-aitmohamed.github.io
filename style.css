@@ -30,10 +30,10 @@ body {
   background-color: #f7f8f6;
   background-image:
     linear-gradient(
-      rgba(249, 250, 248, 0.80),
-      rgba(249, 250, 248, 0.86)
+      rgba(249, 250, 248, 0.72),
+      rgba(249, 250, 248, 0.80)
     ),
-    url("site-background-sherbrooke-autumn.jpg");
+    url("site-background-sherbrooke-autumn.webp");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
