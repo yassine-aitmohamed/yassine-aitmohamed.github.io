@@ -935,3 +935,69 @@ body a:not(.site-brand):hover {
 .cv-date {
   color: var(--muted);
 }
+
+
+/* ==================================================
+   LINK COLOURS BY KIND  (2026-10-02)
+   titles = orange · journals & universities = sky blue
+   people = sage green · documents & tools = sand
+   ================================================== */
+:root {
+  --title-color: #e07b55;
+  --link-journal: #7cc4e8;
+  --link-journal-hover: #b5e0f5;
+  --link-person: #9bd3a6;
+  --link-person-hover: #c6ebcd;
+  --link-doc: #f3c9a6;
+  --link-doc-hover: #fbe3cf;
+}
+
+/* titles and section headings */
+.section-kicker,
+.section-label { color: var(--title-color); }
+.section-label::after { background: rgba(224, 123, 85, .28); }
+.nav-links a.active::after { background: var(--title-color); }
+
+/* journals, universities, course pages */
+html body a[href*="springer"],
+html body a[href*="doi.org"],
+html body a[href*="journal"],
+html body a[href*="usherbrooke.ca"]:not([href^="mailto:"]),
+html body a[href*="usmba.ac.ma"],
+html body a[href*="umi.ac.ma"],
+html body .paper-venue a,
+html body a.lnk-journal {
+  color: var(--link-journal);
+  text-decoration-color: rgba(124, 196, 232, .45);
+}
+
+/* documents (PDF, slides, notes) and tools */
+html body a[href$=".pdf"],
+html body a.teal-link,
+html body a.talk-link,
+html body a.material-card,
+html body a[href*="vanolib"],
+html body a[href*="TikZSketch"],
+html body a[href*="voscours"],
+html body a.lnk-doc {
+  color: var(--link-doc);
+  text-decoration-color: rgba(243, 201, 166, .45);
+}
+html body a.material-card { border-color: rgba(243, 201, 166, .30); }
+
+/* people (supervisors, collaborators) */
+html body a[href*="maxencemayrand"],
+html body a[href*="scholar.google"],
+html body a.lnk-person {
+  color: var(--link-person);
+  text-decoration-color: rgba(155, 211, 166, .45);
+}
+
+html body a[href*="springer"]:hover, html body a[href*="doi.org"]:hover, html body a[href*="journal"]:hover,
+html body a[href*="usherbrooke.ca"]:not([href^="mailto:"]):hover, html body a[href*="usmba.ac.ma"]:hover,
+html body a[href*="umi.ac.ma"]:hover, html body .paper-venue a:hover, html body a.lnk-journal:hover { color: var(--link-journal-hover); }
+html body a[href$=".pdf"]:hover, html body a.teal-link:hover, html body a.talk-link:hover, html body a.material-card:hover,
+html body a[href*="vanolib"]:hover, html body a[href*="TikZSketch"]:hover, html body a[href*="voscours"]:hover,
+html body a.lnk-doc:hover { color: var(--link-doc-hover); }
+html body a[href*="maxencemayrand"]:hover, html body a[href*="scholar.google"]:hover,
+html body a.lnk-person:hover { color: var(--link-person-hover); }
