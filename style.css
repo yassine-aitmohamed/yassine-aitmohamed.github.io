@@ -1001,3 +1001,56 @@ html body a[href*="vanolib"]:hover, html body a[href*="TikZSketch"]:hover, html 
 html body a.lnk-doc:hover { color: var(--link-doc-hover); }
 html body a[href*="maxencemayrand"]:hover, html body a[href*="scholar.google"]:hover,
 html body a.lnk-person:hover { color: var(--link-person-hover); }
+/* ==================================================
+   THEME VANOLIB « PAPER »  — fond crème + accent orange
+   ================================================== */
+:root {
+  --page: #f4f1ea;
+  --paper: #faf8f3;
+  --ink: #1d1b18;
+  --body: #3a352e;
+  --muted: #857f74;
+  --accent: #c4643f;
+  --accent-hover: #a24e2e;
+  --accent-soft: rgba(196, 100, 63, 0.10);
+  --border: rgba(40, 30, 10, 0.10);
+  --green-bg: rgba(31, 122, 104, 0.10);
+  --green: #1f7a68;
+  --title-color: #c4643f;
+  --link-journal: #2f6f8f;
+  --link-journal-hover: #1e4f68;
+  --link-person: #3f7a52;
+  --link-person-hover: #2b5a3a;
+  --link-doc: #b0582f;
+  --link-doc-hover: #8a4122;
+}
+body {
+  background:
+    radial-gradient(circle at 12% 14%, rgba(196, 100, 63, 0.10), transparent 30%),
+    radial-gradient(circle at 88% 86%, rgba(224, 133, 96, 0.08), transparent 30%),
+    #f4f1ea;
+  color: var(--ink);
+}
+body::before {
+  opacity: .5;
+  background-image:
+    linear-gradient(rgba(40, 30, 10, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(40, 30, 10, 0.035) 1px, transparent 1px);
+}
+body::after { background: none; }
+.site-brand { text-shadow: none; }
+.home-intro__copy a { text-decoration-color: rgba(196, 100, 63, .40); }
+.profile-photo-wrap {
+  border-color: rgba(196, 100, 63, 0.30);
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(40,30,10,.04), 0 10px 30px rgba(40,30,10,.10);
+}
+.section-label::after { background: rgba(196, 100, 63, .30); }
+html body a[href*="springer"], html body a[href*="doi.org"], html body a[href*="journal"],
+html body a[href*="usherbrooke.ca"]:not([href^="mailto:"]), html body .paper-venue a, html body a.lnk-journal
+  { text-decoration-color: rgba(47, 111, 143, .40); }
+html body a[href$=".pdf"], html body a.material-card, html body a[href*="vanolib"],
+html body a[href*="TikZSketch"], html body a.lnk-doc { text-decoration-color: rgba(176, 88, 47, .40); }
+html body a.material-card { border-color: rgba(176, 88, 47, .25); background: #fff; }
+html body a[href*="maxencemayrand"], html body a[href*="scholar.google"], html body a.lnk-person
+  { text-decoration-color: rgba(63, 122, 82, .40); }
