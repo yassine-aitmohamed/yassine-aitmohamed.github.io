@@ -77,6 +77,14 @@
       background: var(--accent);
     }
 
+    /* Co-auteur affiché sur la même ligne que le titre */
+
+    .paper-title .coauthor,
+    .paper-title .coauthor a {
+      display: inline;
+      white-space: nowrap;
+    }
+
   </style>
 
 </head>
@@ -195,22 +203,8 @@
         <li class="paper-entry has-badge">
 
           <div class="paper-title">
-
             Integration and quantization of 1-shifted coisotropics
-
-            (with
-
-            <a
-              href="https://maxencemayrand.github.io/"
-              target="_blank"
-              rel="noopener">
-
-              Maxence Mayrand
-
-            </a>
-
-            )
-
+            <span class="coauthor">(with <a href="https://maxencemayrand.github.io/" target="_blank" rel="noopener">Maxence Mayrand</a>)</span>
           </div>
 
 
