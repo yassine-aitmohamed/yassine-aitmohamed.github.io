@@ -1026,13 +1026,13 @@ html body a.lnk-person:hover { color: var(--link-person-hover); }
 }
 body {
   background:
-    radial-gradient(circle at 12% 14%, rgba(196, 100, 63, 0.10), transparent 30%),
-    radial-gradient(circle at 88% 86%, rgba(224, 133, 96, 0.08), transparent 30%),
+    linear-gradient(rgba(244, 241, 234, 0.72), rgba(244, 241, 234, 0.77)),
+    url("https://images.unsplash.com/photo-1730665613567-96df9619adc0?w=1920&q=80&auto=format&fit=crop") center / cover no-repeat fixed,
     #f4f1ea;
   color: var(--ink);
 }
 body::before {
-  opacity: .5;
+  opacity: .2;
   background-image:
     linear-gradient(rgba(40, 30, 10, 0.035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(40, 30, 10, 0.035) 1px, transparent 1px);
