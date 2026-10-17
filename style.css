@@ -1026,8 +1026,8 @@ html body a.lnk-person:hover { color: var(--link-person-hover); }
 }
 body {
   background:
-    radial-gradient(circle at 12% 14%, rgba(31, 58, 104, 0.09), transparent 30%),
-    radial-gradient(circle at 88% 86%, rgba(31, 122, 104, 0.08), transparent 30%),
+    radial-gradient(circle at 12% 14%, rgba(196, 100, 63, 0.10), transparent 30%),
+    radial-gradient(circle at 88% 86%, rgba(224, 133, 96, 0.08), transparent 30%),
     #f4f1ea;
   color: var(--ink);
 }
