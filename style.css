@@ -489,7 +489,7 @@ body a:not(.site-brand):hover {
   align-items: center;
   min-height: auto;
   padding: 4px 8px;
-  border: 1px solid rgba(216, 137, 104, 0.20);
+  border: 1px solid rgba(29, 107, 100, 0.22);
   border-radius: 999px;
   background: var(--accent-soft);
   color: var(--accent);
@@ -666,7 +666,7 @@ body a:not(.site-brand):hover {
 
 .material-card:hover {
   color: var(--accent-hover);
-  background: rgba(216, 137, 104, 0.07);
+  background: rgba(29, 107, 100, 0.06);
 }
 
 /* ==================================================
@@ -939,7 +939,7 @@ body a:not(.site-brand):hover {
 
 /* ==================================================
    LINK COLOURS BY KIND  (2026-10-02)
-   titles = orange · journals & universities = sky blue
+   titles = navy · journals & universities = sky blue
    people = sage green · documents & tools = sand
    ================================================== */
 :root {
@@ -1002,7 +1002,7 @@ html body a.lnk-doc:hover { color: var(--link-doc-hover); }
 html body a[href*="maxencemayrand"]:hover, html body a[href*="scholar.google"]:hover,
 html body a.lnk-person:hover { color: var(--link-person-hover); }
 /* ==================================================
-   THEME VANOLIB « PAPER »  — fond crème + accent orange
+   THEME VANOLIB « PAPER »  — fond crème + accent bleu marine / vert
    ================================================== */
 :root {
   --page: #f4f1ea;
@@ -1010,24 +1010,24 @@ html body a.lnk-person:hover { color: var(--link-person-hover); }
   --ink: #1d1b18;
   --body: #3a352e;
   --muted: #857f74;
-  --accent: #c4643f;
-  --accent-hover: #a24e2e;
-  --accent-soft: rgba(196, 100, 63, 0.10);
+  --accent: #1d6b64;
+  --accent-hover: #12504a;
+  --accent-soft: rgba(29, 107, 100, 0.09);
   --border: rgba(40, 30, 10, 0.10);
   --green-bg: rgba(31, 122, 104, 0.10);
   --green: #1f7a68;
-  --title-color: #c4643f;
+  --title-color: #1f3a68;
   --link-journal: #2f6f8f;
   --link-journal-hover: #1e4f68;
   --link-person: #3f7a52;
   --link-person-hover: #2b5a3a;
-  --link-doc: #b0582f;
-  --link-doc-hover: #8a4122;
+  --link-doc: #1d6b64;
+  --link-doc-hover: #12504a;
 }
 body {
   background:
-    radial-gradient(circle at 12% 14%, rgba(196, 100, 63, 0.10), transparent 30%),
-    radial-gradient(circle at 88% 86%, rgba(224, 133, 96, 0.08), transparent 30%),
+    radial-gradient(circle at 12% 14%, rgba(31, 58, 104, 0.09), transparent 30%),
+    radial-gradient(circle at 88% 86%, rgba(31, 122, 104, 0.08), transparent 30%),
     #f4f1ea;
   color: var(--ink);
 }
@@ -1039,18 +1039,18 @@ body::before {
 }
 body::after { background: none; }
 .site-brand { text-shadow: none; }
-.home-intro__copy a { text-decoration-color: rgba(196, 100, 63, .40); }
+.home-intro__copy a { text-decoration-color: rgba(29, 107, 100, .40); }
 .profile-photo-wrap {
-  border-color: rgba(196, 100, 63, 0.30);
+  border-color: rgba(31, 58, 104, 0.28);
   background: #fff;
   box-shadow: 0 1px 2px rgba(40,30,10,.04), 0 10px 30px rgba(40,30,10,.10);
 }
-.section-label::after { background: rgba(196, 100, 63, .30); }
+.section-label::after { background: linear-gradient(90deg, rgba(31, 58, 104, .35), rgba(31, 122, 104, .25)); }
 html body a[href*="springer"], html body a[href*="doi.org"], html body a[href*="journal"],
 html body a[href*="usherbrooke.ca"]:not([href^="mailto:"]), html body .paper-venue a, html body a.lnk-journal
   { text-decoration-color: rgba(47, 111, 143, .40); }
 html body a[href$=".pdf"], html body a.material-card, html body a[href*="vanolib"],
-html body a[href*="TikZSketch"], html body a.lnk-doc { text-decoration-color: rgba(176, 88, 47, .40); }
-html body a.material-card { border-color: rgba(176, 88, 47, .25); background: #fff; }
+html body a[href*="TikZSketch"], html body a.lnk-doc { text-decoration-color: rgba(29, 107, 100, .40); }
+html body a.material-card { border-color: rgba(29, 107, 100, .25); background: #fff; }
 html body a[href*="maxencemayrand"], html body a[href*="scholar.google"], html body a.lnk-person
   { text-decoration-color: rgba(63, 122, 82, .40); }

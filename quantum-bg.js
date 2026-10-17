@@ -13,7 +13,7 @@
     var ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    var COLORS = ['#D97757', '#E9A47C', '#C1633B', '#E8E8E8'];
+    var COLORS = ['#1F3A68', '#1D6B64', '#3A7CA5', '#E8E8E8'];
     var LINK_DIST = 150;
     var LINK_DIST_SQ = LINK_DIST * LINK_DIST;
 
@@ -78,7 +78,7 @@
                 var distSq = dx * dx + dy * dy;
                 if (distSq < LINK_DIST_SQ) {
                     var alpha = (1 - Math.sqrt(distSq) / LINK_DIST) * 0.3;
-                    ctx.strokeStyle = 'rgba(217,119,87,' + alpha.toFixed(3) + ')';
+                    ctx.strokeStyle = 'rgba(31,58,104,' + alpha.toFixed(3) + ')';
                     ctx.lineWidth = 0.6;
                     ctx.beginPath();
                     ctx.moveTo(p1.x, p1.y);

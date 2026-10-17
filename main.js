@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
  }
  function draw() {
   ctx.clearRect(0,0,width,height);
-  for(let row=0;row<=24;row++) { const points=[]; for(let col=0;col<=70;col++) points.push(point(col/70,row/24)); stroke(points,row%4===0 ? 'rgba(217,119,87,.82)' : 'rgba(217,119,87,.55)'); }
-  for(let col=0;col<=44;col++) { const points=[]; for(let row=0;row<=30;row++) points.push(point(col/44,row/30)); stroke(points,'rgba(217,119,87,.38)'); }
+  for(let row=0;row<=24;row++) { const points=[]; for(let col=0;col<=70;col++) points.push(point(col/70,row/24)); stroke(points,row%4===0 ? 'rgba(31,58,104,.70)' : 'rgba(31,58,104,.45)'); }
+  for(let col=0;col<=44;col++) { const points=[]; for(let row=0;row<=30;row++) points.push(point(col/44,row/30)); stroke(points,'rgba(31,122,104,.38)'); }
  }
  function tick(now) {
   frame=0; if(document.hidden || !visible || motion.matches) return;
