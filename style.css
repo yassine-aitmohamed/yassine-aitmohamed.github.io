@@ -1054,3 +1054,18 @@ html body a[href*="TikZSketch"], html body a.lnk-doc { text-decoration-color: rg
 html body a.material-card { border-color: rgba(29, 107, 100, .25); background: #fff; }
 html body a[href*="maxencemayrand"], html body a[href*="scholar.google"], html body a.lnk-person
   { text-decoration-color: rgba(63, 122, 82, .40); }
+
+/* Research page: co-author names in blue */
+html body .paper-title .coauthor a[href] {
+  color: #2f6f8f;
+  text-decoration-color: rgba(47, 111, 143, .40);
+}
+html body .paper-title .coauthor a[href]:hover { color: #1e4f68; }
+
+/* Published papers: orange badge */
+.badge.published,
+.badge--published {
+  border-color: rgba(201, 104, 40, 0.30);
+  background: rgba(201, 104, 40, 0.10);
+  color: #c96828;
+}
