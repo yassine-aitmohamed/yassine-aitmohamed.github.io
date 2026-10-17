@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap');
 
 :root {
   --page: #070b13;
@@ -1069,3 +1069,34 @@ html body .paper-title .coauthor a[href]:hover { color: #1e4f68; }
   background: rgba(201, 104, 40, 0.10);
   color: #c96828;
 }
+
+/* ==================================================
+   Strong typography over the photo background
+   ================================================== */
+:root {
+  --ink: #12100d;
+  --body: #1f1b16;
+  --muted: #4f4a42;
+  --accent: #0f4f49;
+  --accent-hover: #0a3833;
+  --title-color: #16305c;
+  --link-doc: #0f4f49;
+  --link-journal: #1f5a78;
+  --link-person: #2c6640;
+}
+p, .home-intro__copy, .research-lead, .abstract, .contact-item, .timeline-row, .cv-row {
+  color: var(--body) !important;
+  font-weight: 600;
+}
+.site-brand, .page-title, h1, h2, .section-label { font-weight: 700 !important; }
+.paper-title, .talk-title, .cv-title { font-weight: 700 !important; color: var(--ink); }
+.nav-links a, .abstract-toggle, .teal-link, a.talk-link, .badge, .paper-venue a { font-weight: 600 !important; }
+.section-kicker, .contact-label, .site-footer, .cv-date, .term-badge { color: var(--muted) !important; font-weight: 600; }
+a { text-decoration-thickness: 1.5px; }
+body, body * {
+  text-shadow:
+    0 0 1px rgba(255, 255, 255, .9),
+    0 0 10px rgba(248, 246, 240, .95),
+    0 0 22px rgba(248, 246, 240, .8);
+}
+html body .paper-title .coauthor a[href] { color: #1f5a78; }
