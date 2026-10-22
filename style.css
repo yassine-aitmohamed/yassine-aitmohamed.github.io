@@ -1100,3 +1100,16 @@ body, body * {
     0 0 22px rgba(248, 246, 240, .8);
 }
 html body .paper-title .coauthor a[href] { color: #1f5a78; }
+
+/* Research page: first-posted date of each document */
+html body .doc-date {
+  display: inline-block;
+  margin-left: 12px;
+  color: #c96828 !important;
+  font-family: var(--sans);
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+  white-space: nowrap;
+}
+html body .paper-links .doc-date { margin-left: 0; }
