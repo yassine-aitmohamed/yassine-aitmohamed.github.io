@@ -368,6 +368,10 @@ body a:not(.site-brand):hover {
   letter-spacing: .16em;
 }
 
+.cv-full {
+  margin: 16px 0 0;
+}
+
 .page-title {
   margin: 0;
   color: var(--ink);
