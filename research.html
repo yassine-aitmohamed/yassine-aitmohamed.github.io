@@ -54,25 +54,35 @@
 
   <style>
 
+    .papers-block .paper-list-simple {
+      counter-reset: paper;
+    }
+
     .papers-block .paper-entry {
       position: relative;
-      padding-left: 24px;
+      padding-left: 34px;
+      counter-increment: paper;
     }
 
     .papers-block .paper-entry::before {
-      content: "";
+      content: counter(paper) ".";
 
       position: absolute;
 
       left: 0;
-      top: 0.55em;
+      top: 19px;
 
-      width: 9px;
-      height: 9px;
+      color: var(--accent);
+      font-family: var(--serif);
+      font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+      font-weight: 600;
+      line-height: 1.3;
+    }
 
-      border-radius: 50%;
-
-      background: var(--accent);
+    @media (max-width: 680px) {
+      .papers-block .paper-entry.has-badge::before {
+        top: 48px;
+      }
     }
 
     /* Co-auteur affiché sur la même ligne que le titre */
