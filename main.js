@@ -64,3 +64,32 @@ document.addEventListener('DOMContentLoaded', () => {
  canvas.parentElement.addEventListener('pointerleave',() => { targetPointer=0; });
  document.addEventListener('visibilitychange',sync); motion.addEventListener('change',sync); size(); sync();
 });
+
+// Night mode: button at the end of the navigation, choice remembered per visitor.
+(() => {
+ const root = document.documentElement;
+ const save = v => { try { localStorage.setItem('theme', v); } catch (e) {} };
+ document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelector('.nav-links'); if (!nav) return;
+  const li = document.createElement('li'); li.className = 'theme-li';
+  li.innerHTML = '<button class="theme-toggle" type="button">'
+   + '<svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.3 3a9 9 0 1 0 8.7 11.3A7 7 0 0 1 12.3 3z"/></svg>'
+   + '<svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></g></svg>'
+   + '</button>';
+  nav.appendChild(li);
+  const btn = li.firstChild;
+  const label = () => {
+   const dark = root.dataset.theme === 'dark';
+   btn.setAttribute('aria-label', dark ? 'Switch to day mode' : 'Switch to night mode');
+   btn.title = dark ? 'Day mode' : 'Night mode';
+  };
+  label();
+  btn.addEventListener('click', () => {
+   const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+   root.classList.add('theme-fade');
+   if (next === 'dark') root.dataset.theme = 'dark'; else delete root.dataset.theme;
+   save(next); label();
+   setTimeout(() => root.classList.remove('theme-fade'), 500);
+  });
+ });
+})();
