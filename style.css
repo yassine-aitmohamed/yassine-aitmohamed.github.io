@@ -314,6 +314,36 @@ body a:not(.site-brand):hover {
 .tools-inline a span { font-size: .88em; transition: transform .18s ease; }
 .tools-inline a:hover span { transform: translate(2px, -2px); }
 
+.tools-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px clamp(34px, 6vw, 64px);
+}
+
+.tool {
+  display: grid;
+  gap: 3px;
+  text-decoration: none;
+}
+
+.tool-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--accent);
+  font-size: .95rem;
+  font-weight: 600;
+}
+
+.tool-name span { font-size: .88em; transition: transform .18s ease; }
+.tool:hover .tool-name span { transform: translate(2px, -2px); }
+
+.tool-desc {
+  color: var(--body);
+  font-size: .88rem;
+  line-height: 1.45;
+}
+
 .contact-inline {
   display: flex;
   flex-wrap: wrap;
