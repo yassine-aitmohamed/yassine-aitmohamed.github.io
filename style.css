@@ -314,6 +314,12 @@ body a:not(.site-brand):hover {
 .tools-inline a span { font-size: .88em; transition: transform .18s ease; }
 .tools-inline a:hover span { transform: translate(2px, -2px); }
 
+.tools-lead {
+  margin: -6px 0 18px;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
 .tools-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
