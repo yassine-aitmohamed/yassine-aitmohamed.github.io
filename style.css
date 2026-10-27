@@ -279,7 +279,7 @@ body a:not(.site-brand):hover {
 .home-bottom {
   padding: 36px 0 58px;
   display: grid;
-  grid-template-columns: .75fr 1.55fr;
+  grid-template-columns: 1fr;
   gap: clamp(44px, 8vw, 78px);
   align-items: start;
   border-top: 1px solid var(--border);
@@ -315,9 +315,9 @@ body a:not(.site-brand):hover {
 .tools-inline a:hover span { transform: translate(2px, -2px); }
 
 .contact-inline {
-  display: grid;
-  grid-template-columns: 1.35fr 1fr;
-  gap: 20px 34px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px clamp(34px, 6vw, 64px);
 }
 
 .contact-item {
@@ -339,7 +339,7 @@ body a:not(.site-brand):hover {
   color: var(--body);
   font-size: .93rem;
   text-decoration: none;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
 }
 
 .contact-item a:hover { color: var(--accent); }
@@ -817,8 +817,14 @@ body a:not(.site-brand):hover {
   }
 
   .contact-inline {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 16px;
+  }
+
+  .contact-value,
+  .contact-item a {
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 
   .page-head {
