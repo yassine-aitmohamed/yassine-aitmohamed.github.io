@@ -1,107 +1,73 @@
-/* Theme « Laurel » — deep green and gold, classical serif, a slowly turning root system in the background.
-   Only colours, fonts and motion change: every page keeps its structure and text. */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Figtree:wght@400;500;600&display=swap');
+/* Theme « Laurel » — deep green ground, blue accent, a slowly turning root system in the background.
+   Fonts, sizes and weights are the site's original ones (style.css): only colours and motion change. */
 
 html:root {
-  --page: #F6F5F0;
+  --page: #F6F7F4;
   --paper: #FFFFFF;
-  --ink: #12261F;
-  --body: #2D3E37;
-  --muted: #5E6B64;
-  --accent: #1F6B4F;
-  --accent-hover: #124532;
-  --accent-soft: rgba(31, 107, 79, .07);
+  --ink: #12100D;
+  --body: #1F1B16;
+  --muted: #4F4A42;
+  --accent: #1D5FBF;
+  --accent-hover: #154A96;
+  --accent-soft: rgba(29, 95, 191, .08);
   --border: rgba(18, 38, 31, .13);
-  --green-bg: rgba(31, 107, 79, .08);
-  --green: #1F6B4F;
-  --title-color: #12261F;
-  --link-journal: #1F6B4F;
-  --link-journal-hover: #124532;
-  --link-person: #8A6A1F;
-  --link-person-hover: #5E4712;
-  --link-doc: #1F6B4F;
-  --link-doc-hover: #124532;
-  --gold: #8A6A1F;
-  --date: #8A6A1F;
-  --pub-fg: #F6F5F0;
-  --pub-bg: #1F6B4F;
-  --sub-fg: #8A6A1F;
-  --sub-bg: rgba(138, 106, 31, .10);
-  --lattice: 138, 106, 31;
-  --serif: "Cormorant Garamond", "Garamond", Georgia, serif;
-  --sans: "Figtree", "Helvetica Neue", Arial, sans-serif;
+  --green-bg: rgba(29, 95, 191, .08);
+  --green: #1D5FBF;
+  --title-color: #16305C;
+  --link-journal: #1D5FBF;
+  --link-journal-hover: #154A96;
+  --link-person: #2C6640;
+  --link-person-hover: #1E4A2D;
+  --link-doc: #1D5FBF;
+  --link-doc-hover: #154A96;
+  --lattice: 29, 95, 191;
 }
 html[data-theme="dark"]:root {
   color-scheme: dark;
   --page: #0E1A16;
   --paper: #13241E;
-  --ink: #F1EBDD;
-  --body: #D3CDBE;
-  --muted: #A0A99D;
-  --accent: #D4B26A;
-  --accent-hover: #EBD29A;
-  --accent-soft: rgba(212, 178, 106, .09);
-  --border: rgba(241, 235, 221, .13);
-  --green-bg: rgba(212, 178, 106, .10);
-  --green: #D4B26A;
-  --title-color: #E9D9A6;
-  --link-journal: #D4B26A;
-  --link-journal-hover: #EBD29A;
-  --link-person: #9FD8BE;
-  --link-person-hover: #C8EBDA;
-  --link-doc: #D4B26A;
-  --link-doc-hover: #EBD29A;
-  --gold: #D4B26A;
-  --date: #D4B26A;
-  --pub-fg: #0E1A16;
-  --pub-bg: #D4B26A;
-  --sub-fg: #EBD29A;
-  --sub-bg: rgba(212, 178, 106, .12);
-  --lattice: 212, 178, 106;
+  --ink: #EFE9DD;
+  --body: #D6CFC2;
+  --muted: #A39B8E;
+  --accent: #7FB8FF;
+  --accent-hover: #B3D5FF;
+  --accent-soft: rgba(127, 184, 255, .10);
+  --border: rgba(239, 233, 221, .13);
+  --green-bg: rgba(127, 184, 255, .12);
+  --green: #7FB8FF;
+  --title-color: #A9C7F5;
+  --link-journal: #8CC4E0;
+  --link-journal-hover: #B8DCEF;
+  --link-person: #9BD3A6;
+  --link-person-hover: #C6EBCD;
+  --link-doc: #7FB8FF;
+  --link-doc-hover: #B3D5FF;
+  --lattice: 127, 184, 255;
 }
 
 html:root body, html[data-theme="dark"]:root body { background: var(--page); color: var(--ink); }
 html:root body::before, html:root body::after { background: none !important; opacity: 0 !important; }
 #theme-lattice { opacity: .7; position: fixed; right: -14vmin; top: 50%; width: 78vmin; height: 78vmin; transform: translateY(-50%); z-index: 0; pointer-events: none; }
 
-/* Undo the old glow and heavy weights */
+/* The old glow was made for the photo background; the ground is now flat */
 body, body * { text-shadow: none !important; }
-p, .home-intro__copy, .research-lead, .abstract, .contact-item, .timeline-row, .cv-row { font-weight: 400 !important; }
-.site-brand, .page-title, h1, h2, .section-label { font-weight: 500 !important; }
-.paper-title, .talk-title, .cv-title { font-weight: 600 !important; }
-.nav-links a, .badge { font-weight: 500 !important; }
 
-/* Typography: classical display, roomy body */
-html:root body { font-size: 17px; }
-.site-brand { font-size: clamp(2.1rem, 4.4vw, 3.4rem) !important; letter-spacing: -.01em !important; }
-.page-title { font-size: clamp(3.4rem, 8vw, 5.6rem) !important; letter-spacing: -.015em !important; }
-.page-title, .site-brand { background: linear-gradient(100deg, var(--ink) 0%, var(--ink) 40%, var(--gold) 50%, var(--ink) 60%, var(--ink) 100%); background-size: 250% 100%; -webkit-background-clip: text; background-clip: text; color: transparent !important; animation: lr-shine 7s ease-in-out 1s infinite; }
-@keyframes lr-shine { 0% { background-position: 100% 0; } 35%, 100% { background-position: 0 0; } }
-.paper-title, .talk-title, .cv-title, .home-bottom h2 { font-size: 1.5rem !important; }
-.section-kicker { color: var(--gold) !important; letter-spacing: .22em !important; }
-.section-label { font-size: clamp(1.9rem, 3.4vw, 2.4rem) !important; }
-.section-label::after { background: linear-gradient(90deg, var(--gold), transparent 70%) !important; transform-origin: left; }
+/* Accent details */
+.section-label::after { background: linear-gradient(90deg, var(--accent), transparent 70%) !important; transform-origin: left; }
 .reveal.is-visible .section-label::after, .section-label.is-visible::after { animation: lr-rule 1.3s cubic-bezier(.2,.7,.2,1) both; }
 @keyframes lr-rule { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-.nav-links a::after { background: var(--gold) !important; }
-
-/* Links and badges */
-html body .paper-title .coauthor a[href] { color: var(--link-person); }
-html body .doc-date { color: var(--date) !important; }
-.badge { border: 0 !important; background: var(--sub-bg) !important; color: var(--sub-fg) !important; font-family: var(--sans); letter-spacing: .08em !important; text-transform: uppercase; font-size: .66rem !important; padding: 5px 10px !important; }
-.badge.published, .badge--published { background: var(--pub-bg) !important; color: var(--pub-fg) !important; }
+html body .paper-title .coauthor a[href] { color: var(--link-journal); }
+.badge { border-color: color-mix(in srgb, var(--accent) 35%, transparent) !important; }
 
 /* Surfaces */
-html:root .profile-photo-wrap, html[data-theme="dark"]:root .profile-photo-wrap { background: none !important; border: 1px solid var(--gold) !important; box-shadow: none !important; padding: 10px !important; }
+html:root .profile-photo-wrap, html[data-theme="dark"]:root .profile-photo-wrap { background: none !important; border: 1px solid var(--accent) !important; box-shadow: none !important; padding: 10px !important; }
 html body a.material-card, html[data-theme="dark"] body a.material-card { background: var(--paper); border-color: var(--border); }
 html body a.material-card:hover { background: var(--accent-soft) !important; }
-html body a.profile-link { background: var(--paper); }
 
 /* Motion */
-.home-intro__copy p, .page-head, .profile-photo-wrap, .profile-links { animation: lr-up 1.1s cubic-bezier(.2,.7,.2,1) both; }
+.home-intro__copy p, .page-head, .profile-photo-wrap { animation: lr-up 1.1s cubic-bezier(.2,.7,.2,1) both; }
 .home-intro__copy p:nth-child(2) { animation-delay: .15s; }
 .profile-photo-wrap { animation-delay: .25s; }
-.profile-links { animation-delay: .3s; }
 @keyframes lr-up { from { opacity: .001; transform: translateY(16px); filter: blur(4px); } to { opacity: 1; transform: none; filter: none; } }
 .reveal.will-reveal { opacity: 0; transform: translateY(20px); }
 .reveal.is-visible { transition: opacity 1s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1) !important; }
@@ -109,7 +75,7 @@ html body a.profile-link { background: var(--paper); }
 .paper-entry:hover, .talk-item:hover, .cv-entry:hover { background: var(--accent-soft); }
 
 @media (prefers-reduced-motion: reduce) {
-  .home-intro__copy p, .page-head, .profile-photo-wrap, .profile-links, .page-title, .site-brand { animation: none !important; }
+  .home-intro__copy p, .page-head, .profile-photo-wrap { animation: none !important; }
   #theme-lattice { display: none; }
 }
 @media (max-width: 680px) { #theme-lattice { width: 110vmin; height: 110vmin; right: -40vmin; opacity: .6; } }
