@@ -1,4 +1,4 @@
-/* Theme « Laurel » — deep green ground, blue accent, a slowly turning root system in the background.
+/* Theme « Laurel » — navy blue (bleu marine), a slowly turning root system in the background.
    Fonts, sizes and weights are the site's original ones (style.css): only colours and motion change. */
 
 html:root {
@@ -7,42 +7,42 @@ html:root {
   --ink: #12100D;
   --body: #1F1B16;
   --muted: #4F4A42;
-  --accent: #1D5FBF;
-  --accent-hover: #154A96;
-  --accent-soft: rgba(29, 95, 191, .08);
+  --accent: #1F3A68;
+  --accent-hover: #142748;
+  --accent-soft: rgba(31, 58, 104, .08);
   --border: rgba(18, 38, 31, .13);
-  --green-bg: rgba(29, 95, 191, .08);
-  --green: #1D5FBF;
+  --green-bg: rgba(31, 58, 104, .08);
+  --green: #1F3A68;
   --title-color: #16305C;
-  --link-journal: #1D5FBF;
-  --link-journal-hover: #154A96;
+  --link-journal: #1F3A68;
+  --link-journal-hover: #142748;
   --link-person: #2C6640;
   --link-person-hover: #1E4A2D;
-  --link-doc: #1D5FBF;
-  --link-doc-hover: #154A96;
-  --lattice: 29, 95, 191;
+  --link-doc: #1F3A68;
+  --link-doc-hover: #142748;
+  --lattice: 31, 58, 104;
 }
 html[data-theme="dark"]:root {
   color-scheme: dark;
-  --page: #0E1A16;
-  --paper: #13241E;
+  --page: #0B1426;
+  --paper: #111D33;
   --ink: #EFE9DD;
   --body: #D6CFC2;
   --muted: #A39B8E;
-  --accent: #7FB8FF;
-  --accent-hover: #B3D5FF;
-  --accent-soft: rgba(127, 184, 255, .10);
-  --border: rgba(239, 233, 221, .13);
-  --green-bg: rgba(127, 184, 255, .12);
-  --green: #7FB8FF;
-  --title-color: #A9C7F5;
+  --accent: #8FB4F0;
+  --accent-hover: #BFD3F7;
+  --accent-soft: rgba(143, 180, 240, .10);
+  --border: rgba(220, 230, 250, .13);
+  --green-bg: rgba(143, 180, 240, .12);
+  --green: #8FB4F0;
+  --title-color: #A9C2EE;
   --link-journal: #8CC4E0;
   --link-journal-hover: #B8DCEF;
   --link-person: #9BD3A6;
   --link-person-hover: #C6EBCD;
-  --link-doc: #7FB8FF;
-  --link-doc-hover: #B3D5FF;
-  --lattice: 127, 184, 255;
+  --link-doc: #8FB4F0;
+  --link-doc-hover: #BFD3F7;
+  --lattice: 143, 180, 240;
 }
 
 html:root body, html[data-theme="dark"]:root body { background: var(--page); color: var(--ink); }
