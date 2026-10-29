@@ -1241,3 +1241,29 @@ html.theme-fade body * { transition: background-color .45s ease, color .45s ease
 /* Home header: keep the button out of the name/nav row */
 .home-page .site-header__inner { position: relative; }
 .home-page .nav-links .theme-li { position: absolute; top: 14px; right: 0; }
+
+/* ==================================================
+   RESEARCH PROFILES — Google Scholar, arXiv, ResearchGate, GitHub
+   ================================================== */
+.profile-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 26px 0 0; }
+.research-lead + .profile-links, .page-head + .profile-links { margin: -10px 0 34px; }
+html body a.profile-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 14px 7px 11px;
+  border: 1px solid var(--border); border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink);
+  font: 500 .9rem/1.2 var(--sans);
+  text-decoration: none;
+  transition: border-color .15s, box-shadow .15s, transform .15s;
+}
+html body a.profile-link:hover { color: var(--ink); border-color: var(--brand); box-shadow: 0 2px 10px rgba(0,0,0,.08); transform: translateY(-1px); }
+.profile-link svg { width: 17px; height: 17px; flex: none; fill: var(--brand); }
+.profile-link--scholar { --brand: #4285f4; }
+.profile-link--arxiv { --brand: #b31b1b; }
+.profile-link--researchgate { --brand: #00ccbb; }
+.profile-link--github { --brand: #181717; }
+html[data-theme="dark"] .profile-link--github { --brand: #f0f0f0; }
+html[data-theme="dark"] .profile-link--arxiv { --brand: #e05252; }
+html[data-theme="dark"] .profile-link--researchgate { --brand: #2ad8c9; }
+@media (max-width: 680px) { .profile-links { gap: 8px; } html body a.profile-link { font-size: .85rem; padding: 6px 12px 6px 9px; } }
