@@ -21,6 +21,8 @@ html:root {
   --link-doc: #1F3A68;
   --link-doc-hover: #142748;
   --lattice: 31, 58, 104;
+  --schema: 200, 40, 58;
+  --schema-hi: 214, 120, 20;
 }
 html[data-theme="dark"]:root {
   color-scheme: dark;
@@ -43,11 +45,13 @@ html[data-theme="dark"]:root {
   --link-doc: #8FB4F0;
   --link-doc-hover: #BFD3F7;
   --lattice: 143, 180, 240;
+  --schema: 255, 99, 110;
+  --schema-hi: 255, 190, 110;
 }
 
 html:root body, html[data-theme="dark"]:root body { background: var(--page); color: var(--ink); }
 html:root body::before, html:root body::after { background: none !important; opacity: 0 !important; }
-#theme-lattice { opacity: .7; position: fixed; right: -14vmin; top: 50%; width: 78vmin; height: 78vmin; transform: translateY(-50%); z-index: 0; pointer-events: none; }
+#theme-lattice { opacity: .9; position: fixed; right: -14vmin; top: 50%; width: 78vmin; height: 78vmin; transform: translateY(-50%); z-index: 0; pointer-events: none; }
 
 /* The old glow was made for the photo background; the ground is now flat */
 body, body * { text-shadow: none !important; }
@@ -79,3 +83,7 @@ html body a.material-card:hover { background: var(--accent-soft) !important; }
   #theme-lattice { display: none; }
 }
 @media (max-width: 680px) { #theme-lattice { width: 110vmin; height: 110vmin; right: -40vmin; opacity: .6; } }
+
+/* Caption of the background schema */
+#theme-caption { position: fixed; right: max(16px, 4vmin); bottom: max(16px, 4vh); z-index: 0; max-width: min(46vw, 420px); text-align: right; pointer-events: none; opacity: 0; color: rgb(var(--schema)); font-family: var(--sans); font-size: .7rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; transition: opacity .2s linear; }
+@media (max-width: 680px) { #theme-caption { display: none; } }
