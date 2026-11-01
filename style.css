@@ -69,7 +69,6 @@ section.page p { text-align: justify; }
 
 .portrait { display: block; width: 175px; height: 175px; object-fit: cover; object-position: 50% 20%; border-radius: 50%; margin: 10px auto 0; }
 
-/* paper list, as on Maxence's Research page */
 ol.papers { padding-left: 22px; }
 ol.papers { list-style: none; padding-left: 40px; counter-reset: paper; }
 ol.papers > li { margin-bottom: 4px; position: relative; counter-increment: paper; }
@@ -107,7 +106,6 @@ ol.papers b { font-weight: 400; color: var(--ink); }
   margin: 6px 0 8px; padding: 10px 14px; border-left: 2px solid var(--link); background: var(--tint);
 }
 
-/* dated rows, as on Maxence's CV / Talks pages */
 .row { display: flex; gap: 16px; margin-bottom: 14px; }
 .row .y { flex: 0 0 120px; font-variant-numeric: tabular-nums; color: var(--muted); }
 .row .what { min-width: 0; }
