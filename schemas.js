@@ -80,7 +80,7 @@
     } },
   ];
 
-  let S = 0, DPR = 1, raf = 0, last = 0, t = 0, rgb = '255,107,107', rgbHi = '255,196,120', idx = 0, phase = 0;
+  let S = 0, DPR = 1, raf = 0, last = 0, t = 0, rgb = '255,107,107', rgbHi = '255,196,120', idx = 0, nextIdx = 1, phase = 0, mx = 0, my = 0, tmx = 0, tmy = 0, spin = 0, spinAngle = 0;
   const HOLD = 9, FADE = 1.6;
   function size() {
     const box = canvas.getBoundingClientRect();
@@ -97,7 +97,7 @@
   }
   function drawScene(sc, alpha) {
     if (alpha <= 0) return;
-    const d = sc.build(t), yaw = t * .16, pitch = .42 + .12 * Math.sin(t * .23);
+    const d = sc.build(t), yaw = t * .16 + spinAngle + mx * .9, pitch = .42 + .12 * Math.sin(t * .23) + my * .45;
     const base = d.faint ? .22 : .42;
     d.lines.forEach((line, i) => {
       const hi = d.hi.includes(i);
@@ -114,15 +114,31 @@
     raf = requestAnimationFrame(frame);
     if (now - last < 33) return;
     const dt = Math.min((now - last) / 1000, .05); last = now; t += dt; phase += dt;
-    if (phase > HOLD + FADE) { phase -= HOLD + FADE; idx = (idx + 1) % scenes.length; }
+    mx += (tmx - mx) * .06; my += (tmy - my) * .06; spinAngle += spin * dt; spin *= .93;
+    if (phase > HOLD + FADE) { phase -= HOLD + FADE; idx = nextIdx; nextIdx = (idx + 1) % scenes.length; }
     const cs = getComputedStyle(document.documentElement);
     rgb = cs.getPropertyValue('--schema').trim() || rgb;
     rgbHi = cs.getPropertyValue('--schema-hi').trim() || rgbHi;
     ctx.clearRect(0, 0, S, S);
     const fadeOut = phase > HOLD ? 1 - (phase - HOLD) / FADE : 1;
     drawScene(scenes[idx], fadeOut);
-    if (phase > HOLD) drawScene(scenes[(idx + 1) % scenes.length], 1 - fadeOut);
+    if (phase > HOLD) drawScene(scenes[nextIdx], 1 - fadeOut);
   }
+  addEventListener('pointermove', e => {
+    if (e.pointerType !== 'mouse') return;
+    const r = canvas.getBoundingClientRect();
+    tmx = Math.max(-1, Math.min(1, (e.clientX - (r.left + r.width / 2)) / innerWidth * 2));
+    tmy = Math.max(-1, Math.min(1, (e.clientY - (r.top + r.height / 2)) / innerHeight * 2));
+  }, { passive: true });
+  canvas.addEventListener('click', () => {
+    spin = 9;
+    if (phase <= HOLD) { nextIdx = (idx + 1) % scenes.length; phase = HOLD; }
+  });
+  window.showSchema = i => {
+    if (phase > HOLD) return;
+    if (i === idx) { phase = Math.min(phase, 2); return; }
+    nextIdx = i; phase = HOLD;
+  };
   function run() { cancelAnimationFrame(raf); if (!document.hidden) { last = performance.now(); raf = requestAnimationFrame(frame); } }
   addEventListener('resize', () => { size(); }, { passive: true });
   if ('ResizeObserver' in window) new ResizeObserver(size).observe(canvas);
