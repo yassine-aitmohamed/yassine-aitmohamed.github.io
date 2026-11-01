@@ -1,806 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research — Yassine Ait Mohamed</title>
-
-  <meta
-    name="description"
-    content="Research interests, papers, thesis and notes by Yassine Ait Mohamed."
-  >
-
-  <link
-    rel="stylesheet"
-    href="style.css?v=20261029-profiles"
-  >
-  <script>try{if(localStorage.getItem("theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}</script>
-
-
-  <!-- MathJax -->
-
+  <meta name="description" content="Research interests, papers, thesis and notes by Yassine Ait Mohamed.">
+  <meta name="author" content="Yassine Ait Mohamed">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap">
+  <link rel="stylesheet" href="style.css?v=20261031-mayrand">
   <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$', '$']]
-      },
-      options: {
-        skipHtmlTags: [
-          'script',
-          'noscript',
-          'style',
-          'textarea',
-          'pre'
-        ]
-      }
-    };
+    window.MathJax = { tex: { inlineMath: [['$', '$']] } };
   </script>
-
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"
-    id="MathJax-script"
-    async>
-  </script>
-
-
-
- 
-
-  <style>
-
-    .papers-block .paper-list-simple {
-      counter-reset: paper;
-    }
-
-    .papers-block .paper-entry {
-      position: relative;
-      padding-left: 34px;
-      counter-increment: paper;
-    }
-
-    .papers-block .paper-entry::before {
-      content: counter(paper) ".";
-
-      position: absolute;
-
-      left: 0;
-      top: 19px;
-
-      color: var(--accent);
-      font-family: var(--serif);
-      font-size: clamp(1.2rem, 2.2vw, 1.45rem);
-      font-weight: 600;
-      line-height: 1.3;
-    }
-
-    @media (max-width: 680px) {
-      .papers-block .paper-entry.has-badge::before {
-        top: 48px;
-      }
-    }
-
-    .profile-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin: -6px 0 26px;
-    }
-
-    html body .profile-links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      padding: 7px 14px 7px 10px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: var(--paper);
-      color: var(--title-color);
-      font-size: .95rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: border-color .2s, color .2s;
-    }
-
-    html body .profile-links a:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    .profile-links svg {
-      width: 20px;
-      height: 20px;
-      flex: none;
-    }
-
-    .research-lead .kw {
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .research-lead .kw-label {
-      color: var(--title-color);
-      font-weight: 700;
-    }
-
-    .research-lead .kw-line {
-      display: block;
-      margin-top: 6px;
-    }
-
-    /* Co-auteur affiché sur la même ligne que le titre */
-
-    .paper-title .coauthor,
-    .paper-title .coauthor a {
-      display: inline;
-      white-space: nowrap;
-    }
-
-  </style>
-
-<link rel="stylesheet" href="theme.css?v=20261030-schemas">
-<script>try{if(!localStorage.getItem("theme"))document.documentElement.dataset.theme="dark"}catch(e){}</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js" id="MathJax-script" async></script>
 </head>
-
-
 <body>
-
-
-<!-- ==================================================
-     HEADER
-     ================================================== -->
-
-<header class="site-header site-header--inner-page">
-
-  <div class="site-header__inner">
-<nav aria-label="Main navigation">
-
-      <ul class="nav-links">
-
-        <li>
-          <a href="index.html">
-            Home
-          </a>
-        </li>
-
-        <li>
-          <a
-            class="active"
-            href="research.html">
-            Research
-          </a>
-        </li>
-
-        <li>
-          <a href="talks.html">
-            Talks
-          </a>
-        </li>
-
-        <li>
-          <a href="teaching.html">
-            Teaching
-          </a>
-        </li>
-
-        <li>
-          <a href="cv.html">
-            CV
-          </a>
-        </li>
-
-      </ul>
-
+<div class="wrapper">
+  <header>
+    <h1><a href="index.html">Yassine Ait Mohamed</a></h1>
+    <p>PhD Candidate<br>Department of Mathematics<br>University of Sherbrooke</p>
+    <nav aria-label="Main navigation">
+      <h3><a href="research.html" aria-current="page">Research</a></h3>
+      <h3><a href="talks.html">Talks</a></h3>
+      <h3><a href="cv.html">CV</a></h3>
+      <h3><a href="teaching.html">Teaching</a></h3>
     </nav>
-
-  </div>
-
-</header>
-
-
-
-<!-- ==================================================
-     MAIN
-     ================================================== -->
-
-<main class="page-container">
-
-  <div class="content-narrow">
-
-
-    <!-- PAGE TITLE -->
-
-    <header class="page-head reveal">
-
-      <div class="section-kicker">
-        Research
-      </div>
-
-      <h1 class="page-title">
-        Research
-      </h1>
-
-    </header>
-
-
-
-
-
-    <!-- RESEARCH INTERESTS -->
-
-    <p class="research-lead reveal">
-
-      My research lies between geometry and algebra.
-
-      <span class="kw-line">
-        <span class="kw-label">Geometry:</span>
-        <span class="kw">Poisson geometry</span>;
-        <span class="kw">shifted symplectic geometry</span>;
-        <span class="kw">Lie groupoids</span>;
-        <span class="kw">differentiable stacks</span>;
-        <span class="kw">coisotropic reduction</span>;
-        <span class="kw">deformation quantization</span>;
-        <span class="kw">Moore&ndash;Tachikawa varieties</span>;
-        <span class="kw">topological quantum field theories</span>;
-        <span class="kw">algebraic geometry</span>.
-      </span>
-
-      <span class="kw-line">
-        <span class="kw-label">Algebra:</span>
-        <span class="kw">graded rings</span>;
-        <span class="kw">derivations</span>;
-        <span class="kw">Ore extensions</span>;
-        <span class="kw">graded simplicity</span>;
-        <span class="kw">noncommutative algebra</span>;
-        <span class="kw">Lie theory</span>.
-      </span>
-
-    </p>
-
-
-
-
-    <!-- ==================================================
-         PAPERS
-         ================================================== -->
-
-    <div class="section-label reveal">
-      Papers
-    </div>
-
-
-    <div class="paper-frame papers-block reveal">
-
-      <ul class="paper-list-simple">
-
-
-        <li class="paper-entry has-badge">
-
-          <div class="paper-title">
-            Integration and quantization of 1-shifted coisotropics
-            <span class="coauthor">(with <a href="https://maxencemayrand.github.io/" target="_blank" rel="noopener">Maxence Mayrand</a>)</span>
-          </div>
-
-
-          <span class="badge">
-            Submitted
-          </span>
-
-
-          <div class="paper-links">
-
-
-            <a
-              href="Documents research/1-shifted-coisotropics.pdf"
-              target="_blank"
-              class="teal-link">
-
-              PDF ↗
-
-            </a>
-
-            <time class="doc-date" datetime="2026-10-07">Posted 7 Oct 2026</time>
-
-
-            <button
-              class="abstract-toggle"
-              data-for="abs-a1">
-
-              Abstract ↓
-
-            </button>
-
-          </div>
-
-
-          <div
-            id="abs-a1"
-            class="abstract">
-
-            To quantize the reduction of a coisotropic submanifold of a Poisson manifold, Cattaneo and Felder constructed a homotopy Poisson algebra together with a deformation quantization. Its degree-zero cohomology is the reduced Poisson algebra, while the full homotopy structure retains information about the formal embedding even when the reduced space is singular or trivial. On the integration side, Cattaneo showed that a coisotropic submanifold integrates to a Lagrangian subgroupoid of any symplectic groupoid integrating the ambient Poisson manifold. It is now recognized that both constructions fit into shifted symplectic geometry: the Lagrangian subgroupoid presents a 1-shifted Lagrangian morphism of differentiable stacks, and the homotopy Poisson algebra describes the associated 0-shifted Poisson structure. However, such morphisms form only a special class of 1-shifted Lagrangians. We extend this picture to 1-shifted Lagrangians and, more generally, 1-shifted coisotropics in 1-shifted symplectic differentiable stacks. We establish an integration theorem for their infinitesimal description in terms of twisted Dirac structures and construct a natural Poisson bracket on invariant functions. Under regularity hypotheses, we equip the associated Lie algebroid complex with a flat $P_\infty$-structure and a curved $A_\infty$-quantization, independent of the auxiliary choices up to isomorphism. The induced bracket in degree zero recovers the reduced Poisson bracket, and suitable cohomological vanishing conditions yield a deformation quantization of invariant functions. This extends the Cattaneo&ndash;Felder picture to more general reduction procedures, with the same infinitesimal data governing integration and quantization.
-
-          </div>
-
-        </li>
-
-
-
-        <!-- PAPER 2 -->
-
-        <li class="paper-entry has-badge">
-
-          <div class="paper-title">
-
-            Group-graded Ore extensions and graded simplicity
-
-          </div>
-
-
-          <span class="badge">
-            Submitted
-          </span>
-
-
-          <div class="paper-links">
-
-            <a
-              href="Documents research/group-graded-ore-extensions-v2.pdf"
-              target="_blank"
-              class="teal-link">
-
-              PDF ↗
-
-            </a>
-
-            <time class="doc-date" datetime="2026-10-25">Posted 25 Oct 2026</time>
-
-
-            <button
-              class="abstract-toggle"
-              data-for="abs-a2">
-
-              Abstract ↓
-
-            </button>
-
-          </div>
-
-
-          <div
-            id="abs-a2"
-            class="abstract">
-
-            We study Ore extensions $R[t;\sigma,\delta]$ of rings graded by an arbitrary group $\Gamma$. The grading of $R$ extends with $t$ of degree $\gamma$ if and only if $\sigma$ is compatible with conjugation by $\gamma$ and $\delta$ with left translation by $\gamma$. The extended grading is then unique. For nonabelian $\Gamma$ the degree of $t$ need not commute with the degrees of $R$, and this twist cannot always be removed. If $R$ is gr-simple and $\sigma$ is an automorphism, then $R[t;\sigma,\delta]$ is gr-simple if and only if it has no homogeneous normal element that is monic of positive $t$-degree. The quantized Weyl algebra shows that the graded forms of the classical necessary conditions do not suffice. Over a group algebra $kG$, these extensions correspond to actions of $G$ on the affine line, and gr-simplicity means that the action has no finite orbit. In characteristic zero this is the nonvanishing of a class in $H^1(G,k_\chi)$, and simplicity forces $G$ to be metabelian. We prove the analogous results for Poisson polynomial rings and relate the two settings by semiclassical limits.
-
-          </div>
-
-        </li>
-
-
-        <!-- PAPER 3 -->
-
-        <li class="paper-entry has-badge">
-
-          <div class="paper-title">
-
-            Graded differential polynomial rings
-
-          </div>
-
-
-          <div class="paper-venue">
-
-            <a
-              href="https://onlinelibrary.wiley.com/doi/10.1002/mana.70286"
-              target="_blank"
-              rel="noopener">
-
-              Mathematische Nachrichten
-
-            </a>
-
-          </div>
-
-
-          <span class="badge published">
-            Published
-          </span>
-
-
-          <div class="paper-links">
-
-            <a
-              href="Documents research/gpd.pdf"
-              target="_blank"
-              class="teal-link">
-
-              PDF ↗
-
-            </a>
-
-            <time class="doc-date" datetime="2026-06-23">Posted 23 Jun 2026</time>
-
-
-
-            <button
-              class="abstract-toggle"
-              data-for="abs-a3">
-
-              Abstract ↓
-
-            </button>
-
-          </div>
-
-
-          <div
-            id="abs-a3"
-            class="abstract">
-
-            We study differential polynomial rings
-            $R[t;\delta]$ over $\Gamma$-graded rings,
-            where $\Gamma$ is an arbitrary group.
-
-            We show that $R[t;\delta]$ admits a
-            $\Gamma$-grading compatible with that of $R$
-            if and only if $\delta$ is a $\gamma$-derivation
-            for some $\gamma\in C_\Gamma(\Gamma_R)$,
-            and that this grading is unique once
-            $\deg(t)=\gamma$ is fixed;
-
-            if $\delta\neq0$, then $\gamma$ is itself
-            uniquely determined by $\delta$.
-
-            We characterize the resulting graded ring
-            by a universal property.
-
-            We prove a characteristic-free center criterion
-            for gr-simplicity whenever $Z(R[t;\delta])$
-            is a graded subring;
-
-            in characteristic zero, gr-simplicity is equivalent
-            to $\delta$-gr-simplicity of $R$ and
-            $\gamma$-outerness of $\delta$,
-            extending Jordan's simplicity criterion
-            to the graded setting.
-
-            We further show that $R[t;\delta]$ is gr-prime
-            if and only if $R$ is $\delta$-gr-prime,
-            and that gr-Noetherianity of $R$ passes to
-            $R[t;\delta]$, recovering a graded Hilbert basis
-            theorem as a special case.
-
-            When $\Gamma$ is abelian, gr-simplicity
-            and gr-primality are shown to be invariants
-            of homogeneous graded Morita equivalence,
-            and every ring homogeneously graded equivalent
-            to $R[t;\delta]$ via a compatible idempotent
-            is again a graded differential polynomial ring.
-
-          </div>
-
-        </li>
-
-
-
-        <!-- PAPER 4 -->
-
-        <li class="paper-entry has-badge">
-
-          <div class="paper-title">
-
-            Generalized homogeneous derivations on graded rings
-
-          </div>
-
-
-          <div class="paper-venue">
-
-            <a
-              href=""
-              target="_blank"
-              rel="noopener">
-
-              Siberian Mathematical Journal
-
-            </a>
-
-          </div>
-
-
-          <span class="badge">
-            To appear
-          </span>
-
-
-          <div class="paper-links">
-
-            <a
-              href="Documents research/ghdogr.pdf"
-              target="_blank"
-              class="teal-link">
-
-              PDF ↗
-
-            </a>
-
-            <time class="doc-date" datetime="2026-08-20">Posted 20 Aug 2026</time>
-
-
-
-            <button
-              class="abstract-toggle"
-              data-for="abs-a4">
-
-              Abstract ↓
-
-            </button>
-
-          </div>
-
-
-          <div
-            id="abs-a4"
-            class="abstract">
-
-            We introduce a notion of generalized homogeneous
-            derivations on graded rings, extending the
-            homogeneous derivations of Kanunnikov,
-            and single out the gr-generalized derivations
-            among them, those preserving the degree
-            of every homogeneous component.
-
-            Several results originally established for
-            prime rings are extended to gr-prime rings.
-
-            We also study the algebraic and module-theoretic
-            structure of these maps, establish their
-            functorial properties, and construct categories
-            that record their derivation structure in both
-            ring and module contexts.
-
-          </div>
-
-        </li>
-
-
-
-        <!-- PAPER 5 -->
-
-        <li class="paper-entry has-badge">
-
-          <div class="paper-title">
-
-            On graded rings with homogeneous derivations
-
-          </div>
-
-
-          <div class="paper-venue">
-
-            <a
-              href="https://doi.org/10.33044/revuma.4934"
-              target="_blank"
-              rel="noopener">
-
-              Revista de la Unión Matemática Argentina
-
-            </a>
-
-          </div>
-
-
-          <span class="badge published">
-            Published
-          </span>
-
-
-          <div class="paper-links">
-
-            <a
-              href="Documents research/ogrwhd.pdf"
-              target="_blank"
-              class="teal-link">
-
-              PDF ↗
-
-            </a>
-
-            <time class="doc-date" datetime="2026-08-20">Posted 20 Aug 2026</time>
-
-
-
-            <button
-              class="abstract-toggle"
-              data-for="abs-a5">
-
-              Abstract ↓
-
-            </button>
-
-          </div>
-
-
-          <div
-            id="abs-a5"
-            class="abstract">
-
-            We establish results related to homogeneous
-            derivations, a concept introduced by
-            Kanunnikov (2018).
-
-            First, we prove the existence of a non-trivial
-            family of derivations that are not homogeneous
-            on graded rings.
-
-            Furthermore, based on homogeneous derivations,
-            we extend certain existing significant results
-            in the context of prime (resp. semiprime) rings
-            to gr-prime (resp. gr-semiprime) rings,
-            such as Posner's and Herstein's theorems.
-
-          </div>
-
-        </li>
-
-
-      </ul>
-
-    </div>
-
-
-
-    <!-- ==================================================
-         MASTER'S THESIS
-         ================================================== -->
-
-    <div class="section-label reveal">
-      Master's thesis
-    </div>
-
-
-    <div class="paper-frame reveal">
-
-      <ul class="paper-list-simple">
-
-        <li class="paper-entry">
-
-          <div class="thesis-title">
-
-            Divisors in Algebraic Geometry,
-            Central Simple Algebras and
-            Severi–Brauer Varieties
-
-          </div>
-
-
-          <div class="thesis-meta">
-
-            Sidi Mohamed Ben Abdellah University,
-            2022 ·
-
-            <a
-              href="Documents research/master_thesis.pdf"
-              target="_blank">
-
-              PDF ↗
-
-            </a>
-
-            <time class="doc-date" datetime="2026-03-11">Posted 11 Mar 2026</time>
-
-
-          </div>
-
-        </li>
-
-      </ul>
-
-    </div>
-
-
-
-    <!-- ==================================================
-         EXPOSITORY NOTES
-         ================================================== -->
-
-    <div class="section-label reveal">
-      Expository notes
-    </div>
-
-
-    <div class="paper-frame reveal">
-
-      <ul class="paper-list-simple">
-
-
-        <li class="paper-entry">
-
-          <span class="note-title">
-
-            Note on Central Simple Algebras
-            and the Brauer Group
-
-            <a
-              href="Documents research/On_Simple_Algebras.pdf"
-              target="_blank">
-
-              PDF ↗
-
-            </a>
-
-            <time class="doc-date" datetime="2026-03-11">Posted 11 Mar 2026</time>
-
-
-          </span>
-
-        </li>
-
-
-
-        <li class="paper-entry">
-
-          <span class="note-title">
-
-            Note on Sheaf Theory
-
-            <a
-              href="Documents research/Note_on_sheaf_theory.pdf"
-              target="_blank">
-
-              PDF ↗
-
-            </a>
-
-            <time class="doc-date" datetime="2026-03-11">Posted 11 Mar 2026</time>
-
-
-          </span>
-
-        </li>
-
-
-      </ul>
-
-    </div>
-
-
-  </div>
-
-</main>
-
-
-
-<!-- ==================================================
-     FOOTER
-     ================================================== -->
-
-<footer class="site-footer">
-
-  <span>
-    © Yassine Ait Mohamed
-  </span>
-
-  <span>
-    Research
-  </span>
-
-</footer>
-
-
-
-<!-- ==================================================
-     JAVASCRIPT
-     ================================================== -->
-
-<script src="main.js?v=20261022-night"></script>
-
-
+    <button class="night" id="night" type="button">Night mode</button>
+  </header>
+
+  <section class="page">
+    <hr>
+    <h1>Research</h1>
+    <hr>
+    <h3>Keywords</h3>
+    <p><b>Geometry:</b> Poisson geometry; shifted symplectic geometry; Lie groupoids; differentiable stacks; coisotropic reduction; deformation quantization; Moore–Tachikawa varieties; topological quantum field theories; algebraic geometry.<br>
+    <b>Algebra:</b> graded rings; derivations; Ore extensions; graded simplicity; noncommutative algebra; Lie theory.</p>
+
+    <h3>Papers</h3>
+    <ol class="papers">
+      <li>
+        <div><b>Integration and quantization of 1-shifted coisotropics</b> (with <a class="person" href="https://maxencemayrand.github.io/" target="_blank" rel="noopener">Maxence Mayrand</a>)</div>
+        <div class="paper-meta">
+          <span class="status">Submitted</span> · <a href="Documents%20research/1-shifted-coisotropics.pdf" target="_blank" rel="noopener">pdf</a> · <span class="posted">Posted 7 Oct 2026</span><br>
+          <button class="toggle" type="button" aria-expanded="false"><span class="ic" aria-hidden="true"></span>Abstract</button>
+          <div class="abs-wrap"><div class="abstract"><div class="in">To quantize the reduction of a coisotropic submanifold of a Poisson manifold, Cattaneo and Felder constructed a homotopy Poisson algebra together with a deformation quantization. Its degree-zero cohomology is the reduced Poisson algebra, while the full homotopy structure retains information about the formal embedding even when the reduced space is singular or trivial. On the integration side, Cattaneo showed that a coisotropic submanifold integrates to a Lagrangian subgroupoid of any symplectic groupoid integrating the ambient Poisson manifold. It is now recognized that both constructions fit into shifted symplectic geometry: the Lagrangian subgroupoid presents a 1-shifted Lagrangian morphism of differentiable stacks, and the homotopy Poisson algebra describes the associated 0-shifted Poisson structure. However, such morphisms form only a special class of 1-shifted Lagrangians. We extend this picture to 1-shifted Lagrangians and, more generally, 1-shifted coisotropics in 1-shifted symplectic differentiable stacks. We establish an integration theorem for their infinitesimal description in terms of twisted Dirac structures and construct a natural Poisson bracket on invariant functions. Under regularity hypotheses, we equip the associated Lie algebroid complex with a flat $P_\infty$-structure and a curved $A_\infty$-quantization, independent of the auxiliary choices up to isomorphism. The induced bracket in degree zero recovers the reduced Poisson bracket, and suitable cohomological vanishing conditions yield a deformation quantization of invariant functions. This extends the Cattaneo–Felder picture to more general reduction procedures, with the same infinitesimal data governing integration and quantization.</div></div></div>
+        </div>
+      </li>
+      <li>
+        <div><b>Group-graded Ore extensions and graded simplicity</b></div>
+        <div class="paper-meta">
+          <span class="status">Submitted</span> · <a href="Documents%20research/group-graded-ore-extensions-v2.pdf" target="_blank" rel="noopener">pdf</a> · <span class="posted">Posted 25 Oct 2026</span><br>
+          <button class="toggle" type="button" aria-expanded="false"><span class="ic" aria-hidden="true"></span>Abstract</button>
+          <div class="abs-wrap"><div class="abstract"><div class="in">We study Ore extensions $R[t;\sigma,\delta]$ of rings graded by an arbitrary group $\Gamma$. The grading of $R$ extends with $t$ of degree $\gamma$ if and only if $\sigma$ is compatible with conjugation by $\gamma$ and $\delta$ with left translation by $\gamma$. The extended grading is then unique. For nonabelian $\Gamma$ the degree of $t$ need not commute with the degrees of $R$, and this twist cannot always be removed. If $R$ is gr-simple and $\sigma$ is an automorphism, then $R[t;\sigma,\delta]$ is gr-simple if and only if it has no homogeneous normal element that is monic of positive $t$-degree. The quantized Weyl algebra shows that the graded forms of the classical necessary conditions do not suffice. Over a group algebra $kG$, these extensions correspond to actions of $G$ on the affine line, and gr-simplicity means that the action has no finite orbit. In characteristic zero this is the nonvanishing of a class in $H^1(G,k_\chi)$, and simplicity forces $G$ to be metabelian. We prove the analogous results for Poisson polynomial rings and relate the two settings by semiclassical limits.</div></div></div>
+        </div>
+      </li>
+      <li>
+        <div><b>Graded differential polynomial rings</b></div>
+        <div class="paper-meta">
+          <a href="https://onlinelibrary.wiley.com/doi/10.1002/mana.70286" target="_blank" rel="noopener">Mathematische Nachrichten</a> · <span class="status published">Published</span> · <a href="Documents%20research/gpd.pdf" target="_blank" rel="noopener">pdf</a> · <span class="posted">Posted 23 Jun 2026</span><br>
+          <button class="toggle" type="button" aria-expanded="false"><span class="ic" aria-hidden="true"></span>Abstract</button>
+          <div class="abs-wrap"><div class="abstract"><div class="in">We study differential polynomial rings $R[t;\delta]$ over $\Gamma$-graded rings, where $\Gamma$ is an arbitrary group. We show that $R[t;\delta]$ admits a $\Gamma$-grading compatible with that of $R$ if and only if $\delta$ is a $\gamma$-derivation for some $\gamma\in C_\Gamma(\Gamma_R)$, and that this grading is unique once $\deg(t)=\gamma$ is fixed; if $\delta\neq0$, then $\gamma$ is itself uniquely determined by $\delta$. We characterize the resulting graded ring by a universal property. We prove a characteristic-free center criterion for gr-simplicity whenever $Z(R[t;\delta])$ is a graded subring; in characteristic zero, gr-simplicity is equivalent to $\delta$-gr-simplicity of $R$ and $\gamma$-outerness of $\delta$, extending Jordan's simplicity criterion to the graded setting. We further show that $R[t;\delta]$ is gr-prime if and only if $R$ is $\delta$-gr-prime, and that gr-Noetherianity of $R$ passes to $R[t;\delta]$, recovering a graded Hilbert basis theorem as a special case. When $\Gamma$ is abelian, gr-simplicity and gr-primality are shown to be invariants of homogeneous graded Morita equivalence, and every ring homogeneously graded equivalent to $R[t;\delta]$ via a compatible idempotent is again a graded differential polynomial ring.</div></div></div>
+        </div>
+      </li>
+      <li>
+        <div><b>Generalized homogeneous derivations on graded rings</b></div>
+        <div class="paper-meta">
+          Siberian Mathematical Journal · <span class="status">To appear</span> · <a href="Documents%20research/ghdogr.pdf" target="_blank" rel="noopener">pdf</a> · <span class="posted">Posted 20 Aug 2026</span><br>
+          <button class="toggle" type="button" aria-expanded="false"><span class="ic" aria-hidden="true"></span>Abstract</button>
+          <div class="abs-wrap"><div class="abstract"><div class="in">We introduce a notion of generalized homogeneous derivations on graded rings, extending the homogeneous derivations of Kanunnikov, and single out the gr-generalized derivations among them, those preserving the degree of every homogeneous component. Several results originally established for prime rings are extended to gr-prime rings. We also study the algebraic and module-theoretic structure of these maps, establish their functorial properties, and construct categories that record their derivation structure in both ring and module contexts.</div></div></div>
+        </div>
+      </li>
+      <li>
+        <div><b>On graded rings with homogeneous derivations</b></div>
+        <div class="paper-meta">
+          <a href="https://doi.org/10.33044/revuma.4934" target="_blank" rel="noopener">Revista de la Unión Matemática Argentina</a> · <span class="status published">Published</span> · <a href="Documents%20research/ogrwhd.pdf" target="_blank" rel="noopener">pdf</a> · <span class="posted">Posted 20 Aug 2026</span><br>
+          <button class="toggle" type="button" aria-expanded="false"><span class="ic" aria-hidden="true"></span>Abstract</button>
+          <div class="abs-wrap"><div class="abstract"><div class="in">We establish results related to homogeneous derivations, a concept introduced by Kanunnikov (2018). First, we prove the existence of a non-trivial family of derivations that are not homogeneous on graded rings. Furthermore, based on homogeneous derivations, we extend certain existing significant results in the context of prime (resp. semiprime) rings to gr-prime (resp. gr-semiprime) rings, such as Posner's and Herstein's theorems.</div></div></div>
+        </div>
+      </li>
+    </ol>
+
+    <h3>Master's thesis</h3>
+    <p><b>Divisors in Algebraic Geometry, Central Simple Algebras and Severi–Brauer Varieties</b><br>
+    <span style="margin-left:20px">Sidi Mohamed Ben Abdellah University, 2022 · <a href="Documents%20research/master_thesis.pdf" target="_blank" rel="noopener">pdf</a> · <span class="posted">Posted 11 Mar 2026</span></span></p>
+
+    <h3>Expository notes</h3>
+    <p><b>Note on Central Simple Algebras and the Brauer Group</b><br>
+    <span style="margin-left:20px"><a href="Documents%20research/On_Simple_Algebras.pdf" target="_blank" rel="noopener">pdf</a> · <span class="posted">Posted 11 Mar 2026</span></span><br>
+    <b>Note on Sheaf Theory</b><br>
+    <span style="margin-left:20px"><a href="Documents%20research/Note_on_sheaf_theory.pdf" target="_blank" rel="noopener">pdf</a> · <span class="posted">Posted 11 Mar 2026</span></span></p>
+  </section>
+</div>
+<script src="main.js?v=20261031-mayrand"></script>
+<script src="schemas.js?v=20261031-mayrand"></script>
 </body>
 </html>
