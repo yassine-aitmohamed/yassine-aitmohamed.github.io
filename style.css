@@ -115,11 +115,6 @@ ol.papers b { font-weight: 400; color: var(--ink); }
 .tools li { margin-bottom: 10px; }
 .mat { display: flex; flex-wrap: wrap; gap: 6px 14px; }
 
-#theme-lattice {
-  position: fixed; z-index: 0;
-  left: max(50px, calc(50% - 450px)); bottom: 70px;
-  width: clamp(150px, calc(100vh - 520px), 270px); aspect-ratio: 1; max-width: 100%;
-}
 header, section.page { position: relative; z-index: 1; }
 header { position: fixed; }
 
@@ -128,12 +123,9 @@ header { position: fixed; }
   header { width: 220px; }
   header h1 a { font-size: 20px; }
   section.page { float: none; width: auto; margin-left: 250px; }
-  #theme-lattice { width: clamp(140px, calc(100vh - 520px), 210px); }
 }
-@media screen and (max-height: 620px) { #theme-lattice { display: none; } }
 @media screen and (max-width: 720px) {
   header, section.page { float: none; position: static; width: auto; margin-left: 0; }
-  #theme-lattice { left: auto; right: -60px; top: 20px; bottom: auto; width: 240px; opacity: .45; }
   header h3 { display: inline-block; margin-right: 18px; margin-bottom: 10px; }
   section.page { padding: 20px 0; }
 }
@@ -191,7 +183,6 @@ ol.papers > li > * { transition: opacity .35s ease, filter .35s ease; }
 ol.papers.focus > li:not(.lit) > * { opacity: .25; filter: blur(.6px); }
 ol.papers.focus > li:not(.lit)::before { opacity: .25; }
 ol.papers > li.lit::before { color: var(--orange); }
-#theme-lattice { pointer-events: auto; cursor: pointer; }
 .row .what { position: relative; padding-left: 18px; }
 .row .what::before {
   content: ""; position: absolute; left: -3px; top: .55em; width: 7px; height: 7px; border-radius: 50%;
