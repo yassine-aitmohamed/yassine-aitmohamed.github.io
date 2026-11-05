@@ -1,9 +1,9 @@
 :root {
-  --bg: #F6F7F4;
+  --bg: #F2EAD6;
   --ink: #2E3238;
   --text: #33363B;
   --muted: #6A6F78;
-  --rule: #DCE0DA;
+  --rule: #DED2B4;
   --link: #1F3A68;
   --link-hover: #142748;
   --person: #2C6640;
@@ -13,22 +13,8 @@
   --schema-hi: 214, 120, 20;
   --tint: rgba(31, 58, 104, .05);
   --sans: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color-scheme: light;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0B1426; --ink: #EFE9DD; --text: #D3CDC2; --muted: #9C968B; --rule: #24324D;
-    --link: #8FB4F0; --link-hover: #BFD3F7; --person: #9BD3A6; --name: #A9C2EE; --orange: #F2A35E;
-    --schema: 255, 99, 110; --schema-hi: 255, 190, 110; --tint: rgba(143, 180, 240, .07);
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #0B1426; --ink: #EFE9DD; --text: #D3CDC2; --muted: #9C968B; --rule: #24324D;
-  --link: #8FB4F0; --link-hover: #BFD3F7; --person: #9BD3A6; --name: #A9C2EE; --orange: #F2A35E;
-    --schema: 255, 99, 110; --schema-hi: 255, 190, 110; --tint: rgba(143, 180, 240, .07);
-  color-scheme: dark;
-}
-
 body {
   background: var(--bg);
   color: var(--text);
