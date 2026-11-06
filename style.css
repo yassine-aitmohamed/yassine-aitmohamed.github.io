@@ -64,7 +64,6 @@ ol.papers > li::before {
 }
 ol.papers b { font-weight: 400; color: var(--ink); }
 .paper-meta { margin-left: 20px; }
-.posted { color: var(--orange); font-size: 14px; }
 .status { color: var(--muted); }
 .status.published { color: var(--orange); font-weight: 400; }
 .toggle {
