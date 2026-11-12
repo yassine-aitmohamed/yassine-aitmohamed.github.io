@@ -1,49 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yassine Ait Mohamed — Mathematics</title>
-  <meta name="description" content="Yassine Ait Mohamed — PhD Candidate in Mathematics at the University of Sherbrooke, Canada.">
-  <meta name="author" content="Yassine Ait Mohamed">
-  <script>document.documentElement.dataset.theme="light"</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
-  <link rel="stylesheet" href="style.css?v=20261106-fonts">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yassine Ait Mohamed</title>
+<meta name="description" content="Yassine Ait Mohamed, PhD Candidate in Mathematics at the University of Sherbrooke, Canada.">
+<meta name="author" content="Yassine Ait Mohamed">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+:root {
+  --bg: #F2EAD6; --ink: #2E3238; --text: #33363B; --muted: #6A6F78; --rule: #DED2B4;
+  --accent: #1F3A68; --link: #1F3A68; --person: #2C6640; --pub: #C25E14; --tint: rgba(31, 58, 104, .05);
+}
+:root {
+  --sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body { margin: 0; color: var(--text); font: 400 16.5px/1.6 var(--serif); }
+em, i { font-style: normal; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+a.person, span.person { color: var(--person); white-space: nowrap; }
+
+.wrap { max-width: 1180px; margin: 0 auto; padding: 60px 32px 28px; }
+
+header { text-align: center; }
+h1 { margin: 0; color: var(--ink); font: 500 38px/1.15 var(--sans); letter-spacing: .06em; }
+h1::after { content: ""; display: block; width: 44px; height: 2px; margin: 18px auto 16px; background: var(--accent); }
+.sub { margin: 0 auto; max-width: 760px; font-size: 18px; color: var(--text); }
+.bar {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px;
+  margin: 30px 0 46px; padding: 12px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  font: 400 13.5px/1.6 var(--mono); color: var(--muted);
+}
+.bar .sep { color: var(--rule); }
+
+.cols { display: grid; grid-template-columns: repeat(3, 1fr); }
+.col { padding: 0 34px; min-width: 0; }
+.col:first-child { padding-left: 0; }
+.col:last-child { padding-right: 0; }
+.col + .col { border-left: 1px solid var(--rule); }
+
+h3 {
+  position: relative; margin: 0 0 18px; padding-bottom: 10px; border-bottom: 1px solid var(--rule);
+  color: var(--accent); font: 600 13.5px/1.2 var(--sans); letter-spacing: .18em; text-transform: uppercase;
+}
+h3::after { content: ""; position: absolute; left: 0; bottom: -1px; width: 34px; height: 2px; background: var(--accent); }
+h5 { margin: 24px 0 10px; color: var(--ink); font: 600 15px/1.3 var(--sans); }
+h3 + h5 { margin-top: 0; }
+
+ul { list-style: none; margin: 0; padding: 0; }
+.bul li { position: relative; padding-left: 18px; margin: 0 0 4px; }
+.bul li::before {
+  content: ""; position: absolute; left: 2px; top: .62em; width: 6px; height: 6px;
+  border: 1.5px solid var(--accent); border-radius: 50%;
+}
+.bul .grp { color: var(--ink); font: 500 15.5px/1.6 var(--sans); }
+.bul ul { margin: 2px 0 8px; }
+.bul ul li::before { width: 4px; height: 4px; top: .7em; background: var(--accent); border: 0; }
+
+.dated li, .notes li { position: relative; margin: 0; padding: 0 0 12px 18px; border-left: 1px solid var(--rule); }
+.dated li:last-child, .notes li:last-child { padding-bottom: 2px; }
+.dated li::before, .notes li::before {
+  content: ""; position: absolute; left: -4px; top: .5em; width: 7px; height: 7px;
+  border-radius: 50%; background: var(--bg); border: 1.5px solid var(--accent);
+}
+.d { display: block; color: var(--muted); font: 400 12.5px/1.5 var(--mono); letter-spacing: .02em; }
+.t { display: block; color: var(--ink); font: 500 15.5px/1.4 var(--sans); margin-bottom: 2px; }
+.b2 { display: block; }
+.notes .pl, .dated .pl { display: block; margin-top: 5px; }
+
+.dot { color: var(--muted); padding: 0 2px; }
+.tag {
+  display: inline-block; margin: 0 4px 4px 0; padding: 0 8px; border: 1px solid var(--rule); border-radius: 3px;
+  font: 500 12px/1.9 var(--mono); color: var(--link); background: var(--tint);
+}
+.tag:hover { text-decoration: none; background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.tag[aria-expanded="true"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.mat { margin: 0 0 8px; }
+.ml { display: block; margin-bottom: 4px; color: var(--text); font: 500 14.5px/1.4 var(--sans); }
+
+.papers-sec { margin-top: 60px; }
+.papers li { padding: 16px 0 14px; border-bottom: 1px solid var(--rule); }
+.papers li:first-child { padding-top: 4px; }
+.pt { color: var(--ink); font: 500 18px/1.4 var(--sans); }
+.pm { margin-top: 3px; font-size: 16px; }
+.pm:empty { display: none; }
+.pl { margin-top: 8px; }
+.status { font: 500 12px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.status.published { color: var(--pub); }
+.abstract {
+  margin: 10px 0 4px; padding: 14px 18px; background: var(--tint); border-left: 2px solid var(--accent);
+  font-size: 15.5px; line-height: 1.65; text-align: justify; hyphens: auto;
+}
+
+footer {
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  margin-top: 56px; padding-top: 14px; border-top: 1px solid var(--rule);
+  font: 400 12.5px/1.6 var(--mono); color: var(--muted);
+}
+
+
+@media (max-width: 960px) {
+  .cols { grid-template-columns: 1fr; gap: 40px; }
+  .col, .col:first-child, .col:last-child { padding: 0; }
+  .col + .col { border-left: 0; }
+}
+@media (max-width: 600px) {
+  .wrap { padding: 36px 18px 20px; }
+  h1 { font-size: 30px; }
+  .sub { font-size: 16.5px; }
+}
+</style>
+<script>window.MathJax = { tex: { inlineMath: [['$', '$']] } };</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js" async></script>
 </head>
-<body>
-<div class="readbar" aria-hidden="true"></div>
-<div class="wrapper">
-  <header>
-    <h1><a href="index.html">Yassine Ait Mohamed</a></h1>
-    <p>PhD Candidate<br>Department of Mathematics<br>University of Sherbrooke</p>
-    <nav aria-label="Main navigation">
-      <h3><a href="research.html">Research</a></h3>
-      <h3><a href="talks.html">Talks</a></h3>
-      <h3><a href="cv.html">CV</a></h3>
-      <h3><a href="teaching.html">Teaching</a></h3>
-      <span class="nav-mark" aria-hidden="true"></span>
-    </nav>
-  </header>
+<body id="top">
+<div class="wrap">
 
-  <section class="page">
-    <img class="portrait" src="photo.jpg" alt="Yassine Ait Mohamed">
-    <h4 style="margin-top:20px">Introduction</h4>
-    <p style="margin-top:10px">I am a PhD candidate in Mathematics at the <a href="https://www.usherbrooke.ca/mathematiques/" target="_blank" rel="noopener">University of Sherbrooke</a>, under the supervision of <a class="person" href="https://maxencemayrand.github.io/" target="_blank" rel="noopener">Maxence Mayrand</a>.</p>
-    <p>My current interests include Poisson geometry, shifted symplectic geometry, algebraic geometry, Lie theory, topological quantum field theories, and derivations of graded rings.</p>
-
-    <h4>Email</h4>
-    <p><button class="copy" id="copy-email" type="button">yassine.ait.mohamed@usherbrooke.ca<span class="copied" aria-live="polite"></span></button></p>
-    <h4>Office</h4>
-    <p>D3-1027-4 · University of Sherbrooke, Canada</p>
-    <h4>Profiles</h4>
-    <ul class="profiles">
-      <li><a class="pf orcid" href="https://orcid.org/0009-0002-2245-4217" target="_blank" rel="noopener me"><svg viewBox="0 0 512 512" aria-hidden="true" fill="currentColor"><path d="m 336.6206,194.53756 c -7.12991,-3.32734 -13.8671,-5.55949 -20.25334,-6.61343 -6.36534,-1.09517 -16.57451,-1.61223 -30.71059,-1.61223 h -36.70409 v 152.74712 h 37.63425 c 14.6735,0 26.08126,-1.01267 34.22385,-3.01709 8.14259,-2.00442 14.92159,-4.52592 20.35674,-7.62608 5.43519,-3.07925 10.416,-6.8615 14.94192,-11.38742 14.4876,-14.71475 21.74129,-33.27334 21.74129,-55.7176 0,-22.05151 -7.44016,-40.05177 -22.34085,-53.98159 -5.49732,-5.16674 -11.82143,-9.44459 -18.88918,-12.79281 z M 255.99999,8.0000031 C 119.02153,8.0000031 8.0000034,119.04185 8.0000034,255.99998 8.0000034,392.95812 119.02153,504 255.99999,504 392.97849,504 504,392.95812 504,255.99998 504,119.04185 392.97849,8.0000031 255.99999,8.0000031 Z M 173.66372,365.51268 H 144.27546 V 160.1481 h 29.38826 z M 158.94954,138.69619 c -11.13935,0 -20.21208,-9.01056 -20.21208,-20.21208 0,-11.11841 9.05183,-20.191181 20.21208,-20.191181 11.18058,0 20.23244,9.051831 20.23244,20.191181 -0.0219,11.22184 -9.05186,20.21208 -20.23244,20.21208 z m 241.3866,163.59715 c -5.29051,12.54475 -12.83407,23.58066 -22.65053,33.08742 -9.98203,9.83734 -21.59659,17.19443 -34.84378,22.19616 -7.74983,3.01709 -14.83852,5.06335 -21.30725,6.11726 -6.4891,1.01267 -18.82759,1.50883 -37.07593,1.50883 H 219.5033 V 160.1481 h 69.23318 c 27.96195,0 50.03378,4.1541 66.31951,12.54476 16.26485,8.36977 29.18144,20.72859 38.79164,36.97254 9.61013,16.26483 14.4254,34.01757 14.4254,53.19607 0.0227,13.76426 -2.66619,26.90802 -7.93576,39.43187 z"/></svg>ORCID</a></li>
-      <li><a class="pf rg" href="https://www.researchgate.net/profile/Yassine-Ait-Mohamed" target="_blank" rel="noopener me"><svg viewBox="0 0 384 512" aria-hidden="true" fill="currentColor"><path d="M 228.65968,408.10149 C 208.46616,386.12784 181.4422,350.83324 158.962,310.93516 c 37.13444,-8.68487 64.63318,-43.55027 64.63318,-78.38386 0,-51.3457 -39.88089,-75.17678 -92.16329,-75.17678 -27.02266,0 -48.583367,1.36546 -68.715441,1.36546 -18.369155,0 -36.722401,0 -48.154153,-0.4447 v 13.30466 l 17.401097,3.19159 c 11.968845,2.30214 18.78249,7.76579 18.78249,36.21494 v 180.59919 c 0,28.43543 -6.813222,33.92871 -18.78249,36.19953 l -17.401097,3.25258 v 13.25908 c 12.367998,-0.4447 33.912828,-1.3513 55.473533,-1.3513 20.62404,0 47.217451,0.9066 58.680561,1.3513 v -13.25908 l -23.84698,-3.25258 c -12.366696,-1.796 -18.813848,-7.7641 -18.813848,-36.19953 v -76.54225 c 11.002507,0.92078 20.624038,0.92078 35.325548,0.92078 27.95932,49.94887 54.55102,87.55896 69.65214,104.9618 13.779,16.52587 34.84949,27.05401 61.44162,27.05401 7.78128,0 16.02316,-1.36721 21.05458,-3.68315 v -11.89361 c -16.49625,0 -32.99204,-11.47725 -44.8702,-24.3213 z M 119.06392,295.34424 c -15.59093,0 -22.434257,-0.41463 -33.007939,-1.41103 V 178.91935 c 10.573682,-0.92079 24.751869,-0.92079 37.135739,-0.92079 38.53132,0 61.42745,20.19525 61.42745,56.83902 0,36.21495 -24.73641,60.50666 -65.55525,60.50666 z m 139.93416,-115.7035 c -0.4606,-2.4087 -0.87524,-5.21701 -1.24303,-8.45544 -0.38328,-3.26846 -0.63033,-7.10411 -0.78243,-11.63108 -0.15386,-4.49562 -0.21509,-9.98891 -0.21509,-16.28098 0,-6.32297 0.0616,-11.7398 0.21509,-16.25087 0.15258,-4.52698 0.39915,-8.4099 0.78243,-11.64703 0.36778,-3.22291 0.78243,-6.0467 1.24303,-8.45541 0.4447,-2.4246 1.02776,-4.72679 1.78055,-6.981678 3.94262,-11.923264 10.40396,-20.884861 19.44246,-26.901503 9.0226,-6.015342 20.08653,-9.036752 33.22147,-9.036752 6.75224,0 12.87587,0.782429 18.30773,2.377345 5.37082,1.580761 10.1887,3.760457 14.43897,6.552435 4.18926,2.762339 7.81137,6.015349 10.80317,9.698476 3.06868,3.697285 5.53882,7.641624 7.47319,11.877718 0.75106,1.349583 0.53752,2.424608 -0.65998,3.175676 l -16.68012,6.858773 c -1.41275,0.75278 -2.40869,0.36907 -3.19287,-1.12058 -3.74283,-6.93613 -6.93611,-11.49275 -12.18281,-14.806757 -5.30941,-3.299853 -10.22007,-4.865129 -18.3077,-4.865129 -8.79314,0 -12.7216,1.748734 -18.22953,5.693102 -5.46364,3.867008 -9.46901,8.732137 -11.83217,16.142614 -0.47437,1.33581 -0.9053,2.99348 -1.41104,4.94203 -0.41463,1.97991 -0.75278,4.40452 -0.9663,7.24247 -0.21544,2.83925 -0.41464,6.35308 -0.59855,10.49678 -0.12246,4.14373 -0.18403,9.17686 -0.18403,15.00788 0,5.86107 0.0616,10.8942 0.18403,15.03794 0.18402,4.12779 0.38328,7.64162 0.59855,10.48086 0.2135,2.86931 0.55167,5.27805 0.9663,7.27386 0.50616,1.91846 0.93667,3.57483 1.41104,4.92613 2.36316,7.38084 5.74037,11.41585 10.71205,14.65467 4.91068,3.28394 10.55651,5.64755 19.34965,5.64755 7.81134,0 14.96232,-2.22524 19.62634,-5.61746 4.61979,-3.39094 8.45544,-7.87108 10.17452,-13.99472 0.75281,-2.57843 1.71916,-5.78588 2.3791,-9.71393 0.59853,-3.92843 0.59853,-8.08632 0.59853,-13.82497 0,-0.9066 -0.5074,-1.36721 -1.3513,-1.36721 h -26.71631 c -1.50383,0 -2.24073,-0.73558 -2.24073,-2.23898 v -15.31466 c 0,-1.51931 0.7369,-2.25661 2.24073,-2.25661 h 49.02807 c 1.53521,0 2.25661,0.73688 2.25661,2.25661 v 13.08938 c 0,6.93614 0,13.36612 -0.7214,19.32001 -0.69131,5.95392 -1.62625,11.10951 -2.80789,14.86822 -3.74453,11.7712 -9.68254,20.14969 -18.78247,26.39405 -9.1313,6.29165 -20.90079,9.68257 -33.6838,9.68257 -13.13494,0 -24.19891,-3.02183 -33.22147,-9.0226 -9.0385,-6.07635 -15.49984,-14.99239 -19.44246,-26.91566 -0.75279,-2.25489 -1.33585,-4.57253 -1.78055,-6.99714 z"/></svg>ResearchGate</a></li>
-      <li><a class="pf linkedin" href="https://www.linkedin.com/in/yassine-ait-mohamed-172016436/" target="_blank" rel="noopener me"><svg viewBox="0 0 448 512" aria-hidden="true" fill="currentColor"><path d="M416 32L31.9 32C14.3 32 0 46.5 0 64.3L0 447.7C0 465.5 14.3 480 31.9 480L416 480c17.6 0 32-14.5 32-32.3l0-383.4C448 46.5 433.6 32 416 32zM135.4 416l-66.4 0 0-213.8 66.5 0 0 213.8-.1 0zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77zM384.3 416l-66.4 0 0-104c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9l0 105.8-66.4 0 0-213.8 63.7 0 0 29.2 .9 0c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9l0 117.2z"/></svg>LinkedIn</a></li>
-    </ul>
-  </section>
+<header>
+<h1>Yassine Ait Mohamed</h1>
+<p class="sub">PhD Candidate in the <a href="https://www.usherbrooke.ca/mathematiques/" target="_blank" rel="noopener">Department of Mathematics</a> at the <a href="https://www.usherbrooke.ca/" target="_blank" rel="noopener">University of Sherbrooke</a>, under the supervision of <a class="person" href="https://maxencemayrand.github.io/" target="_blank" rel="noopener">Maxence Mayrand</a></p>
+<div class="bar">
+<span>D3-1027-4</span><span class="sep">&bull;</span>
+<a href="mailto:yassine.ait.mohamed@usherbrooke.ca">yassine.ait.mohamed@usherbrooke.ca</a><span class="sep">&bull;</span>
+<a href="https://orcid.org/0009-0002-2245-4217" target="_blank" rel="noopener me">ORCID</a><span class="sep">&bull;</span>
+<a href="https://www.researchgate.net/profile/Yassine-Ait-Mohamed" target="_blank" rel="noopener me">ResearchGate</a><span class="sep">&bull;</span>
+<a href="https://www.linkedin.com/in/yassine-ait-mohamed-172016436/" target="_blank" rel="noopener me">LinkedIn</a><span class="sep">&bull;</span>
+<a href="Documents%20cv/Yassine_Ait_Mohamed_CV.pdf?v=20261107" target="_blank" rel="noopener">CV</a>
 </div>
-<script src="main.js?v=20261031-motion"></script>
+</header>
+
+<div class="cols">
+<section class="col" id="research">
+<h3>Research</h3>
+<h5>Current Interests</h5>
+<ul class="bul">
+<li><span class="grp">Geometry</span>
+<ul><li>Poisson geometry</li><li>shifted symplectic geometry</li><li>Lie groupoids</li><li>differentiable stacks</li><li>coisotropic reduction</li><li>deformation quantization</li><li>Moore–Tachikawa varieties</li><li>topological quantum field theories</li><li>algebraic geometry</li></ul></li>
+<li><span class="grp">Algebra</span>
+<ul><li>graded rings</li><li>derivations</li><li>Ore extensions</li><li>graded simplicity</li><li>noncommutative algebra</li><li>Lie theory</li></ul></li>
+</ul>
+<h5>Education</h5>
+<ul class="dated">
+<li><span class="d">2024–present</span><span class="b"><span class="t">PhD in Mathematics</span><a href="https://www.usherbrooke.ca/mathematiques/" rel="noopener" target="_blank">University of Sherbrooke</a>, Canada</span></li>
+<li><span class="d">2020–2022</span><span class="b"><span class="t">Master's in Mathematics</span><a href="https://www.usmba.ac.ma/" rel="noopener" target="_blank">University of Sidi Mohamed Ben Abdellah</a>, Morocco</span></li>
+<li><span class="d">2016–2020</span><span class="b"><span class="t">B.Sc. in Mathematics</span><a href="https://www.umi.ac.ma/" rel="noopener" target="_blank">University of Moulay Ismail</a>, Morocco</span></li>
+</ul>
+</section>
+
+<section class="col" id="teaching">
+<h3>Teaching</h3>
+<h5>Université de Sherbrooke</h5>
+<ul class="dated">
+<li><span class="d">Automne 2026</span><span class="b">Algèbre linéaire appliquée en informatique (MAT199)</span></li>
+<li><span class="d">Été 2026</span><span class="b">Méthodes numériques en algèbre linéaire (MAT417)</span></li>
+<li><span class="d">Hiver 2026</span><span class="b">Analyse I (MAT129)</span></li>
+<li><span class="d">Automne 2025</span><span class="b">Éléments d'algèbre (MAT141)</span></li>
+<li><span class="d">Automne 2025</span><span class="b">Algèbre linéaire appliquée en informatique (MAT199)</span></li>
+<li><span class="d">Hiver 2025</span><span class="b">Algèbre linéaire (MAT253)</span></li>
+<li><span class="d">Automne 2024</span><span class="b">Calcul différentiel et intégral I (MAT194)</span></li>
+<li><span class="d">Automne 2024</span><span class="b">Centre d'aide en mathématiques</span></li>
+</ul>
+<h5>Private schools, Morocco</h5>
+<ul class="dated">
+<li><span class="d">2022–2023</span><span class="b">Mini School Center, Fez</span></li>
+<li><span class="d">2018–2019</span><span class="b">Olympia Centre Zarhounia, Meknès</span></li>
+<li><span class="d">2017–2018</span><span class="b">Maxcence Centre, Meknès</span></li>
+</ul>
+<h5>Mathematics tutor</h5>
+<ul class="dated">
+<li><span class="d">2022–present</span><span class="b">Algebra, Real and Complex Analysis, Topology <span class="dot">·</span> <a href="https://www.voscours.fr/professeur/yassine-ait-mohamed.htm" rel="noopener" target="_blank">VosCours profile</a></span></li>
+</ul>
+<h5>Materials</h5>
+<p class="mat"><span class="ml">Algebra</span><a class="tag" href="Documents%20teach/pdf7.pdf" target="_blank" rel="noopener">1</a> <a class="tag" href="Documents%20teach/pdf6.pdf" target="_blank" rel="noopener">2</a> <a class="tag" href="Documents%20teach/pdf5.pdf" target="_blank" rel="noopener">3</a> <a class="tag" href="Documents%20teach/pdf4.pdf" target="_blank" rel="noopener">4</a> <a class="tag" href="Documents%20teach/pdf3.pdf" target="_blank" rel="noopener">5</a> <a class="tag" href="Documents%20teach/pdf16.pdf" target="_blank" rel="noopener">6</a> <a class="tag" href="Documents%20teach/pdf15.pdf" target="_blank" rel="noopener">7</a> <a class="tag" href="Documents%20teach/pdf12.pdf" target="_blank" rel="noopener">8</a> <a class="tag" href="Documents%20teach/pdf11.pdf" target="_blank" rel="noopener">9</a> <a class="tag" href="Documents%20teach/pdf10.pdf" target="_blank" rel="noopener">10</a> <a class="tag" href="Documents%20teach/pdf19.pdf" target="_blank" rel="noopener">11</a></p>
+<p class="mat"><span class="ml">Analysis &amp; Topology</span><a class="tag" href="Documents%20teach/pdf9.pdf" target="_blank" rel="noopener">1</a> <a class="tag" href="Documents%20teach/pdf8.pdf" target="_blank" rel="noopener">2</a> <a class="tag" href="Documents%20teach/pdf2.pdf" target="_blank" rel="noopener">3</a> <a class="tag" href="Documents%20teach/pdf17.pdf" target="_blank" rel="noopener">4</a> <a class="tag" href="Documents%20teach/pdf14.pdf" target="_blank" rel="noopener">5</a> <a class="tag" href="Documents%20teach/pdf13.pdf" target="_blank" rel="noopener">6</a> <a class="tag" href="Documents%20teach/pdf1.pdf" target="_blank" rel="noopener">7</a> <a class="tag" href="Documents%20teach/pdf20.pdf" target="_blank" rel="noopener">8</a></p>
+</section>
+
+<section class="col" id="talks">
+<h3>Talks</h3>
+<ul class="dated">
+<li><span class="d">Nov 2025</span><span class="b"><span class="t">Poisson structures on 1-shifted coisotropics</span>Séminaire SAG, Université de Sherbrooke<span class="pl"><a class="tag" href="Documents%20talks/ppt2025.pdf" rel="noopener" target="_blank">slides</a></span></span></li>
+<li><span class="d">Dec 2021</span><span class="b"><span class="t">Tensor algebra and enveloping algebra of a Lie algebra</span>Seminar of Geometry and Algebra, Faculty of Science, Dhar El Mahraz</span></li>
+<li><span class="d">Nov 2021</span><span class="b"><span class="t">On Riemann–Roch theorem</span>Seminar of Geometry and Algebra, Faculty of Science, Dhar El Mahraz<span class="pl"><a class="tag" href="Documents%20talks/roch.pdf" rel="noopener" target="_blank">slides</a></span></span></li>
+<li><span class="d">Feb 2021</span><span class="b"><span class="t">Action of a Lie group on a smooth manifold</span>Seminar of Geometry and Algebra, Faculty of Science, Dhar El Mahraz</span></li>
+</ul>
+<h5>Thesis and Notes</h5>
+<ul class="notes">
+<li><span class="t">Divisors in Algebraic Geometry, Central Simple Algebras and Severi–Brauer Varieties</span><span class="b2">Master's thesis, Sidi Mohamed Ben Abdellah University, 2022</span><span class="pl"><a class="tag" href="Documents%20research/master_thesis.pdf" target="_blank" rel="noopener">pdf</a></span></li>
+<li><span class="t">Note on Central Simple Algebras and the Brauer Group</span><span class="pl"><a class="tag" href="Documents%20research/On_Simple_Algebras.pdf" target="_blank" rel="noopener">pdf</a></span></li>
+<li><span class="t">Note on Sheaf Theory</span><span class="pl"><a class="tag" href="Documents%20research/Note_on_sheaf_theory.pdf" target="_blank" rel="noopener">pdf</a></span></li>
+</ul>
+</section>
+</div>
+
+<section class="papers-sec" id="papers">
+<h3>Papers</h3>
+<h5>Submitted</h5>
+<ul class="papers">
+<li><div class="pt">Simplicity of graded iterated Ore extensions of group algebras</div>
+<div class="pm"></div>
+<div class="pl"><a class="tag abs" href="#" aria-expanded="false">abstract</a></div>
+<div class="abstract" hidden>We prove that the iterated Ore extensions of a group algebra that are compatible with its grading are the skew group rings of iterated Ore extensions of the base field under triangular actions of the group. A group admitting a simple extension of this kind is solvable, with derived length bounded in terms of the length of the extension. For polynomial coefficient rings we characterize graded simplicity and simplicity in every characteristic, which extends a criterion of Shamsuddin from a single automorphism to an arbitrary group. In characteristic zero, we prove that the group algebra of a finitely generated group has a simple extension of this kind if and only if the group embeds in a group of invertible upper triangular matrices over the base field. In characteristic zero we also determine the least length of such an extension for finitely generated free abelian groups, for the integral Heisenberg group and for finite abelian groups with at most two generators. For finite abelian groups the extensions are quotients of path algebras of quivers, and the simple ones include deformed preprojective algebras of cyclic quivers.</div></li>
+<li><div class="pt">Shifted Lagrangian geometry of curves in Radko surfaces</div>
+<div class="pm">with <a class="person" href="https://maxencemayrand.github.io/" rel="noopener" target="_blank">Maxence Mayrand</a></div>
+<div class="pl"><a class="tag" href="Documents%20research/radko-curves.pdf" target="_blank" rel="noopener">pdf</a> <a class="tag abs" href="#" aria-expanded="false">abstract</a></div>
+<div class="abstract" hidden>We describe the shifted Lagrangian geometry of curves in Radko surfaces, through their global integrations and their homotopy Poisson algebras. We construct the adjoint symplectic groupoid of the surface explicitly, show that admissible curves integrate to embedded Lagrangian subgroupoids, which are 1-shifted Lagrangians, and characterize when their shifted intersections are clean. For a component of the degeneracy locus, a canonical Hamiltonian flow on its shifted self-intersection recovers the modular period. On the infinitesimal side, the homotopy Poisson algebra of a connected admissible curve not contained in the degeneracy locus is $L_\infty$-isomorphic to its underlying cochain complex, and its $L_\infty$-isomorphism class is determined by the total contact multiplicity. The brackets of arity at least two can be removed by a change of tubular neighbourhood exactly when all contacts are transverse. At tangential contacts, the binary bracket retains the modular vector field. We establish this distinction using a general characterization of the $L_\infty$-isomorphisms induced by changes of tubular neighbourhood, valid for arbitrary coisotropic submanifolds.</div></li>
+<li><div class="pt">Dual reflection groups of graded Ore extensions</div>
+<div class="pm">with <span class="person">Asmae El-Baz</span></div>
+<div class="pl"><a class="tag abs" href="#" aria-expanded="false">abstract</a></div>
+<div class="abstract" hidden>We prove that the Artin--Schelter Gorenstein and Artin--Schelter regular properties descend from a graded Ore extension to its coefficient algebra, for every twisting automorphism and every skew derivation. We use this descent to determine the dual reflection groups of graded Ore extensions for all gradings compatible with the Ore structure. They are exactly the semidirect products of a dual reflection group of the coefficient algebra by the cyclic group generated by the degree of the new variable, meeting it trivially, and a nonzero skew derivation never contributes a new degree. For iterated Ore extensions we characterize the dual reflection groups by an order formula analogous to the theorem of Shephard, Todd and Chevalley, and we prove the binomial conjecture of Buzaglo and Rogalski for these algebras. We show that their covariant rings are complete intersections of growth type, whose Ext-algebras grow like a polynomial ring in as many variables as there are generators of nontrivial degree. This answers a question of Kirkman, Kuzmanovich and Zhang for these algebras. Finally, we describe the smash product as a Cayley quiver with relations, factor its matrix Hilbert series, and show that the extension becomes Hopf--Galois once the Jacobian is inverted.</div></li>
+<li><div class="pt">Integration and quantization of 1-shifted coisotropics</div>
+<div class="pm">with <a class="person" href="https://maxencemayrand.github.io/" rel="noopener" target="_blank">Maxence Mayrand</a></div>
+<div class="pl"><a class="tag" href="Documents%20research/1-shifted-coisotropics.pdf" target="_blank" rel="noopener">pdf</a> <a class="tag abs" href="#" aria-expanded="false">abstract</a></div>
+<div class="abstract" hidden>To quantize the reduction of a coisotropic submanifold of a Poisson manifold, Cattaneo and Felder constructed a homotopy Poisson algebra together with a deformation quantization. Its degree-zero cohomology is the reduced Poisson algebra, while the full homotopy structure retains information about the formal embedding even when the reduced space is singular or trivial. On the integration side, Cattaneo showed that a coisotropic submanifold integrates to a Lagrangian subgroupoid of any symplectic groupoid integrating the ambient Poisson manifold. It is now recognized that both constructions fit into shifted symplectic geometry: the Lagrangian subgroupoid presents a 1-shifted Lagrangian morphism of differentiable stacks, and the homotopy Poisson algebra describes the associated 0-shifted Poisson structure. However, such morphisms form only a special class of 1-shifted Lagrangians. We extend this picture to 1-shifted Lagrangians and, more generally, 1-shifted coisotropics in 1-shifted symplectic differentiable stacks. We establish an integration theorem for their infinitesimal description in terms of twisted Dirac structures and construct a natural Poisson bracket on invariant functions. Under regularity hypotheses, we equip the associated Lie algebroid complex with a flat $P_\infty$-structure and a curved $A_\infty$-quantization, independent of the auxiliary choices up to isomorphism. The induced bracket in degree zero recovers the reduced Poisson bracket, and suitable cohomological vanishing conditions yield a deformation quantization of invariant functions. This extends the Cattaneo–Felder picture to more general reduction procedures, with the same infinitesimal data governing integration and quantization.</div></li>
+<li><div class="pt">Group-graded Ore extensions and graded simplicity</div>
+<div class="pm"></div>
+<div class="pl"><a class="tag" href="Documents%20research/group-graded-ore-extensions-v2.pdf" target="_blank" rel="noopener">pdf</a> <a class="tag abs" href="#" aria-expanded="false">abstract</a></div>
+<div class="abstract" hidden>We study Ore extensions $R[t;\sigma,\delta]$ of rings graded by an arbitrary group $\Gamma$. The grading of $R$ extends with $t$ of degree $\gamma$ if and only if $\sigma$ is compatible with conjugation by $\gamma$ and $\delta$ with left translation by $\gamma$. The extended grading is then unique. For nonabelian $\Gamma$ the degree of $t$ need not commute with the degrees of $R$, and this twist cannot always be removed. If $R$ is gr-simple and $\sigma$ is an automorphism, then $R[t;\sigma,\delta]$ is gr-simple if and only if it has no homogeneous normal element that is monic of positive $t$-degree. The quantized Weyl algebra shows that the graded forms of the classical necessary conditions do not suffice. Over a group algebra $kG$, these extensions correspond to actions of $G$ on the affine line, and gr-simplicity means that the action has no finite orbit. In characteristic zero this is the nonvanishing of a class in $H^1(G,k_\chi)$, and simplicity forces $G$ to be metabelian. We prove the analogous results for Poisson polynomial rings and relate the two settings by semiclassical limits.</div></li>
+</ul>
+<h5>Published and to appear</h5>
+<ul class="papers">
+<li><div class="pt">Graded differential polynomial rings</div>
+<div class="pm"><a href="https://onlinelibrary.wiley.com/doi/10.1002/mana.70286" target="_blank" rel="noopener">Mathematische Nachrichten</a> <span class="dot">·</span> <span class="status published">Published</span></div>
+<div class="pl"><a class="tag" href="Documents%20research/gpd.pdf" target="_blank" rel="noopener">pdf</a> <a class="tag abs" href="#" aria-expanded="false">abstract</a></div>
+<div class="abstract" hidden>We study differential polynomial rings $R[t;\delta]$ over $\Gamma$-graded rings, where $\Gamma$ is an arbitrary group. We show that $R[t;\delta]$ admits a $\Gamma$-grading compatible with that of $R$ if and only if $\delta$ is a $\gamma$-derivation for some $\gamma\in C_\Gamma(\Gamma_R)$, and that this grading is unique once $\deg(t)=\gamma$ is fixed; if $\delta\neq0$, then $\gamma$ is itself uniquely determined by $\delta$. We characterize the resulting graded ring by a universal property. We prove a characteristic-free center criterion for gr-simplicity whenever $Z(R[t;\delta])$ is a graded subring; in characteristic zero, gr-simplicity is equivalent to $\delta$-gr-simplicity of $R$ and $\gamma$-outerness of $\delta$, extending Jordan's simplicity criterion to the graded setting. We further show that $R[t;\delta]$ is gr-prime if and only if $R$ is $\delta$-gr-prime, and that gr-Noetherianity of $R$ passes to $R[t;\delta]$, recovering a graded Hilbert basis theorem as a special case. When $\Gamma$ is abelian, gr-simplicity and gr-primality are shown to be invariants of homogeneous graded Morita equivalence, and every ring homogeneously graded equivalent to $R[t;\delta]$ via a compatible idempotent is again a graded differential polynomial ring.</div></li>
+<li><div class="pt">Generalized homogeneous derivations on graded rings</div>
+<div class="pm">Siberian Mathematical Journal <span class="dot">·</span> <span class="status">To appear</span></div>
+<div class="pl"><a class="tag" href="Documents%20research/ghdogr.pdf" target="_blank" rel="noopener">pdf</a> <a class="tag abs" href="#" aria-expanded="false">abstract</a></div>
+<div class="abstract" hidden>We introduce a notion of generalized homogeneous derivations on graded rings, extending the homogeneous derivations of Kanunnikov, and single out the gr-generalized derivations among them, those preserving the degree of every homogeneous component. Several results originally established for prime rings are extended to gr-prime rings. We also study the algebraic and module-theoretic structure of these maps, establish their functorial properties, and construct categories that record their derivation structure in both ring and module contexts.</div></li>
+<li><div class="pt">On graded rings with homogeneous derivations</div>
+<div class="pm"><a href="https://doi.org/10.33044/revuma.4934" target="_blank" rel="noopener">Revista de la Unión Matemática Argentina</a> <span class="dot">·</span> <span class="status published">Published</span></div>
+<div class="pl"><a class="tag" href="Documents%20research/ogrwhd.pdf" target="_blank" rel="noopener">pdf</a> <a class="tag abs" href="#" aria-expanded="false">abstract</a></div>
+<div class="abstract" hidden>We establish results related to homogeneous derivations, a concept introduced by Kanunnikov (2018). First, we prove the existence of a non-trivial family of derivations that are not homogeneous on graded rings. Furthermore, based on homogeneous derivations, we extend certain existing significant results in the context of prime (resp. semiprime) rings to gr-prime (resp. gr-semiprime) rings, such as Posner's and Herstein's theorems.</div></li>
+</ul>
+</section>
+
+<footer>
+<span>Last updated: <span id="updated"></span></span>
+<a href="#top" id="to-top">Back to top &uarr;</a>
+</footer>
+
+</div>
+
+<script>
+var up = new Date(document.lastModified);
+document.getElementById("updated").textContent = up.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+document.getElementById("to-top").addEventListener("click", function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); });
+document.querySelectorAll("a.abs").forEach(function (a) {
+  a.addEventListener("click", function (e) {
+    e.preventDefault();
+    var box = a.closest("li").querySelector(".abstract");
+    box.hidden = !box.hidden;
+    a.setAttribute("aria-expanded", String(!box.hidden));
+  });
+});
+
+</script>
 </body>
 </html>
