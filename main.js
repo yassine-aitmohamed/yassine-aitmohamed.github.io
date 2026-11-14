@@ -31,66 +31,6 @@
     new IntersectionObserver(([e]) => tabs.classList.toggle('stuck', !e.isIntersecting)).observe(sentinel);
   }
 
-  const cv = document.querySelector('canvas.flow');
-  if (cv) {
-    const ctx = cv.getContext('2d');
-    const ink = getComputedStyle(root).getPropertyValue('--link').trim() || '#1F3A68';
-    let W = 0, H = 0, dpr = 1, pts = [], running = true, raf = 0;
-    const Q = 2 * Math.PI, P = 3.1;
-    const X = q => (q + Q) / (2 * Q) * W, Y = p => H / 2 - p / P * (H / 2);
-    const spawn = () => {
-      const q = (Math.random() * 2 - 1) * Q;
-      const E = -1 + Math.random() * 3.4;
-      const p2 = 2 * (E + Math.cos(q));
-      const p = p2 > 0 ? (Math.random() < .5 ? -1 : 1) * Math.sqrt(p2) : (Math.random() * 2 - 1) * 0.4;
-      return { q, p, life: 600 + Math.random() * 900 };
-    };
-    const size = () => {
-      dpr = Math.min(devicePixelRatio || 1, 2);
-      W = cv.clientWidth; H = cv.clientHeight;
-      cv.width = W * dpr; cv.height = H * dpr;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      ctx.strokeStyle = ink; ctx.lineWidth = 1; ctx.lineCap = 'round';
-      const n = Math.round(Math.min(170, Math.max(60, W / 8)));
-      pts = Array.from({ length: n }, spawn);
-    };
-    const dt = 0.011;
-    const step = draw => {
-      if (draw) {
-        ctx.globalCompositeOperation = 'destination-out';
-        ctx.fillStyle = 'rgba(0,0,0,0.035)';
-        ctx.fillRect(0, 0, W, H);
-        ctx.globalCompositeOperation = 'source-over';
-        ctx.globalAlpha = .55;
-        ctx.beginPath();
-      }
-      for (const s of pts) {
-        const x0 = X(s.q), y0 = Y(s.p);
-        s.p -= dt / 2 * Math.sin(s.q); s.q += dt * s.p; s.p -= dt / 2 * Math.sin(s.q);
-        let wrapped = false;
-        if (s.q > Q) { s.q -= 2 * Q; wrapped = true; } else if (s.q < -Q) { s.q += 2 * Q; wrapped = true; }
-        if (draw && !wrapped) { ctx.moveTo(x0, y0); ctx.lineTo(X(s.q), Y(s.p)); }
-        if (--s.life < 0) Object.assign(s, spawn());
-      }
-      if (draw) { ctx.stroke(); ctx.globalAlpha = 1; }
-    };
-    const loop = () => { step(true); if (running) raf = requestAnimationFrame(loop); };
-    size();
-    if (reduce) { for (let i = 0; i < 500; i++) step(true); }
-    else {
-      for (let i = 0; i < 160; i++) step(true);
-      loop();
-      new IntersectionObserver(([e]) => {
-        running = e.isIntersecting;
-        if (running) { cancelAnimationFrame(raf); raf = requestAnimationFrame(loop); }
-      }).observe(cv);
-      document.addEventListener('visibilitychange', () => {
-        running = !document.hidden; if (running) { cancelAnimationFrame(raf); raf = requestAnimationFrame(loop); }
-      });
-    }
-    let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(size, 150); });
-  }
-
   if (page && !reduce) {
     const items = [];
     [...page.children].forEach(c => {
