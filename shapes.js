@@ -14,7 +14,9 @@
 (function () {
   'use strict';
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var ROYAL = [127, 155, 242], SKY = [124, 198, 240], ORANGE = [242, 161, 96];
+  var DAY = document.documentElement.dataset.theme === 'light';
+  var ROYAL = DAY ? [43, 79, 179] : [127, 155, 242], SKY = DAY ? [24, 128, 192] : [124, 198, 240], ORANGE = DAY ? [214, 106, 22] : [242, 161, 96];
+  var BOOST = DAY ? 1.15 : 1;
 
   function layer(blur, op) {
     var c = document.createElement('canvas');
@@ -25,7 +27,7 @@
     if (host && host.after) host.after(c); else document.body.insertBefore(c, document.body.firstChild);
     return c;
   }
-  var back = layer(5, 0.75), front = layer(0, 1);
+  var back = layer(5, DAY ? 0.6 : 0.75), front = layer(0, 1);
   var bx = back.getContext('2d'), fx = front.getContext('2d');
   var W = 0, H = 0, DPR = 1, S = 1, narrow = false;
 
@@ -47,7 +49,7 @@
     c = Math.cos(az); s = Math.sin(az); t = x * c - y * s; y = x * s + y * c; x = t;
     return [x, y, z];
   }
-  function rgba(c, a) { return 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + a.toFixed(3) + ')'; }
+  function rgba(c, a) { return 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + Math.min(1, a * BOOST).toFixed(3) + ')'; }
   function mix(a, b, t) { return [a[0] + (b[0] - a[0]) * t | 0, a[1] + (b[1] - a[1]) * t | 0, a[2] + (b[2] - a[2]) * t | 0]; }
   function grad3(t) { return t < 0.5 ? mix(ROYAL, SKY, t * 2) : mix(SKY, ORANGE, t * 2 - 1); }
 
@@ -268,7 +270,7 @@
       var t = Math.max(0, now - t0) / 1000;
       for (var i = 0; i < 3; i++) lorenzStep(0.005);
       bx.clearRect(0, 0, W, H); fx.clearRect(0, 0, W, H);
-      bx.globalCompositeOperation = fx.globalCompositeOperation = 'lighter';
+      bx.globalCompositeOperation = fx.globalCompositeOperation = DAY ? 'source-over' : 'lighter';
       drawKlein(bx, t); drawPoly(bx, t);
       drawLorenz(fx, t); drawKnot(fx, t); drawHopf(fx, t); drawOrbital(fx, t);
     }
