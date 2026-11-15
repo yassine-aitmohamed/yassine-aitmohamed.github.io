@@ -240,3 +240,130 @@ section.page h4 { margin-top: 26px; color: var(--ink); }
   header.top h1::after { animation: none; }
   nav.tabs, .tabs .mini, .tabs .links { transition: none; }
 }
+
+/* ===== Quantum night theme ===== */
+:root {
+  --bg: #050813;
+  --ink: #eef2f9;
+  --text: #cfd8e8;
+  --muted: #8f9bb3;
+  --rule: rgba(255, 255, 255, .10);
+  --link: #7cc6f0;
+  --link-hover: #b4e0f8;
+  --person: #f2a160;
+  --name: #ffffff;
+  --orange: #f2a160;
+  --royal: #7f9bf2;
+  --tint: rgba(63, 163, 221, .07);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; }
+.quantum { position: fixed; inset: 0; z-index: 0; overflow: hidden; background: radial-gradient(120% 90% at 70% 40%, #0f1a3a 0%, #050813 65%); }
+.quantum.quantum-fallback { background: radial-gradient(60% 50% at 70% 45%, rgba(63,163,221,.25), transparent 70%), radial-gradient(40% 40% at 60% 60%, rgba(224,123,36,.18), transparent 70%), radial-gradient(120% 90% at 70% 40%, #0f1a3a 0%, #050813 65%); }
+.wrapper { position: relative; z-index: 1; }
+.readbar { background: linear-gradient(90deg, #2b4fb3, #3fa3dd, #e07b24); height: 2px; }
+
+/* header */
+header.top { height: 220px; }
+header.top h1 { font-weight: 600; letter-spacing: .02em; font-size: 40px; text-shadow: 0 2px 30px rgba(5, 8, 19, .8); }
+header.top h1::after { width: 64px; background: linear-gradient(90deg, #2b4fb3, #3fa3dd, #e07b24); }
+header.top .role { color: #b4c0d6; letter-spacing: .04em; }
+header.top .role span { color: #e07b24; }
+
+/* sticky navigation, glass */
+nav.tabs {
+  background: linear-gradient(180deg, rgba(5, 8, 19, .82), rgba(5, 8, 19, .6));
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+}
+nav.tabs.stuck { box-shadow: 0 10px 30px -18px rgba(0, 0, 0, .9); }
+.tabs .links a { color: #9aa6bd; font-weight: 500; }
+.tabs .links a:hover, .tabs .links a[aria-current="page"] { color: #ffffff; }
+.nav-mark { background: linear-gradient(90deg, #3fa3dd, #e07b24); }
+
+/* content panel */
+section.page {
+  margin: 44px auto 70px; padding: 44px 52px 40px;
+  background: rgba(9, 13, 27, .78); border: 1px solid var(--rule); border-radius: 16px;
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 30px 80px -40px rgba(0, 0, 0, .9);
+}
+section.page > h1 { color: #fff; font-weight: 600; letter-spacing: .02em; }
+section.page h3 { color: #f2a160; font: 500 12.5px/1.2 var(--mono); letter-spacing: .16em; border-bottom-color: var(--rule); }
+section.page h3::after { background: #e07b24; }
+section.page h4 { color: #fff; font-weight: 600; }
+b, strong { color: #fff; }
+a { color: var(--link); }
+a:hover { color: var(--link-hover); }
+hr { background: var(--rule); }
+
+/* portrait with a quantum ring */
+.portrait { box-shadow: 0 0 0 2px rgba(5, 8, 19, 1), 0 0 0 4px #3fa3dd, 0 0 40px 6px rgba(63, 163, 221, .35); }
+
+/* papers */
+ol.papers > li::before { color: var(--royal); }
+ol.papers > li:hover::before, ol.papers > li.lit::before { color: #f2a160; }
+ol.papers b { color: #fff; }
+ol.papers b { background-image: linear-gradient(#3fa3dd, #3fa3dd); }
+.status { color: var(--muted); }
+.status.published { color: #f2a160; }
+.abstract .in { border-left: 2px solid #3fa3dd; background: rgba(63, 163, 221, .07); border-radius: 0 8px 8px 0; color: #c6d0e2; }
+.toggle { color: var(--muted); }
+.toggle[aria-expanded="true"], .toggle:hover { color: var(--link); }
+.toggle[aria-expanded="true"] .ic { animation: ping .6s ease-out; }
+
+/* timelines (talks, CV, teaching) */
+.row .y { color: #8f9bb3; }
+.row .what::before { background: #0b1022; border-color: #3fa3dd; }
+.row:nth-of-type(3n+2) .what::before { border-color: #7f9bf2; }
+.row:nth-of-type(3n) .what::before { border-color: #e07b24; }
+.row:hover .what::before { background: #3fa3dd; }
+.row .what::after { background: rgba(127, 155, 242, .28); }
+.row:hover .what b { color: var(--link); }
+
+/* email and profiles */
+.copy { color: var(--link); }
+.copied { color: #f2a160; }
+.profiles a.pf { color: var(--text); padding: 8px 14px; border: 1px solid var(--rule); border-radius: 999px; background: rgba(255, 255, 255, .03); transition: color .25s ease, border-color .25s ease, background .25s ease; }
+.profiles a.pf:hover { color: #fff; border-color: rgba(124, 198, 240, .5); background: rgba(63, 163, 221, .08); }
+.profiles { gap: 12px 14px; }
+
+@media screen and (max-width: 600px) {
+  section.page { padding: 28px 20px; margin-top: 24px; border-radius: 12px; }
+  header.top { height: 170px; }
+  header.top h1 { font-size: 27px; }
+}
+
+/* ===== Seamless: no separating lines, one continuous surface ===== */
+nav.tabs, nav.tabs.stuck {
+  border: 0; box-shadow: none;
+  background: linear-gradient(180deg, rgba(5, 8, 19, .72) 0%, rgba(5, 8, 19, .45) 70%, rgba(5, 8, 19, 0) 100%);
+  backdrop-filter: none; -webkit-backdrop-filter: none;
+}
+.nav-mark { height: 2px; border-radius: 2px; }
+section.page {
+  background: transparent; border: 0; box-shadow: none; border-radius: 0;
+  backdrop-filter: none; -webkit-backdrop-filter: none;
+  margin-top: 10px; padding-top: 30px;
+}
+/* a soft veil behind the text column, with no edge */
+.wrapper::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(90deg, rgba(5, 8, 19, 0) 0%, rgba(5, 8, 19, .55) 26%, rgba(5, 8, 19, .7) 50%, rgba(5, 8, 19, .55) 74%, rgba(5, 8, 19, 0) 100%);
+}
+section.page h3 { border-bottom: 0; padding-bottom: 0; margin: 40px 0 16px; }
+section.page h3::after { display: none; }
+hr { display: none; }
+.row .what::after { display: none; }
+.profiles a.pf { border-color: transparent; background: rgba(255, 255, 255, .045); }
+.abstract .in { border-left: 0; background: rgba(63, 163, 221, .06); border-radius: 10px; }
+@media screen and (max-width: 600px) {
+  section.page { padding: 20px 4px; }
+  .wrapper::before { background: rgba(5, 8, 19, .55); }
+}
+.wrapper::before {
+  background: radial-gradient(ellipse 46% 120% at 50% 50%, rgba(5, 8, 19, .58) 0%, rgba(5, 8, 19, .5) 35%, rgba(5, 8, 19, .3) 65%, rgba(5, 8, 19, .12) 85%, rgba(5, 8, 19, 0) 100%);
+}
+nav.tabs { background: transparent; transition: background .4s ease; }
+nav.tabs.stuck { background: linear-gradient(180deg, rgba(5, 8, 19, .9) 0%, rgba(5, 8, 19, .7) 55%, rgba(5, 8, 19, 0) 100%); }
