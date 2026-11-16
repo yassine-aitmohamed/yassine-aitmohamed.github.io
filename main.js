@@ -100,6 +100,17 @@
     });
   }
 
+  document.querySelectorAll('a[href*=".pdf"]').forEach(a => {
+    if (a.origin !== location.origin) return;
+    const fresh = () => {
+      const u = new URL(a.href);
+      u.searchParams.set('v', Date.now().toString(36));
+      a.href = u.href;
+    };
+    a.addEventListener('pointerdown', fresh);
+    a.addEventListener('click', fresh);
+  });
+
   const bar = document.querySelector('.readbar');
   if (bar) {
     const progress = () => {
