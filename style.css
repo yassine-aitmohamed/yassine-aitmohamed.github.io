@@ -155,7 +155,7 @@ section.page.enter .row.st .what::before { animation: pop .45s ease-out both; an
 }
 @media screen and (max-width: 480px) { .copied { left: 0; top: 100%; transform: none; margin: 4px 0 0; } .copy.done .copied { transform: none; } }
 
-.profiles { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 10px 34px; margin-top: 10px; }
+.profiles { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, auto); justify-content: start; gap: 10px 34px; margin-top: 10px; }
 .profiles a.pf { display: inline-flex; align-items: center; gap: 9px; color: var(--text); white-space: nowrap; transition: color .25s ease; }
 .profiles a.pf svg { width: 18px; height: 18px; flex: none; transition: transform .35s cubic-bezier(.2,.7,.2,1); }
 .profiles a.pf:hover { color: var(--link); }
