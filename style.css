@@ -414,3 +414,13 @@ html[data-theme="light"] .profiles a.pf { color: #2c3445; background: rgba(20, 2
 html[data-theme="light"] .profiles a.pf:hover { color: #141b2b; background: rgba(24, 128, 192, .1); }
 html[data-theme="light"] .copied { color: #c45f12; }
 @media screen and (max-width: 600px) { html[data-theme="light"] .wrapper::before { background: rgba(242, 234, 214, .72); } }
+
+ol.papers > li.forthcoming .veil {
+  display: inline-block; width: min(420px, 70%); height: 0.95em; vertical-align: -0.1em;
+  border-radius: 4px; background: linear-gradient(90deg, var(--tint), color-mix(in srgb, var(--link) 18%, transparent), var(--tint));
+  background-size: 200% 100%; animation: veil 3.2s ease-in-out infinite;
+}
+@keyframes veil { 0% { background-position: 100% 0; } 100% { background-position: -100% 0; } }
+@media (prefers-reduced-motion: reduce) { ol.papers > li.forthcoming .veil { animation: none; } }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.countdown { font-family: var(--mono); font-size: 13.5px; color: var(--link); font-variant-numeric: tabular-nums; }

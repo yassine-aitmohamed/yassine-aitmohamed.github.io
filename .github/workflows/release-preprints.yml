@@ -1,0 +1,53 @@
+name: Release preprints
+
+on:
+  schedule:
+    - cron: "1 5 2 12 *"
+    - cron: "31 5-23 2 12 *"
+    - cron: "31 */2 3-4 12 *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: release-preprints
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check release date
+        id: gate
+        run: |
+          if [ "$(date -u +%s)" -ge "$(date -u -d 2026-12-02T05:00:00Z +%s)" ]; then
+            echo "go=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "go=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.go == 'true'
+
+      - name: Decrypt and publish
+        if: steps.gate.outputs.go == 'true' && hashFiles('release/payload.enc') != ''
+        env:
+          RELEASE_KEY: ${{ secrets.RELEASE_KEY }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          work="$(mktemp -d)"
+          openssl enc -d -aes-256-cbc -pbkdf2 -iter 600000 -md sha256 \
+            -in release/payload.enc -out "$work/p.tgz" -pass env:RELEASE_KEY
+          tar -xzf "$work/p.tgz" -C "$work"
+          python3 .github/scripts/apply_release.py . "$work"
+          git rm -rq release release.js .github/scripts/apply_release.py .github/workflows/release-preprints.yml
+          git add -A
+          git config user.name "Yassine Ait Mohamed"
+          git config user.email "y.aitmohamed@yahoo.com"
+          git commit -q -m "Add two preprints"
+          git push
+          rm -rf "$work"
+          gh api -X POST "repos/${GITHUB_REPOSITORY}/pages/builds" >/dev/null || true
