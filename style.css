@@ -161,11 +161,8 @@ section.page.enter .row.st .what::before { animation: pop .45s ease-out both; an
 .profiles a.pf:hover { color: var(--link); }
 .profiles a.pf:hover svg { transform: translateY(-2px) scale(1.12); }
 .pf.scholar svg { color: #8AB4F8; }
-.pf.orcid svg { color: #A6CE39; }
-.pf.rg svg { color: #40D3C3; }
 .pf.scopus svg { color: #F28C3C; }
 .pf.arxiv svg { color: #E5686E; }
-.pf.linkedin svg { color: #5AA9F2; }
 @media screen and (max-width: 480px) { .profiles { grid-template-columns: repeat(2, auto); gap: 10px 28px; } }
 @media (prefers-reduced-motion: reduce) { .profiles a.pf, .profiles a.pf svg { transition: none; } }
 
